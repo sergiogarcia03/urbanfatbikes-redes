@@ -1,0 +1,25 @@
+# Calendario de publicaciones de urbanfatbikes
+#
+# Cada publicación lleva:
+#   id:       un nombre único, sin espacios (sirve para no publicarla dos veces)
+#   fecha:    cuándo publicarla, en hora de España: "AAAA-MM-DD HH:MM"
+#   archivos: uno o varios archivos de la carpeta contenido/
+#               - 1 foto (.jpg)      -> publicación normal
+#               - 1 vídeo (.mp4)     -> reel
+#               - de 2 a 10 archivos -> carrusel
+#   texto:    el texto de la publicación, con sus hashtags
+#
+# El programa revisa el calendario cada hora, así que la publicación sale
+# en la primera revisión después de la fecha indicada (puede tardar hasta 1 hora).
+#
+# Ejemplo (quita las almohadillas # del principio para activarlo):
+#
+#  - id: primera-prueba
+#    fecha: "2026-10-01 18:30"
+#    archivos:
+#      - primera-prueba.jpg
+#    texto: |
+#      ¡Hola desde urbanfatbikes! 🚲
+#      #fatbike #ebike #urbanfatbikes
+
+publicaciones:
