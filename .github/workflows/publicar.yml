@@ -1,0 +1,50 @@
+name: Publicar en redes
+
+on:
+  # Revisa el calendario cada hora (a y 5 minutos).
+  schedule:
+    - cron: "5 * * * *"
+  # Permite lanzarlo a mano desde la pestaña "Actions" de GitHub.
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "comprobar = probar el token · simular = revisar sin publicar · publicar = publicar de verdad"
+        type: choice
+        options: [comprobar, simular, publicar]
+        default: comprobar
+
+permissions:
+  contents: write
+
+# Nunca dos ejecuciones a la vez (evita publicar algo dos veces).
+concurrency: publicar
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Publicar
+        run: python publicar.py --modo "${{ inputs.modo || 'publicar' }}"
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          # Dirección pública de los archivos. Si no se configura la variable
+          # MEDIA_BASE_URL, se usan los archivos del propio repositorio
+          # (solo funciona si el repositorio es público).
+          MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL || format('https://raw.githubusercontent.com/{0}/{1}', github.repository, github.ref_name) }}
+
+      - name: Guardar qué se ha publicado
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publicados.json
+          git diff --cached --quiet || (git commit -m "Registrar publicaciones" && git push)
