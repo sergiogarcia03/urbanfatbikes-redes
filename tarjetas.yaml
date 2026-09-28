@@ -12,6 +12,7 @@
 #   cierre:  logo grande con una frase final (titulo, texto)
 #
 # Las palabras entre *asteriscos* salen en turquesa.
+# "dice" es la frase del guion que se oye en esa diapositiva (para los reels con voz).
 #
 # Con "reel: sí", además se crea un vídeo animado contenido/reel-<nombre>.mp4
 # (ver reels.py). Con "musica: archivo.mp3" lleva ese audio de contenido/musica/.
@@ -28,36 +29,43 @@ tarjetas:
   - nombre: legal
     reel: sí
     musica: urban-1.m4a
+    voz: [legal-1.aac, legal-2.aac]
     diapositivas:
       - tipo: portada
         antetitulo: Antes de comprar
         titulo: ¿Tu fatbike es *legal?*
         subtitulo: 3 cifras deciden si es una bicicleta o un ciclomotor.
         tamano: 130
+        dice: ¿Tu fatbike eléctrica es legal? Hay tres cifras que lo deciden.
       - tipo: dato
         antetitulo: Cifra 1
         numero: 25
         unidad: km/h
         texto: A esta velocidad el motor deja de ayudarte. Si sigue empujando, no es una bicicleta.
+        dice: Uno, veinticinco kilómetros por hora. A esa velocidad, el motor tiene que dejar de ayudarte.
       - tipo: dato
         antetitulo: Cifra 2
         numero: 250
         unidad: vatios
         texto: Es la potencia nominal máxima del motor de una bicicleta eléctrica.
+        dice: Dos, doscientos cincuenta vatios de potencia, como máximo.
       - tipo: dato
         antetitulo: Cifra 3
         numero: 6
         unidad: km/h sin pedalear
         texto: Es lo máximo que puede ayudarte al arrancar. Por encima, el motor solo funciona si pedaleas.
+        dice: Tres, sin pedalear, solo puede ayudarte hasta seis kilómetros por hora, para arrancar.
       - tipo: lista
         titulo: ¿Supera alguna? Es un *ciclomotor*
         puntos:
           - Necesita homologación y matrícula
           - Seguro obligatorio
           - Carné para conducirla
+        dice: Si supera alguna, legalmente es un ciclomotor. Necesita homologación, matrícula, seguro y carné.
       - tipo: cierre
         titulo: Pide siempre el certificado *EN 15194*
         texto: Síguenos para saber más antes de elegir tu fatbike.
+        dice: Así que antes de comprar, pide siempre el certificado. Síguenos para saber más.
 
   # Usa la foto del proveedor: solo se publica cuando haya permiso.
   - nombre: v8
