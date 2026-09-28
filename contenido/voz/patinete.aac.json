@@ -1,0 +1,389 @@
+{
+ "audio": "patinete.aac",
+ "palabras": [
+  {
+   "palabra": "Fatbike",
+   "inicio": 0.0,
+   "fin": 1.32,
+   "confianza": 0.401
+  },
+  {
+   "palabra": "o",
+   "inicio": 1.32,
+   "fin": 1.62,
+   "confianza": 0.844
+  },
+  {
+   "palabra": "patinete",
+   "inicio": 1.62,
+   "fin": 1.96,
+   "confianza": 0.885
+  },
+  {
+   "palabra": "eléctrico,",
+   "inicio": 1.96,
+   "fin": 2.48,
+   "confianza": 0.94
+  },
+  {
+   "palabra": "te",
+   "inicio": 3.14,
+   "fin": 3.4,
+   "confianza": 0.823
+  },
+  {
+   "palabra": "lo",
+   "inicio": 3.4,
+   "fin": 3.52,
+   "confianza": 0.89
+  },
+  {
+   "palabra": "resumimos",
+   "inicio": 3.52,
+   "fin": 3.96,
+   "confianza": 0.979
+  },
+  {
+   "palabra": "en",
+   "inicio": 3.96,
+   "fin": 4.14,
+   "confianza": 0.987
+  },
+  {
+   "palabra": "30",
+   "inicio": 4.14,
+   "fin": 4.38,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "segundos.",
+   "inicio": 4.38,
+   "fin": 4.82,
+   "confianza": 0.913
+  },
+  {
+   "palabra": "Estabilidad.",
+   "inicio": 5.86,
+   "fin": 6.58,
+   "confianza": 0.939
+  },
+  {
+   "palabra": "Las",
+   "inicio": 7.44,
+   "fin": 7.96,
+   "confianza": 0.95
+  },
+  {
+   "palabra": "ruedas",
+   "inicio": 7.96,
+   "fin": 8.22,
+   "confianza": 0.99
+  },
+  {
+   "palabra": "de",
+   "inicio": 8.22,
+   "fin": 8.36,
+   "confianza": 0.96
+  },
+  {
+   "palabra": "4",
+   "inicio": 8.36,
+   "fin": 8.6,
+   "confianza": 0.654
+  },
+  {
+   "palabra": "pulgadas",
+   "inicio": 8.6,
+   "fin": 9.14,
+   "confianza": 0.97
+  },
+  {
+   "palabra": "agarran",
+   "inicio": 9.14,
+   "fin": 9.92,
+   "confianza": 0.946
+  },
+  {
+   "palabra": "mucho",
+   "inicio": 9.92,
+   "fin": 10.22,
+   "confianza": 0.987
+  },
+  {
+   "palabra": "más",
+   "inicio": 10.22,
+   "fin": 10.42,
+   "confianza": 0.911
+  },
+  {
+   "palabra": "que",
+   "inicio": 10.42,
+   "fin": 10.54,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "las",
+   "inicio": 10.54,
+   "fin": 10.68,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "ruedas",
+   "inicio": 10.68,
+   "fin": 10.9,
+   "confianza": 0.758
+  },
+  {
+   "palabra": "pequeñas",
+   "inicio": 10.9,
+   "fin": 11.32,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "de",
+   "inicio": 11.32,
+   "fin": 11.42,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "un",
+   "inicio": 11.42,
+   "fin": 11.5,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "patinete.",
+   "inicio": 11.5,
+   "fin": 11.98,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "Comodidad.",
+   "inicio": 12.6,
+   "fin": 13.22,
+   "confianza": 0.989
+  },
+  {
+   "palabra": "Vas",
+   "inicio": 14.32,
+   "fin": 14.72,
+   "confianza": 0.404
+  },
+  {
+   "palabra": "sentado",
+   "inicio": 14.72,
+   "fin": 15.26,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "en",
+   "inicio": 15.26,
+   "fin": 15.8,
+   "confianza": 0.723
+  },
+  {
+   "palabra": "la",
+   "inicio": 15.8,
+   "fin": 15.9,
+   "confianza": 0.901
+  },
+  {
+   "palabra": "rueda",
+   "inicio": 15.9,
+   "fin": 16.18,
+   "confianza": 0.967
+  },
+  {
+   "palabra": "ancha",
+   "inicio": 16.18,
+   "fin": 16.5,
+   "confianza": 0.609
+  },
+  {
+   "palabra": "absorbe",
+   "inicio": 16.5,
+   "fin": 16.9,
+   "confianza": 0.908
+  },
+  {
+   "palabra": "batches",
+   "inicio": 16.9,
+   "fin": 17.42,
+   "confianza": 0.883
+  },
+  {
+   "palabra": "y",
+   "inicio": 17.42,
+   "fin": 17.66,
+   "confianza": 0.983
+  },
+  {
+   "palabra": "adoquines.",
+   "inicio": 17.66,
+   "fin": 18.14,
+   "confianza": 0.7
+  },
+  {
+   "palabra": "Autonomía.",
+   "inicio": 19.44,
+   "fin": 20.16,
+   "confianza": 0.969
+  },
+  {
+   "palabra": "Una",
+   "inicio": 20.7,
+   "fin": 20.9,
+   "confianza": 0.971
+  },
+  {
+   "palabra": "fatbike",
+   "inicio": 20.9,
+   "fin": 21.42,
+   "confianza": 0.583
+  },
+  {
+   "palabra": "suele",
+   "inicio": 21.42,
+   "fin": 21.86,
+   "confianza": 0.94
+  },
+  {
+   "palabra": "llegar",
+   "inicio": 21.86,
+   "fin": 22.1,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "bastante",
+   "inicio": 22.1,
+   "fin": 22.42,
+   "confianza": 0.952
+  },
+  {
+   "palabra": "más",
+   "inicio": 22.42,
+   "fin": 22.78,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "lejos",
+   "inicio": 22.78,
+   "fin": 23.18,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "con",
+   "inicio": 23.18,
+   "fin": 23.44,
+   "confianza": 0.954
+  },
+  {
+   "palabra": "una",
+   "inicio": 23.44,
+   "fin": 23.62,
+   "confianza": 0.972
+  },
+  {
+   "palabra": "carga,",
+   "inicio": 23.62,
+   "fin": 23.9,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "y",
+   "inicio": 24.52,
+   "fin": 24.78,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "si",
+   "inicio": 24.78,
+   "fin": 24.88,
+   "confianza": 0.97
+  },
+  {
+   "palabra": "cumple",
+   "inicio": 24.88,
+   "fin": 25.22,
+   "confianza": 0.807
+  },
+  {
+   "palabra": "la",
+   "inicio": 25.22,
+   "fin": 25.36,
+   "confianza": 0.905
+  },
+  {
+   "palabra": "norma",
+   "inicio": 25.36,
+   "fin": 25.58,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "europea",
+   "inicio": 25.58,
+   "fin": 26.06,
+   "confianza": 0.978
+  },
+  {
+   "palabra": "legalmente",
+   "inicio": 26.06,
+   "fin": 26.78,
+   "confianza": 0.95
+  },
+  {
+   "palabra": "es",
+   "inicio": 26.78,
+   "fin": 26.9,
+   "confianza": 0.967
+  },
+  {
+   "palabra": "una",
+   "inicio": 26.9,
+   "fin": 27.0,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "bicicleta.",
+   "inicio": 27.0,
+   "fin": 27.64,
+   "confianza": 0.854
+  },
+  {
+   "palabra": "Tu",
+   "inicio": 27.64,
+   "fin": 28.36,
+   "confianza": 0.342
+  },
+  {
+   "palabra": "web",
+   "inicio": 28.36,
+   "fin": 28.54,
+   "confianza": 0.465
+  },
+  {
+   "palabra": "prefieres?",
+   "inicio": 28.54,
+   "fin": 29.14,
+   "confianza": 0.874
+  },
+  {
+   "palabra": "Cuéntanos",
+   "inicio": 29.4,
+   "fin": 29.7,
+   "confianza": 0.894
+  },
+  {
+   "palabra": "en",
+   "inicio": 29.7,
+   "fin": 29.88,
+   "confianza": 0.748
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 29.88,
+   "fin": 30.32,
+   "confianza": 0.938
+  }
+ ]
+}

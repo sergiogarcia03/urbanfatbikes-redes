@@ -21,6 +21,7 @@ De momento funciona con **Instagram**. TikTok vendrá más adelante.
 | `tarjetas.yaml` y `tarjetas.py` | Las tarjetas de texto con el diseño de la marca: se escriben en `tarjetas.yaml` y el programa crea la imagen |
 | `reels.py` | Convierte las tarjetas con `reel: sí` en reels animados (`contenido/reel-<nombre>.mp4`) |
 | `musica.py` | Compone por código la música original de los reels (`contenido/musica/`). Se ejecuta a mano |
+| `transcribir.py` | Pasa las grabaciones de voz a texto con Whisper (se ejecuta solo en GitHub) |
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |
@@ -76,9 +77,12 @@ En la pestaña **Actions → Publicar en redes → Run workflow**, elige:
 - **Voz en los reels:** graba el guion con la app de notas de voz (en uno o
   varios audios) y mándalo. Los audios van a `contenido/voz/` y a la tarjeta en
   `tarjetas.yaml` (`voz: [audio-1, audio-2]`, con la frase de cada diapositiva
-  en `dice`). El programa junta los audios, reparte las frases entre las
-  diapositivas, limpia la voz (ruido, golpes, eses, volumen), acorta las pausas
-  y baja la música mientras se habla.
+  en `dice`). Al subir un audio, el workflow «Transcribir voz» lo pasa a texto
+  palabra a palabra con Whisper (`contenido/voz/<audio>.json`). Con eso el
+  programa compara lo dicho con el guion y quita lo que sobra (lo dicho antes
+  de empezar, repeticiones, arranques en falso, muletillas); si una frase se
+  repite, se queda la última toma. Después limpia la voz (ruido, golpes, eses,
+  volumen), acorta las pausas y baja la música mientras se habla.
 - Las horas del calendario son **hora de España**.
 - Una publicación con `borrador: sí` no se publica hasta que se quita esa línea.
 - Si la fecha de una publicación pasó hace más de 24 horas sin publicarse

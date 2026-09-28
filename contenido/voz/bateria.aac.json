@@ -1,0 +1,431 @@
+{
+ "audio": "bateria.aac",
+ "palabras": [
+  {
+   "palabra": "Tres",
+   "inicio": 0.0,
+   "fin": 0.84,
+   "confianza": 0.556
+  },
+  {
+   "palabra": "consejos",
+   "inicio": 0.84,
+   "fin": 1.36,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "para",
+   "inicio": 1.36,
+   "fin": 1.58,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "que",
+   "inicio": 1.58,
+   "fin": 1.68,
+   "confianza": 0.95
+  },
+  {
+   "palabra": "la",
+   "inicio": 1.68,
+   "fin": 1.8,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "batería",
+   "inicio": 1.8,
+   "fin": 2.24,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "de",
+   "inicio": 2.24,
+   "fin": 2.38,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "tu",
+   "inicio": 2.38,
+   "fin": 2.48,
+   "confianza": 0.991
+  },
+  {
+   "palabra": "bici",
+   "inicio": 2.48,
+   "fin": 2.68,
+   "confianza": 0.82
+  },
+  {
+   "palabra": "eléctrica",
+   "inicio": 2.68,
+   "fin": 3.18,
+   "confianza": 0.945
+  },
+  {
+   "palabra": "dure",
+   "inicio": 3.18,
+   "fin": 3.74,
+   "confianza": 0.929
+  },
+  {
+   "palabra": "muchos",
+   "inicio": 3.74,
+   "fin": 3.96,
+   "confianza": 0.879
+  },
+  {
+   "palabra": "años.",
+   "inicio": 3.96,
+   "fin": 4.36,
+   "confianza": 0.998
+  },
+  {
+   "palabra": "Uno,",
+   "inicio": 5.22,
+   "fin": 5.78,
+   "confianza": 0.09
+  },
+  {
+   "palabra": "cargala",
+   "inicio": 6.62,
+   "fin": 6.9,
+   "confianza": 0.887
+  },
+  {
+   "palabra": "siempre",
+   "inicio": 6.9,
+   "fin": 7.24,
+   "confianza": 0.991
+  },
+  {
+   "palabra": "con",
+   "inicio": 7.24,
+   "fin": 7.48,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "el",
+   "inicio": 7.48,
+   "fin": 7.6,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "cargador",
+   "inicio": 7.6,
+   "fin": 7.92,
+   "confianza": 0.991
+  },
+  {
+   "palabra": "original.",
+   "inicio": 7.92,
+   "fin": 8.36,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "Dos,",
+   "inicio": 9.78,
+   "fin": 10.34,
+   "confianza": 0.942
+  },
+  {
+   "palabra": "no",
+   "inicio": 11.0,
+   "fin": 11.12,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "la",
+   "inicio": 11.12,
+   "fin": 11.22,
+   "confianza": 0.964
+  },
+  {
+   "palabra": "dejas",
+   "inicio": 11.22,
+   "fin": 11.46,
+   "confianza": 0.714
+  },
+  {
+   "palabra": "al",
+   "inicio": 11.46,
+   "fin": 11.66,
+   "confianza": 0.957
+  },
+  {
+   "palabra": "sol",
+   "inicio": 11.66,
+   "fin": 11.88,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "ni",
+   "inicio": 11.88,
+   "fin": 12.34,
+   "confianza": 0.841
+  },
+  {
+   "palabra": "con",
+   "inicio": 12.34,
+   "fin": 12.52,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "mucho",
+   "inicio": 12.52,
+   "fin": 12.76,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "frío.",
+   "inicio": 12.76,
+   "fin": 13.14,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "Mejor",
+   "inicio": 13.68,
+   "fin": 13.96,
+   "confianza": 0.998
+  },
+  {
+   "palabra": "cargala",
+   "inicio": 13.96,
+   "fin": 14.48,
+   "confianza": 0.865
+  },
+  {
+   "palabra": "y",
+   "inicio": 14.48,
+   "fin": 14.78,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "guardala",
+   "inicio": 14.78,
+   "fin": 15.12,
+   "confianza": 0.817
+  },
+  {
+   "palabra": "a",
+   "inicio": 15.12,
+   "fin": 15.24,
+   "confianza": 0.776
+  },
+  {
+   "palabra": "temperatura",
+   "inicio": 15.24,
+   "fin": 15.46,
+   "confianza": 0.967
+  },
+  {
+   "palabra": "ambiente.",
+   "inicio": 15.46,
+   "fin": 16.06,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "Tres,",
+   "inicio": 17.0,
+   "fin": 17.32,
+   "confianza": 0.946
+  },
+  {
+   "palabra": "si",
+   "inicio": 17.88,
+   "fin": 18.0,
+   "confianza": 0.938
+  },
+  {
+   "palabra": "no",
+   "inicio": 18.0,
+   "fin": 18.14,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "vas",
+   "inicio": 18.14,
+   "fin": 18.3,
+   "confianza": 0.972
+  },
+  {
+   "palabra": "a",
+   "inicio": 18.3,
+   "fin": 18.34,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "usar",
+   "inicio": 18.34,
+   "fin": 18.62,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "la",
+   "inicio": 18.62,
+   "fin": 18.8,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "bici",
+   "inicio": 18.8,
+   "fin": 19.0,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "en",
+   "inicio": 19.0,
+   "fin": 19.12,
+   "confianza": 0.885
+  },
+  {
+   "palabra": "semanas,",
+   "inicio": 19.12,
+   "fin": 19.58,
+   "confianza": 0.974
+  },
+  {
+   "palabra": "guardará",
+   "inicio": 20.06,
+   "fin": 20.4,
+   "confianza": 0.723
+  },
+  {
+   "palabra": "media",
+   "inicio": 20.4,
+   "fin": 20.66,
+   "confianza": 0.928
+  },
+  {
+   "palabra": "carga.",
+   "inicio": 20.66,
+   "fin": 21.06,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "No",
+   "inicio": 21.58,
+   "fin": 21.82,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "vacía",
+   "inicio": 21.82,
+   "fin": 22.26,
+   "confianza": 0.933
+  },
+  {
+   "palabra": "ni",
+   "inicio": 22.26,
+   "fin": 22.56,
+   "confianza": 0.802
+  },
+  {
+   "palabra": "al",
+   "inicio": 22.56,
+   "fin": 22.66,
+   "confianza": 0.979
+  },
+  {
+   "palabra": "cien",
+   "inicio": 22.66,
+   "fin": 22.8,
+   "confianza": 0.737
+  },
+  {
+   "palabra": "por",
+   "inicio": 22.8,
+   "fin": 23.02,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "cien.",
+   "inicio": 23.02,
+   "fin": 23.2,
+   "confianza": 0.889
+  },
+  {
+   "palabra": "Es",
+   "inicio": 23.9,
+   "fin": 24.08,
+   "confianza": 0.978
+  },
+  {
+   "palabra": "muy",
+   "inicio": 24.08,
+   "fin": 24.2,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "importante.",
+   "inicio": 24.2,
+   "fin": 24.62,
+   "confianza": 0.998
+  },
+  {
+   "palabra": "guarda",
+   "inicio": 24.62,
+   "fin": 25.44,
+   "confianza": 0.53
+  },
+  {
+   "palabra": "este",
+   "inicio": 25.44,
+   "fin": 25.62,
+   "confianza": 0.935
+  },
+  {
+   "palabra": "vídeo",
+   "inicio": 25.62,
+   "fin": 25.9,
+   "confianza": 0.815
+  },
+  {
+   "palabra": "y",
+   "inicio": 25.9,
+   "fin": 26.24,
+   "confianza": 0.861
+  },
+  {
+   "palabra": "compártelo",
+   "inicio": 26.24,
+   "fin": 27.42,
+   "confianza": 0.951
+  },
+  {
+   "palabra": "con",
+   "inicio": 27.42,
+   "fin": 27.68,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "quien",
+   "inicio": 27.68,
+   "fin": 27.8,
+   "confianza": 0.954
+  },
+  {
+   "palabra": "tenga",
+   "inicio": 27.8,
+   "fin": 28.18,
+   "confianza": 0.99
+  },
+  {
+   "palabra": "una",
+   "inicio": 28.18,
+   "fin": 28.44,
+   "confianza": 0.897
+  },
+  {
+   "palabra": "bici",
+   "inicio": 28.44,
+   "fin": 28.68,
+   "confianza": 0.818
+  },
+  {
+   "palabra": "eléctrica",
+   "inicio": 28.68,
+   "fin": 29.04,
+   "confianza": 0.95
+  }
+ ]
+}
