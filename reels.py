@@ -495,13 +495,22 @@ def preparar_voz_con_texto(tarjeta, textos):
 
     # Ajuste fino con la energía del sonido: Whisper a veces adelanta o alarga
     # las palabras; se recorta el silencio que haya en los bordes de cada trozo.
+    # Además, si junto a un corte se ha quitado una palabra, el corte se lleva al
+    # silencio más cercano: así no se oye el final o el principio de lo quitado.
     con_voz = [tramos_con_voz(f) for f in fuentes]
     for trozo in trozos:
         g, ini, fin = trozo[0], trozo[1], trozo[2]
         dentro = [(a, b) for a, b in con_voz[g] if b > ini and a < fin]
-        if dentro:
-            trozo[1] = max(ini, dentro[0][0] - 0.05)
-            trozo[2] = min(fin, dentro[-1][1] + 0.08)
+        if not dentro:
+            continue
+        if dentro[0][0] < ini and len(dentro) > 1:  # empieza a mitad de un sonido
+            dentro = dentro[1:]
+            ini = dentro[0][0] - 0.05
+        if dentro[-1][1] > fin + 0.08 and len(dentro) > 1:  # acaba a mitad de un sonido
+            dentro = dentro[:-1]
+            fin = dentro[-1][1] + 0.08
+        trozo[1] = max(ini, dentro[0][0] - 0.05)
+        trozo[2] = min(fin, dentro[-1][1] + 0.08)
 
     # Tartamudeos dentro de una palabra: se parte el trozo y se quita la repetición
     for g, desde, hasta in tartamudeos_internos(textos, fuentes, diapositiva_palabra):
