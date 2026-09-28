@@ -9,12 +9,17 @@ No usa inteligencia artificial.
 Si la tarjeta lleva "musica: archivo.mp3", se usa ese audio (de contenido/musica/).
 Tiene que ser música libre de derechos o con licencia para redes sociales.
 
+Si lleva "voz: archivo.m4a" (de contenido/voz/), el reel se ajusta a la grabación:
+cada frase (separada por un silencio) acompaña a una diapositiva, y la música
+baja sola mientras se habla. Hace falta una frase por diapositiva.
+
 Uso:
   python reels.py
 """
 
 import hashlib
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -28,6 +33,7 @@ from tarjetas import ANCHO, ALTO, TURQUESA, contenido, fondo, pie
 RAIZ = Path(__file__).parent
 CONTENIDO = RAIZ / "contenido"
 MUSICA = CONTENIDO / "musica"
+VOZ = CONTENIDO / "voz"
 HUELLAS = CONTENIDO / "reels.json"  # para no rehacer reels que no han cambiado
 
 ALTO_REEL = 1920
@@ -60,11 +66,73 @@ def numero_animado(datos, t):
     return {**datos, "numero": round(int(numero) * suave(t / CUENTA))}
 
 
+# --- Voz ----------------------------------------------------------------------
+
+ANTES_VOZ = 0.3  # segundos de vídeo antes de que empiece a hablar
+FILTRO_VOZ = "highpass=f=100,highpass=f=100"  # quita golpes y ruidos graves del móvil
+
+
+def frases(archivo):
+    """Devuelve los tramos (inicio, fin) en los que se habla, separados por silencios."""
+    salida = subprocess.run(
+        [imageio_ffmpeg.get_ffmpeg_exe(), "-hide_banner", "-i", str(archivo),
+         "-af", f"{FILTRO_VOZ},silencedetect=noise=-38dB:d=0.1", "-f", "null", "-"],
+        capture_output=True, text=True).stderr
+    inicios = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", salida)]
+    finales = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", salida)]
+    h, m, seg = re.search(r"Duration: (\d+):(\d+):([\d.]+)", salida).groups()
+    total = int(h) * 3600 + int(m) * 60 + float(seg)
+    # Pasa de silencios a tramos con voz
+    tramos, cursor = [], 0.0
+    for ini, fin in zip(inicios, finales + [total] * (len(inicios) - len(finales))):
+        if ini > cursor:
+            tramos.append((cursor, ini))
+        cursor = fin
+    if cursor < total:
+        tramos.append((cursor, total))
+    tramos = [t for t in tramos if t[1] - t[0] > 0.25]  # fuera golpes y chasquidos sueltos
+    # Une las pausas muy cortas (entre palabras de una misma frase)
+    unidos = []
+    for tramo in tramos:
+        if unidos and tramo[0] - unidos[-1][1] < 0.25:
+            unidos[-1] = (unidos[-1][0], tramo[1])
+        else:
+            unidos.append(tramo)
+    return unidos
+
+
+def tiempos_con_voz(tarjeta):
+    """Duración de cada diapositiva para que cada una acompañe a una frase."""
+    n = len(tarjeta["diapositivas"])
+    tramos = frases(VOZ / tarjeta["voz"])
+    # Si hay más tramos que diapositivas (pausas dentro de una frase), une los más cercanos
+    while len(tramos) > n:
+        i = min(range(len(tramos) - 1), key=lambda k: tramos[k + 1][0] - tramos[k][1])
+        tramos[i:i + 2] = [(tramos[i][0], tramos[i + 1][1])]
+    if len(tramos) < n:
+        raise SystemExit(f"❌ {tarjeta['voz']}: tiene {len(tramos)} frases y el reel {n} diapositivas. "
+                         "Graba una frase por diapositiva, con una pausa entre frases.")
+    # El silencio antes de la primera frase se recorta (ver generar)
+    corte = tramos[0][0]
+    cambios = [0.0] + [ANTES_VOZ + ini - corte - 0.25 for ini, _ in tramos[1:]]
+    final = ANTES_VOZ + tramos[-1][1] - corte + (2.0 if tarjeta["diapositivas"][-1]["tipo"] == "cierre" else 1.2)
+    return [max(1.2, b - a) for a, b in zip(cambios, cambios[1:] + [final])]
+
+
+def tiempos(tarjeta):
+    if tarjeta.get("voz"):
+        return tiempos_con_voz(tarjeta)
+    return [duracion(d) for d in tarjeta["diapositivas"]]
+
+
+# --- Vídeo ----------------------------------------------------------------------
+
+
 def fotogramas(tarjeta):
     diapositivas = tarjeta["diapositivas"]
     total = len(diapositivas)
-    tiempos = [duracion(d) for d in diapositivas]
-    duracion_total = sum(tiempos)
+    tiempos_ = tiempos(tarjeta)
+    duracion_total = sum(tiempos_)
     transcurrido = 0.0
     # Pie con el logo y @urbanfatbikes (sin numeración), a la altura de la diapositiva
     capa_pie = Image.new("RGBA", (ANCHO, ALTO), (0, 0, 0, 0))
@@ -74,10 +142,10 @@ def fotogramas(tarjeta):
         f.alpha_composite(capa_pie, (0, ARRIBA))
     for indice, datos in enumerate(diapositivas):
         capa_fija = None if datos["tipo"] == "dato" else contenido(datos)
-        cuadros = round(tiempos[indice] * FPS)
+        cuadros = round(tiempos_[indice] * FPS)
         for cuadro in range(cuadros):
             t = cuadro / FPS
-            restante = tiempos[indice] - t
+            restante = tiempos_[indice] - t
 
             # Fondo: fundido con el de la siguiente diapositiva al salir
             imagen = fondos[indice]
@@ -105,7 +173,7 @@ def fotogramas(tarjeta):
             d.rounded_rectangle((60, 150, 60 + round((ANCHO - 120) * progreso), 158), radius=4, fill=TURQUESA)
             imagen.alpha_composite(barra)
             yield imagen.convert("RGB")
-        transcurrido += tiempos[indice]
+        transcurrido += tiempos_[indice]
 
 
 def huella(tarjeta):
@@ -113,25 +181,40 @@ def huella(tarjeta):
     h = hashlib.sha256(json.dumps(tarjeta, sort_keys=True, ensure_ascii=False).encode())
     for archivo in (Path(__file__), Path(tarjetas.__file__)):
         h.update(archivo.read_bytes())
-    for clave in ("imagen", "musica"):
+    carpetas = {"imagen": CONTENIDO, "musica": MUSICA, "voz": VOZ}
+    for clave, carpeta in carpetas.items():
         for datos in [tarjeta] + tarjeta["diapositivas"]:
             if datos.get(clave):
-                carpeta = MUSICA if clave == "musica" else CONTENIDO
                 h.update((carpeta / datos[clave]).read_bytes())
     return h.hexdigest()
 
 
 def generar(tarjeta, destino):
-    segundos = sum(duracion(d) for d in tarjeta["diapositivas"])
+    segundos = sum(tiempos(tarjeta))
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     orden = [ffmpeg, "-y", "-loglevel", "error",
              "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{ANCHO}x{ALTO_REEL}", "-r", str(FPS), "-i", "-"]
     if tarjeta.get("musica"):
-        orden += ["-i", str(MUSICA / tarjeta["musica"]), "-af", f"afade=t=out:st={max(0, segundos - 1.5):.2f}:d=1.5"]
+        orden += ["-stream_loop", "-1", "-i", str(MUSICA / tarjeta["musica"])]
     else:
         # Pista de audio en silencio: Instagram la espera aunque no haya música.
         orden += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
-    orden += ["-map", "0:v", "-map", "1:a", "-shortest",
+    final = f"afade=t=out:st={max(0, segundos - 1.5):.2f}:d=1.5"
+    if tarjeta.get("voz"):
+        retardo = round(ANTES_VOZ * 1000)
+        corte = frases(VOZ / tarjeta["voz"])[0][0]  # silencio antes de empezar a hablar
+        orden += ["-i", str(VOZ / tarjeta["voz"]), "-filter_complex",
+                  f"[2:a]atrim=start={corte:.3f},asetpts=PTS-STARTPTS,{FILTRO_VOZ},acompressor=threshold=-20dB:ratio=3:attack=5:release=120,"
+                  f"loudnorm=I=-16:TP=-1.5,aformat=sample_rates=44100:channel_layouts=stereo,"
+                  f"adelay={retardo}|{retardo},apad,asplit=2[v1][v2];"
+                  # La música baja sola mientras se habla
+                  f"[1:a]aformat=sample_rates=44100:channel_layouts=stereo,volume=0.5[m];"
+                  f"[m][v1]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=350[mb];"
+                  f"[mb][v2]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5,{final}[a]",
+                  "-map", "0:v", "-map", "[a]"]
+    else:
+        orden += ["-af", final, "-map", "0:v", "-map", "1:a"]
+    orden += ["-t", f"{segundos:.2f}",
               "-c:v", "libx264", "-profile:v", "high", "-pix_fmt", "yuv420p", "-crf", "20", "-g", "60",
               "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-movflags", "+faststart", str(destino)]
     proceso = subprocess.Popen(orden, stdin=subprocess.PIPE)
