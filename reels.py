@@ -488,26 +488,33 @@ def preparar_voz_con_texto(tarjeta, textos):
             fin = min(p["fin"] + 0.08, (p["fin"] + siguiente_ini) / 2)
             diap = diapositiva_palabra[(g, k)]
             seguido = k > 0 and (g, k - 1) in diapositiva_palabra
+            palabra_ = (p["inicio"], p["fin"])
             if trozos and seguido and trozos[-1][0] == g and trozos[-1][3] == diap:
                 trozos[-1][2] = fin
+                trozos[-1][5] = palabra_
             else:
-                trozos.append([g, ini, fin, diap])
+                # [grabación, inicio, fin, diapositiva, primera palabra, última palabra]
+                trozos.append([g, ini, fin, diap, palabra_, palabra_])
 
     # Ajuste fino con la energía del sonido: Whisper a veces adelanta o alarga
     # las palabras; se recorta el silencio que haya en los bordes de cada trozo.
     # Además, si junto a un corte se ha quitado una palabra, el corte se lleva al
     # silencio más cercano: así no se oye el final o el principio de lo quitado.
+    # Solo se mueve si la palabra que se queda está casi toda al otro lado del
+    # silencio; si va pegada a lo quitado, se respeta (mejor que comérsela).
     con_voz = [tramos_con_voz(f) for f in fuentes]
     for trozo in trozos:
         g, ini, fin = trozo[0], trozo[1], trozo[2]
         dentro = [(a, b) for a, b in con_voz[g] if b > ini and a < fin]
         if not dentro:
             continue
-        if dentro[0][0] < ini and len(dentro) > 1:  # empieza a mitad de un sonido
-            dentro = dentro[1:]
+        mitad_primera = (trozo[4][0] + trozo[4][1]) / 2
+        mitad_ultima = (trozo[5][0] + trozo[5][1]) / 2
+        if dentro[0][0] < ini and len(dentro) > 1 and dentro[1][0] <= mitad_primera:
+            dentro = dentro[1:]  # empieza a mitad de un sonido que era de lo quitado
             ini = dentro[0][0] - 0.05
-        if dentro[-1][1] > fin + 0.08 and len(dentro) > 1:  # acaba a mitad de un sonido
-            dentro = dentro[:-1]
+        if dentro[-1][1] > fin + 0.08 and len(dentro) > 1 and dentro[-2][1] >= mitad_ultima:
+            dentro = dentro[:-1]  # acaba a mitad de un sonido que era de lo quitado
             fin = dentro[-1][1] + 0.08
         trozo[1] = max(ini, dentro[0][0] - 0.05)
         trozo[2] = min(fin, dentro[-1][1] + 0.08)
@@ -518,16 +525,16 @@ def preparar_voz_con_texto(tarjeta, textos):
         nuevos = []
         for trozo in trozos:
             if trozo[0] == g and trozo[1] < desde < trozo[2]:
-                nuevos.append([g, trozo[1], desde, trozo[3]])
+                nuevos.append([g, trozo[1], desde] + trozo[3:])
                 if hasta < trozo[2]:
-                    nuevos.append([g, hasta, trozo[2], trozo[3]])
+                    nuevos.append([g, hasta, trozo[2]] + trozo[3:])
             else:
                 nuevos.append(trozo)
         trozos = nuevos
 
     salida, inicios, posicion = bytearray(), [], 0.0
     fundido = int(0.012 * FM_VOZ)  # 12 ms de fundido en cada corte, sin chasquidos
-    for n, (g, ini, fin, diap) in enumerate(trozos):
+    for n, (g, ini, fin, diap, _, _) in enumerate(trozos):
         if len(inicios) <= diap:
             inicios.append(posicion)
         muestras = fuentes[g]
