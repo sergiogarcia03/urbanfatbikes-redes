@@ -1,0 +1,43 @@
+name: Transcribir voz
+
+on:
+  # Cada vez que llega una grabación nueva, en cualquier rama
+  push:
+    paths:
+      - "contenido/voz/**"
+      - "!contenido/voz/*.json"
+      - "transcribir.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: transcribir-${{ github.ref }}
+
+jobs:
+  transcribir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # El modelo de voz se guarda entre ejecuciones para no descargarlo cada vez
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-small
+
+      - run: pip install faster-whisper
+
+      - run: python transcribir.py
+
+      - name: Guardar transcripciones
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contenido/voz
+          git diff --cached --quiet || (git commit -m "Transcribir grabaciones de voz" && git pull --rebase && git push)
