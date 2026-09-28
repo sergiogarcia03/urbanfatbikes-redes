@@ -22,6 +22,7 @@ De momento funciona con **Instagram**. TikTok vendrá más adelante.
 | `reels.py` | Convierte las tarjetas con `reel: sí` en reels animados (`contenido/reel-<nombre>.mp4`) |
 | `musica.py` | Compone por código la música original de los reels (`contenido/musica/`). Se ejecuta a mano |
 | `transcribir.py` | Pasa las grabaciones de voz a texto con Whisper (se ejecuta solo en GitHub) |
+| `historias.yaml` y `historias.py` | Historias: la de "nuevo post" de cada publicación (1 h después) y las de `historias.yaml` (4 por semana) |
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |
@@ -84,6 +85,9 @@ En la pestaña **Actions → Publicar en redes → Run workflow**, elige:
   repite, se queda la última toma. Después limpia la voz (ruido, golpes, eses,
   volumen), acorta las pausas y baja la música mientras se habla.
 - Las horas del calendario son **hora de España**.
+- Horarios de más actividad en España: **reels a las 20:30**, fotos y carruseles
+  a las 14:00, historias extra martes y jueves a las 21:00 y fines de semana a
+  las 12:30. Cada publicación lleva su historia "nuevo post" una hora después.
 - Una publicación con `borrador: sí` no se publica hasta que se quita esa línea.
 - Si la fecha de una publicación pasó hace más de 24 horas sin publicarse
   (por ejemplo, porque el calendario se aprobó tarde), no sale sola: hay que

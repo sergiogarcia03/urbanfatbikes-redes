@@ -70,6 +70,10 @@ class Instagram:
                 params["caption"] = texto
         return self._llamar("POST", f"{self.user_id}/media", **params)["id"]
 
+    def contenedor_historia(self, url, video=False):
+        clave = "video_url" if video else "image_url"
+        return self._llamar("POST", f"{self.user_id}/media", media_type="STORIES", **{clave: url})["id"]
+
     def contenedor_carrusel(self, hijos, texto=None):
         params = {"media_type": "CAROUSEL", "children": ",".join(hijos)}
         if texto:

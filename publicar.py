@@ -26,6 +26,9 @@ from instagram import Instagram, InstagramError
 
 RAIZ = Path(__file__).parent
 CALENDARIO = RAIZ / "calendario.yaml"
+HISTORIAS = RAIZ / "historias.yaml"
+# La historia "nuevo post" de cada publicación sale este tiempo después
+RETRASO_HISTORIA = timedelta(hours=1)
 PUBLICADOS = RAIZ / "publicados.json"
 ZONA = ZoneInfo("Europe/Madrid")
 
@@ -39,8 +42,31 @@ MAX_RETRASO = timedelta(hours=24)
 
 
 def cargar_calendario():
+    """Publicaciones del calendario más todas las historias.
+
+    Cada publicación (que no sea borrador) lleva su historia "nuevo post" una hora
+    después, salvo que tenga "historia: no". Las demás historias están en
+    historias.yaml. Las imágenes de las historias las crea historias.py.
+    """
     datos = yaml.safe_load(CALENDARIO.read_text(encoding="utf-8")) or {}
-    return datos.get("publicaciones") or []
+    publicaciones = list(datos.get("publicaciones") or [])
+    lista = list(publicaciones)
+    for p in publicaciones:
+        if p.get("borrador") or p.get("historia") is False or not p.get("id"):
+            continue
+        try:
+            cuando = fecha_de(p) + RETRASO_HISTORIA
+        except (KeyError, ValueError):
+            continue
+        lista.append({"id": f"{p['id']}-historia", "tipo": "historia",
+                      "fecha": cuando.strftime("%Y-%m-%d %H:%M"),
+                      "archivos": [f"historias/nuevo-{p['id']}.jpg"]})
+    if HISTORIAS.exists():
+        extra = yaml.safe_load(HISTORIAS.read_text(encoding="utf-8")) or {}
+        for h in extra.get("historias") or []:
+            lista.append({"id": f"historia-{h.get('id')}", "tipo": "historia", "fecha": h.get("fecha"),
+                          "borrador": h.get("borrador"), "archivos": [f"historias/{h.get('id')}.jpg"]})
+    return sorted(lista, key=lambda p: str(p.get("fecha")))
 
 
 def cargar_publicados():
@@ -75,6 +101,14 @@ def problemas(publicacion):
     archivos = archivos_de(publicacion)
     if not archivos:
         errores.append("no tiene archivos")
+    if publicacion.get("tipo") == "historia":
+        # Las historias ya se crean en formato vertical listas para Instagram
+        if len(archivos) != 1:
+            errores.append("una historia lleva un solo archivo")
+        for archivo in archivos:
+            if not (RAIZ / "contenido" / archivo).exists():
+                errores.append(f"{archivo}: no existe (python historias.py)")
+        return errores
     if len(archivos) > MAX_CARRUSEL:
         errores.append(f"un carrusel admite como máximo {MAX_CARRUSEL} archivos")
     for archivo in archivos:
@@ -100,7 +134,7 @@ def url_publica(archivo):
     if archivo.startswith("http"):
         return archivo
     base = os.environ["MEDIA_BASE_URL"].rstrip("/")
-    if es_video(archivo):
+    if es_video(archivo) or archivo.startswith("historias/"):
         return f"{base}/contenido/{quote(archivo)}"
     # Las fotos se publican desde su copia adaptada (ver adaptar.py).
     return f"{base}/{quote(ruta_adaptada(archivo).relative_to(RAIZ).as_posix())}"
@@ -113,6 +147,11 @@ def es_video(archivo):
 def publicar_en_instagram(ig, publicacion):
     archivos = archivos_de(publicacion)
     texto = publicacion.get("texto")
+
+    if publicacion.get("tipo") == "historia":
+        contenedor = ig.contenedor_historia(url_publica(archivos[0]), video=es_video(archivos[0]))
+        ig.esperar(contenedor)
+        return ig.publicar(contenedor)
 
     if len(archivos) == 1:
         archivo = archivos[0]
