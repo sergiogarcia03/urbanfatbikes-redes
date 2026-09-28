@@ -1,0 +1,119 @@
+# Historias de Instagram con el diseño de urbanfatbikes (además de la historia
+# "nuevo post" que cada publicación lleva sola).
+#
+# 4 por semana: martes y jueves a las 21:00, sábado y domingo a las 12:30.
+# Cada una tiene un id, su fecha y una diapositiva con los mismos tipos que
+# tarjetas.yaml (portada, dato, lista). historias.py crea la imagen.
+
+historias:
+  - id: sabias-legal
+    fecha: "2026-10-06 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: ¿Sabías que…?
+      titulo: Una fatbike eléctrica *no tiene por qué* ser un ciclomotor
+      subtitulo: Si cumple la norma EN 15194, legalmente es una bicicleta.
+      tamano: 100
+
+  - id: dato-25
+    fecha: "2026-10-08 21:00"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato
+      numero: 25
+      unidad: km/h
+      texto: Hasta aquí te ayuda el motor de una bicicleta eléctrica en Europa.
+
+  - id: plan-sabado
+    fecha: "2026-10-10 12:30"
+    diapositiva:
+      tipo: lista
+      titulo: Plan de *sábado*
+      puntos:
+        - Ruta por el paseo marítimo
+        - Parada para un café
+        - Vuelta a casa sin sudar
+
+  - id: proximamente
+    fecha: "2026-10-11 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Próximamente
+      titulo: Llegamos a *España*
+      subtitulo: Activa las notificaciones para no perderte nada.
+      logo: sí
+
+  - id: antes-de-salir
+    fecha: "2026-10-13 21:00"
+    diapositiva:
+      tipo: lista
+      titulo: Antes de salir, *revisa*
+      puntos:
+        - Presión de las ruedas
+        - Frenos
+        - Luces
+        - Carga de la batería
+
+  - id: frio-bateria
+    fecha: "2026-10-15 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: ¿Sabías que…?
+      titulo: Con frío, la batería *rinde menos*
+      subtitulo: Es normal en las baterías de litio. En invierno, guárdala dentro de casa.
+      tamano: 100
+
+  - id: casco
+    fecha: "2026-10-17 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Seguridad
+      titulo: Casco, *siempre*
+      subtitulo: Aunque no siempre sea obligatorio, es tu mejor protección.
+      tamano: 120
+
+  - id: aviso-patinete
+    fecha: "2026-10-18 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Mañana, nuevo reel
+      titulo: ¿Fatbike o *patinete*?
+      subtitulo: Mañana a las 20:30 te lo contamos.
+      tamano: 120
+
+  - id: dato-48v
+    fecha: "2026-10-20 21:00"
+    diapositiva:
+      tipo: dato
+      antetitulo: La V8
+      numero: 48
+      unidad: voltios
+      texto: Batería de litio de 48 V y 15,6 Ah.
+
+  - id: sabias-ruedas
+    fecha: "2026-10-22 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: ¿Sabías que…?
+      titulo: Las ruedas anchas *absorben* los baches
+      subtitulo: Por eso una fatbike es tan cómoda sobre adoquines.
+      tamano: 100
+
+  - id: limpieza
+    fecha: "2026-10-24 12:30"
+    diapositiva:
+      tipo: lista
+      titulo: Tu fatbike, *limpia*
+      puntos:
+        - Agua y jabón suave
+        - Nada de agua a presión
+        - Seca y engrasa la cadena
+
+  - id: que-quieres-ver
+    fecha: "2026-10-25 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te escuchamos
+      titulo: ¿Qué quieres *ver?*
+      subtitulo: Escríbenos por mensaje y lo preparamos.
+      tamano: 120

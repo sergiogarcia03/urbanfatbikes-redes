@@ -10,6 +10,10 @@
 #   texto:    el texto de la publicación, con sus hashtags
 #   borrador: (opcional) sí = todavía no se publica
 #
+# Horas de más actividad en España: reels a las 20:30, fotos y carruseles a las 14:00.
+# Cada publicación lleva además su historia "nuevo post" una hora después
+# (para no ponerla: historia: no). Las demás historias van en historias.yaml.
+#
 # El programa revisa el calendario cada hora, así que la publicación sale
 # en la primera revisión después de la fecha indicada (puede tardar hasta 1 hora).
 # Si una fecha pasó hace más de 24 horas sin publicarse, no sale sola:
@@ -28,7 +32,7 @@
 publicaciones:
 
   - id: presentacion
-    fecha: "2026-10-05 19:00"
+    fecha: "2026-10-05 14:00"
     archivos:
       - tarjeta-presentacion-1.jpg
     texto: |
@@ -43,7 +47,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #movilidadurbana #ebike
 
   - id: reel-legal
-    fecha: "2026-10-07 19:00"
+    fecha: "2026-10-07 20:30"
     archivos:
       - reel-legal.mp4
     texto: |
@@ -59,7 +63,7 @@ publicaciones:
 
   # Pendiente del permiso del proveedor para usar su foto.
   - id: presentamos-v8
-    fecha: "2026-10-09 19:00"
+    fecha: "2026-10-09 14:00"
     borrador: sí
     archivos:
       - tarjeta-v8-1.jpg
@@ -79,7 +83,7 @@ publicaciones:
 
   # Pendiente del permiso del proveedor para usar su vídeo.
   - id: detalles-v8
-    fecha: "2026-10-12 19:00"
+    fecha: "2026-10-12 20:30"
     borrador: sí
     archivos:
       - v8-detalles.mp4
@@ -93,7 +97,7 @@ publicaciones:
       #urbanfatbikes #V8 #fatbike #ebike #bicicletaelectrica
 
   - id: que-incluye-v8
-    fecha: "2026-10-14 19:00"
+    fecha: "2026-10-14 14:00"
     archivos:
       - tarjeta-incluye-1.jpg
       - tarjeta-incluye-2.jpg
@@ -109,7 +113,7 @@ publicaciones:
       #urbanfatbikes #V8 #fatbike #fatbikeelectrica #ebike
 
   - id: reel-ficha-v8
-    fecha: "2026-10-16 19:00"
+    fecha: "2026-10-16 20:30"
     archivos:
       - reel-ficha.mp4
     texto: |
@@ -122,7 +126,7 @@ publicaciones:
       #urbanfatbikes #V8 #fatbike #fichatecnica #bicicletaelectrica #ebike
 
   - id: reel-patinete
-    fecha: "2026-10-19 19:00"
+    fecha: "2026-10-19 20:30"
     archivos:
       - reel-patinete.mp4
     texto: |
@@ -135,7 +139,7 @@ publicaciones:
       #urbanfatbikes #fatbike #patineteelectrico #movilidadurbana #bicicletaelectrica
 
   - id: que-es-fatbike
-    fecha: "2026-10-21 19:00"
+    fecha: "2026-10-21 14:00"
     archivos:
       - tarjeta-que-es-1.jpg
       - tarjeta-que-es-2.jpg
@@ -151,7 +155,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-10-23 19:00"
+    fecha: "2026-10-23 20:30"
     archivos:
       - reel-bateria.mp4
     texto: |

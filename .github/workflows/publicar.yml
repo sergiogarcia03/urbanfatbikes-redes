@@ -11,6 +11,8 @@ on:
       - "contenido/**"
       - "!contenido/instagram/**"
       - "tarjetas.yaml"
+      - "historias.yaml"
+      - "calendario.yaml"
   # Permite lanzarlo a mano desde la pestaña "Actions" de GitHub.
   workflow_dispatch:
     inputs:
@@ -48,6 +50,7 @@ jobs:
           python tarjetas.py
           python reels.py
           python adaptar.py
+          python historias.py
           git add contenido
           git diff --cached --quiet || (git commit -m "Preparar tarjetas y fotos para Instagram" && git pull --rebase && git push)
           # Instagram descargará las fotos de esta versión exacta del repositorio.
