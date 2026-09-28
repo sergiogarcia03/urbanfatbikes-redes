@@ -10,7 +10,8 @@
 #   texto:    el texto de la publicación, con sus hashtags
 #   borrador: (opcional) sí = todavía no se publica
 #
-# Horas de más actividad en España: reels a las 20:30, fotos y carruseles a las 14:00.
+# Horas de más actividad en España: reels a las 19:00, fotos y carruseles a las 13:30
+# (pronto para que dé tiempo a comentar y escribir; responder la primera hora).
 # Cada publicación lleva además su historia "nuevo post" una hora después
 # (para no ponerla: historia: no). Las demás historias van en historias.yaml.
 #
@@ -32,7 +33,7 @@
 publicaciones:
 
   - id: presentacion
-    fecha: "2026-10-05 14:00"
+    fecha: "2026-10-05 13:30"
     archivos:
       - tarjeta-presentacion-1.jpg
     texto: |
@@ -44,10 +45,10 @@ publicaciones:
 
       Síguenos para no perderte nada.
 
-      #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #movilidadurbana #ebike
+      #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #movilidadurbana
 
   - id: reel-legal
-    fecha: "2026-10-07 20:30"
+    fecha: "2026-10-07 19:00"
     archivos:
       - reel-legal.mp4
     texto: |
@@ -59,11 +60,11 @@ publicaciones:
 
       Antes de comprar, pide siempre el certificado. Guarda este vídeo y compártelo con quien esté pensando en comprarse una.
 
-      #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT #movilidadurbana
+      #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT
 
   # Pendiente del permiso del proveedor para usar su foto.
   - id: presentamos-v8
-    fecha: "2026-10-09 14:00"
+    fecha: "2026-10-09 13:30"
     borrador: sí
     archivos:
       - tarjeta-v8-1.jpg
@@ -79,11 +80,11 @@ publicaciones:
 
       Ensayada por TÜV Rheinland según la norma europea EN 15194.
 
-      #urbanfatbikes #V8 #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
+      #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   # Pendiente del permiso del proveedor para usar su vídeo.
   - id: detalles-v8
-    fecha: "2026-10-12 20:30"
+    fecha: "2026-10-12 19:00"
     borrador: sí
     archivos:
       - v8-detalles.mp4
@@ -94,10 +95,10 @@ publicaciones:
 
       ¿Cuál es tu favorito? Te leemos en comentarios.
 
-      #urbanfatbikes #V8 #fatbike #ebike #bicicletaelectrica
+      #urbanfatbikes #fatbike #ebike #bicicletaelectrica
 
   - id: que-incluye-v8
-    fecha: "2026-10-14 14:00"
+    fecha: "2026-10-14 13:30"
     archivos:
       - tarjeta-incluye-1.jpg
       - tarjeta-incluye-2.jpg
@@ -110,10 +111,10 @@ publicaciones:
 
       Y de serie: llave NFC, alarma, localizador compatible con iPhone, frenos de disco hidráulicos y doble suspensión.
 
-      #urbanfatbikes #V8 #fatbike #fatbikeelectrica #ebike
+      #urbanfatbikes #fatbike #fatbikeelectrica #ebike
 
   - id: reel-ficha-v8
-    fecha: "2026-10-16 20:30"
+    fecha: "2026-10-16 19:00"
     archivos:
       - reel-ficha.mp4
     texto: |
@@ -123,10 +124,10 @@ publicaciones:
 
       Guárdalo para tenerlo a mano. ¿Alguna duda? Pregúntanos en comentarios.
 
-      #urbanfatbikes #V8 #fatbike #fichatecnica #bicicletaelectrica #ebike
+      #urbanfatbikes #fatbike #fichatecnica #bicicletaelectrica #ebike
 
   - id: reel-patinete
-    fecha: "2026-10-19 20:30"
+    fecha: "2026-10-19 19:00"
     archivos:
       - reel-patinete.mp4
     texto: |
@@ -139,7 +140,7 @@ publicaciones:
       #urbanfatbikes #fatbike #patineteelectrico #movilidadurbana #bicicletaelectrica
 
   - id: que-es-fatbike
-    fecha: "2026-10-21 14:00"
+    fecha: "2026-10-21 13:30"
     archivos:
       - tarjeta-que-es-1.jpg
       - tarjeta-que-es-2.jpg
@@ -155,7 +156,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-10-23 20:30"
+    fecha: "2026-10-23 19:00"
     archivos:
       - reel-bateria.mp4
     texto: |

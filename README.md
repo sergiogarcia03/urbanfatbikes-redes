@@ -85,8 +85,8 @@ En la pestaña **Actions → Publicar en redes → Run workflow**, elige:
   repite, se queda la última toma. Después limpia la voz (ruido, golpes, eses,
   volumen), acorta las pausas y baja la música mientras se habla.
 - Las horas del calendario son **hora de España**.
-- Horarios de más actividad en España: **reels a las 20:30**, fotos y carruseles
-  a las 14:00, historias extra martes y jueves a las 21:00 y fines de semana a
+- Horarios de más actividad en España: **reels a las 19:00**, fotos y carruseles
+  a las 13:30 (máximo 5 hashtags por publicación), historias extra martes y jueves a las 21:00 y fines de semana a
   las 12:30. Cada publicación lleva su historia "nuevo post" una hora después.
 - Una publicación con `borrador: sí` no se publica hasta que se quita esa línea.
 - Si la fecha de una publicación pasó hace más de 24 horas sin publicarse
