@@ -8,9 +8,12 @@
 #               - 1 vídeo (.mp4)     -> reel
 #               - de 2 a 10 archivos -> carrusel
 #   texto:    el texto de la publicación, con sus hashtags
+#   borrador: (opcional) sí = todavía no se publica
 #
 # El programa revisa el calendario cada hora, así que la publicación sale
 # en la primera revisión después de la fecha indicada (puede tardar hasta 1 hora).
+# Si una fecha pasó hace más de 24 horas sin publicarse, no sale sola:
+# hay que ponerle una fecha nueva.
 #
 # Ejemplo (quita las almohadillas # del principio para activarlo):
 #
@@ -23,3 +26,97 @@
 #      #fatbike #ebike #urbanfatbikes
 
 publicaciones:
+
+  - id: presentacion
+    fecha: "2026-10-05 19:00"
+    archivos:
+      - tarjeta-presentacion-1.jpg
+    texto: |
+      Presentamos urbanfatbikes.
+
+      Fatbikes eléctricas certificadas para moverte por la ciudad con comodidad, seguridad y sin complicaciones legales.
+
+      Estamos preparando el lanzamiento en España. Mientras tanto, aquí te contaremos todo lo que conviene saber antes de elegir una fatbike: modelos, normativa, mantenimiento y uso seguro.
+
+      Síguenos para no perderte nada.
+
+      #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #movilidadurbana #ebike
+
+  - id: reel-legal
+    fecha: "2026-10-07 19:00"
+    archivos:
+      - reel-legal.mp4
+    texto: |
+      ¿Tu fatbike es legal? Estas 3 cifras lo deciden 👇
+
+      En España, una fatbike eléctrica cuenta como bicicleta si cumple la norma EN 15194: asistencia hasta 25 km/h, motor de 250 W y ayuda solo al pedalear (salvo la asistencia de arranque, hasta 6 km/h).
+
+      Si supera alguna, legalmente es un ciclomotor: homologación, matrícula, seguro y carné.
+
+      Antes de comprar, pide siempre el certificado. Guarda este vídeo y compártelo con quien esté pensando en comprarse una.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT #movilidadurbana
+
+  # Pendiente del permiso del proveedor para usar su foto.
+  - id: presentamos-v8
+    fecha: "2026-10-09 19:00"
+    borrador: sí
+    archivos:
+      - tarjeta-v8-1.jpg
+    texto: |
+      Te presentamos la V8.
+
+      Una fatbike eléctrica de estética clásica y ruedas de 4 pulgadas, pensada para la ciudad y para salir de ella.
+
+      · Motor de 250 W con asistencia hasta 25 km/h
+      · Batería de litio de 48 V
+      · Frenos de disco hidráulicos
+      · Doble suspensión
+
+      Ensayada por TÜV Rheinland según la norma europea EN 15194.
+
+      #urbanfatbikes #V8 #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
+
+  # Pendiente del permiso del proveedor para usar su vídeo.
+  - id: detalles-v8
+    fecha: "2026-10-12 19:00"
+    borrador: sí
+    archivos:
+      - v8-detalles.mp4
+    texto: |
+      Los detalles de la V8 👀
+
+      Pantalla con velocidad y nivel de batería, llave NFC, mando con alarma, cesta delantera y faro delantero.
+
+      ¿Cuál es tu favorito? Te leemos en comentarios.
+
+      #urbanfatbikes #V8 #fatbike #ebike #bicicletaelectrica
+
+  - id: que-incluye-v8
+    fecha: "2026-10-14 19:00"
+    archivos:
+      - tarjeta-incluye-1.jpg
+      - tarjeta-incluye-2.jpg
+      - tarjeta-incluye-3.jpg
+      - tarjeta-incluye-4.jpg
+    texto: |
+      3 regalos con cada V8 🎁 Desliza para verlos.
+
+      De regalo: candado, bomba de aire y kit de herramientas, para que salgas a rodar desde el primer día.
+
+      Y de serie: llave NFC, alarma, localizador compatible con iPhone, frenos de disco hidráulicos y doble suspensión.
+
+      #urbanfatbikes #V8 #fatbike #fatbikeelectrica #ebike
+
+  - id: reel-ficha-v8
+    fecha: "2026-10-16 19:00"
+    archivos:
+      - reel-ficha.mp4
+    texto: |
+      La V8 en 4 cifras ⚡
+
+      250 W de motor, 50-55 km de autonomía según fabricante, ruedas de 4 pulgadas y doble suspensión. Ensayada por TÜV Rheinland según la norma europea EN 15194.
+
+      Guárdalo para tenerlo a mano. ¿Alguna duda? Pregúntanos en comentarios.
+
+      #urbanfatbikes #V8 #fatbike #fichatecnica #bicicletaelectrica #ebike

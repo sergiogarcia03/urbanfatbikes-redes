@@ -14,13 +14,14 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 import yaml
 
+from adaptar import EXT_FOTO, ruta_adaptada
 from instagram import Instagram, InstagramError
 
 RAIZ = Path(__file__).parent
@@ -28,11 +29,13 @@ CALENDARIO = RAIZ / "calendario.yaml"
 PUBLICADOS = RAIZ / "publicados.json"
 ZONA = ZoneInfo("Europe/Madrid")
 
-EXT_IMAGEN = {".jpg", ".jpeg"}
 EXT_VIDEO = {".mp4", ".mov"}
 MAX_TEXTO = 2200
 MAX_HASHTAGS = 30
 MAX_CARRUSEL = 10
+# Si una publicación lleva más de esto sin salir (por ejemplo porque el
+# calendario se aprobó tarde), no se publica sola: hay que cambiarle la fecha.
+MAX_RETRASO = timedelta(hours=24)
 
 
 def cargar_calendario():
@@ -76,10 +79,14 @@ def problemas(publicacion):
         errores.append(f"un carrusel admite como máximo {MAX_CARRUSEL} archivos")
     for archivo in archivos:
         extension = Path(archivo).suffix.lower()
-        if extension not in EXT_IMAGEN | EXT_VIDEO:
-            errores.append(f"{archivo}: Instagram solo acepta fotos .jpg y vídeos .mp4/.mov")
-        if not archivo.startswith("http") and not (RAIZ / "contenido" / archivo).exists():
+        if extension not in EXT_FOTO | EXT_VIDEO:
+            errores.append(f"{archivo}: solo se admiten fotos (.jpg, .png, .heic...) y vídeos (.mp4, .mov)")
+        elif archivo.startswith("http"):
+            continue
+        elif not (RAIZ / "contenido" / archivo).exists():
             errores.append(f"{archivo}: no existe en la carpeta contenido/")
+        elif extension in EXT_FOTO and not ruta_adaptada(archivo).exists():
+            errores.append(f"{archivo}: falta adaptarla (python adaptar.py)")
 
     texto = publicacion.get("texto") or ""
     if len(texto) > MAX_TEXTO:
@@ -93,7 +100,10 @@ def url_publica(archivo):
     if archivo.startswith("http"):
         return archivo
     base = os.environ["MEDIA_BASE_URL"].rstrip("/")
-    return f"{base}/contenido/{quote(archivo)}"
+    if es_video(archivo):
+        return f"{base}/contenido/{quote(archivo)}"
+    # Las fotos se publican desde su copia adaptada (ver adaptar.py).
+    return f"{base}/{quote(ruta_adaptada(archivo).relative_to(RAIZ).as_posix())}"
 
 
 def es_video(archivo):
@@ -128,7 +138,9 @@ def publicar_en_instagram(ig, publicacion):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--modo", choices=["comprobar", "simular", "publicar"], default="simular")
-    modo = parser.parse_args().modo
+    parser.add_argument("--manual", action="store_true", help="lanzado a mano: publica aunque vaya con retraso")
+    args = parser.parse_args()
+    modo = args.modo
 
     token = os.environ.get("IG_ACCESS_TOKEN")
     if modo != "simular" and not token:
@@ -149,6 +161,9 @@ def main():
 
     for publicacion in cargar_calendario():
         nombre = publicacion.get("id", "(sin id)")
+        if publicacion.get("borrador"):
+            print(f"📝 {nombre}: borrador, no se publica")
+            continue
         errores = problemas(publicacion)
         if errores:
             fallos += 1
@@ -159,6 +174,9 @@ def main():
             continue
         if fecha_de(publicacion) > ahora:
             print(f"🕒 {nombre}: programada para el {publicacion['fecha']}")
+            continue
+        if ahora - fecha_de(publicacion) > MAX_RETRASO and not args.manual:
+            print(f"⏰ {nombre}: su fecha ({publicacion['fecha']}) pasó hace más de 24 h; cámbiala para publicarla")
             continue
 
         if modo == "simular":

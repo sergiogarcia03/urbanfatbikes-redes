@@ -18,6 +18,10 @@ De momento funciona con **Instagram**. TikTok vendrá más adelante.
 | `calendario.yaml` | Qué se publica y cuándo. **Es el único archivo que tendrás que tocar a diario.** |
 | `contenido/` | Las fotos (.jpg) y vídeos (.mp4) |
 | `publicar.py` | El programa que lee el calendario y publica |
+| `tarjetas.yaml` y `tarjetas.py` | Las tarjetas de texto con el diseño de la marca: se escriben en `tarjetas.yaml` y el programa crea la imagen |
+| `reels.py` | Convierte las tarjetas con `reel: sí` en reels animados (`contenido/reel-<nombre>.mp4`) |
+| `musica.py` | Compone por código la música original de los reels (`contenido/musica/`). Se ejecuta a mano |
+| `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |
 | `.github/workflows/publicar.yml` | El "reloj" que lanza el programa cada hora en GitHub |
@@ -61,5 +65,18 @@ En la pestaña **Actions → Publicar en redes → Run workflow**, elige:
 - **El token caduca a los 60 días.** Antes de que caduque, genera uno nuevo en
   Meta for Developers y sustitúyelo en el Secret `IG_ACCESS_TOKEN`.
 - Instagram permite como máximo unas 50 publicaciones por API cada 24 horas.
-- Las fotos tienen que ser **JPG**. Los reels, **MP4**.
+- Las fotos pueden ser JPG, PNG, WEBP o HEIC (iPhone). Al subirlas, GitHub crea
+  sola una copia adaptada a Instagram en `contenido/instagram/`: la recorta por
+  el centro si es demasiado alargada, la reduce si es muy grande y le quita los
+  datos ocultos (como la ubicación GPS). Mira esa copia para ver cómo quedará.
+- **Ojo:** el repositorio es público y las fotos originales de `contenido/`
+  conservan sus datos ocultos. Desactiva la ubicación en la cámara del móvil
+  antes de hacer fotos que vayas a subir.
+- Los reels tienen que ser **MP4** o **MOV**.
 - Las horas del calendario son **hora de España**.
+- Una publicación con `borrador: sí` no se publica hasta que se quita esa línea.
+- Si la fecha de una publicación pasó hace más de 24 horas sin publicarse
+  (por ejemplo, porque el calendario se aprobó tarde), no sale sola: hay que
+  ponerle una fecha nueva. Así nunca salen varias publicaciones atrasadas de golpe.
+- Todo el contenido debe ser real o diseño propio: no publicamos imágenes
+  realistas hechas con IA.
