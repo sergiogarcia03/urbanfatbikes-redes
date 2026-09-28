@@ -27,6 +27,7 @@ tarjetas:
 
   - nombre: legal
     reel: sí
+    musica: urban-1.m4a
     diapositivas:
       - tipo: portada
         antetitulo: Antes de comprar
@@ -93,6 +94,7 @@ tarjetas:
 
   - nombre: ficha
     reel: sí
+    musica: urban-2.m4a
     diapositivas:
       - tipo: portada
         antetitulo: Ficha técnica
