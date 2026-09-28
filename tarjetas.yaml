@@ -28,6 +28,9 @@ tarjetas:
   - nombre: legal
     reel: sí
     musica: urban-1.m4a
+    voz: legal.aac
+    # Segundo de la grabación en el que empieza cada diapositiva (desde la 2.ª)
+    voz_cortes: [7.7, 17.6, 20.7, 25.9, 30.3]
     diapositivas:
       - tipo: portada
         antetitulo: Antes de comprar

@@ -11,7 +11,8 @@ Tiene que ser música libre de derechos o con licencia para redes sociales.
 
 Si lleva "voz: archivo.m4a" (de contenido/voz/), el reel se ajusta a la grabación:
 cada frase (separada por un silencio) acompaña a una diapositiva, y la música
-baja sola mientras se habla. Hace falta una frase por diapositiva.
+baja sola mientras se habla. Hace falta una frase por diapositiva; si las pausas
+no bastan para separarlas, "voz_cortes" fija a mano dónde empieza cada una.
 
 Uso:
   python reels.py
@@ -102,9 +103,21 @@ def frases(archivo):
 
 
 def tiempos_con_voz(tarjeta):
-    """Duración de cada diapositiva para que cada una acompañe a una frase."""
+    """Duración de cada diapositiva para que cada una acompañe a una frase.
+
+    Con "voz_cortes" (segundos de la grabación en los que empieza cada
+    diapositiva a partir de la segunda) se fijan los cambios a mano.
+    """
     n = len(tarjeta["diapositivas"])
     tramos = frases(VOZ / tarjeta["voz"])
+    if tarjeta.get("voz_cortes"):
+        cortes = [float(c) for c in tarjeta["voz_cortes"]]
+        if len(cortes) != n - 1:
+            raise SystemExit(f"❌ voz_cortes necesita {n - 1} tiempos, uno por diapositiva a partir de la segunda")
+        corte = tramos[0][0]
+        cambios = [0.0] + [ANTES_VOZ + c - corte - 0.15 for c in cortes]
+        final = ANTES_VOZ + max(tramos[-1][1], cortes[-1]) - corte + 2.2
+        return [max(1.2, b - a) for a, b in zip(cambios, cambios[1:] + [final])]
     # Si hay más tramos que diapositivas (pausas dentro de una frase), une los más cercanos
     while len(tramos) > n:
         i = min(range(len(tramos) - 1), key=lambda k: tramos[k + 1][0] - tramos[k][1])
