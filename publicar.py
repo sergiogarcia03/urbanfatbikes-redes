@@ -21,6 +21,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
+from adaptar import EXT_FOTO, ruta_adaptada
 from instagram import Instagram, InstagramError
 
 RAIZ = Path(__file__).parent
@@ -28,7 +29,6 @@ CALENDARIO = RAIZ / "calendario.yaml"
 PUBLICADOS = RAIZ / "publicados.json"
 ZONA = ZoneInfo("Europe/Madrid")
 
-EXT_IMAGEN = {".jpg", ".jpeg"}
 EXT_VIDEO = {".mp4", ".mov"}
 MAX_TEXTO = 2200
 MAX_HASHTAGS = 30
@@ -76,10 +76,14 @@ def problemas(publicacion):
         errores.append(f"un carrusel admite como máximo {MAX_CARRUSEL} archivos")
     for archivo in archivos:
         extension = Path(archivo).suffix.lower()
-        if extension not in EXT_IMAGEN | EXT_VIDEO:
-            errores.append(f"{archivo}: Instagram solo acepta fotos .jpg y vídeos .mp4/.mov")
-        if not archivo.startswith("http") and not (RAIZ / "contenido" / archivo).exists():
+        if extension not in EXT_FOTO | EXT_VIDEO:
+            errores.append(f"{archivo}: solo se admiten fotos (.jpg, .png, .heic...) y vídeos (.mp4, .mov)")
+        elif archivo.startswith("http"):
+            continue
+        elif not (RAIZ / "contenido" / archivo).exists():
             errores.append(f"{archivo}: no existe en la carpeta contenido/")
+        elif extension in EXT_FOTO and not ruta_adaptada(archivo).exists():
+            errores.append(f"{archivo}: falta adaptarla (python adaptar.py)")
 
     texto = publicacion.get("texto") or ""
     if len(texto) > MAX_TEXTO:
@@ -93,7 +97,10 @@ def url_publica(archivo):
     if archivo.startswith("http"):
         return archivo
     base = os.environ["MEDIA_BASE_URL"].rstrip("/")
-    return f"{base}/contenido/{quote(archivo)}"
+    if es_video(archivo):
+        return f"{base}/contenido/{quote(archivo)}"
+    # Las fotos se publican desde su copia adaptada (ver adaptar.py).
+    return f"{base}/{quote(ruta_adaptada(archivo).relative_to(RAIZ).as_posix())}"
 
 
 def es_video(archivo):
