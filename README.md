@@ -19,6 +19,7 @@ De momento funciona con **Instagram**. TikTok vendrá más adelante.
 | `contenido/` | Las fotos (.jpg) y vídeos (.mp4) |
 | `publicar.py` | El programa que lee el calendario y publica |
 | `tarjetas.yaml` y `tarjetas.py` | Las tarjetas de texto con el diseño de la marca: se escriben en `tarjetas.yaml` y el programa crea la imagen |
+| `reels.py` | Convierte las tarjetas con `reel: sí` en reels animados (`contenido/reel-<nombre>.mp4`) |
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |

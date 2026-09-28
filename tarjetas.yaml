@@ -1,65 +1,120 @@
-# Tarjetas de texto con el diseño de urbanfatbikes.
+# Tarjetas con el diseño de urbanfatbikes.
 #
-# El programa tarjetas.py convierte cada una en una imagen
-# contenido/<archivo>.jpg que luego se usa en calendario.yaml.
+# El programa tarjetas.py convierte cada diapositiva en una imagen
+# contenido/tarjeta-<nombre>-<número>.jpg, que luego se usa en calendario.yaml.
+# Varias diapositivas = carrusel para deslizar.
 #
-# Campos:
-#   archivo:     nombre de la imagen (sin espacios ni tildes)
-#   titulo:      el texto grande
-#   subtitulo:   (opcional) texto gris bajo el título
-#   bloques:     (opcional) apartados con su título y sus puntos
-#   nota:        (opcional) texto pequeño al final
-#   logo_grande: (opcional) sí = el logo grande arriba, para portadas
+# Tipos de diapositiva:
+#   portada: titular grande (antetitulo, titulo, subtitulo) y opcionalmente
+#            una foto de producto sin fondo (imagen) o el logo (logo: sí)
+#   dato:    una cifra gigante (numero, unidad, texto)
+#   lista:   un título con varios puntos (titulo, puntos, nota)
+#   cierre:  logo grande con una frase final (titulo, texto)
+#
+# Las palabras entre *asteriscos* salen en turquesa.
+#
+# Con "reel: sí", además se crea un vídeo animado contenido/reel-<nombre>.mp4
+# (ver reels.py). Con "musica: archivo.mp3" lleva ese audio de contenido/musica/.
 
 tarjetas:
-  - archivo: tarjeta-presentacion
-    logo_grande: sí
-    titulo: Fatbikes eléctricas certificadas
-    subtitulo: Próximamente en España.
+  - nombre: presentacion
+    diapositivas:
+      - tipo: portada
+        antetitulo: Próximamente en España
+        titulo: Fatbikes eléctricas. *Certificadas.*
+        subtitulo: Para moverte por la ciudad sin complicaciones.
+        logo: sí
 
-  - archivo: tarjeta-bici-o-ciclomotor
-    titulo: ¿Bicicleta eléctrica o ciclomotor?
-    subtitulo: Depende de sus características, y la diferencia importa.
-    bloques:
-      - titulo: Bicicleta eléctrica (norma EN 15194)
+  - nombre: legal
+    reel: sí
+    diapositivas:
+      - tipo: portada
+        antetitulo: Antes de comprar
+        titulo: ¿Tu fatbike es *legal?*
+        subtitulo: 3 cifras deciden si es una bicicleta o un ciclomotor.
+        tamano: 130
+      - tipo: dato
+        antetitulo: Cifra 1
+        numero: 25
+        unidad: km/h
+        texto: A esta velocidad el motor deja de ayudarte. Si sigue empujando, no es una bicicleta.
+      - tipo: dato
+        antetitulo: Cifra 2
+        numero: 250
+        unidad: vatios
+        texto: Es la potencia nominal máxima del motor de una bicicleta eléctrica.
+      - tipo: dato
+        antetitulo: Cifra 3
+        numero: 6
+        unidad: km/h sin pedalear
+        texto: Es lo máximo que puede ayudarte al arrancar. Por encima, el motor solo funciona si pedaleas.
+      - tipo: lista
+        titulo: ¿Supera alguna? Es un *ciclomotor*
         puntos:
-          - El motor solo ayuda mientras pedaleas
-          - La ayuda se corta a 25 km/h
-          - Motor de 250 W como máximo
-          - Sin matrícula ni carné
-      - titulo: Si supera esos límites
-        puntos:
-          - Se considera ciclomotor
-          - Necesita homologación, matrícula, seguro y carné
-    nota: Antes de comprar, pide siempre el certificado.
+          - Necesita homologación y matrícula
+          - Seguro obligatorio
+          - Carné para conducirla
+      - tipo: cierre
+        titulo: Pide siempre el certificado *EN 15194*
+        texto: Síguenos para saber más antes de elegir tu fatbike.
 
-  - archivo: tarjeta-que-incluye-v8
-    titulo: Qué incluye tu V8
-    bloques:
-      - titulo: De regalo
+  # Usa la foto del proveedor: solo se publica cuando haya permiso.
+  - nombre: v8
+    diapositivas:
+      - tipo: portada
+        antetitulo: Te presentamos
+        titulo: La nueva *V8*
+        subtitulo: Estética clásica. Ruedas de 4 pulgadas. 100 % bicicleta.
+        imagen: v8-estudio.webp
+
+  - nombre: incluye
+    diapositivas:
+      - tipo: dato
+        antetitulo: Qué incluye tu V8
+        numero: 3
+        unidad: regalos con cada bici
+        texto: Para que salgas a rodar desde el primer día.
+      - tipo: lista
+        titulo: De *regalo*
         puntos:
           - Candado
           - Bomba de aire
           - Kit de herramientas
-      - titulo: De serie
+      - tipo: lista
+        titulo: Y de *serie*
         puntos:
-          - Llave NFC y mando con alarma
+          - Llave NFC y alarma
           - Localizador compatible con iPhone
           - Frenos de disco hidráulicos
           - Doble suspensión
+      - tipo: cierre
+        titulo: ¿Qué te parece?
+        texto: Cuéntanoslo en comentarios.
 
-  - archivo: tarjeta-ficha-v8
-    titulo: V8 · Ficha técnica
-    bloques:
-      - titulo: Motor y batería
-        puntos:
-          - Motor de 250 W con asistencia hasta 25 km/h
-          - Batería de litio de 48 V y 15,6 Ah
-          - Autonomía de 50 a 55 km, según fabricante
-      - titulo: Bicicleta
-        puntos:
-          - Ruedas de 20" × 4,0"
-          - Cuadro de acero de alto carbono
-          - Frenos de disco hidráulicos
-          - Suspensión delantera y trasera
-    nota: Ensayada por TÜV Rheinland según la norma europea EN 15194.
+  - nombre: ficha
+    reel: sí
+    diapositivas:
+      - tipo: portada
+        antetitulo: Ficha técnica
+        titulo: La *V8* en 4 cifras
+        subtitulo: Guárdala para tenerla a mano.
+        tamano: 130
+      - tipo: dato
+        numero: 250
+        unidad: vatios
+        texto: Motor con asistencia al pedaleo hasta 25 km/h.
+      - tipo: dato
+        numero: 50-55
+        unidad: km de autonomía
+        texto: Según fabricante, con batería de litio de 48 V y 15,6 Ah.
+      - tipo: dato
+        numero: 4"
+        unidad: de ancho de rueda
+        texto: Ruedas de 20" × 4" para más agarre y comodidad en asfalto, tierra o arena.
+      - tipo: dato
+        numero: 2
+        unidad: suspensiones
+        texto: Delantera y trasera, con frenos de disco hidráulicos.
+      - tipo: cierre
+        titulo: Ensayada por *TÜV Rheinland*
+        texto: Según la norma europea EN 15194.

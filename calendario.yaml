@@ -30,7 +30,7 @@ publicaciones:
   - id: presentacion
     fecha: "2026-10-05 19:00"
     archivos:
-      - tarjeta-presentacion.jpg
+      - tarjeta-presentacion-1.jpg
     texto: |
       Presentamos urbanfatbikes.
 
@@ -42,20 +42,18 @@ publicaciones:
 
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #movilidadurbana #ebike
 
-  - id: bici-o-ciclomotor
+  - id: reel-legal
     fecha: "2026-10-07 19:00"
     archivos:
-      - tarjeta-bici-o-ciclomotor.jpg
+      - reel-legal.mp4
     texto: |
-      ¿Tu fatbike eléctrica es una bicicleta o un ciclomotor?
+      ¿Tu fatbike es legal? Estas 3 cifras lo deciden 👇
 
-      En España, para que cuente como bicicleta eléctrica debe cumplir la norma EN 15194: el motor solo ayuda mientras pedaleas, la asistencia se corta a 25 km/h y la potencia no supera los 250 W.
+      En España, una fatbike eléctrica cuenta como bicicleta si cumple la norma EN 15194: asistencia hasta 25 km/h, motor de 250 W y ayuda solo al pedalear (salvo la asistencia de arranque, hasta 6 km/h).
 
-      Si supera esos límites, legalmente es un ciclomotor y necesita homologación, matrícula, seguro y carné.
+      Si supera alguna, legalmente es un ciclomotor: homologación, matrícula, seguro y carné.
 
-      Antes de comprar, pide siempre el certificado. En urbanfatbikes solo trabajaremos con modelos certificados.
-
-      ¿Lo sabías? Te leemos en comentarios.
+      Antes de comprar, pide siempre el certificado. Guarda este vídeo y compártelo con quien esté pensando en comprarse una.
 
       #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT #movilidadurbana
 
@@ -64,7 +62,7 @@ publicaciones:
     fecha: "2026-10-09 19:00"
     borrador: sí
     archivos:
-      - v8-estudio.webp
+      - tarjeta-v8-1.jpg
     texto: |
       Te presentamos la V8.
 
@@ -86,34 +84,39 @@ publicaciones:
     archivos:
       - v8-detalles.mp4
     texto: |
-      Los detalles de la V8.
+      Los detalles de la V8 👀
 
       Pantalla con velocidad y nivel de batería, llave NFC, mando con alarma, cesta delantera y faro delantero.
 
-      Pensada para que solo tengas que preocuparte de disfrutar del camino.
+      ¿Cuál es tu favorito? Te leemos en comentarios.
 
       #urbanfatbikes #V8 #fatbike #ebike #bicicletaelectrica
 
   - id: que-incluye-v8
     fecha: "2026-10-14 19:00"
     archivos:
-      - tarjeta-que-incluye-v8.jpg
+      - tarjeta-incluye-1.jpg
+      - tarjeta-incluye-2.jpg
+      - tarjeta-incluye-3.jpg
+      - tarjeta-incluye-4.jpg
     texto: |
-      Qué incluye tu V8.
+      3 regalos con cada V8 🎁 Desliza para verlos.
 
       De regalo: candado, bomba de aire y kit de herramientas, para que salgas a rodar desde el primer día.
 
-      Y de serie: llave NFC, mando con alarma, localizador compatible con iPhone, frenos de disco hidráulicos y doble suspensión.
+      Y de serie: llave NFC, alarma, localizador compatible con iPhone, frenos de disco hidráulicos y doble suspensión.
 
       #urbanfatbikes #V8 #fatbike #fatbikeelectrica #ebike
 
-  - id: ficha-v8
+  - id: reel-ficha-v8
     fecha: "2026-10-16 19:00"
     archivos:
-      - tarjeta-ficha-v8.jpg
+      - reel-ficha.mp4
     texto: |
-      V8, ficha técnica.
+      La V8 en 4 cifras ⚡
 
-      Guarda esta publicación para tenerla a mano. ¿Alguna duda? Pregúntanos en comentarios.
+      250 W de motor, 50-55 km de autonomía según fabricante, ruedas de 4 pulgadas y doble suspensión. Ensayada por TÜV Rheinland según la norma europea EN 15194.
+
+      Guárdalo para tenerlo a mano. ¿Alguna duda? Pregúntanos en comentarios.
 
       #urbanfatbikes #V8 #fatbike #fichatecnica #bicicletaelectrica #ebike

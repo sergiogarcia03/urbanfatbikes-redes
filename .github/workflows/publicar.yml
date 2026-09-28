@@ -46,6 +46,7 @@ jobs:
       - name: Preparar tarjetas y fotos para Instagram
         run: |
           python tarjetas.py
+          python reels.py
           python adaptar.py
           git add contenido
           git diff --cached --quiet || (git commit -m "Preparar tarjetas y fotos para Instagram" && git pull --rebase && git push)
