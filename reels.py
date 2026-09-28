@@ -327,6 +327,89 @@ def transcripciones(tarjeta):
     return lista
 
 
+def rasgos_sonido(muestras):
+    """Rasgos del sonido cada 10 ms (energía por bandas, como el oído)."""
+    import numpy as np
+    x = np.frombuffer(muestras, dtype="<i2").astype(float) / 32768
+    n, salto = int(0.025 * FM_VOZ), int(0.010 * FM_VOZ)
+    tramas = np.lib.stride_tricks.sliding_window_view(x, n)[::salto] * np.hanning(n)
+    espectro = np.abs(np.fft.rfft(tramas, axis=1)) ** 2
+    frec = np.fft.rfftfreq(n, 1 / FM_VOZ)
+    mel = 2595 * np.log10(1 + frec / 700)
+    bordes = np.linspace(2595 * np.log10(1 + 80 / 700), 2595 * np.log10(1 + 7000 / 700), 26)
+    bandas = np.stack([espectro[:, (mel >= bordes[i]) & (mel < bordes[i + 2])].sum(1) for i in range(24)], 1)
+    rasgos = np.log(bandas + 1e-9)
+    return rasgos - rasgos.mean(0)
+
+
+def distancia(a, b):
+    """Parecido entre dos sonidos (DTW): cuanto más bajo, más se parecen."""
+    import numpy as np
+    coste = np.linalg.norm(a[:, None] - b[None], axis=2)
+    D = np.full((len(a) + 1, len(b) + 1), np.inf)
+    D[0, 0] = 0
+    for i in range(1, len(a) + 1):
+        for j in range(1, len(b) + 1):
+            D[i, j] = coste[i - 1, j - 1] + min(D[i - 1, j], D[i, j - 1], D[i - 1, j - 1])
+    return D[-1, -1] / (len(a) + len(b))
+
+
+def tartamudeos_internos(textos, fuentes, diapositiva_palabra):
+    """Busca repeticiones dentro de una misma palabra ("com… compártelo").
+
+    Whisper a veces escribe la palabra una sola vez aunque se haya dicho a trozos.
+    Se sospecha de las palabras que duran mucho más de lo que tocan por sus sílabas
+    y tienen una pausa dentro; si el trozo de antes de la pausa suena igual que lo
+    que viene después, es un arranque en falso. Devuelve los tramos a quitar
+    (grabación, inicio, fin).
+    """
+    import numpy as np
+    claves = [c for c in diapositiva_palabra]
+    silabas_total = sum(silabas(textos[g][k]["palabra"]) for g, k in claves)
+    segundos_total = sum(textos[g][k]["fin"] - textos[g][k]["inicio"] for g, k in claves)
+    ritmo = segundos_total / max(silabas_total, 1)
+    cortes = []
+    for g, muestras in enumerate(fuentes):
+        rasgos = None
+        con_voz = tramos_con_voz(muestras)
+        for k, p in enumerate(textos[g]):
+            if (g, k) not in diapositiva_palabra:
+                continue
+            dura = p["fin"] - p["inicio"]
+            if dura < 0.7 or dura < 1.6 * ritmo * silabas(p["palabra"]):
+                continue
+            # Partes con voz dentro de la palabra (separadas por pausas de al menos 0,1 s)
+            partes = [(max(a, p["inicio"]), min(b, p["fin"])) for a, b in con_voz
+                      if b > p["inicio"] and a < p["fin"]]
+            if len(partes) < 2:
+                continue
+            if rasgos is None:
+                rasgos = rasgos_sonido(muestras)
+            trozo = lambda a, b: rasgos[int(a * 100):int(b * 100)]
+            primero = partes[0]
+            largo = min(0.45, primero[1] - primero[0])
+            if largo < 0.12:
+                continue
+            A = trozo(primero[0], primero[0] + largo)
+            # Referencia: cuánto se parece A a palabras que no tienen nada que ver
+            rng = np.random.default_rng(k)
+            otros = [d for d in textos[g] if abs(d["inicio"] - p["inicio"]) > 1.5 and d["fin"] - d["inicio"] > largo]
+            if len(otros) < 3:
+                continue
+            referencia = np.median([distancia(A, trozo(d["inicio"], d["inicio"] + largo))
+                                    for d in rng.choice(otros, min(8, len(otros)), replace=False)])
+            mejor, donde = math.inf, None
+            t = primero[1] + 0.1
+            while t < p["fin"] + 0.2:
+                d = distancia(A, trozo(t, t + largo))
+                if d < mejor:
+                    mejor, donde = d, t
+                t += 0.03
+            if donde is not None and mejor < 0.65 * referencia:
+                cortes.append((g, primero[0] - 0.02, donde - 0.03))
+    return cortes
+
+
 def preparar_voz_con_texto(tarjeta, textos):
     diapositivas = tarjeta["diapositivas"]
     # Palabras del guion, con su diapositiva
@@ -420,6 +503,19 @@ def preparar_voz_con_texto(tarjeta, textos):
             trozo[1] = max(ini, dentro[0][0] - 0.05)
             trozo[2] = min(fin, dentro[-1][1] + 0.08)
 
+    # Tartamudeos dentro de una palabra: se parte el trozo y se quita la repetición
+    for g, desde, hasta in tartamudeos_internos(textos, fuentes, diapositiva_palabra):
+        print(f"   ✂️  {tarjeta['nombre']}: tartamudeo quitado ({hasta - desde:.2f} s en el segundo {desde:.1f})")
+        nuevos = []
+        for trozo in trozos:
+            if trozo[0] == g and trozo[1] < desde < trozo[2]:
+                nuevos.append([g, trozo[1], desde, trozo[3]])
+                if hasta < trozo[2]:
+                    nuevos.append([g, hasta, trozo[2], trozo[3]])
+            else:
+                nuevos.append(trozo)
+        trozos = nuevos
+
     salida, inicios, posicion = bytearray(), [], 0.0
     fundido = int(0.012 * FM_VOZ)  # 12 ms de fundido en cada corte, sin chasquidos
     for n, (g, ini, fin, diap) in enumerate(trozos):
@@ -440,7 +536,7 @@ def preparar_voz_con_texto(tarjeta, textos):
             if siguiente[3] != diap:
                 hueco = PAUSA_DIAPOSITIVA
             elif siguiente[0] == g:
-                hueco = min(PAUSA_FRASE, max(0.05, siguiente[1] - fin))
+                hueco = min(PAUSA_FRASE, max(0.04, siguiente[1] - fin))
             else:
                 hueco = PAUSA_FRASE
             salida += bytes(int(hueco * FM_VOZ) * 2)
