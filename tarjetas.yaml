@@ -103,28 +103,126 @@ tarjetas:
   - nombre: ficha
     reel: sí
     musica: urban-2.m4a
+    voz: [ficha.aac]
     diapositivas:
       - tipo: portada
         antetitulo: Ficha técnica
         titulo: La *V8* en 4 cifras
         subtitulo: Guárdala para tenerla a mano.
         tamano: 130
+        dice: Esta es la V8, en cuatro cifras.
       - tipo: dato
         numero: 250
         unidad: vatios
         texto: Motor con asistencia al pedaleo hasta 25 km/h.
+        dice: Doscientos cincuenta vatios de motor, con asistencia hasta veinticinco kilómetros por hora.
       - tipo: dato
         numero: 50-55
         unidad: km de autonomía
         texto: Según fabricante, con batería de litio de 48 V y 15,6 Ah.
+        dice: Entre cincuenta y cincuenta y cinco kilómetros de autonomía, según el fabricante.
       - tipo: dato
         numero: 4"
         unidad: de ancho de rueda
         texto: Ruedas de 20" × 4" para más agarre y comodidad en asfalto, tierra o arena.
+        dice: Ruedas de cuatro pulgadas de ancho, para ir cómodo por asfalto, tierra o arena.
       - tipo: dato
         numero: 2
         unidad: suspensiones
         texto: Delantera y trasera, con frenos de disco hidráulicos.
+        dice: Y doble suspensión, delante y detrás, con frenos de disco hidráulicos.
       - tipo: cierre
         titulo: Ensayada por *TÜV Rheinland*
         texto: Según la norma europea EN 15194.
+        dice: Ensayada por TÜV Rheinland según la norma europea. Guárdalo para tenerlo a mano.
+
+  - nombre: patinete
+    reel: sí
+    musica: urban-2.m4a
+    voz: [patinete.aac]
+    diapositivas:
+      - tipo: portada
+        antetitulo: Comparativa
+        titulo: ¿Fatbike o *patinete* eléctrico?
+        subtitulo: Te lo resumimos en 30 segundos.
+        tamano: 120
+        dice: ¿Fatbike o patinete eléctrico? Te lo resumimos en treinta segundos.
+      - tipo: dato
+        antetitulo: Estabilidad
+        numero: 4"
+        unidad: de ancho de rueda
+        texto: Mucho más agarre que las ruedas pequeñas de un patinete.
+        dice: Estabilidad. Las ruedas de cuatro pulgadas agarran mucho más que las ruedas pequeñas de un patinete.
+      - tipo: lista
+        titulo: "*Comodidad*"
+        puntos:
+          - Vas sentado
+          - La rueda ancha absorbe baches y adoquines
+        dice: Comodidad. Vas sentado y la rueda ancha absorbe baches y adoquines.
+      - tipo: lista
+        titulo: "*Autonomía*"
+        puntos:
+          - Suele llegar bastante más lejos con una carga
+        dice: Autonomía. Una fatbike suele llegar bastante más lejos con una carga.
+      - tipo: portada
+        antetitulo: Y lo más importante
+        titulo: Con la norma EN 15194 es una *bicicleta*
+        dice: Y si cumple la norma europea, legalmente es una bicicleta.
+      - tipo: cierre
+        titulo: ¿Tú cuál *prefieres?*
+        texto: Cuéntanoslo en comentarios.
+        dice: ¿Tú cuál prefieres? Cuéntanoslo en comentarios.
+
+  - nombre: que-es
+    diapositivas:
+      - tipo: portada
+        antetitulo: Para empezar
+        titulo: ¿Qué es una *fatbike?*
+        subtitulo: Te lo explicamos en 3 diapositivas.
+        tamano: 130
+      - tipo: dato
+        numero: 4"
+        unidad: o más de ancho de rueda
+        texto: Lo que la define son unos neumáticos mucho más anchos que los de una bici normal.
+      - tipo: lista
+        titulo: Por qué *engancha*
+        puntos:
+          - Más estabilidad y agarre
+          - Más comodidad en baches y adoquines
+          - Asfalto, tierra, grava o arena
+      - tipo: cierre
+        titulo: ¿Te subirías a *una?*
+        texto: Cuéntanoslo en comentarios.
+
+  - nombre: bateria
+    reel: sí
+    musica: urban-1.m4a
+    voz: [bateria.aac]
+    diapositivas:
+      - tipo: portada
+        antetitulo: Mantenimiento
+        titulo: 3 consejos para que tu *batería* dure años
+        tamano: 110
+        dice: Tres consejos para que la batería de tu bici eléctrica dure muchos años.
+      - tipo: dato
+        antetitulo: Consejo 1
+        numero: 1
+        unidad: Cargador original
+        texto: Cárgala siempre con el cargador que viene con la bici.
+        dice: Uno. Cárgala siempre con el cargador original.
+      - tipo: dato
+        antetitulo: Consejo 2
+        numero: 2
+        unidad: Ni sol ni frío
+        texto: Cárgala y guárdala a temperatura ambiente.
+        dice: Dos. No la dejes al sol ni con mucho frío. Mejor cárgala y guárdala a temperatura ambiente.
+      - tipo: dato
+        antetitulo: Consejo 3
+        numero: 3
+        unidad: A media carga
+        texto: Si no vas a usar la bici en semanas, guárdala ni vacía ni al 100 %.
+        dice: Tres. Si no vas a usar la bici en semanas, guárdala a media carga, no vacía ni al cien por cien.
+      - tipo: cierre
+        titulo: "*Guarda* este vídeo"
+        texto: Y compártelo con quien tenga una bici eléctrica.
+        dice: Guarda este vídeo y compártelo con quien tenga una bici eléctrica.

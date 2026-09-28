@@ -135,42 +135,95 @@ def tramos_con_voz(muestras):
 
 
 def silabas(texto):
-    return max(1, len(re.findall(r"[aeiouáéíóúü]+", str(texto).lower())))
+    texto = str(texto).lower()
+    digitos = len(re.findall(r"\d", texto))  # "V8": cada cifra cuenta como ~2 sílabas
+    return max(1, len(re.findall(r"[aeiouáéíóúü]+", texto)) + 2 * digitos)
+
+
+def palabras_del_guion(diapositivas):
+    """Lista de (diapositiva, sílabas, pausa esperada después) para cada palabra."""
+    lista = []
+    for i, d in enumerate(diapositivas):
+        trozos = re.findall(r"[^\s]+", str(d.get("dice", "")))
+        for j, trozo in enumerate(trozos):
+            if not re.search(r"[\wáéíóúüñ]", trozo, re.I):
+                continue
+            ultima = j == len(trozos) - 1
+            if ultima or re.search(r"[.?!:;]$", trozo):
+                pausa = 1.0  # final de frase: se espera una pausa clara
+            elif trozo.endswith(","):
+                pausa = 0.5
+            else:
+                pausa = 0.0
+            lista.append((i, silabas(trozo), pausa))
+    return lista
 
 
 def repartir(tramos, diapositivas):
-    """Agrupa los tramos seguidos en tantas partes como diapositivas.
+    """Asigna los tramos de voz a las diapositivas.
 
-    Busca el reparto cuyas duraciones se parezcan más a lo esperado por el guion
-    y que corte por las pausas más largas.
+    Si hay guion ("dice"), alinea cada tramo con las palabras que dice: la duración
+    de un tramo debe parecerse a la de sus sílabas, y las pausas largas deben caer
+    donde el guion tiene un punto o una coma. Los tramos que no encajan en el guion
+    (arranques en falso, "eeeh") se descartan. Devuelve una lista de grupos de
+    tramos, uno por diapositiva.
     """
     n, m = len(diapositivas), len(tramos)
-    if m < n:
-        raise SystemExit(f"❌ La voz tiene {m} frases y el reel {n} diapositivas. "
-                         "Graba una frase por diapositiva, con una pausa entre frases.")
-    pesos = [silabas(d.get("dice", "")) if any(x.get("dice") for x in diapositivas) else 1 for d in diapositivas]
-    total_voz = sum(b - a for a, b in tramos)
-    esperado = [total_voz * p / sum(pesos) for p in pesos]
-    pausa = [tramos[k + 1][0] - tramos[k][1] for k in range(m - 1)]
-    max_pausa = max(pausa) if pausa else 1
+    palabras = palabras_del_guion(diapositivas) if all(d.get("dice") for d in diapositivas) else []
+    if not palabras:
+        return repartir_por_pausas(tramos, n)
+    W = len(palabras)
+    duraciones = [b - a for a, b in tramos]
+    ritmo = sum(duraciones) / sum(s for _, s, _ in palabras)  # segundos por sílaba
+    pausas = [tramos[k + 1][0] - tramos[k][1] for k in range(m - 1)] + [2.0]
+    pausa_media = sorted(pausas)[len(pausas) // 2] or 0.3
+    acumuladas = [0]
+    for _, s, _ in palabras:
+        acumuladas.append(acumuladas[-1] + s)
+    DESCARTE = 3.0  # coste de dar por sobrante un tramo
 
     @functools.lru_cache(maxsize=None)
-    def mejor(k, i):
-        """Mejor coste para repartir los tramos k.. entre las diapositivas i.."""
-        if i == n:
-            return (0.0, ()) if k == m else (math.inf, ())
-        resultado = (math.inf, ())
-        for fin in range(k + 1, m - (n - i - 1) + 1):
-            duracion_ = sum(b - a for a, b in tramos[k:fin])
-            coste = ((duracion_ - esperado[i]) / max(esperado[i], 0.5)) ** 2
-            if fin < m:
-                coste -= 0.8 * pausa[fin - 1] / max_pausa  # premio a cortar en pausas largas
-            resto = mejor(fin, i + 1)
+    def mejor(k, w):
+        if k == m:
+            return (0.0, ()) if w == W else (math.inf, ())
+        # Opción 1: el tramo k sobra (titubeo, "eeeh", arranque en falso)
+        coste = DESCARTE + duraciones[k] / max(ritmo * 4, 0.3)
+        resto = mejor(k + 1, w)
+        resultado = (coste + resto[0], (None,) + resto[1])
+        # Opción 2: el tramo k dice las palabras w..w2-1 (de una misma diapositiva)
+        for w2 in range(w + 1, min(W, w + 25) + 1):
+            if palabras[w2 - 1][0] != palabras[w][0]:
+                break
+            esperado = ritmo * (acumuladas[w2] - acumuladas[w])
+            coste = ((duraciones[k] - esperado) / (esperado + 0.3)) ** 2
+            # Pausa tras el tramo: larga donde hay puntuación, corta donde no
+            p = min(pausas[k] / pausa_media, 4.0)
+            marca = palabras[w2 - 1][2]
+            coste += 0.6 * (p - 1) * (0.5 - marca) if w2 < W else 0.0
+            resto = mejor(k + 1, w2)
             if coste + resto[0] < resultado[0]:
-                resultado = (coste + resto[0], (fin,) + resto[1])
+                resultado = (coste + resto[0], (palabras[w][0],) + resto[1])
         return resultado
 
-    cortes = (0,) + mejor(0, 0)[1]
+    total, asignacion = mejor(0, 0)
+    if total == math.inf:
+        return repartir_por_pausas(tramos, n)
+    grupos = [[] for _ in range(n)]
+    for tramo, diapositiva in zip(tramos, asignacion):
+        if diapositiva is not None:
+            grupos[diapositiva].append(tramo)
+    if any(not g for g in grupos):
+        return repartir_por_pausas(tramos, n)
+    return grupos
+
+
+def repartir_por_pausas(tramos, n):
+    """Sin guion: corta por las n-1 pausas más largas."""
+    if len(tramos) < n:
+        raise SystemExit(f"❌ La voz tiene {len(tramos)} frases y el reel {n} diapositivas. "
+                         "Graba una frase por diapositiva, con una pausa entre frases.")
+    pausas = sorted(range(len(tramos) - 1), key=lambda k: tramos[k][1] - tramos[k + 1][0])[:n - 1]
+    cortes = [0] + sorted(k + 1 for k in pausas) + [len(tramos)]
     return [tramos[a:b] for a, b in zip(cortes, cortes[1:])]
 
 
@@ -178,31 +231,26 @@ def preparar_voz(tarjeta):
     """Monta y limpia la pista de voz. Devuelve (archivo, inicio de cada diapositiva, duración)."""
     # Se colocan todas las grabaciones en una línea de tiempo común; el paso de
     # una grabación a otra cuenta como una pausa larga (buen sitio para cortar).
-    tramos, locales, fuentes, desplazamiento = [], [], [], 0.0
+    tramos, origen, desplazamiento = [], {}, 0.0
     for archivo in archivos_de_voz(tarjeta):
         muestras = pcm(archivo)
         propios = tramos_con_voz(muestras)
         for a, b in propios:
-            tramos.append((desplazamiento + a, desplazamiento + b))
-            locales.append((a, b))
-            fuentes.append(muestras)
+            tramo = (desplazamiento + a, desplazamiento + b)
+            tramos.append(tramo)
+            origen[tramo] = (a, b, muestras)  # tiempos dentro de su grabación
         if propios:
             desplazamiento += propios[-1][1] + 2.0
-    grupos_globales = repartir(tramos, tarjeta["diapositivas"])
-    # Vuelve a los tiempos de cada grabación para recortar el audio
-    grupos, k = [], 0
-    for grupo in grupos_globales:
-        grupos.append(locales[k:k + len(grupo)])
-        k += len(grupo)
+    grupos = [[origen[t] for t in grupo] for grupo in repartir(tramos, tarjeta["diapositivas"])]
+    usados = sum(len(g) for g in grupos)
+    if usados < len(tramos):
+        print(f"   ✂️  {tarjeta['nombre']}: {len(tramos) - usados} titubeo(s) quitado(s)")
 
     # Nueva pista: cada tramo con su margen y pausas cortas y regulares
     salida, inicios, posicion = bytearray(), [], 0.0
-    indice = 0
     for g, grupo in enumerate(grupos):
         inicios.append(posicion)
-        for j, (a, b) in enumerate(grupo):
-            muestras = fuentes[indice]
-            indice += 1
+        for j, (a, b, muestras) in enumerate(grupo):
             desde = max(0, int((a - MARGEN_TRAMO[0]) * FM_VOZ)) * 2
             hasta = min(len(muestras), int((b + MARGEN_TRAMO[1]) * FM_VOZ) * 2)
             salida += muestras[desde:hasta]
@@ -210,6 +258,8 @@ def preparar_voz(tarjeta):
             if j < len(grupo) - 1:
                 siguiente = grupo[j + 1][0]
                 hueco = min(PAUSA_FRASE, max(0.0, siguiente - b - sum(MARGEN_TRAMO)))
+                if grupo[j + 1][2] is not muestras:  # cambio de grabación
+                    hueco = PAUSA_FRASE
             elif g < len(grupos) - 1:
                 hueco = PAUSA_DIAPOSITIVA
             else:
