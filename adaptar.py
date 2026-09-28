@@ -51,7 +51,10 @@ def recortar(foto):
 
 def adaptar(origen, destino):
     with Image.open(origen) as foto:
-        foto = ImageOps.exif_transpose(foto).convert("RGB")
+        foto = ImageOps.exif_transpose(foto).convert("RGBA")
+    # Las zonas transparentes (fotos de producto sin fondo) quedan en blanco.
+    fondo = Image.new("RGBA", foto.size, "white")
+    foto = Image.alpha_composite(fondo, foto).convert("RGB")
     foto = recortar(foto)
     if foto.width > ANCHO_MAX:
         foto = foto.resize((ANCHO_MAX, round(foto.height * ANCHO_MAX / foto.width)), Image.LANCZOS)

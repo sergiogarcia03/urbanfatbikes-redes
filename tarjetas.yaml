@@ -1,0 +1,65 @@
+# Tarjetas de texto con el diseño de urbanfatbikes.
+#
+# El programa tarjetas.py convierte cada una en una imagen
+# contenido/<archivo>.jpg que luego se usa en calendario.yaml.
+#
+# Campos:
+#   archivo:     nombre de la imagen (sin espacios ni tildes)
+#   titulo:      el texto grande
+#   subtitulo:   (opcional) texto gris bajo el título
+#   bloques:     (opcional) apartados con su título y sus puntos
+#   nota:        (opcional) texto pequeño al final
+#   logo_grande: (opcional) sí = el logo grande arriba, para portadas
+
+tarjetas:
+  - archivo: tarjeta-presentacion
+    logo_grande: sí
+    titulo: Fatbikes eléctricas certificadas
+    subtitulo: Próximamente en España.
+
+  - archivo: tarjeta-bici-o-ciclomotor
+    titulo: ¿Bicicleta eléctrica o ciclomotor?
+    subtitulo: Depende de sus características, y la diferencia importa.
+    bloques:
+      - titulo: Bicicleta eléctrica (norma EN 15194)
+        puntos:
+          - El motor solo ayuda mientras pedaleas
+          - La ayuda se corta a 25 km/h
+          - Motor de 250 W como máximo
+          - Sin matrícula ni carné
+      - titulo: Si supera esos límites
+        puntos:
+          - Se considera ciclomotor
+          - Necesita homologación, matrícula, seguro y carné
+    nota: Antes de comprar, pide siempre el certificado.
+
+  - archivo: tarjeta-que-incluye-v8
+    titulo: Qué incluye tu V8
+    bloques:
+      - titulo: De regalo
+        puntos:
+          - Candado
+          - Bomba de aire
+          - Kit de herramientas
+      - titulo: De serie
+        puntos:
+          - Llave NFC y mando con alarma
+          - Localizador compatible con iPhone
+          - Frenos de disco hidráulicos
+          - Doble suspensión
+
+  - archivo: tarjeta-ficha-v8
+    titulo: V8 · Ficha técnica
+    bloques:
+      - titulo: Motor y batería
+        puntos:
+          - Motor de 250 W con asistencia hasta 25 km/h
+          - Batería de litio de 48 V y 15,6 Ah
+          - Autonomía de 50 a 55 km, según fabricante
+      - titulo: Bicicleta
+        puntos:
+          - Ruedas de 20" × 4,0"
+          - Cuadro de acero de alto carbono
+          - Frenos de disco hidráulicos
+          - Suspensión delantera y trasera
+    nota: Ensayada por TÜV Rheinland según la norma europea EN 15194.

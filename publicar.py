@@ -14,7 +14,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
 from zoneinfo import ZoneInfo
@@ -33,6 +33,9 @@ EXT_VIDEO = {".mp4", ".mov"}
 MAX_TEXTO = 2200
 MAX_HASHTAGS = 30
 MAX_CARRUSEL = 10
+# Si una publicación lleva más de esto sin salir (por ejemplo porque el
+# calendario se aprobó tarde), no se publica sola: hay que cambiarle la fecha.
+MAX_RETRASO = timedelta(hours=24)
 
 
 def cargar_calendario():
@@ -135,7 +138,9 @@ def publicar_en_instagram(ig, publicacion):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--modo", choices=["comprobar", "simular", "publicar"], default="simular")
-    modo = parser.parse_args().modo
+    parser.add_argument("--manual", action="store_true", help="lanzado a mano: publica aunque vaya con retraso")
+    args = parser.parse_args()
+    modo = args.modo
 
     token = os.environ.get("IG_ACCESS_TOKEN")
     if modo != "simular" and not token:
@@ -156,6 +161,9 @@ def main():
 
     for publicacion in cargar_calendario():
         nombre = publicacion.get("id", "(sin id)")
+        if publicacion.get("borrador"):
+            print(f"📝 {nombre}: borrador, no se publica")
+            continue
         errores = problemas(publicacion)
         if errores:
             fallos += 1
@@ -166,6 +174,9 @@ def main():
             continue
         if fecha_de(publicacion) > ahora:
             print(f"🕒 {nombre}: programada para el {publicacion['fecha']}")
+            continue
+        if ahora - fecha_de(publicacion) > MAX_RETRASO and not args.manual:
+            print(f"⏰ {nombre}: su fecha ({publicacion['fecha']}) pasó hace más de 24 h; cámbiala para publicarla")
             continue
 
         if modo == "simular":

@@ -10,6 +10,7 @@ on:
     paths:
       - "contenido/**"
       - "!contenido/instagram/**"
+      - "tarjetas.yaml"
   # Permite lanzarlo a mano desde la pestaña "Actions" de GitHub.
   workflow_dispatch:
     inputs:
@@ -42,17 +43,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Adaptar fotos para Instagram
+      - name: Preparar tarjetas y fotos para Instagram
         run: |
+          python tarjetas.py
           python adaptar.py
-          git add contenido/instagram
-          git diff --cached --quiet || (git commit -m "Adaptar fotos para Instagram" && git pull --rebase && git push)
+          git add contenido
+          git diff --cached --quiet || (git commit -m "Preparar tarjetas y fotos para Instagram" && git pull --rebase && git push)
           # Instagram descargará las fotos de esta versión exacta del repositorio.
           echo "VERSION=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Publicar
         if: github.event_name != 'push'
-        run: python publicar.py --modo "${{ inputs.modo || 'publicar' }}"
+        run: python publicar.py --modo "${{ inputs.modo || 'publicar' }}" ${{ github.event_name == 'workflow_dispatch' && '--manual' || '' }}
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           # Dirección pública de los archivos. Si no se configura la variable
