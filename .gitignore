@@ -3,3 +3,4 @@ __pycache__/
 .env
 contenido/.voz-*
 research_notes/
+reports/

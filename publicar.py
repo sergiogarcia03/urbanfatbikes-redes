@@ -34,7 +34,7 @@ ZONA = ZoneInfo("Europe/Madrid")
 
 EXT_VIDEO = {".mp4", ".mov"}
 MAX_TEXTO = 2200
-MAX_HASHTAGS = 30
+MAX_HASHTAGS = 5  # Instagram ignora los que pasen de 5 (desde dic. 2025)
 MAX_CARRUSEL = 10
 # Si una publicación lleva más de esto sin salir (por ejemplo porque el
 # calendario se aprobó tarde), no se publica sola: hay que cambiarle la fecha.
