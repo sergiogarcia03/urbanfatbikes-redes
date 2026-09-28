@@ -73,10 +73,12 @@ En la pestaña **Actions → Publicar en redes → Run workflow**, elige:
   conservan sus datos ocultos. Desactiva la ubicación en la cámara del móvil
   antes de hacer fotos que vayas a subir.
 - Los reels tienen que ser **MP4** o **MOV**.
-- **Voz en los reels:** graba el guion con la app de notas de voz, dejando un
-  segundo de silencio entre frases (una frase por diapositiva), guárdalo en
-  `contenido/voz/` y añade `voz: archivo` a la tarjeta en `tarjetas.yaml`.
-  El reel se ajusta solo a tu voz y la música baja mientras hablas.
+- **Voz en los reels:** graba el guion con la app de notas de voz (en uno o
+  varios audios) y mándalo. Los audios van a `contenido/voz/` y a la tarjeta en
+  `tarjetas.yaml` (`voz: [audio-1, audio-2]`, con la frase de cada diapositiva
+  en `dice`). El programa junta los audios, reparte las frases entre las
+  diapositivas, limpia la voz (ruido, golpes, eses, volumen), acorta las pausas
+  y baja la música mientras se habla.
 - Las horas del calendario son **hora de España**.
 - Una publicación con `borrador: sí` no se publica hasta que se quita esa línea.
 - Si la fecha de una publicación pasó hace más de 24 horas sin publicarse
