@@ -1,0 +1,443 @@
+{
+ "audio": "ficha.aac",
+ "palabras": [
+  {
+   "palabra": "Esta",
+   "inicio": 0.68,
+   "fin": 1.34,
+   "confianza": 0.279
+  },
+  {
+   "palabra": "lo",
+   "inicio": 1.34,
+   "fin": 1.52,
+   "confianza": 0.498
+  },
+  {
+   "palabra": "veo,",
+   "inicio": 1.52,
+   "fin": 1.7,
+   "confianza": 0.878
+  },
+  {
+   "palabra": "eh,",
+   "inicio": 1.98,
+   "fin": 2.18,
+   "confianza": 0.065
+  },
+  {
+   "palabra": "vale",
+   "inicio": 3.36,
+   "fin": 5.06,
+   "confianza": 0.212
+  },
+  {
+   "palabra": "ahora,",
+   "inicio": 5.06,
+   "fin": 5.34,
+   "confianza": 0.809
+  },
+  {
+   "palabra": "esta",
+   "inicio": 5.76,
+   "fin": 6.16,
+   "confianza": 0.909
+  },
+  {
+   "palabra": "lo",
+   "inicio": 6.16,
+   "fin": 6.32,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "veo",
+   "inicio": 6.32,
+   "fin": 6.48,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "8,",
+   "inicio": 6.48,
+   "fin": 6.74,
+   "confianza": 0.656
+  },
+  {
+   "palabra": "en",
+   "inicio": 6.92,
+   "fin": 7.06,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "4",
+   "inicio": 7.06,
+   "fin": 7.24,
+   "confianza": 0.836
+  },
+  {
+   "palabra": "cifras,",
+   "inicio": 7.24,
+   "fin": 7.74,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "250",
+   "inicio": 8.12,
+   "fin": 9.06,
+   "confianza": 0.914
+  },
+  {
+   "palabra": "vatios",
+   "inicio": 9.06,
+   "fin": 9.98,
+   "confianza": 0.758
+  },
+  {
+   "palabra": "de",
+   "inicio": 9.98,
+   "fin": 10.12,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "motor,",
+   "inicio": 10.12,
+   "fin": 10.4,
+   "confianza": 0.973
+  },
+  {
+   "palabra": "con",
+   "inicio": 10.84,
+   "fin": 11.0,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "asistencia",
+   "inicio": 11.0,
+   "fin": 11.82,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "hasta",
+   "inicio": 11.82,
+   "fin": 12.3,
+   "confianza": 0.816
+  },
+  {
+   "palabra": "25",
+   "inicio": 12.3,
+   "fin": 12.78,
+   "confianza": 0.991
+  },
+  {
+   "palabra": "km",
+   "inicio": 12.78,
+   "fin": 13.06,
+   "confianza": 0.723
+  },
+  {
+   "palabra": "por",
+   "inicio": 13.06,
+   "fin": 13.62,
+   "confianza": 0.079
+  },
+  {
+   "palabra": "hora,",
+   "inicio": 13.62,
+   "fin": 13.84,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "entre",
+   "inicio": 14.44,
+   "fin": 14.7,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "50",
+   "inicio": 14.7,
+   "fin": 15.12,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "y",
+   "inicio": 15.12,
+   "fin": 15.34,
+   "confianza": 0.823
+  },
+  {
+   "palabra": "55",
+   "inicio": 15.34,
+   "fin": 15.92,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "km",
+   "inicio": 15.92,
+   "fin": 16.28,
+   "confianza": 0.878
+  },
+  {
+   "palabra": "de",
+   "inicio": 16.28,
+   "fin": 16.7,
+   "confianza": 0.969
+  },
+  {
+   "palabra": "autonomía,",
+   "inicio": 16.7,
+   "fin": 17.3,
+   "confianza": 0.979
+  },
+  {
+   "palabra": "según",
+   "inicio": 17.72,
+   "fin": 17.98,
+   "confianza": 0.927
+  },
+  {
+   "palabra": "el",
+   "inicio": 17.98,
+   "fin": 18.16,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "fabricante,",
+   "inicio": 18.16,
+   "fin": 18.7,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "ruedas,",
+   "inicio": 19.74,
+   "fin": 20.16,
+   "confianza": 0.961
+  },
+  {
+   "palabra": "ruedas",
+   "inicio": 20.34,
+   "fin": 20.8,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "de",
+   "inicio": 20.8,
+   "fin": 20.94,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "4",
+   "inicio": 20.94,
+   "fin": 21.12,
+   "confianza": 0.948
+  },
+  {
+   "palabra": "pulgadas",
+   "inicio": 21.12,
+   "fin": 21.58,
+   "confianza": 0.917
+  },
+  {
+   "palabra": "de",
+   "inicio": 21.58,
+   "fin": 21.86,
+   "confianza": 0.945
+  },
+  {
+   "palabra": "ancho,",
+   "inicio": 21.86,
+   "fin": 22.2,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "para",
+   "inicio": 22.52,
+   "fin": 22.72,
+   "confianza": 0.99
+  },
+  {
+   "palabra": "ir",
+   "inicio": 22.72,
+   "fin": 22.86,
+   "confianza": 0.463
+  },
+  {
+   "palabra": "cómodo",
+   "inicio": 22.86,
+   "fin": 23.26,
+   "confianza": 0.978
+  },
+  {
+   "palabra": "por",
+   "inicio": 23.26,
+   "fin": 23.42,
+   "confianza": 0.977
+  },
+  {
+   "palabra": "asfalto,",
+   "inicio": 23.42,
+   "fin": 23.9,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "tierra",
+   "inicio": 24.18,
+   "fin": 24.52,
+   "confianza": 0.976
+  },
+  {
+   "palabra": "o",
+   "inicio": 24.52,
+   "fin": 24.84,
+   "confianza": 0.917
+  },
+  {
+   "palabra": "arena,",
+   "inicio": 24.84,
+   "fin": 25.1,
+   "confianza": 0.965
+  },
+  {
+   "palabra": "y",
+   "inicio": 25.7,
+   "fin": 25.8,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "doble",
+   "inicio": 25.8,
+   "fin": 26.04,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "suspensión",
+   "inicio": 26.04,
+   "fin": 26.66,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "delante",
+   "inicio": 26.66,
+   "fin": 27.1,
+   "confianza": 0.859
+  },
+  {
+   "palabra": "y",
+   "inicio": 27.1,
+   "fin": 27.24,
+   "confianza": 0.485
+  },
+  {
+   "palabra": "detrás,",
+   "inicio": 27.24,
+   "fin": 27.66,
+   "confianza": 0.907
+  },
+  {
+   "palabra": "con",
+   "inicio": 28.24,
+   "fin": 28.34,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "frenos",
+   "inicio": 28.34,
+   "fin": 28.72,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "de",
+   "inicio": 28.72,
+   "fin": 28.82,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "discos",
+   "inicio": 28.82,
+   "fin": 29.16,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "hidraúlicos",
+   "inicio": 29.16,
+   "fin": 31.44,
+   "confianza": 0.734
+  },
+  {
+   "palabra": "ensayadas",
+   "inicio": 31.44,
+   "fin": 32.54,
+   "confianza": 0.53
+  },
+  {
+   "palabra": "por",
+   "inicio": 32.54,
+   "fin": 32.82,
+   "confianza": 0.951
+  },
+  {
+   "palabra": "TUV,",
+   "inicio": 32.82,
+   "fin": 34.82,
+   "confianza": 0.393
+  },
+  {
+   "palabra": "reinflando,",
+   "inicio": 35.52,
+   "fin": 36.18,
+   "confianza": 0.492
+  },
+  {
+   "palabra": "según",
+   "inicio": 36.76,
+   "fin": 36.96,
+   "confianza": 0.954
+  },
+  {
+   "palabra": "la",
+   "inicio": 36.96,
+   "fin": 37.12,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "norma",
+   "inicio": 37.12,
+   "fin": 37.38,
+   "confianza": 0.896
+  },
+  {
+   "palabra": "europea,",
+   "inicio": 37.38,
+   "fin": 38.2,
+   "confianza": 0.935
+  },
+  {
+   "palabra": "guárdalo",
+   "inicio": 38.7,
+   "fin": 39.36,
+   "confianza": 0.771
+  },
+  {
+   "palabra": "para",
+   "inicio": 39.36,
+   "fin": 39.5,
+   "confianza": 0.584
+  },
+  {
+   "palabra": "tener",
+   "inicio": 39.5,
+   "fin": 39.74,
+   "confianza": 0.927
+  },
+  {
+   "palabra": "a",
+   "inicio": 39.74,
+   "fin": 39.88,
+   "confianza": 0.941
+  },
+  {
+   "palabra": "mano.",
+   "inicio": 39.88,
+   "fin": 40.12,
+   "confianza": 0.995
+  }
+ ]
+}

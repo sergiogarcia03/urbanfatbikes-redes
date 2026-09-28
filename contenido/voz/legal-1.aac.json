@@ -1,0 +1,89 @@
+{
+ "audio": "legal-1.aac",
+ "palabras": [
+  {
+   "palabra": "Tu",
+   "inicio": 0.0,
+   "fin": 0.92,
+   "confianza": 0.475
+  },
+  {
+   "palabra": "fatbike",
+   "inicio": 0.92,
+   "fin": 1.28,
+   "confianza": 0.082
+  },
+  {
+   "palabra": "eléctrica",
+   "inicio": 1.28,
+   "fin": 1.88,
+   "confianza": 0.799
+  },
+  {
+   "palabra": "es",
+   "inicio": 1.88,
+   "fin": 2.28,
+   "confianza": 0.97
+  },
+  {
+   "palabra": "legal,",
+   "inicio": 2.28,
+   "fin": 2.6,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "ahora",
+   "inicio": 3.14,
+   "fin": 3.32,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "lo",
+   "inicio": 3.32,
+   "fin": 3.58,
+   "confianza": 0.972
+  },
+  {
+   "palabra": "ves,",
+   "inicio": 3.58,
+   "fin": 3.8,
+   "confianza": 0.987
+  },
+  {
+   "palabra": "hay",
+   "inicio": 3.94,
+   "fin": 4.04,
+   "confianza": 0.979
+  },
+  {
+   "palabra": "tres",
+   "inicio": 4.04,
+   "fin": 4.26,
+   "confianza": 0.705
+  },
+  {
+   "palabra": "cifras",
+   "inicio": 4.26,
+   "fin": 4.76,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "que",
+   "inicio": 4.76,
+   "fin": 4.96,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "lo",
+   "inicio": 4.96,
+   "fin": 5.08,
+   "confianza": 0.957
+  },
+  {
+   "palabra": "deciden.",
+   "inicio": 5.08,
+   "fin": 5.52,
+   "confianza": 0.972
+  }
+ ]
+}
