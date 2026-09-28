@@ -22,8 +22,8 @@ tarjetas:
     diapositivas:
       - tipo: portada
         antetitulo: Próximamente en España
-        titulo: Fatbikes eléctricas. *Certificadas.*
-        subtitulo: Para moverte por la ciudad sin complicaciones.
+        titulo: Fatbikes eléctricas. *Legales.*
+        subtitulo: Ensayadas según la norma europea EN 15194.
         logo: sí
 
   - nombre: legal
@@ -34,7 +34,7 @@ tarjetas:
       - tipo: portada
         antetitulo: Antes de comprar
         titulo: ¿Tu fatbike es *legal?*
-        subtitulo: 3 cifras deciden si es una bicicleta o un ciclomotor.
+        subtitulo: 3 cifras deciden si es una bicicleta o un vehículo de motor.
         tamano: 130
         dice: ¿Tu fatbike eléctrica es legal? Hay tres cifras que lo deciden.
       - tipo: dato
@@ -56,11 +56,11 @@ tarjetas:
         texto: Es lo máximo que puede ayudarte al arrancar. Por encima, el motor solo funciona si pedaleas.
         dice: Tres, sin pedalear, solo puede ayudarte hasta seis kilómetros por hora, para arrancar.
       - tipo: lista
-        titulo: ¿Supera alguna? Es un *ciclomotor*
+        titulo: ¿Supera alguna? *Ya no es una bici*
         puntos:
-          - Necesita homologación y matrícula
-          - Seguro obligatorio
-          - Carné para conducirla
+          - Pasa a ser un vehículo de motor (L1e)
+          - Homologación y matrícula
+          - Seguro obligatorio y permiso AM
         dice: Si supera alguna, legalmente es un ciclomotor. Necesita homologación, matrícula, seguro y carné.
       - tipo: cierre
         titulo: Pide siempre el certificado *EN 15194*
@@ -166,7 +166,7 @@ tarjetas:
         dice: Autonomía. Una fatbike suele llegar bastante más lejos con una carga.
       - tipo: portada
         antetitulo: Y lo más importante
-        titulo: Con la norma EN 15194 es una *bicicleta*
+        titulo: Si cumple la norma europea, es una *bicicleta*
         dice: Y si cumple la norma europea, legalmente es una bicicleta.
       - tipo: cierre
         titulo: ¿Tú cuál *prefieres?*
