@@ -118,6 +118,7 @@ def token_de_acceso():
 class TikTok:
     def __init__(self, token):
         self.token = token
+        self.ultima_respuesta = ""
 
     def _llamar(self, metodo, ruta, **opciones):
         cabeceras = {"Authorization": f"Bearer {self.token}"}
@@ -159,14 +160,17 @@ class TikTok:
                     raise TikTokError(f"falló la subida del vídeo ({type(error).__name__})") from None
                 if respuesta.status_code not in (200, 201, 206):
                     raise TikTokError(f"falló la subida del vídeo (HTTP {respuesta.status_code})")
+                self.ultima_respuesta = f"HTTP {respuesta.status_code} {respuesta.text[:300]}"
         return datos["publish_id"]
 
-    def esperar(self, publish_id, max_segundos=300):
+    def esperar(self, publish_id, max_segundos=300, detalle=False):
         """Espera a que TikTok procese el vídeo y lo deje en la bandeja de entrada."""
         limite = time.time() + max_segundos
         while True:
             estado = self._llamar("POST", "post/publish/status/fetch/", json={"publish_id": publish_id})
             situacion = estado.get("status")
+            if detalle:
+                print(f"   estado: {estado}", flush=True)
             if situacion in ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE"):
                 return situacion
             if situacion == "FAILED":
@@ -293,8 +297,10 @@ def main():
             return
         if args.modo == "probar":
             video = RAIZ / "contenido" / args.video
-            print(f"📤 Prueba: subiendo {video.name} a la bandeja de TikTok...")
-            situacion = tiktok.esperar(tiktok.subir_borrador(video))
+            print(f"📤 Prueba: subiendo {video.name} ({video.stat().st_size} bytes) a la bandeja de TikTok...", flush=True)
+            publish_id = tiktok.subir_borrador(video)
+            print(f"   subida: {tiktok.ultima_respuesta} · publish_id {publish_id}", flush=True)
+            situacion = tiktok.esperar(publish_id, max_segundos=180, detalle=True)
             print(f"✅ Borrador enviado ({situacion}). Míralo en la app de TikTok (bandeja de entrada).")
             return
     except TikTokError as error:
