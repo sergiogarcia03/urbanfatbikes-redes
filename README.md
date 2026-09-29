@@ -26,6 +26,7 @@ Instagram se publica solo. En TikTok los reels llegan como **borrador** a la app
 | `historias.yaml` y `historias.py` | Historias: la de "nuevo post" de cada publicación (1 h después) y las de `historias.yaml` (4 por semana) |
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
+| `renovar_token.py` | Renueva el token de Instagram cada semana para que nunca caduque |
 | `tiktok.py` | Sube los reels del calendario a la bandeja de entrada de TikTok y abre un aviso en GitHub con el texto para pegar |
 | `docs/` | La web de la marca (GitHub Pages): inicio, privacidad, aviso legal y la página de vuelta de TikTok |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |
@@ -90,8 +91,10 @@ y GitHub abre un aviso (issue) con el texto. Opciones en `calendario.yaml`:
 
 ## Cosas a tener en cuenta
 
-- **El token caduca a los 60 días.** Antes de que caduque, genera uno nuevo en
-  Meta for Developers y sustitúyelo en el Secret `IG_ACCESS_TOKEN`.
+- **El token caduca a los 60 días**, pero el workflow «Renovar token de Instagram»
+  lo renueva solo cada lunes (necesita el Secret `GH_PAT`, ver TikTok). Si alguna
+  vez llega a caducar, genera uno nuevo en Meta for Developers y sustitúyelo en
+  el Secret `IG_ACCESS_TOKEN`.
 - Instagram permite como máximo unas 50 publicaciones por API cada 24 horas.
 - Las fotos pueden ser JPG, PNG, WEBP o HEIC (iPhone). Al subirlas, GitHub crea
   sola una copia adaptada a Instagram en `contenido/instagram/`: la recorta por
