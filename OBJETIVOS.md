@@ -15,12 +15,13 @@ Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negoci
 
 ## Oct–dic 2026 · Aclarar
 
-- [ ] El proveedor responde: nombre del exportador, precio con aranceles pagados (DDP) y precios por cantidad
+- [x] Precio con aranceles e IVA pagados, entregado desde almacén en Alemania (pedido de 3 bicis de 250 W)
+- [ ] Precios por cantidad y nombre del importador (se pregunta en enero de 2027)
 - [x] Nombre del modelo decidido: se queda **urbanfatbikes V8** (siempre con la marca delante, nunca "Ouxi")
 - [ ] App de TikTok creada y conectada
 - [ ] 3 publicaciones por semana en Instagram y TikTok, sin fallar
 - [ ] 200 seguidores sumando las dos redes
-- **Condición para seguir:** bici puesta en España por ≤ 650 € sin IVA, con aranceles pagados y documentados
+- **Condición para seguir:** bici puesta en España por ≤ 650 € sin IVA, con aranceles pagados y documentados ✅ cumplida con el pedido de 3 (falta el documento de importación)
 
 ## Ene–mar 2027 · Decidir
 
@@ -31,7 +32,7 @@ Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negoci
 
 ## Abr–jun 2027 · Probar
 
-- [ ] 1 bici de muestra comprada
+- [x] 1 bici de muestra comprada (3 bicis de 250 W ya recibidas)
 - [ ] Vídeo de la prueba de corte a 25 km/h
 - [ ] La muestra coincide con el informe TÜV y no se puede desbloquear
 - [ ] 1.000 seguidores · 100 personas en la lista de fundadores
