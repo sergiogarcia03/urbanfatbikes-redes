@@ -65,7 +65,7 @@ def ocultar(valor):
 
 
 def clave(nombre):
-    valor = os.environ.get(nombre)
+    valor = (os.environ.get(nombre) or "").strip()  # sin saltos de línea pegados sin querer
     if not valor:
         sys.exit(f"Falta el secret {nombre} (ver README, sección TikTok).")
     return valor
