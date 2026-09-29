@@ -8,10 +8,13 @@ on:
       modo:
         description: "enlace = dar permiso · conectar = pegar el código · comprobar = probar la conexión · probar = mandar un reel de prueba · simular = ver qué subiría · subir = subir ya"
         type: choice
-        options: [enlace, conectar, comprobar, probar, simular, subir]
+        options: [enlace, conectar, comprobar, probar, estado, simular, subir]
         default: enlace
       codigo:
         description: "Solo para conectar: el código que te da la web después de dar permiso"
+        required: false
+      publish_id:
+        description: "Solo para estado: identificadores de subidas anteriores, separados por comas"
         required: false
 
 permissions:
@@ -38,6 +41,7 @@ jobs:
         run: python tiktok.py --modo "${{ inputs.modo }}" --manual
         env:
           TIKTOK_CODIGO: ${{ inputs.codigo }}
+          TIKTOK_PUBLISH_ID: ${{ inputs.publish_id }}
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
