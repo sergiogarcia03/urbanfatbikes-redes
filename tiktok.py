@@ -226,10 +226,11 @@ def avisar(publicacion, nombre_video):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--modo", choices=["enlace", "conectar", "comprobar", "probar", "simular", "subir"], default="simular")
+    parser.add_argument("--modo", choices=["enlace", "conectar", "comprobar", "probar", "estado", "simular", "subir"], default="simular")
     parser.add_argument("--codigo", help="código que muestra la web después de dar permiso (modo conectar)")
     parser.add_argument("--video", default="reel-legal.mp4",
                         help="modo probar: vídeo de contenido/ que se manda a la bandeja (no se registra)")
+    parser.add_argument("--publish-id", help="modo estado: identificador de una subida anterior")
     parser.add_argument("--manual", action="store_true", help="lanzado a mano: sube aunque vaya con retraso")
     args = parser.parse_args()
 
@@ -294,6 +295,12 @@ def main():
         tiktok = TikTok(token_de_acceso())
         if args.modo == "comprobar":
             print(f"✅ Conectado a TikTok como {tiktok.cuenta().get('display_name')}")
+            return
+        if args.modo == "estado":
+            for publish_id in (args.publish_id or os.environ.get("TIKTOK_PUBLISH_ID", "")).split(","):
+                if publish_id.strip():
+                    estado = tiktok._llamar("POST", "post/publish/status/fetch/", json={"publish_id": publish_id.strip()})
+                    print(f"{publish_id.strip()}: {estado}")
             return
         if args.modo == "probar":
             video = RAIZ / "contenido" / args.video
