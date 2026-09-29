@@ -90,12 +90,14 @@ def nuevo_post(publicacion):
         d.text((ANCHO / 2, y), texto, font=letra, fill=BLANCO, anchor="ma")
         y += 62
 
-    # Portada de la publicación, con esquinas redondeadas y sombra
-    imagen = portada(archivos[0])
+    # Portada de la publicación, con esquinas redondeadas y sombra.
+    # Con "portada: archivo.jpg" en el calendario se usa esa imagen en su lugar.
+    imagen = portada(publicacion.get("portada") or archivos[0])
     alto_max, ancho_max = 1640 - (y + 30), 860
     escala = min(ancho_max / imagen.width, alto_max / imagen.height)
     imagen = imagen.resize((round(imagen.width * escala), round(imagen.height * escala)), Image.LANCZOS)
-    x0, y0 = (ANCHO - imagen.width) // 2, y + 30
+    # Centrada en el hueco que queda (las portadas apaisadas no quedan pegadas arriba)
+    x0, y0 = (ANCHO - imagen.width) // 2, y + 30 + (alto_max - imagen.height) // 2
     sombra = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
     ImageDraw.Draw(sombra).rounded_rectangle((x0 + 10, y0 + 24, x0 + imagen.width + 10, y0 + imagen.height + 24),
                                              radius=40, fill=(0, 0, 0, 150))
