@@ -9,6 +9,7 @@
 #               - de 2 a 10 archivos -> carrusel
 #   texto:    el texto de la publicación, con sus hashtags
 #   borrador: (opcional) sí = todavía no se publica
+#   portada:  (opcional) imagen para la historia "nuevo post", si no vale la primera
 #
 # Horas de más actividad en España: reels a las 19:00, fotos y carruseles a las 13:30
 # (pronto para que dé tiempo a comentar y escribir; responder la primera hora).
@@ -62,14 +63,12 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT
 
-  # Pendiente del permiso del proveedor para usar su foto.
   - id: presentamos-v8
     fecha: "2026-10-09 13:30"
-    borrador: sí
     archivos:
       - tarjeta-v8-1.jpg
     texto: |
-      Te presentamos la V8.
+      Te presentamos la urbanfatbikes V8.
 
       Una fatbike eléctrica de estética clásica y ruedas de 4 pulgadas, pensada para la ciudad y para salir de ella.
 
@@ -82,14 +81,13 @@ publicaciones:
 
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
-  # Pendiente del permiso del proveedor para usar su vídeo.
   - id: detalles-v8
     fecha: "2026-10-12 19:00"
-    borrador: sí
     archivos:
       - v8-detalles.mp4
+    portada: v8-detalles-portada.jpg  # imagen para su historia "nuevo reel"
     texto: |
-      Los detalles de la V8 👀
+      Los detalles de la urbanfatbikes V8 👀
 
       Pantalla con velocidad y nivel de batería, llave NFC, mando con alarma, cesta delantera y faro delantero.
 
