@@ -1,7 +1,8 @@
 # urbanfatbikes-redes
 
 Publicación automática en las redes sociales de urbanfatbikes.
-De momento funciona con **Instagram**. TikTok vendrá más adelante.
+Instagram se publica solo. En TikTok los reels llegan como **borrador** a la app
+(TikTok no deja publicar directamente a herramientas propias) y se publican con un toque.
 
 ## Cómo funciona
 
@@ -25,6 +26,8 @@ De momento funciona con **Instagram**. TikTok vendrá más adelante.
 | `historias.yaml` y `historias.py` | Historias: la de "nuevo post" de cada publicación (1 h después) y las de `historias.yaml` (4 por semana) |
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
+| `tiktok.py` | Sube los reels del calendario a la bandeja de entrada de TikTok y abre un aviso en GitHub con el texto para pegar |
+| `docs/` | La web de la marca (GitHub Pages): inicio, privacidad, aviso legal y la página de vuelta de TikTok |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |
 | `.github/workflows/publicar.yml` | El "reloj" que lanza el programa cada hora en GitHub |
 
@@ -61,6 +64,29 @@ En la pestaña **Actions → Publicar en redes → Run workflow**, elige:
 - `comprobar`: prueba el token. Debe responder `✅ Conectado a Instagram como @urbanfatbikes`.
 - `simular`: revisa el calendario y dice qué publicaría, **sin publicar nada**.
 - `publicar`: publica de verdad lo que toque.
+
+### 4. La web (GitHub Pages)
+
+**Settings → Pages → Build and deployment → Source: Deploy from a branch →
+Branch: `main`, carpeta `/docs` → Save.** La web queda en
+`https://sergiogarcia03.github.io/urbanfatbikes-redes/`.
+
+### 5. TikTok
+
+1. En [TikTok for Developers](https://developers.tiktok.com/) crea una app con
+   **Login Kit** y **Content Posting API** (permisos `user.info.basic` y
+   `video.upload`, sin «Direct Post»). Dirección de vuelta (Redirect URI):
+   `https://sergiogarcia03.github.io/urbanfatbikes-redes/tiktok/`.
+2. Guarda en los Secrets `TIKTOK_CLIENT_KEY` y `TIKTOK_CLIENT_SECRET`, y un
+   token de GitHub (fine-grained, solo este repositorio, permiso *Secrets: Read
+   and write*) como `GH_PAT`.
+3. **Actions → Conectar TikTok → Run workflow → `enlace`**: abre el enlace del
+   resumen y acepta. La web te da un código: pégalo con el modo `conectar`.
+
+A partir de ahí, cada reel del calendario llega a la bandeja de TikTok a su hora
+y GitHub abre un aviso (issue) con el texto. Opciones en `calendario.yaml`:
+`tiktok: no` (no subirlo), `texto_tiktok:` (otro texto) y `fecha_tiktok:`
+(otra hora). Si existe `contenido/<reel>-tiktok.mp4`, se sube ese vídeo.
 
 ## Cosas a tener en cuenta
 

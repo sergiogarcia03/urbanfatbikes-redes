@@ -1,0 +1,123 @@
+/* Diseño de la web de urbanfatbikes: mismos colores y letra que las tarjetas. */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --fondo-arriba: #2a3840;
+  --fondo-abajo: #12191e;
+  --tarjeta: #1d272d;
+  --borde: #33444d;
+  --turquesa: #32c6ca;
+  --blanco: #ffffff;
+  --gris: #bfcacc;
+  --gris-azulado: #708c92;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--fondo-abajo) linear-gradient(180deg, var(--fondo-arriba) 0, var(--fondo-abajo) 640px) no-repeat;
+  color: var(--gris);
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--turquesa); text-underline-offset: 3px; }
+a:hover { color: var(--blanco); }
+
+.contenedor { width: min(960px, 100% - 32px); margin-inline: auto; }
+.estrecho { width: min(760px, 100% - 32px); margin-inline: auto; }
+
+/* Cabecera */
+.cabecera { padding: 20px 0; }
+.cabecera .contenedor { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: 12px; color: var(--blanco); text-decoration: none; font-weight: 800; letter-spacing: .02em; }
+.marca img { width: 44px; height: 44px; }
+.cabecera nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.cabecera nav a { color: var(--gris); text-decoration: none; font-weight: 600; font-size: 15px; }
+.cabecera nav a:hover { color: var(--turquesa); }
+
+/* Portada */
+.portada { text-align: center; padding: 48px 0 72px; }
+.portada .logo { width: min(240px, 60vw); height: auto; filter: drop-shadow(0 18px 40px rgba(0, 0, 0, .45)); }
+.antetitulo { color: var(--turquesa); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 14px; margin: 32px 0 8px; }
+h1, h2, h3 { color: var(--blanco); line-height: 1.15; margin: 0 0 16px; }
+h1 { font-size: clamp(36px, 7vw, 64px); font-weight: 800; }
+h2 { font-size: clamp(26px, 4.5vw, 38px); font-weight: 800; }
+h3 { font-size: 20px; font-weight: 700; }
+.resaltado { color: var(--turquesa); }
+.entradilla { font-size: clamp(17px, 2.4vw, 20px); max-width: 620px; margin: 0 auto; }
+
+.botones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+.boton {
+  display: inline-block; padding: 14px 26px; border-radius: 999px;
+  background: var(--turquesa); color: var(--fondo-abajo); font-weight: 800; text-decoration: none;
+  border: 2px solid var(--turquesa); font-size: 16px; cursor: pointer; font-family: inherit;
+}
+.boton:hover { background: var(--blanco); border-color: var(--blanco); color: var(--fondo-abajo); }
+.boton.secundario { background: transparent; color: var(--blanco); border-color: var(--borde); }
+.boton.secundario:hover { border-color: var(--turquesa); color: var(--turquesa); }
+
+/* Secciones */
+section { padding: 56px 0; }
+.seccion-titulo { text-align: center; margin-bottom: 32px; }
+.seccion-titulo p { max-width: 620px; margin: 0 auto; }
+
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.cifra { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 24px; }
+.cifra .numero { color: var(--turquesa); font-size: 48px; font-weight: 800; line-height: 1; }
+.cifra .unidad { color: var(--blanco); font-weight: 700; margin: 6px 0 8px; }
+.cifra p { margin: 0; font-size: 15px; }
+
+.caja { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 28px; }
+.caja ul { padding-left: 20px; margin: 12px 0 0; }
+.caja li { margin: 6px 0; }
+.nota { font-size: 14px; color: var(--gris-azulado); }
+
+/* Textos legales */
+.legal { padding: 24px 0 64px; }
+.legal h1 { font-size: clamp(30px, 5vw, 44px); }
+.legal h2 { font-size: 24px; margin-top: 40px; }
+.legal h3 { margin-top: 24px; }
+.legal table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--borde); }
+.legal th { color: var(--blanco); background: var(--tarjeta); width: 32%; }
+.tabla-desplazable { overflow-x: auto; }
+.idiomas { display: flex; gap: 12px; margin: 8px 0 24px; font-weight: 600; }
+.separador { border: 0; border-top: 1px solid var(--borde); margin: 56px 0 24px; }
+
+/* Página de conexión con TikTok */
+.codigo {
+  display: block; width: 100%; margin: 16px 0; padding: 16px; border-radius: 14px;
+  background: var(--fondo-abajo); border: 1px solid var(--borde); color: var(--blanco);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 15px;
+  word-break: break-all; resize: none;
+}
+.pasos { padding-left: 22px; }
+.pasos li { margin: 10px 0; }
+.oculto { display: none; }
+
+/* Pie */
+.pie { border-top: 1px solid var(--borde); padding: 32px 0 48px; font-size: 14px; }
+.pie .contenedor { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pie nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.pie a { color: var(--gris); }
+.pie a:hover { color: var(--turquesa); }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  section { padding: 40px 0; }
+  .portada { padding: 24px 0 48px; }
+  .cifra .numero { font-size: 40px; }
+}
