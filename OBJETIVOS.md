@@ -16,7 +16,7 @@ Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negoci
 ## Oct–dic 2026 · Aclarar
 
 - [ ] El proveedor responde: nombre del exportador, precio con aranceles pagados (DDP) y precios por cantidad
-- [ ] Nombre nuevo para el modelo (sin "V8")
+- [x] Nombre del modelo decidido: se queda **urbanfatbikes V8** (siempre con la marca delante, nunca "Ouxi")
 - [ ] App de TikTok creada y conectada
 - [ ] 3 publicaciones por semana en Instagram y TikTok, sin fallar
 - [ ] 200 seguidores sumando las dos redes
