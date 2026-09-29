@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "enlace = dar permiso · conectar = pegar el código · comprobar = probar · simular = ver qué subiría · subir = subir ya"
+        description: "enlace = dar permiso · conectar = pegar el código · comprobar = probar la conexión · probar = mandar un reel de prueba · simular = ver qué subiría · subir = subir ya"
         type: choice
-        options: [enlace, conectar, comprobar, simular, subir]
+        options: [enlace, conectar, comprobar, probar, simular, subir]
         default: enlace
       codigo:
         description: "Solo para conectar: el código que te da la web después de dar permiso"
