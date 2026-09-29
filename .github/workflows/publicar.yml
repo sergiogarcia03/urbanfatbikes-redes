@@ -24,6 +24,7 @@ on:
 
 permissions:
   contents: write
+  issues: write  # avisos de TikTok con el texto para pegar
 
 # Nunca dos ejecuciones a la vez (evita publicar algo dos veces).
 concurrency: publicar
@@ -65,6 +66,16 @@ jobs:
           # MEDIA_BASE_URL, se usan los archivos del propio repositorio
           # (solo funciona si el repositorio es público).
           MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL || format('https://raw.githubusercontent.com/{0}/{1}', github.repository, env.VERSION) }}
+
+      - name: Subir reels a TikTok (como borrador)
+        if: always() && github.event_name != 'push'
+        run: python tiktok.py --modo ${{ inputs.modo == 'publicar' && 'subir' || inputs.modo == 'simular' && 'simular' || github.event_name == 'schedule' && 'subir' || 'simular' }} ${{ github.event_name == 'workflow_dispatch' && '--manual' || '' }}
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Guardar qué se ha publicado
         if: always() && github.event_name != 'push'
