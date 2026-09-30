@@ -117,3 +117,41 @@ historias:
       titulo: ¿Qué quieres *ver?*
       subtitulo: Escríbenos por mensaje y lo preparamos.
       tamano: 120
+
+  - id: cambio-hora
+    fecha: "2026-10-27 21:00"
+    diapositiva:
+      tipo: lista
+      titulo: Ya anochece *antes*
+      puntos:
+        - Luz delantera y trasera
+        - Ropa clara o reflectante
+        - De noche, las luces son obligatorias
+
+  - id: dato-kwh
+    fecha: "2026-10-29 21:00"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato
+      numero: 0,75
+      unidad: kWh
+      texto: Es lo que gasta una carga completa de una batería de 48 V y 15,6 Ah.
+
+  - id: otono
+    fecha: "2026-10-31 12:30"
+    diapositiva:
+      tipo: lista
+      titulo: En otoño, *ojo* con
+      puntos:
+        - Hojas mojadas en el suelo
+        - Frenar antes de las curvas
+        - Charcos que esconden baches
+
+  - id: tu-trayecto
+    fecha: "2026-11-01 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Coche o *fatbike* para ir al trabajo?
+      subtitulo: Cuéntanos tu trayecto por mensaje.
+      tamano: 100

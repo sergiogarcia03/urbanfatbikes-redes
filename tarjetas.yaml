@@ -226,3 +226,103 @@ tarjetas:
         titulo: "*Guarda* este vídeo"
         texto: Y compártelo con quien tenga una bici eléctrica.
         dice: Es muy importante. Guarda este vídeo y compártelo con quien tenga una bici eléctrica.
+  - nombre: carga
+    reel: sí
+    musica: urban-1.m4a
+    diapositivas:
+      - tipo: portada
+        antetitulo: Coche o fatbike
+        titulo: ¿Cuánto cuesta *cargarla?*
+        subtitulo: Hagamos la cuenta.
+        tamano: 130
+        dice: ¿Cuánto cuesta cargar una fatbike eléctrica? Hagamos la cuenta.
+      - tipo: dato
+        numero: 0,75
+        unidad: kWh por carga
+        texto: Es la energía de una batería de 48 V y 15,6 Ah, como la de la urbanfatbikes V8.
+        dice: La batería de la urbanfatbikes V8 es de cuarenta y ocho voltios y quince coma seis amperios hora. Unos cero coma setenta y cinco kilovatios hora.
+      - tipo: dato
+        numero: 50-55
+        unidad: km por carga
+        texto: Autonomía según fabricante.
+        dice: Con una carga, entre cincuenta y cincuenta y cinco kilómetros, según el fabricante.
+      - tipo: lista
+        titulo: Y además, *sin*
+        puntos:
+          - Gasolina
+          - Seguro obligatorio
+          - Permiso de conducir
+        nota: Si cumple la norma EN 15194, legalmente es una bicicleta.
+        dice: Y sin gasolina, sin seguro obligatorio y sin carné, porque legalmente es una bicicleta.
+      - tipo: cierre
+        titulo: Unos *céntimos* por carga
+        texto: Según tu tarifa de luz. Guarda este vídeo.
+        dice: Así que cargarla cuesta unos céntimos, según tu tarifa. Guarda este vídeo y compártelo.
+  - nombre: mitos
+    diapositivas:
+      - tipo: portada
+        antetitulo: Mitos
+        titulo: 4 mitos sobre las *fatbikes*
+        subtitulo: Desliza y descubre la verdad.
+        tamano: 120
+      - tipo: portada
+        antetitulo: Mito 1
+        titulo: Todas son *ilegales*
+        subtitulo: Falso. Si cumple la norma EN 15194, legalmente es una bicicleta.
+        tamano: 120
+      - tipo: portada
+        antetitulo: Mito 2
+        titulo: Necesitas *carné* y seguro
+        subtitulo: Falso. Una bicicleta eléctrica que cumple la norma no necesita permiso de conducir ni seguro obligatorio.
+        tamano: 110
+      - tipo: portada
+        antetitulo: Mito 3
+        titulo: Con *acelerador* es igual
+        subtitulo: Falso. Si el motor empuja sin pedalear por encima de 6 km/h, pasa a ser un vehículo de motor (L1e).
+        tamano: 110
+      - tipo: portada
+        antetitulo: Mito 4
+        titulo: El casco *nunca* es obligatorio
+        subtitulo: Falso. Lo es para menores de 16 años y, para todos, en vías interurbanas.
+        tamano: 100
+      - tipo: cierre
+        titulo: ¿Conocías *los 4?*
+        texto: Cuéntanoslo en comentarios.
+  - nombre: padres
+    reel: sí
+    musica: urban-2.m4a
+    diapositivas:
+      - tipo: portada
+        antetitulo: Para padres
+        titulo: ¿Vas a regalarle una *fatbike?*
+        subtitulo: Revisa estas 3 cosas antes.
+        tamano: 110
+        dice: ¿Vas a regalarle una fatbike eléctrica a tu hijo? Antes, revisa estas tres cosas.
+      - tipo: dato
+        antetitulo: Paso 1
+        numero: 1
+        unidad: El informe de ensayo
+        texto: Pide el informe según la norma europea EN 15194. Sin él, no sabes si es una bicicleta.
+        dice: Uno. Pide el informe de ensayo según la norma europea EN 15194.
+      - tipo: dato
+        antetitulo: Paso 2
+        numero: 2
+        unidad: Sin acelerador
+        texto: Si el motor empuja sin pedalear por encima de 6 km/h, ya no es una bicicleta.
+        dice: Dos. Que no tenga acelerador. Si empuja sin pedalear por encima de seis kilómetros por hora, ya no es una bicicleta.
+      - tipo: dato
+        antetitulo: Paso 3
+        numero: 3
+        unidad: Sin trucos
+        texto: Desconfía de los "modos desbloqueados" que pasan de 25 km/h.
+        dice: Tres. Nada de modos desbloqueados que pasen de veinticinco kilómetros por hora.
+      - tipo: lista
+        titulo: Y siempre, *casco*
+        puntos:
+          - Obligatorio para menores de 16 años
+          - En cualquier vía
+        dice: Y siempre casco. Para menores de dieciséis años es obligatorio en cualquier vía.
+      - tipo: cierre
+        titulo: Compártelo con quien lo *necesite*
+        texto: Síguenos para elegir bien.
+        dice: Comparte este vídeo con quien lo necesite.
