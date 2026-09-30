@@ -28,6 +28,8 @@ Instagram se publica solo. En TikTok los reels llegan como **borrador** a la app
 | `instagram.py` | La parte que habla con Instagram |
 | `renovar_token.py` | Renueva el token de Instagram cada semana para que nunca caduque |
 | `tiktok.py` | Sube los reels del calendario a la bandeja de entrada de TikTok y abre un aviso en GitHub con el texto para pegar |
+| `herramientas/contactos.html` | Código de la agenda privada de contactos (los datos no están aquí) |
+| `CLAUDE.md` | Memoria del proyecto para Claude: normas de la marca, cómo funciona todo y lo pendiente |
 | `docs/` | La web de la marca (GitHub Pages): inicio, privacidad, aviso legal y la página de vuelta de TikTok |
 | `publicados.json` | Registro automático de lo ya publicado (no editar a mano) |
 | `.github/workflows/publicar.yml` | El "reloj" que lanza el programa cada hora en GitHub |

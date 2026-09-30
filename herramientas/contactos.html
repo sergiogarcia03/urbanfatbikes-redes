@@ -1,0 +1,394 @@
+<title>Contactos urbanfatbikes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabecera con "Esta semana" arriba, lista filtrable de fichas y panel de detalle (lateral en ordenador, a pantalla completa en el móvil). */
+:root {
+  --bg: #f3f6f6;
+  --surface: #ffffff;
+  --surface-2: #e9eff0;
+  --line: #d3dde0;
+  --fg: #16232a;
+  --muted: #5b6d74;
+  --brand: #2a3840;
+  --accent: #1f9ea2;
+  --accent-soft: #d6f1f1;
+  --on-accent: #ffffff;
+  --warn: #b26a00;
+  --warn-soft: #fbecd4;
+  --bad: #b3261e;
+  --bad-soft: #f8dcda;
+  --good: #2e7d4f;
+  --good-soft: #dcefe3;
+  --shadow: 0 10px 30px rgba(22, 35, 42, .12);
+  --f-display: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12191e; --surface: #1b252b; --surface-2: #24323a; --line: #33444d;
+    --fg: #e8eef0; --muted: #9fb1b6; --brand: #e8eef0; --accent: #32c6ca;
+    --accent-soft: #173d40; --on-accent: #0f1a1e; --warn: #f0b35a; --warn-soft: #3b2d17;
+    --bad: #f28b82; --bad-soft: #3d1f1d; --good: #7fd19b; --good-soft: #1b3325;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .45); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12191e; --surface: #1b252b; --surface-2: #24323a; --line: #33444d;
+  --fg: #e8eef0; --muted: #9fb1b6; --brand: #e8eef0; --accent: #32c6ca;
+  --accent-soft: #173d40; --on-accent: #0f1a1e; --warn: #f0b35a; --warn-soft: #3b2d17;
+  --bad: #f28b82; --bad-soft: #3d1f1d; --good: #7fd19b; --good-soft: #1b3325;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .45); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+.app { max-width: 1100px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 60px; display: grid; gap: 20px; }
+h1, h2, h3 { font-family: var(--f-display); margin: 0; text-wrap: balance; color: var(--brand); }
+h1 { font-size: 26px; font-weight: 800; letter-spacing: -.01em; }
+h2 { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.top { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.marca { display: flex; flex-direction: column; gap: 2px; }
+.marca small { color: var(--muted); font-size: 13px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 9px 16px; font-weight: 600; }
+.btn:hover { border-color: var(--accent); }
+.btn.principal { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.btn.peligro { color: var(--bad); border-color: var(--bad); background: transparent; }
+.btn.peligro.lleno { background: var(--bad); color: var(--surface); }
+.btn:disabled { opacity: .5; cursor: default; }
+
+.semana { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 10px; }
+.semana ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.semana li button { width: 100%; text-align: left; border: 0; background: var(--surface-2); border-radius: 10px; padding: 10px 12px; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: baseline; }
+.semana li button:hover { background: var(--accent-soft); }
+.fecha { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 13px; white-space: nowrap; }
+.fecha.tarde { color: var(--bad); }
+.fecha.hoy { color: var(--warn); }
+.semana .quien { font-weight: 600; min-width: 0; }
+.semana .que { grid-column: 2; color: var(--muted); font-size: 14px; min-width: 0; overflow-wrap: anywhere; }
+.vacio { color: var(--muted); font-size: 14px; margin: 0; }
+
+.filtros { display: flex; gap: 8px; flex-wrap: wrap; }
+.filtros input, .filtros select { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 12px; min-width: 0; }
+.filtros input { flex: 1 1 220px; }
+.filtros select { flex: 0 1 180px; }
+.cuenta { color: var(--muted); font-size: 13px; }
+
+.lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.ficha { text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); padding: 14px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.ficha:hover { border-color: var(--accent); }
+.ficha .nombre { font-family: var(--f-display); font-weight: 700; font-size: 16px; overflow-wrap: anywhere; }
+.ficha .linea { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.ficha .nota { color: var(--muted); font-size: 13px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.chip { font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--surface-2); color: var(--muted); white-space: nowrap; }
+.est-nuevo { background: var(--surface-2); color: var(--fg); }
+.est-conversacion { background: var(--accent-soft); color: var(--accent); }
+.est-interesado { background: var(--warn-soft); color: var(--warn); }
+.est-cliente { background: var(--good-soft); color: var(--good); }
+.est-descartado { background: var(--bad-soft); color: var(--bad); }
+
+.estado-db { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 20px; color: var(--muted); }
+.estado-db strong { color: var(--fg); }
+
+/* Panel de detalle */
+.fondo { position: fixed; inset: 0; background: rgba(10, 16, 20, .45); z-index: 10; }
+.panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(520px, 100%); background: var(--surface); z-index: 11; box-shadow: var(--shadow); display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.panel-cab { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.panel-cuerpo { overflow-y: auto; padding: 16px; display: grid; gap: 18px; }
+.campos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.campos .ancho { grid-column: 1 / -1; }
+label { display: grid; gap: 4px; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .02em; min-width: 0; }
+.panel input, .panel select, .panel textarea { border: 1px solid var(--line); background: var(--bg); border-radius: 10px; padding: 9px 11px; font-size: 15px; font-weight: 400; color: var(--fg); width: 100%; min-width: 0; }
+textarea { resize: vertical; min-height: 70px; }
+.notas { display: grid; gap: 10px; }
+.notas ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.notas li { border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 10px 10px 0; padding: 8px 12px; display: grid; gap: 2px; }
+.notas li .fecha { color: var(--muted); font-weight: 500; }
+.notas li p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.nueva-nota { display: grid; gap: 8px; }
+.acciones { display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+.confirmar { background: var(--bad-soft); color: var(--bad); border-radius: 10px; padding: 12px; display: grid; gap: 10px; }
+.aviso { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--brand); color: var(--bg); padding: 10px 18px; border-radius: 999px; font-weight: 600; z-index: 20; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
+@media (max-width: 520px) {
+  .campos { grid-template-columns: 1fr; }
+  h1 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .panel { animation: entra .18s ease-out; }
+  @keyframes entra { from { transform: translateX(24px); opacity: .6; } to { transform: none; opacity: 1; } }
+}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="marca">
+      <h1>Contactos urbanfatbikes</h1>
+      <small>Interesados, clientes, proveedores, alquileres y talleres</small>
+    </div>
+    <button class="btn principal" id="nuevo" type="button">+ Nuevo contacto</button>
+  </header>
+
+  <section class="semana" aria-labelledby="t-semana">
+    <h2 id="t-semana">Esta semana</h2>
+    <ul id="agenda"></ul>
+    <p class="vacio" id="agenda-vacia">Nada pendiente para los próximos 7 días. Pon una «próxima acción» con fecha en un contacto y aparecerá aquí.</p>
+  </section>
+
+  <section aria-labelledby="t-lista" style="display:grid;gap:12px">
+    <div class="top">
+      <h2 id="t-lista">Todos los contactos</h2>
+      <span class="cuenta" id="cuenta"></span>
+    </div>
+    <div class="filtros">
+      <input id="buscar" type="search" placeholder="Buscar por nombre, ciudad, nota…" aria-label="Buscar">
+      <select id="f-tipo" aria-label="Filtrar por tipo"><option value="">Todos los tipos</option></select>
+      <select id="f-estado" aria-label="Filtrar por estado"><option value="">Todos los estados</option></select>
+    </div>
+    <div id="estado-db" class="estado-db">Cargando tus contactos…</div>
+    <div class="lista" id="lista"></div>
+  </section>
+</div>
+
+<div class="fondo" id="fondo" hidden></div>
+<aside class="panel" id="panel" hidden aria-labelledby="p-titulo" role="dialog">
+  <div class="panel-cab">
+    <h3 id="p-titulo">Contacto</h3>
+    <button class="btn" id="cerrar" type="button">Cerrar</button>
+  </div>
+  <form class="panel-cuerpo" id="formulario" autocomplete="off">
+    <div class="campos">
+      <label class="ancho">Nombre<input id="c-nombre" required maxlength="120" placeholder="Nombre y apellido o empresa"></label>
+      <label>Tipo<select id="c-tipo"></select></label>
+      <label>Estado<select id="c-estado"></select></label>
+      <label>Cómo nos contactó<select id="c-canal"></select></label>
+      <label>Ciudad<input id="c-ciudad" maxlength="80"></label>
+      <label>Teléfono<input id="c-telefono" type="tel" maxlength="40"></label>
+      <label>Email<input id="c-email" type="email" maxlength="120"></label>
+      <label class="ancho">Qué le interesa<input id="c-interes" maxlength="200" placeholder="Ej.: urbanfatbikes V8, recambios, 10 bicis para alquiler"></label>
+      <label class="ancho">Próxima acción<input id="c-accion" maxlength="200" placeholder="Ej.: llamar para confirmar precios"></label>
+      <label>Fecha de la acción<input id="c-fecha" type="date"></label>
+    </div>
+
+    <div class="notas">
+      <h2>Notas</h2>
+      <div class="nueva-nota">
+        <textarea id="c-nota" maxlength="2000" placeholder="¿Qué habéis hablado? Se guarda con la fecha de hoy."></textarea>
+      </div>
+      <ol id="notas"></ol>
+    </div>
+
+    <div class="acciones">
+      <button class="btn peligro" id="borrar" type="button">Borrar contacto</button>
+      <button class="btn principal" id="guardar" type="submit">Guardar</button>
+    </div>
+    <div class="confirmar" id="confirmar" hidden>
+      <span>¿Borrar este contacto y todas sus notas? No se puede deshacer.</span>
+      <div class="acciones">
+        <button class="btn" id="no-borrar" type="button">Cancelar</button>
+        <button class="btn peligro lleno" id="si-borrar" type="button">Sí, borrar</button>
+      </div>
+    </div>
+  </form>
+</aside>
+<div class="aviso" id="aviso" hidden role="status"></div>
+
+<script>
+(() => {
+  const TIPOS = ["Interesado", "Cliente", "Proveedor", "Alquiler u hotel", "Taller", "Otro"];
+  const ESTADOS = [
+    ["nuevo", "Nuevo"], ["conversacion", "En conversación"], ["interesado", "Interesado"],
+    ["cliente", "Cliente"], ["descartado", "Descartado"]
+  ];
+  const CANALES = ["Instagram", "TikTok", "Email", "WhatsApp", "Web", "Teléfono", "En persona", "Otro"];
+  const nombreEstado = Object.fromEntries(ESTADOS);
+  const $ = (id) => document.getElementById(id);
+
+  function opciones(sel, lista, primera) {
+    if (primera) sel.append(new Option(primera, ""));
+    for (const o of lista) {
+      const [v, t] = Array.isArray(o) ? o : [o, o];
+      sel.append(new Option(t, v));
+    }
+  }
+  opciones($("f-tipo"), TIPOS);
+  opciones($("f-estado"), ESTADOS);
+  opciones($("c-tipo"), TIPOS);
+  opciones($("c-estado"), ESTADOS);
+  opciones($("c-canal"), CANALES, "—");
+
+  const hoyISO = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  };
+  const fechaCorta = (iso) => {
+    if (!iso) return "";
+    const [y, m, d] = iso.split("-").map(Number);
+    return new Date(y, m - 1, d).toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" });
+  };
+  const diasHasta = (iso) => {
+    const [y, m, d] = iso.split("-").map(Number);
+    const a = new Date(y, m - 1, d); const h = new Date(); h.setHours(0, 0, 0, 0);
+    return Math.round((a - h) / 86400000);
+  };
+
+  let db = null, col = null, contactos = [], abierto = null, guardando = false;
+
+  function aviso(texto) {
+    const el = $("aviso"); el.textContent = texto; el.hidden = false;
+    clearTimeout(aviso.t); aviso.t = setTimeout(() => { el.hidden = true; }, 2400);
+  }
+
+  function chip(texto, clase) {
+    const s = document.createElement("span"); s.className = "chip " + (clase || ""); s.textContent = texto; return s;
+  }
+
+  function pintar() {
+    const q = $("buscar").value.trim().toLowerCase();
+    const ft = $("f-tipo").value, fe = $("f-estado").value;
+    const vistos = contactos.filter((c) => {
+      if (ft && c.tipo !== ft) return false;
+      if (fe && c.estado !== fe) return false;
+      if (!q) return true;
+      const texto = [c.nombre, c.ciudad, c.interes, c.accion, c.email, c.telefono, ...(c.notas || []).map((n) => n.texto)].join(" ").toLowerCase();
+      return texto.includes(q);
+    }).sort((a, b) => (b.actualizado || "").localeCompare(a.actualizado || ""));
+
+    const lista = $("lista"); lista.replaceChildren();
+    for (const c of vistos) {
+      const b = document.createElement("button"); b.type = "button"; b.className = "ficha";
+      const n = document.createElement("div"); n.className = "nombre"; n.textContent = c.nombre || "Sin nombre";
+      const l = document.createElement("div"); l.className = "linea";
+      l.append(chip(nombreEstado[c.estado] || "Nuevo", "est-" + (c.estado || "nuevo")), chip(c.tipo || "Otro"));
+      if (c.ciudad) l.append(chip(c.ciudad));
+      b.append(n, l);
+      const ultima = (c.notas || [])[0];
+      if (ultima) { const p = document.createElement("div"); p.className = "nota"; p.textContent = ultima.texto; b.append(p); }
+      if (c.fecha && c.accion) {
+        const p = document.createElement("div"); p.className = "nota";
+        p.textContent = `Próximo: ${c.accion} · ${fechaCorta(c.fecha)}`; b.append(p);
+      }
+      b.addEventListener("click", () => abrir(c.id));
+      lista.append(b);
+    }
+    $("cuenta").textContent = contactos.length ? `${vistos.length} de ${contactos.length}` : "";
+    if (db && !contactos.length) {
+      $("estado-db").hidden = false;
+      $("estado-db").innerHTML = "<strong>Todavía no hay contactos.</strong> Pulsa «+ Nuevo contacto» para apuntar el primero: nombre, tipo, cómo te contactó y una nota de lo que habéis hablado.";
+    } else if (db && contactos.length && !vistos.length) {
+      $("estado-db").hidden = false; $("estado-db").textContent = "Ningún contacto coincide con la búsqueda o los filtros.";
+    } else if (db) { $("estado-db").hidden = true; }
+
+    const agenda = $("agenda"); agenda.replaceChildren();
+    const pendientes = contactos.filter((c) => c.fecha && c.accion && c.estado !== "descartado" && diasHasta(c.fecha) <= 7)
+      .sort((a, b) => a.fecha.localeCompare(b.fecha));
+    for (const c of pendientes) {
+      const li = document.createElement("li"); const b = document.createElement("button"); b.type = "button";
+      const dias = diasHasta(c.fecha);
+      const f = document.createElement("span"); f.className = "fecha" + (dias < 0 ? " tarde" : dias === 0 ? " hoy" : "");
+      f.textContent = dias < 0 ? `Atrasado · ${fechaCorta(c.fecha)}` : dias === 0 ? "Hoy" : fechaCorta(c.fecha);
+      const quien = document.createElement("span"); quien.className = "quien"; quien.textContent = c.nombre;
+      const que = document.createElement("span"); que.className = "que"; que.textContent = c.accion;
+      b.append(f, quien, que); b.addEventListener("click", () => abrir(c.id));
+      li.append(b); agenda.append(li);
+    }
+    $("agenda-vacia").hidden = pendientes.length > 0;
+  }
+
+  function pintarNotas(notas) {
+    const ol = $("notas"); ol.replaceChildren();
+    for (const n of notas || []) {
+      const li = document.createElement("li");
+      const f = document.createElement("span"); f.className = "fecha"; f.textContent = fechaCorta(n.fecha);
+      const p = document.createElement("p"); p.textContent = n.texto;
+      li.append(f, p); ol.append(li);
+    }
+  }
+
+  function abrir(id) {
+    const c = id ? contactos.find((x) => x.id === id) : null;
+    abierto = c ? c.id : null;
+    $("p-titulo").textContent = c ? c.nombre : "Nuevo contacto";
+    $("c-nombre").value = c?.nombre || "";
+    $("c-tipo").value = c?.tipo || "Interesado";
+    $("c-estado").value = c?.estado || "nuevo";
+    $("c-canal").value = c?.canal || "";
+    $("c-ciudad").value = c?.ciudad || "";
+    $("c-telefono").value = c?.telefono || "";
+    $("c-email").value = c?.email || "";
+    $("c-interes").value = c?.interes || "";
+    $("c-accion").value = c?.accion || "";
+    $("c-fecha").value = c?.fecha || "";
+    $("c-nota").value = "";
+    pintarNotas(c?.notas);
+    $("borrar").hidden = !c; $("confirmar").hidden = true;
+    $("fondo").hidden = false; $("panel").hidden = false;
+    setTimeout(() => $("c-nombre").focus(), 30);
+  }
+  function cerrar() { $("fondo").hidden = true; $("panel").hidden = true; abierto = null; }
+
+  $("nuevo").addEventListener("click", () => {
+    if (!db) { aviso("Todavía conectando… prueba en un momento"); return; }
+    abrir(null);
+  });
+  $("cerrar").addEventListener("click", cerrar);
+  $("fondo").addEventListener("click", cerrar);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("panel").hidden) cerrar(); });
+  for (const id of ["buscar", "f-tipo", "f-estado"]) $(id).addEventListener("input", pintar);
+
+  $("formulario").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!db || guardando) return;
+    const nombre = $("c-nombre").value.trim();
+    if (!nombre) { $("c-nombre").focus(); return; }
+    const anterior = abierto ? contactos.find((x) => x.id === abierto) : null;
+    const notas = [...(anterior?.notas || [])];
+    const texto = $("c-nota").value.trim();
+    if (texto) notas.unshift({ fecha: hoyISO(), texto });
+    const datos = {
+      nombre, tipo: $("c-tipo").value, estado: $("c-estado").value, canal: $("c-canal").value,
+      ciudad: $("c-ciudad").value.trim(), telefono: $("c-telefono").value.trim(), email: $("c-email").value.trim(),
+      interes: $("c-interes").value.trim(), accion: $("c-accion").value.trim(), fecha: $("c-fecha").value,
+      notas, creado: anterior?.creado || new Date().toISOString(), actualizado: new Date().toISOString()
+    };
+    guardando = true; $("guardar").disabled = true;
+    try {
+      const ref = abierto ? col.doc(abierto) : col.doc();
+      await ref.set(datos);
+      abierto = ref.id; aviso("Guardado"); cerrar();
+    } catch (err) {
+      aviso(err?.code === "quota_exceeded" ? "No hay espacio para más contactos: borra alguno antiguo" : "No se pudo guardar. Revisa la conexión y vuelve a pulsar Guardar");
+    } finally { guardando = false; $("guardar").disabled = false; }
+  });
+
+  $("borrar").addEventListener("click", () => { $("confirmar").hidden = false; });
+  $("no-borrar").addEventListener("click", () => { $("confirmar").hidden = true; });
+  $("si-borrar").addEventListener("click", async () => {
+    if (!db || !abierto) return;
+    try { await col.doc(abierto).delete(); aviso("Contacto borrado"); cerrar(); }
+    catch { aviso("No se pudo borrar. Vuelve a intentarlo"); }
+  });
+
+  pintar();
+
+  (async () => {
+    try { db = await window.claude?.use?.("db"); } catch { db = null; }
+    if (!db) {
+      $("estado-db").innerHTML = "<strong>No se pueden cargar los contactos aquí.</strong> Abre esta página con tu cuenta de Claude para ver y guardar tus contactos.";
+      $("nuevo").disabled = true; return;
+    }
+    col = db.collection("contactos");
+    col.onSnapshot((snap) => {
+      contactos = snap.docs.filter((d) => d.exists).map((d) => ({ id: d.id, ...d.data() }));
+      pintar();
+    }, () => {
+      $("estado-db").hidden = false;
+      $("estado-db").textContent = "Se ha perdido la conexión con tus contactos. Recarga la página.";
+    });
+  })();
+})();
+</script>
