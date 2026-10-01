@@ -112,7 +112,8 @@ y GitHub abre un aviso (issue) con el texto. Opciones en `calendario.yaml`:
   en `dice`). Al subir un audio, el workflow «Transcribir voz» lo pasa a texto
   palabra a palabra con Whisper (`contenido/voz/<audio>.json`). Con eso el
   programa compara lo dicho con el guion y quita lo que sobra (lo dicho antes
-  de empezar, repeticiones, arranques en falso, muletillas); si una frase se
+  de empezar, repeticiones, arranques en falso, muletillas, «eeeh», vocales
+  alargadas y pausas largas a mitad de frase); si una frase se
   repite, se queda la última toma. Después limpia la voz (ruido, golpes, eses,
   volumen), acorta las pausas y baja la música mientras se habla.
   Opciones de la tarjeta: `quitar: {audio: [[inicio, fin]]}` corta tramos a

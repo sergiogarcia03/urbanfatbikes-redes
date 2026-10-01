@@ -88,6 +88,7 @@ ANTES_VOZ = 0.3  # segundos de vídeo antes de que empiece a hablar
 FM_VOZ = 44100
 PAUSA_FRASE = 0.28  # pausa máxima dentro de una misma diapositiva
 PAUSA_DIAPOSITIVA = 0.5  # pausa al pasar de una diapositiva a la siguiente
+ALARGAMIENTO = 0.25  # un sonido quieto más largo que esto es un «eeeh» o una vocal alargada
 MARGEN_TRAMO = (0.06, 0.12)  # sonido que se conserva antes y después de cada tramo
 LIMPIEZA_VOZ = ("highpass=f=90,afftdn=nf=-30:nr=12,equalizer=f=250:t=q:w=1:g=-2,"
                 "equalizer=f=3200:t=q:w=1.2:g=2.5,deesser=i=0.4,"
@@ -422,6 +423,49 @@ def tartamudeos_internos(textos, fuentes, diapositiva_palabra):
     return cortes
 
 
+def alargamientos(muestras, tramos):
+    """Busca «eeeh», «mmm» y vocales alargadas («yyy», «queee») dentro de los tramos.
+
+    Whisper no suele escribirlos. Se reconocen porque el sonido se queda quieto
+    (mismo timbre) mucho más tiempo que una vocal normal. Se deja el principio,
+    para que la palabra no quede cortada, y se quita el resto. Devuelve los
+    tramos a quitar (inicio, fin).
+    """
+    import numpy as np
+    rasgos = rasgos_sonido(muestras)
+    x = np.frombuffer(muestras, dtype="<i2").astype(float) / 32768
+    n, salto = int(0.025 * FM_VOZ), int(0.010 * FM_VOZ)
+    energia = 20 * np.log10(np.sqrt((np.lib.stride_tricks.sliding_window_view(x, n)[::salto] ** 2).mean(1)) + 1e-9)
+    cambio = np.r_[np.linalg.norm(rasgos[4:] - rasgos[:-4], axis=1), np.full(4, np.inf)]
+    voz = energia > np.percentile(energia, 98) - 30
+    quieto = voz & (cambio < np.percentile(cambio[voz], 25))
+    cortes, t = [], 0
+    while t < len(quieto):
+        if not quieto[t]:
+            t += 1
+            continue
+        u = t
+        while u < len(quieto) and quieto[u]:
+            u += 1
+        inicio, fin = t * 0.01, u * 0.01 + 0.04
+        if fin - inicio >= ALARGAMIENTO and any(a <= inicio and fin <= b for a, b in tramos):
+            cortes.append((inicio + 0.10, fin - 0.03))
+        t = u
+    return cortes
+
+
+def pausas_internas(con_voz, tramos):
+    """Silencios largos dentro de un trozo (dudas a mitad de frase): se quitan y al
+    montar se pone una pausa corta y regular."""
+    cortes = []
+    for a, b in tramos:
+        dentro = [(x, y) for x, y in con_voz if y > a and x < b]
+        for (_, fin), (inicio, _) in zip(dentro, dentro[1:]):
+            if inicio - fin > PAUSA_FRASE + 0.1:
+                cortes.append((fin + 0.06, inicio - 0.04))
+    return cortes
+
+
 def preparar_voz_con_texto(tarjeta, textos):
     diapositivas = tarjeta["diapositivas"]
     # Palabras del guion, con su diapositiva
@@ -505,8 +549,9 @@ def preparar_voz_con_texto(tarjeta, textos):
                 trozos[-1][2] = fin
                 trozos[-1][5] = palabra_
             else:
-                # [grabación, inicio, fin, diapositiva, primera palabra, última palabra]
-                trozos.append([g, ini, fin, diap, palabra_, palabra_])
+                # [grabación, inicio, fin, diapositiva, primera palabra, última palabra, pegado]
+                # (pegado: va justo detrás del anterior, sin pausa, porque se ha quitado un sonido alargado)
+                trozos.append([g, ini, fin, diap, palabra_, palabra_, False])
 
     # Ajuste fino con la energía del sonido: Whisper a veces adelanta o alarga
     # las palabras; se recorta el silencio que haya en los bordes de cada trozo.
@@ -531,22 +576,28 @@ def preparar_voz_con_texto(tarjeta, textos):
         trozo[1] = max(ini, dentro[0][0] - 0.05)
         trozo[2] = min(fin, dentro[-1][1] + 0.08)
 
-    # Tartamudeos dentro de una palabra: se parte el trozo y se quita la repetición
-    for g, desde, hasta in tartamudeos_internos(textos, fuentes, diapositiva_palabra):
-        print(f"   ✂️  {tarjeta['nombre']}: tartamudeo quitado ({hasta - desde:.2f} s en el segundo {desde:.1f})")
+    # Tartamudeos dentro de una palabra, «eeeh» y sonidos alargados que Whisper no
+    # escribe, y silencios largos a mitad de frase: se parte el trozo y se quita.
+    cortes = [(g, a, b, "tartamudeo") for g, a, b in tartamudeos_internos(textos, fuentes, diapositiva_palabra)]
+    for g, muestras in enumerate(fuentes):
+        tramos_g = [(t[1], t[2]) for t in trozos if t[0] == g]
+        cortes += [(g, a, b, "«eeeh» o sonido alargado") for a, b in alargamientos(muestras, tramos_g)]
+        cortes += [(g, a, b, "pausa larga") for a, b in pausas_internas(con_voz[g], tramos_g)]
+    for g, desde, hasta, motivo in sorted(cortes, key=lambda c: (c[0], c[1])):
+        print(f"   ✂️  {tarjeta['nombre']}: quitado {motivo} ({hasta - desde:.2f} s en el segundo {desde:.1f})")
         nuevos = []
         for trozo in trozos:
             if trozo[0] == g and trozo[1] < desde < trozo[2]:
                 nuevos.append([g, trozo[1], desde] + trozo[3:])
                 if hasta < trozo[2]:
-                    nuevos.append([g, hasta, trozo[2]] + trozo[3:])
+                    nuevos.append([g, hasta, trozo[2]] + trozo[3:6] + [motivo.startswith("«eeeh»")])
             else:
                 nuevos.append(trozo)
         trozos = nuevos
 
     salida, inicios, posicion = bytearray(), [], 0.0
     fundido = int(0.012 * FM_VOZ)  # 12 ms de fundido en cada corte, sin chasquidos
-    for n, (g, ini, fin, diap, _, _) in enumerate(trozos):
+    for n, (g, ini, fin, diap, _, _, _) in enumerate(trozos):
         if len(inicios) <= diap:
             inicios.append(posicion)
         muestras = fuentes[g]
@@ -563,6 +614,8 @@ def preparar_voz_con_texto(tarjeta, textos):
             siguiente = trozos[n + 1]
             if siguiente[3] != diap:
                 hueco = PAUSA_DIAPOSITIVA
+            elif siguiente[6]:
+                hueco = 0.0
             elif siguiente[0] == g:
                 hueco = min(PAUSA_FRASE, max(0.04, siguiente[1] - fin))
             else:
