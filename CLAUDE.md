@@ -18,6 +18,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - Datos de la V8 **solo** del informe TÜV y de la ficha del proveedor. **No inventar precios ni ofertas.**
 - Nunca decir «homologada»: «ensayada según la norma europea EN 15194». Más de 250 W / 25 km/h /
   6 km/h sin pedalear = «vehículo de motor (L1e)». Lo legal, solo si está contrastado.
+- Sergio quiere **fotos y vídeos reales** (la bici de verdad, sus manos, su cara, la calle), no todo con
+  tarjetas de fondo azul. Las tarjetas solo para datos sueltos; en cuanto haya grabaciones reales, van
+  primero. Su voz debe ir con su imagen o con su nombre («Soy Sergio, de urbanfatbikes»).
 - Máximo 5 hashtags, siempre #urbanfatbikes; nunca #v8 ni #ouxiv8. Decir «urbanfatbikes V8», nunca «Ouxi».
 - Los mensajes que Sergio tenga que mandar a terceros: **en español e inglés**.
 - No publicar precios del proveedor ni datos personales en este repositorio: **es público**.
