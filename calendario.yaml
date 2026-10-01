@@ -37,12 +37,15 @@ publicaciones:
     fecha: "2026-10-05 13:30"
     archivos:
       - tarjeta-presentacion-1.jpg
+      - tarjeta-presentacion-2.jpg
     texto: |
       Presentamos urbanfatbikes.
 
       Fatbikes eléctricas ensayadas según la norma europea EN 15194, para moverte por la ciudad con comodidad, seguridad y sin complicaciones legales.
 
       Estamos preparando el lanzamiento en España. Mientras tanto, aquí te contaremos todo lo que conviene saber antes de elegir una fatbike: modelos, normativa, mantenimiento y uso seguro.
+
+      Desliza para ver cómo es una fatbike 👉
 
       Síguenos para no perderte nada.
 
@@ -144,6 +147,7 @@ publicaciones:
       - tarjeta-que-es-2.jpg
       - tarjeta-que-es-3.jpg
       - tarjeta-que-es-4.jpg
+      - tarjeta-que-es-5.jpg
     texto: |
       ¿Qué es una fatbike? Desliza 👉
 
