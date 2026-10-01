@@ -229,6 +229,7 @@ tarjetas:
   - nombre: carga
     reel: sí
     musica: urban-1.m4a
+    voz: [carga.aac]
     diapositivas:
       - tipo: portada
         antetitulo: Coche o fatbike
@@ -291,6 +292,7 @@ tarjetas:
   - nombre: padres
     reel: sí
     musica: urban-2.m4a
+    voz: [padres.aac]
     diapositivas:
       - tipo: portada
         antetitulo: Para padres
