@@ -1,0 +1,599 @@
+{
+ "audio": "padres.aac",
+ "palabras": [
+  {
+   "palabra": "Vas",
+   "inicio": 0.0,
+   "fin": 1.0,
+   "confianza": 0.027
+  },
+  {
+   "palabra": "a",
+   "inicio": 1.0,
+   "fin": 1.12,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "regalarle",
+   "inicio": 1.12,
+   "fin": 1.66,
+   "confianza": 0.893
+  },
+  {
+   "palabra": "una",
+   "inicio": 1.66,
+   "fin": 1.78,
+   "confianza": 0.954
+  },
+  {
+   "palabra": "fat",
+   "inicio": 1.78,
+   "fin": 1.96,
+   "confianza": 0.067
+  },
+  {
+   "palabra": "-bike",
+   "inicio": 1.96,
+   "fin": 2.1,
+   "confianza": 0.368
+  },
+  {
+   "palabra": "eléctrica",
+   "inicio": 2.1,
+   "fin": 2.58,
+   "confianza": 0.856
+  },
+  {
+   "palabra": "a",
+   "inicio": 2.58,
+   "fin": 2.78,
+   "confianza": 0.729
+  },
+  {
+   "palabra": "tu",
+   "inicio": 2.78,
+   "fin": 2.8,
+   "confianza": 0.96
+  },
+  {
+   "palabra": "hijo,",
+   "inicio": 2.8,
+   "fin": 3.04,
+   "confianza": 0.887
+  },
+  {
+   "palabra": "antes",
+   "inicio": 3.8,
+   "fin": 4.28,
+   "confianza": 0.912
+  },
+  {
+   "palabra": "que,",
+   "inicio": 4.28,
+   "fin": 4.64,
+   "confianza": 0.839
+  },
+  {
+   "palabra": "que",
+   "inicio": 4.64,
+   "fin": 5.02,
+   "confianza": 0.466
+  },
+  {
+   "palabra": "deberías",
+   "inicio": 5.02,
+   "fin": 5.5,
+   "confianza": 0.95
+  },
+  {
+   "palabra": "saber",
+   "inicio": 5.5,
+   "fin": 5.78,
+   "confianza": 0.894
+  },
+  {
+   "palabra": "antes",
+   "inicio": 5.78,
+   "fin": 6.02,
+   "confianza": 0.954
+  },
+  {
+   "palabra": "de",
+   "inicio": 6.02,
+   "fin": 6.14,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "comprar",
+   "inicio": 6.14,
+   "fin": 6.4,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "una.",
+   "inicio": 6.4,
+   "fin": 6.7,
+   "confianza": 0.978
+  },
+  {
+   "palabra": "Primero,",
+   "inicio": 7.7,
+   "fin": 8.28,
+   "confianza": 0.882
+  },
+  {
+   "palabra": "pide",
+   "inicio": 8.6,
+   "fin": 8.92,
+   "confianza": 0.824
+  },
+  {
+   "palabra": "el",
+   "inicio": 8.92,
+   "fin": 9.04,
+   "confianza": 0.934
+  },
+  {
+   "palabra": "informe",
+   "inicio": 9.04,
+   "fin": 9.44,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "de",
+   "inicio": 9.44,
+   "fin": 9.52,
+   "confianza": 0.951
+  },
+  {
+   "palabra": "ensayo,",
+   "inicio": 9.52,
+   "fin": 9.94,
+   "confianza": 0.977
+  },
+  {
+   "palabra": "según",
+   "inicio": 10.26,
+   "fin": 10.48,
+   "confianza": 0.815
+  },
+  {
+   "palabra": "la",
+   "inicio": 10.48,
+   "fin": 10.66,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "norma",
+   "inicio": 10.66,
+   "fin": 10.94,
+   "confianza": 0.914
+  },
+  {
+   "palabra": "europea,",
+   "inicio": 10.94,
+   "fin": 12.08,
+   "confianza": 0.876
+  },
+  {
+   "palabra": "EN",
+   "inicio": 12.18,
+   "fin": 12.68,
+   "confianza": 0.534
+  },
+  {
+   "palabra": "15194.",
+   "inicio": 12.68,
+   "fin": 15.56,
+   "confianza": 0.858
+  },
+  {
+   "palabra": "Segundo,",
+   "inicio": 16.62,
+   "fin": 17.2,
+   "confianza": 0.861
+  },
+  {
+   "palabra": "que",
+   "inicio": 17.42,
+   "fin": 17.44,
+   "confianza": 0.949
+  },
+  {
+   "palabra": "no",
+   "inicio": 17.44,
+   "fin": 17.54,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "tenga",
+   "inicio": 17.54,
+   "fin": 17.78,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "acelerador.",
+   "inicio": 17.78,
+   "fin": 18.34,
+   "confianza": 0.989
+  },
+  {
+   "palabra": "Se",
+   "inicio": 18.8,
+   "fin": 18.94,
+   "confianza": 0.658
+  },
+  {
+   "palabra": "empuja",
+   "inicio": 18.94,
+   "fin": 19.38,
+   "confianza": 0.946
+  },
+  {
+   "palabra": "sin",
+   "inicio": 19.38,
+   "fin": 19.54,
+   "confianza": 0.79
+  },
+  {
+   "palabra": "pedalar",
+   "inicio": 19.54,
+   "fin": 20.1,
+   "confianza": 0.583
+  },
+  {
+   "palabra": "por",
+   "inicio": 20.1,
+   "fin": 20.26,
+   "confianza": 0.962
+  },
+  {
+   "palabra": "encima",
+   "inicio": 20.26,
+   "fin": 20.64,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "de",
+   "inicio": 20.64,
+   "fin": 20.84,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "seis",
+   "inicio": 20.84,
+   "fin": 20.96,
+   "confianza": 0.215
+  },
+  {
+   "palabra": "kilómetros",
+   "inicio": 20.96,
+   "fin": 21.44,
+   "confianza": 0.938
+  },
+  {
+   "palabra": "por",
+   "inicio": 21.44,
+   "fin": 21.74,
+   "confianza": 0.971
+  },
+  {
+   "palabra": "hora,",
+   "inicio": 21.74,
+   "fin": 21.96,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "ya",
+   "inicio": 22.34,
+   "fin": 22.56,
+   "confianza": 0.964
+  },
+  {
+   "palabra": "no",
+   "inicio": 22.56,
+   "fin": 22.68,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "es",
+   "inicio": 22.68,
+   "fin": 22.76,
+   "confianza": 0.837
+  },
+  {
+   "palabra": "una",
+   "inicio": 22.76,
+   "fin": 22.88,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "bicicleta.",
+   "inicio": 22.88,
+   "fin": 23.42,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "Y",
+   "inicio": 24.64,
+   "fin": 25.3,
+   "confianza": 0.41
+  },
+  {
+   "palabra": "tercero,",
+   "inicio": 25.3,
+   "fin": 25.96,
+   "confianza": 0.913
+  },
+  {
+   "palabra": "nada",
+   "inicio": 26.32,
+   "fin": 27.24,
+   "confianza": 0.926
+  },
+  {
+   "palabra": "de",
+   "inicio": 27.24,
+   "fin": 27.56,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "modos",
+   "inicio": 27.56,
+   "fin": 27.98,
+   "confianza": 0.859
+  },
+  {
+   "palabra": "de",
+   "inicio": 27.98,
+   "fin": 28.06,
+   "confianza": 0.778
+  },
+  {
+   "palabra": "bloqueados",
+   "inicio": 28.06,
+   "fin": 28.6,
+   "confianza": 0.939
+  },
+  {
+   "palabra": "que",
+   "inicio": 28.6,
+   "fin": 28.78,
+   "confianza": 0.907
+  },
+  {
+   "palabra": "pasen",
+   "inicio": 28.78,
+   "fin": 29.06,
+   "confianza": 0.909
+  },
+  {
+   "palabra": "de",
+   "inicio": 29.06,
+   "fin": 29.16,
+   "confianza": 0.627
+  },
+  {
+   "palabra": "25",
+   "inicio": 29.16,
+   "fin": 29.5,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "km",
+   "inicio": 29.5,
+   "fin": 29.72,
+   "confianza": 0.56
+  },
+  {
+   "palabra": "por",
+   "inicio": 29.72,
+   "fin": 30.24,
+   "confianza": 0.022
+  },
+  {
+   "palabra": "hora,",
+   "inicio": 30.24,
+   "fin": 30.46,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "porque",
+   "inicio": 30.66,
+   "fin": 31.48,
+   "confianza": 0.935
+  },
+  {
+   "palabra": "eso",
+   "inicio": 31.48,
+   "fin": 31.86,
+   "confianza": 0.979
+  },
+  {
+   "palabra": "ya",
+   "inicio": 31.86,
+   "fin": 32.12,
+   "confianza": 0.94
+  },
+  {
+   "palabra": "a",
+   "inicio": 32.12,
+   "fin": 32.48,
+   "confianza": 0.832
+  },
+  {
+   "palabra": "partir",
+   "inicio": 32.48,
+   "fin": 32.66,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "de",
+   "inicio": 32.66,
+   "fin": 32.82,
+   "confianza": 0.913
+  },
+  {
+   "palabra": "los",
+   "inicio": 32.82,
+   "fin": 32.84,
+   "confianza": 0.603
+  },
+  {
+   "palabra": "25",
+   "inicio": 32.84,
+   "fin": 33.24,
+   "confianza": 0.986
+  },
+  {
+   "palabra": "deja",
+   "inicio": 33.24,
+   "fin": 33.62,
+   "confianza": 0.708
+  },
+  {
+   "palabra": "de",
+   "inicio": 33.62,
+   "fin": 33.82,
+   "confianza": 0.94
+  },
+  {
+   "palabra": "ser",
+   "inicio": 33.82,
+   "fin": 33.9,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "legal.",
+   "inicio": 33.9,
+   "fin": 34.26,
+   "confianza": 0.998
+  },
+  {
+   "palabra": "Siempre",
+   "inicio": 34.82,
+   "fin": 35.38,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "hay",
+   "inicio": 35.38,
+   "fin": 35.92,
+   "confianza": 0.797
+  },
+  {
+   "palabra": "que",
+   "inicio": 35.92,
+   "fin": 35.94,
+   "confianza": 0.998
+  },
+  {
+   "palabra": "llevar",
+   "inicio": 35.94,
+   "fin": 36.16,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "el",
+   "inicio": 36.16,
+   "fin": 36.32,
+   "confianza": 0.359
+  },
+  {
+   "palabra": "casco",
+   "inicio": 36.32,
+   "fin": 36.64,
+   "confianza": 0.971
+  },
+  {
+   "palabra": "para",
+   "inicio": 36.64,
+   "fin": 37.18,
+   "confianza": 0.822
+  },
+  {
+   "palabra": "menores",
+   "inicio": 37.18,
+   "fin": 37.54,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "de",
+   "inicio": 37.54,
+   "fin": 37.68,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "16",
+   "inicio": 37.68,
+   "fin": 38.0,
+   "confianza": 0.991
+  },
+  {
+   "palabra": "años",
+   "inicio": 38.0,
+   "fin": 38.46,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "en",
+   "inicio": 38.93,
+   "fin": 39.26,
+   "confianza": 0.873
+  },
+  {
+   "palabra": "cualquier",
+   "inicio": 39.26,
+   "fin": 39.44,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "vía.",
+   "inicio": 39.44,
+   "fin": 39.9,
+   "confianza": 0.825
+  },
+  {
+   "palabra": "Comparte",
+   "inicio": 40.48,
+   "fin": 40.88,
+   "confianza": 0.958
+  },
+  {
+   "palabra": "este",
+   "inicio": 40.88,
+   "fin": 41.08,
+   "confianza": 0.985
+  },
+  {
+   "palabra": "vídeo",
+   "inicio": 41.08,
+   "fin": 41.3,
+   "confianza": 0.952
+  },
+  {
+   "palabra": "con",
+   "inicio": 41.3,
+   "fin": 41.52,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "quien",
+   "inicio": 41.52,
+   "fin": 41.62,
+   "confianza": 0.776
+  },
+  {
+   "palabra": "lo",
+   "inicio": 41.62,
+   "fin": 41.74,
+   "confianza": 0.841
+  },
+  {
+   "palabra": "necesite.",
+   "inicio": 41.74,
+   "fin": 42.18,
+   "confianza": 0.935
+  }
+ ]
+}

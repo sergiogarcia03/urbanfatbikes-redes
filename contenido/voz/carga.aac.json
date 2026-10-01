@@ -1,0 +1,491 @@
+{
+ "audio": "carga.aac",
+ "palabras": [
+  {
+   "palabra": "¿Cuánto",
+   "inicio": 1.28,
+   "fin": 2.04,
+   "confianza": 0.761
+  },
+  {
+   "palabra": "cuesta",
+   "inicio": 2.04,
+   "fin": 2.3,
+   "confianza": 0.973
+  },
+  {
+   "palabra": "cargar",
+   "inicio": 2.3,
+   "fin": 2.6,
+   "confianza": 0.969
+  },
+  {
+   "palabra": "una",
+   "inicio": 2.6,
+   "fin": 2.78,
+   "confianza": 0.931
+  },
+  {
+   "palabra": "fatbike",
+   "inicio": 2.78,
+   "fin": 3.1,
+   "confianza": 0.038
+  },
+  {
+   "palabra": "eléctrica?",
+   "inicio": 3.1,
+   "fin": 3.56,
+   "confianza": 0.865
+  },
+  {
+   "palabra": "Hagamos",
+   "inicio": 3.98,
+   "fin": 4.32,
+   "confianza": 0.749
+  },
+  {
+   "palabra": "la",
+   "inicio": 4.32,
+   "fin": 4.5,
+   "confianza": 0.941
+  },
+  {
+   "palabra": "cuenta.",
+   "inicio": 4.5,
+   "fin": 4.76,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "La",
+   "inicio": 5.56,
+   "fin": 5.66,
+   "confianza": 0.89
+  },
+  {
+   "palabra": "batería",
+   "inicio": 5.66,
+   "fin": 6.04,
+   "confianza": 0.928
+  },
+  {
+   "palabra": "de",
+   "inicio": 6.04,
+   "fin": 6.16,
+   "confianza": 0.924
+  },
+  {
+   "palabra": "la",
+   "inicio": 6.16,
+   "fin": 6.26,
+   "confianza": 0.971
+  },
+  {
+   "palabra": "urban",
+   "inicio": 6.26,
+   "fin": 6.46,
+   "confianza": 0.07
+  },
+  {
+   "palabra": "fatbike",
+   "inicio": 6.46,
+   "fin": 6.94,
+   "confianza": 0.937
+  },
+  {
+   "palabra": "V8",
+   "inicio": 6.94,
+   "fin": 7.48,
+   "confianza": 0.711
+  },
+  {
+   "palabra": "es",
+   "inicio": 7.48,
+   "fin": 8.1,
+   "confianza": 0.644
+  },
+  {
+   "palabra": "de",
+   "inicio": 8.1,
+   "fin": 8.18,
+   "confianza": 0.663
+  },
+  {
+   "palabra": "48",
+   "inicio": 8.18,
+   "fin": 8.76,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "voltíos",
+   "inicio": 8.76,
+   "fin": 9.3,
+   "confianza": 0.636
+  },
+  {
+   "palabra": "y",
+   "inicio": 9.3,
+   "fin": 9.88,
+   "confianza": 0.598
+  },
+  {
+   "palabra": "15",
+   "inicio": 9.88,
+   "fin": 10.16,
+   "confianza": 0.94
+  },
+  {
+   "palabra": ",6",
+   "inicio": 10.16,
+   "fin": 10.56,
+   "confianza": 0.889
+  },
+  {
+   "palabra": "amperios",
+   "inicio": 10.56,
+   "fin": 11.04,
+   "confianza": 0.743
+  },
+  {
+   "palabra": "hora.",
+   "inicio": 11.04,
+   "fin": 11.3,
+   "confianza": 0.688
+  },
+  {
+   "palabra": "1",
+   "inicio": 11.82,
+   "fin": 12.0,
+   "confianza": 0.456
+  },
+  {
+   "palabra": ".0",
+   "inicio": 12.0,
+   "fin": 12.38,
+   "confianza": 0.714
+  },
+  {
+   "palabra": ",75",
+   "inicio": 12.38,
+   "fin": 13.02,
+   "confianza": 0.714
+  },
+  {
+   "palabra": "kilovatios",
+   "inicio": 13.02,
+   "fin": 13.88,
+   "confianza": 0.771
+  },
+  {
+   "palabra": "hora.",
+   "inicio": 13.88,
+   "fin": 14.3,
+   "confianza": 0.897
+  },
+  {
+   "palabra": "Con",
+   "inicio": 15.08,
+   "fin": 15.84,
+   "confianza": 0.908
+  },
+  {
+   "palabra": "una",
+   "inicio": 15.84,
+   "fin": 16.02,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "carga",
+   "inicio": 16.02,
+   "fin": 16.38,
+   "confianza": 0.996
+  },
+  {
+   "palabra": "entre",
+   "inicio": 16.38,
+   "fin": 16.78,
+   "confianza": 0.918
+  },
+  {
+   "palabra": "55...",
+   "inicio": 16.78,
+   "fin": 18.36,
+   "confianza": 0.574
+  },
+  {
+   "palabra": "Borra",
+   "inicio": 19.0,
+   "fin": 19.8,
+   "confianza": 0.523
+  },
+  {
+   "palabra": "esto...",
+   "inicio": 19.8,
+   "fin": 20.18,
+   "confianza": 0.766
+  },
+  {
+   "palabra": "Con",
+   "inicio": 20.92,
+   "fin": 21.1,
+   "confianza": 0.723
+  },
+  {
+   "palabra": "una",
+   "inicio": 21.1,
+   "fin": 21.32,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "carga",
+   "inicio": 21.32,
+   "fin": 21.62,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "entre",
+   "inicio": 21.62,
+   "fin": 21.84,
+   "confianza": 0.987
+  },
+  {
+   "palabra": "50",
+   "inicio": 21.84,
+   "fin": 22.4,
+   "confianza": 0.981
+  },
+  {
+   "palabra": "y",
+   "inicio": 22.4,
+   "fin": 22.64,
+   "confianza": 0.939
+  },
+  {
+   "palabra": "55",
+   "inicio": 22.64,
+   "fin": 23.28,
+   "confianza": 0.988
+  },
+  {
+   "palabra": "kilómetros,",
+   "inicio": 23.28,
+   "fin": 23.92,
+   "confianza": 0.925
+  },
+  {
+   "palabra": "según",
+   "inicio": 24.26,
+   "fin": 24.6,
+   "confianza": 0.901
+  },
+  {
+   "palabra": "el",
+   "inicio": 24.6,
+   "fin": 24.8,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "fabricante.",
+   "inicio": 24.8,
+   "fin": 25.36,
+   "confianza": 0.998
+  },
+  {
+   "palabra": "y",
+   "inicio": 26.14,
+   "fin": 26.74,
+   "confianza": 0.454
+  },
+  {
+   "palabra": "sin",
+   "inicio": 26.74,
+   "fin": 27.02,
+   "confianza": 0.947
+  },
+  {
+   "palabra": "gasolina,",
+   "inicio": 27.02,
+   "fin": 27.62,
+   "confianza": 0.992
+  },
+  {
+   "palabra": "sin",
+   "inicio": 27.86,
+   "fin": 27.94,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "seguro",
+   "inicio": 27.94,
+   "fin": 28.26,
+   "confianza": 0.96
+  },
+  {
+   "palabra": "obligatorio",
+   "inicio": 28.26,
+   "fin": 28.98,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "y",
+   "inicio": 28.98,
+   "fin": 29.26,
+   "confianza": 0.76
+  },
+  {
+   "palabra": "sin",
+   "inicio": 29.26,
+   "fin": 29.44,
+   "confianza": 0.975
+  },
+  {
+   "palabra": "carnet",
+   "inicio": 29.44,
+   "fin": 29.76,
+   "confianza": 0.866
+  },
+  {
+   "palabra": "porque",
+   "inicio": 29.76,
+   "fin": 30.02,
+   "confianza": 0.682
+  },
+  {
+   "palabra": "legalmente",
+   "inicio": 30.02,
+   "fin": 30.66,
+   "confianza": 0.982
+  },
+  {
+   "palabra": "sigue",
+   "inicio": 30.66,
+   "fin": 30.9,
+   "confianza": 0.969
+  },
+  {
+   "palabra": "siendo",
+   "inicio": 30.9,
+   "fin": 31.28,
+   "confianza": 0.995
+  },
+  {
+   "palabra": "una",
+   "inicio": 31.28,
+   "fin": 31.62,
+   "confianza": 0.962
+  },
+  {
+   "palabra": "bicicleta,",
+   "inicio": 32.32,
+   "fin": 32.92,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "así",
+   "inicio": 32.92,
+   "fin": 33.24,
+   "confianza": 0.894
+  },
+  {
+   "palabra": "que",
+   "inicio": 33.24,
+   "fin": 33.42,
+   "confianza": 0.994
+  },
+  {
+   "palabra": "cargala",
+   "inicio": 33.42,
+   "fin": 33.88,
+   "confianza": 0.792
+  },
+  {
+   "palabra": "cuesta",
+   "inicio": 33.88,
+   "fin": 34.88,
+   "confianza": 0.515
+  },
+  {
+   "palabra": "9",
+   "inicio": 34.88,
+   "fin": 35.02,
+   "confianza": 0.104
+  },
+  {
+   "palabra": "centimos",
+   "inicio": 35.02,
+   "fin": 35.56,
+   "confianza": 0.658
+  },
+  {
+   "palabra": "según",
+   "inicio": 35.56,
+   "fin": 35.84,
+   "confianza": 0.877
+  },
+  {
+   "palabra": "tu",
+   "inicio": 35.84,
+   "fin": 35.96,
+   "confianza": 0.98
+  },
+  {
+   "palabra": "tarifa",
+   "inicio": 35.96,
+   "fin": 36.4,
+   "confianza": 0.99
+  },
+  {
+   "palabra": "y",
+   "inicio": 36.4,
+   "fin": 36.96,
+   "confianza": 0.938
+  },
+  {
+   "palabra": "guarda",
+   "inicio": 36.96,
+   "fin": 37.26,
+   "confianza": 0.898
+  },
+  {
+   "palabra": "este",
+   "inicio": 37.26,
+   "fin": 37.44,
+   "confianza": 0.984
+  },
+  {
+   "palabra": "vídeo",
+   "inicio": 37.44,
+   "fin": 37.72,
+   "confianza": 0.837
+  },
+  {
+   "palabra": "y",
+   "inicio": 37.72,
+   "fin": 37.86,
+   "confianza": 0.736
+  },
+  {
+   "palabra": "compártelo",
+   "inicio": 37.86,
+   "fin": 38.28,
+   "confianza": 0.767
+  },
+  {
+   "palabra": "con",
+   "inicio": 38.28,
+   "fin": 38.44,
+   "confianza": 0.997
+  },
+  {
+   "palabra": "tus",
+   "inicio": 38.44,
+   "fin": 38.54,
+   "confianza": 0.993
+  },
+  {
+   "palabra": "amigos.",
+   "inicio": 38.54,
+   "fin": 38.78,
+   "confianza": 0.989
+  }
+ ]
+}
