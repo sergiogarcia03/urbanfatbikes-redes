@@ -11,6 +11,13 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   Sergio ya tiene 3 bicis (una dañada en un accidente).
 - Quiere que Claude lleve las redes al 100 % y le autoriza a **unir las PR** él mismo.
 - Objetivo y plan: `OBJETIVOS.md` (20 bicis vendidas en junio de 2028).
+- **Claude decide solo** el contenido y la estrategia de redes (temas, formatos, fechas, qué foto o vídeo
+  usar), sin preguntarle cada cosa, teniendo en cuenta al consumidor español, la competencia y la
+  actualidad (normativa, noticias, temporada). A Sergio solo se le pide lo que solo él puede hacer
+  (grabar voz o vídeo, responder comentarios, mensajes a terceros) y se le informa con un resumen corto.
+- **Objetivo ahora: que nos conozca gente (alcance).** Priorizar lo que se comparte y se reenvía,
+  ganchos en los 3 primeros segundos, reels para descubrir y carruseles para guardar. Sin repetir la
+  misma foto en muchas publicaciones.
 
 ## Normas de la marca (siempre)
 - Tono profesional y de confianza, **solo en español**.

@@ -25,11 +25,6 @@ tarjetas:
         titulo: Fatbikes eléctricas. *Legales.*
         subtitulo: Ensayadas según la norma europea EN 15194.
         logo: sí
-      - tipo: portada
-        antetitulo: Así es una fatbike
-        titulo: Ruedas de *4 pulgadas*
-        subtitulo: Más anchas, más estables y más cómodas.
-        imagen: v8-estudio.webp
 
   - nombre: legal
     reel: sí
@@ -277,7 +272,7 @@ tarjetas:
         antetitulo: Mitos
         titulo: 4 mitos sobre las *fatbikes*
         subtitulo: Desliza y descubre la verdad.
-        imagen: v8-estudio.webp
+        tamano: 120
       - tipo: portada
         antetitulo: Mito 1
         titulo: Todas son *ilegales*
