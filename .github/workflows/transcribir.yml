@@ -31,7 +31,7 @@ jobs:
           path: ~/.cache/huggingface
           key: whisper-small
 
-      - run: pip install --upgrade faster-whisper "av>=14"
+      - run: pip install --upgrade faster-whisper "av>=14,<19"  # av 19 quitó un parámetro que usa faster-whisper
 
       - run: python transcribir.py
 
