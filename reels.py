@@ -323,7 +323,12 @@ def transcripciones(tarjeta):
         json_ = archivo.with_name(archivo.name + ".json")
         if not json_.exists():
             return None
-        lista.append(json.loads(json_.read_text(encoding="utf-8"))["palabras"])
+        palabras = json.loads(json_.read_text(encoding="utf-8"))["palabras"]
+        # «quitar: {audio: [[inicio, fin], ...]}» descarta a mano tramos de la grabación
+        # (por ejemplo, un intento fallido que el programa no distingue solo).
+        for inicio, fin in (tarjeta.get("quitar") or {}).get(archivo.name, []):
+            palabras = [w for w in palabras if not inicio <= (w["inicio"] + w["fin"]) / 2 <= fin]
+        lista.append(palabras)
     return lista
 
 
