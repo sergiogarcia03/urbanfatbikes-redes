@@ -295,6 +295,7 @@ tarjetas:
     reel: sí
     musica: urban-2.m4a
     voz: [padres.aac]
+    limpieza: fuerte  # quita más ruido de fondo de esta grabación
     diapositivas:
       - tipo: portada
         antetitulo: Para padres

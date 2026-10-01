@@ -115,6 +115,9 @@ y GitHub abre un aviso (issue) con el texto. Opciones en `calendario.yaml`:
   de empezar, repeticiones, arranques en falso, muletillas); si una frase se
   repite, se queda la última toma. Después limpia la voz (ruido, golpes, eses,
   volumen), acorta las pausas y baja la música mientras se habla.
+  Opciones de la tarjeta: `quitar: {audio: [[inicio, fin]]}` corta tramos a
+  mano (en segundos) y `limpieza: fuerte` quita más ruido de fondo (RNNoise,
+  modelo en `contenido/voz/quitar-ruido.rnnn`; solo quita ruido, no cambia la voz).
 - Las horas del calendario son **hora de España**.
 - Horarios de más actividad en España: **reels a las 19:00**, fotos y carruseles
   a las 13:30 (máximo 5 hashtags por publicación), historias extra martes y jueves a las 21:00 y fines de semana a

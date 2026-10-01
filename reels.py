@@ -93,6 +93,13 @@ LIMPIEZA_VOZ = ("highpass=f=90,afftdn=nf=-30:nr=12,equalizer=f=250:t=q:w=1:g=-2,
                 "equalizer=f=3200:t=q:w=1.2:g=2.5,deesser=i=0.4,"
                 "acompressor=threshold=-22dB:ratio=3:attack=5:release=120:makeup=2,"
                 "loudnorm=I=-16:TP=-1.5:LRA=7")
+# Con «limpieza: fuerte» en la tarjeta, antes de lo anterior se quita el ruido de
+# fondo con un filtro de reducción de ruido para voz (RNNoise, modelo
+# contenido/voz/quitar-ruido.rnnn: no cambia ni inventa la voz, solo quita ruido)
+# y se bajan los ruidos sueltos entre palabras (respiraciones, roces).
+MODELO_RUIDO = VOZ / "quitar-ruido.rnnn"
+LIMPIEZA_FUERTE = (f"highpass=f=90,arnndn=m={MODELO_RUIDO.as_posix()}:mix=0.9,"
+                   "agate=threshold=0.015:ratio=3:range=0.12:attack=8:release=250,")
 
 
 def archivos_de_voz(tarjeta):
@@ -562,7 +569,7 @@ def preparar_voz_con_texto(tarjeta, textos):
                 hueco = PAUSA_FRASE
             salida += bytes(int(hueco * FM_VOZ) * 2)
             posicion += hueco
-    return limpiar_voz(salida), inicios, posicion
+    return limpiar_voz(salida, tarjeta.get("limpieza") == "fuerte"), inicios, posicion
 
 
 def preparar_voz(tarjeta):
@@ -610,17 +617,17 @@ def preparar_voz(tarjeta):
             salida += bytes(int(hueco * FM_VOZ) * 2)
             posicion += hueco
 
-    return limpiar_voz(salida), inicios, posicion
+    return limpiar_voz(salida, tarjeta.get("limpieza") == "fuerte"), inicios, posicion
 
 
-def limpiar_voz(salida):
+def limpiar_voz(salida, fuerte=False):
     """Aplica la limpieza de voz a la pista montada y la guarda en un archivo temporal."""
     crudo = CONTENIDO / ".voz-cruda.raw"
     limpio = CONTENIDO / ".voz-limpia.wav"
     crudo.write_bytes(bytes(salida))
     subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error",
                     "-f", "s16le", "-ar", str(FM_VOZ), "-ac", "1", "-i", str(crudo),
-                    "-af", LIMPIEZA_VOZ, "-ar", str(FM_VOZ), "-ac", "2", str(limpio)], check=True)
+                    "-af", (LIMPIEZA_FUERTE if fuerte else "") + LIMPIEZA_VOZ, "-ar", str(FM_VOZ), "-ac", "2", str(limpio)], check=True)
     crudo.unlink()
     return limpio
 
