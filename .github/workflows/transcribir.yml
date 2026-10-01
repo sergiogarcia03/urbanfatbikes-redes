@@ -31,7 +31,7 @@ jobs:
           path: ~/.cache/huggingface
           key: whisper-small
 
-      - run: pip install faster-whisper
+      - run: pip install --upgrade faster-whisper "av>=14"
 
       - run: python transcribir.py
 
