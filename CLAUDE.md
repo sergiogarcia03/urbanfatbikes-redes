@@ -51,6 +51,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - Agenda de contactos (privada, en Claude): https://claude.ai/artifact/3e9TFCyMgwTbwW9Eeho5Y9 — su código
   está en `herramientas/contactos.html`; los datos viven en su base de datos, no en el repositorio.
 
+- Consejo de ideas de negocio: `/roast <idea>` ejecuta en orden los subagentes de `.claude/agents/`
+  (creyente → esceptico → inversionista → juez); el juez guarda el veredicto en `veredictos.md` (público).
+
 ## Rutina
 - Cada miércoles (tarea programada) se prepara la primera semana sin contenido, se comprueba todo con
   `publicar.py --modo simular`, se une la PR y se mandan vistas previas y guiones de voz.
