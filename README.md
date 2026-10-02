@@ -21,7 +21,7 @@ Instagram se publica solo. En TikTok los reels llegan como **borrador** a la app
 | `publicar.py` | El programa que lee el calendario y publica |
 | `tarjetas.yaml` y `tarjetas.py` | Las tarjetas de texto con el diseño de la marca: se escriben en `tarjetas.yaml` y el programa crea la imagen |
 | `reels.py` | Convierte las tarjetas con `reel: sí` en reels animados (`contenido/reel-<nombre>.mp4`) |
-| `musica.py` | Compone por código la música original de los reels (`contenido/musica/`). Se ejecuta a mano |
+| `musica.py` | Compone por código la música original de los reels (`contenido/musica/`): electrónica (urban), de inspiración (inspira) y tranquila. Se ejecuta a mano y solo crea las pistas que falten |
 | `transcribir.py` | Pasa las grabaciones de voz a texto con Whisper (se ejecuta solo en GitHub) |
 | `historias.yaml` y `historias.py` | Historias: la de "nuevo post" de cada publicación (1 h después) y las de `historias.yaml` (4 por semana) |
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |

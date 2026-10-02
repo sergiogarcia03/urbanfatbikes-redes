@@ -138,7 +138,7 @@ tarjetas:
 
   - nombre: patinete
     reel: sí
-    musica: urban-2.m4a
+    musica: urban-1.m4a
     voz: [patinete.aac]
     diapositivas:
       - tipo: portada
@@ -201,7 +201,7 @@ tarjetas:
 
   - nombre: bateria
     reel: sí
-    musica: urban-1.m4a
+    musica: tranquila-1.m4a
     voz: [bateria.aac]
     diapositivas:
       - tipo: portada
@@ -233,7 +233,7 @@ tarjetas:
         dice: Es muy importante. Guarda este vídeo y compártelo con quien tenga una bici eléctrica.
   - nombre: carga
     reel: sí
-    musica: urban-1.m4a
+    musica: inspira-2.m4a
     voz: [carga.aac]
     quitar:
       carga.aac: [[15.0, 20.5]]  # primer intento de «con una carga entre…» y «borra esto»
@@ -298,7 +298,7 @@ tarjetas:
         texto: Cuéntanoslo en comentarios.
   - nombre: padres
     reel: sí
-    musica: urban-2.m4a
+    musica: tranquila-1.m4a
     voz: [padres.aac]
     limpieza: fuerte  # quita más ruido de fondo de esta grabación
     diapositivas:
