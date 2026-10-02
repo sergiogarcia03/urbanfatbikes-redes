@@ -28,6 +28,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - Sergio quiere **fotos y vídeos reales** (la bici de verdad, sus manos, su cara, la calle), no todo con
   tarjetas de fondo azul. Las tarjetas solo para datos sueltos; en cuanto haya grabaciones reales, van
   primero. Su voz debe ir con su imagen o con su nombre («Soy Sergio, de urbanfatbikes»).
+- Música propia compuesta por código (`musica.py`): urban-1/2 (electrónica), inspira-1/2 (de inspiración,
+  va creciendo), tranquila-1 (consejos). **Variar**: no repetir la misma pista en reels seguidos.
 - Máximo 5 hashtags, siempre #urbanfatbikes; nunca #v8 ni #ouxiv8. Decir «urbanfatbikes V8», nunca «Ouxi».
 - Los mensajes que Sergio tenga que mandar a terceros: **en español e inglés**.
 - No publicar precios del proveedor ni datos personales en este repositorio: **es público**.
