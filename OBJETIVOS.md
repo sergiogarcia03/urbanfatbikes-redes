@@ -7,6 +7,9 @@ sin cobrar dinero a nadie. Cada trimestre tiene una **condición para seguir**: 
 cumple, se cambia de plan (otra fábrica, comprar bajo pedido o distribuir otra marca)
 antes de gastar más.
 
+Ciudad de lanzamiento: **Valencia**. Veredicto del consejo (02/10/2026, `veredictos.md`): **arreglar primero**,
+medir la demanda real en Valencia y no solo contar seguidores.
+
 Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negocio fatbikes España.md`.
 
 ## Ahorro
@@ -21,12 +24,14 @@ Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negoci
 - [ ] App de TikTok creada y conectada
 - [ ] 3 publicaciones por semana en Instagram y TikTok, sin fallar
 - [ ] 200 seguidores sumando las dos redes
+- [ ] Contenido con ángulo Valencia (carriles bici, trayectos, normas de la ciudad) al menos 1 vez por semana
 - **Condición para seguir:** bici puesta en España por ≤ 650 € sin IVA, con aranceles pagados y documentados ✅ cumplida con el pedido de 3 (falta el documento de importación)
 
 ## Ene–mar 2027 · Decidir
 
 - [ ] Proveedor elegido (o 2–3 alternativas con almacén en la UE comparadas)
-- [ ] Lista de fundadores abierta en la web (gratis, sin depósitos)
+- [ ] Lista de fundadores abierta en la web (gratis, sin depósitos), **con precio orientativo de venta y código postal**
+- [ ] Prueba de anuncio: ~40 € en Meta para la provincia de Valencia (coste por inscrito local < 3 €)
 - [ ] Primeros ingresos por afiliación (cascos, candados, seguros)
 - [ ] 500 seguidores
 
@@ -35,7 +40,7 @@ Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negoci
 - [x] 1 bici de muestra comprada (3 bicis de 250 W ya recibidas)
 - [ ] Vídeo de la prueba de corte a 25 km/h
 - [ ] La muestra coincide con el informe TÜV y no se puede desbloquear
-- [ ] 1.000 seguidores · 100 personas en la lista de fundadores
+- [ ] 1.000 seguidores · 100 personas en la lista de fundadores (la mayoría de la provincia de Valencia)
 - **Condición para seguir:** la muestra es legal y de buena calidad
 
 ## Jul–sep 2027 · Papeles y clientes
@@ -49,9 +54,11 @@ Marca con `[x]` lo que se vaya cumpliendo. Detalles en `reports/Modelo de negoci
 
 - [ ] 1 carta de intención de un alquiler u hotel
 - [ ] Tienda online preparada (textos legales, pagos, envíos)
-- [ ] Taller asociado en la ciudad de lanzamiento
+- [ ] Taller asociado en Valencia
 - [ ] 300 personas en la lista
-- **Condición para seguir:** 300 en la lista y 1 interesado B2B
+- [ ] Importador / responsable en la UE decidido y taller de garantía en Valencia
+- **Condición para seguir:** 300 en la lista (**al menos 150 de la provincia de Valencia que hayan visto el precio**)
+  y 1 interesado B2B. Si el coste por inscrito local pasa de 10 € o el margen real baja del 15 %, se replantea.
 
 ## Ene–mar 2028 · Montar la empresa
 
