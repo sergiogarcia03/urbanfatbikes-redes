@@ -15,6 +15,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   usar), sin preguntarle cada cosa, teniendo en cuenta al consumidor español, la competencia y la
   actualidad (normativa, noticias, temporada). A Sergio solo se le pide lo que solo él puede hacer
   (grabar voz o vídeo, responder comentarios, mensajes a terceros) y se le informa con un resumen corto.
+- **Ciudad de lanzamiento: Valencia** (2028). Orientar parte del contenido a Valencia para que los seguidores
+  sean de allí (lo pidió el consejo: medir demanda real, no solo seguidores).
 - **Objetivo ahora: que nos conozca gente (alcance).** Priorizar lo que se comparte y se reenvía,
   ganchos en los 3 primeros segundos, reels para descubrir y carruseles para guardar. Sin repetir la
   misma foto en muchas publicaciones.
