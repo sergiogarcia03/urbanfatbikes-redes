@@ -65,11 +65,11 @@ publicaciones:
 
   - id: presentamos-v8
     fecha: "2026-10-09 13:30"
+    borrador: sí  # esperando fotos nuevas de Sergio (las primeras no daban la talla)
     archivos:
       - v8-real-1.jpg
-      - v8-real-2.jpg
     texto: |
-      Te presentamos la urbanfatbikes V8. Fotos reales, sin estudio 📸 Desliza para verla por los dos lados.
+      Te presentamos la urbanfatbikes V8. Fotos reales, sin estudio 📸
 
       Una fatbike eléctrica de estética clásica y ruedas de 4 pulgadas, pensada para la ciudad y para salir de ella.
 
