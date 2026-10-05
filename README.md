@@ -27,6 +27,7 @@ Instagram se publica solo. En TikTok los reels llegan como **borrador** a la app
 | `adaptar.py` | Adapta las fotos a Instagram (recorte, tamaño, formato) y guarda la copia en `contenido/instagram/` |
 | `instagram.py` | La parte que habla con Instagram |
 | `renovar_token.py` | Renueva el token de Instagram cada semana para que nunca caduque |
+| `gancho_tiktok.py` | Crea `contenido/reel-<nombre>-tiktok.mp4`: 3 s de fotos reales con frase gancho (de `ganchos_tiktok.yaml`) y luego el reel. Volver a ejecutarlo si cambia un reel |
 | `tiktok.py` | Sube los reels del calendario a la bandeja de entrada de TikTok y abre un aviso en GitHub con el texto para pegar |
 | `herramientas/contactos.html` | Código de la agenda privada de contactos (los datos no están aquí) |
 | `CLAUDE.md` | Memoria del proyecto para Claude: normas de la marca, cómo funciona todo y lo pendiente |
