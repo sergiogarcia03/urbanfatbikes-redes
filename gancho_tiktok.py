@@ -48,6 +48,8 @@ def cargar_plano(plano):
     if plano.get("recorte"):
         foto = foto.crop(tuple(plano["recorte"]))
     foto = foto.resize((ANCHO, round(ANCHO * foto.height / foto.width)), Image.LANCZOS)
+    if foto.height > 860:  # foto vertical: que quepa entre el texto y la marca
+        foto = foto.resize((round(foto.width * 860 / foto.height), 860), Image.LANCZOS)
     fondo = cubrir(foto, ANCHO, ALTO).filter(ImageFilter.GaussianBlur(40))
     fondo = ImageEnhance.Brightness(fondo).enhance(0.45)
     return foto, fondo
