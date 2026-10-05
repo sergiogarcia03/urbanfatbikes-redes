@@ -6,7 +6,6 @@
 #   planos:   2 fotos de contenido/ (recorte opcional: izquierda, arriba, derecha, abajo)
 # Variar las fotos y los recortes: que dos vídeos seguidos no empiecen igual.
 
-# Pendiente: ficha, patinete, bateria y padres, con las fotos nuevas de Sergio.
 ganchos:
   legal:
     duracion: 3
@@ -15,6 +14,27 @@ ganchos:
       - foto: v8-real-1.jpg
       - foto: v8-real-1.jpg
         recorte: [600, 400, 1080, 760]
+  ficha:
+    duracion: 3
+    texto: Esta fatbike en *4 cifras*
+    planos:
+      - foto: v8-lado.jpg
+      - foto: v8-lado.jpg
+        recorte: [620, 380, 1020, 680]
+  patinete:
+    duracion: 3
+    texto: "*¿Fatbike* o *patinete?*"
+    planos:
+      - foto: v8-trasera.jpg
+        recorte: [60, 650, 900, 1300]
+      - foto: v8-lado.jpg
+  bateria:
+    duracion: 3
+    texto: Haz esto y tu batería *durará años*
+    planos:
+      - foto: v8-lado.jpg
+        recorte: [560, 330, 1060, 705]
+      - foto: v8-trasera.jpg
   carga:
     duracion: 3
     texto: ¿Cuánto cuesta *cargarla?*
@@ -22,3 +42,10 @@ ganchos:
       - foto: v8-real-1.jpg
       - foto: v8-real-1.jpg
         recorte: [560, 20, 1000, 350]
+  padres:
+    duracion: 3
+    texto: "*Padres:* ojo antes de regalar una fatbike"
+    planos:
+      - foto: v8-trasera.jpg
+      - foto: v8-lado.jpg
+        recorte: [860, 480, 1300, 810]
