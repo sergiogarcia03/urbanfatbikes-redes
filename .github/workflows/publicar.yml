@@ -1,9 +1,12 @@
 name: Publicar en redes
 
 on:
-  # Revisa el calendario cada hora (a y 5 minutos).
+  # Revisa el calendario dos veces por hora. GitHub suele arrancar las tareas
+  # programadas 15-25 minutos tarde: la de "y 35" recoge lo de las y media
+  # (carruseles 13:30) y la de "y 5" lo de las en punto (reels 19:00).
   schedule:
     - cron: "5 * * * *"
+    - cron: "35 * * * *"
   # Cuando se sube una foto nueva, prepara su copia adaptada para Instagram.
   push:
     branches: [main]
