@@ -139,6 +139,12 @@ def main():
             print(f"🖼  gancho-{nombre}-{i}.jpg")
         return
     huellas = json.loads(HUELLAS.read_text()) if HUELLAS.exists() else {}
+    # Borra las versiones de TikTok que ya no tienen gancho.
+    for sobrante in CONTENIDO.glob("reel-*-tiktok.mp4"):
+        if sobrante.stem[5:-7] not in ganchos and not args:
+            sobrante.unlink()
+            huellas.pop(sobrante.stem[5:-7], None)
+            print(f"🗑️  {sobrante.name}")
     for nombre, gancho in ganchos.items():
         if args and nombre not in args:
             continue

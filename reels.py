@@ -817,9 +817,9 @@ def main():
         generar(tarjeta, destino)
         print(f"✅ {destino.name}")
 
-    # Borra los reels que ya no están en tarjetas.yaml.
+    # Borra los reels que ya no están en tarjetas.yaml (las versiones -tiktok son de gancho_tiktok.py).
     for sobrante in CONTENIDO.glob("reel-*.mp4"):
-        if sobrante.name not in nuevas:
+        if sobrante.name not in nuevas and not sobrante.stem.endswith("-tiktok"):
             sobrante.unlink()
             print(f"🗑️  {sobrante.name}")
     HUELLAS.write_text(json.dumps(nuevas, indent=2) + "\n")

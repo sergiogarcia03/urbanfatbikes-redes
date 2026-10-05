@@ -53,6 +53,7 @@ jobs:
         run: |
           python tarjetas.py
           python reels.py
+          python gancho_tiktok.py
           python adaptar.py
           python historias.py
           git add contenido
