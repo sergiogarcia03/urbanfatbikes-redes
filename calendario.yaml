@@ -64,7 +64,8 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT
 
   - id: presentamos-v8
-    fecha: "2026-10-09 13:30"
+    fecha: "2026-10-30 13:30"
+    borrador: sí  # en feed solo reels mientras haya pocos seguidores; la presentación va en el reel de detalles (9/10)
     archivos:
       - tarjeta-v8-1.jpg
     texto: |
@@ -84,12 +85,12 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: detalles-v8
-    fecha: "2026-10-12 19:00"
+    fecha: "2026-10-09 19:00"
     archivos:
       - v8-detalles.mp4
     portada: v8-detalles-portada.jpg  # imagen para su historia "nuevo reel"
     texto: |
-      Faro LED, llave NFC y alarma: lo que no esperas en una fatbike 👀
+      Faro LED, llave NFC y alarma: te presentamos la urbanfatbikes V8 👀
 
       Y además: pantalla con velocidad y nivel de batería, mandos en el manillar, doble suspensión y cesta delantera.
 
@@ -98,23 +99,20 @@ publicaciones:
       #urbanfatbikes #fatbike #ebike #bicicletaelectrica
 
   - id: que-incluye-v8
-    fecha: "2026-10-14 13:30"
+    fecha: "2026-10-21 19:00"
     archivos:
-      - tarjeta-incluye-1.jpg
-      - tarjeta-incluye-2.jpg
-      - tarjeta-incluye-3.jpg
-      - tarjeta-incluye-4.jpg
+      - reel-incluye-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
-      3 regalos con cada V8 🎁 Desliza para verlos.
+      Candado, bomba de aire y kit de herramientas: 3 regalos con cada urbanfatbikes V8 🎁
 
-      De regalo: candado, bomba de aire y kit de herramientas, para que salgas a rodar desde el primer día.
+      Para que salgas a rodar desde el primer día. Y de serie: llave NFC, alarma, localizador compatible con iPhone, frenos de disco hidráulicos y doble suspensión.
 
-      Y de serie: llave NFC, alarma, localizador compatible con iPhone, frenos de disco hidráulicos y doble suspensión.
+      Mándaselo a quien esté pensando en comprarse una.
 
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike
 
   - id: reel-ficha-v8
-    fecha: "2026-10-16 19:00"
+    fecha: "2026-10-12 19:00"
     archivos:
       - reel-ficha-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
@@ -127,7 +125,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fichatecnica #bicicletaelectrica #ebike
 
   - id: reel-patinete
-    fecha: "2026-10-19 19:00"
+    fecha: "2026-10-14 19:00"
     archivos:
       - reel-patinete-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
@@ -140,14 +138,11 @@ publicaciones:
       #urbanfatbikes #fatbike #patineteelectrico #movilidadurbana #bicicletaelectrica
 
   - id: que-es-fatbike
-    fecha: "2026-10-28 13:30"
+    fecha: "2026-10-26 19:00"
     archivos:
-      - tarjeta-que-es-1.jpg
-      - tarjeta-que-es-2.jpg
-      - tarjeta-que-es-3.jpg
-      - tarjeta-que-es-4.jpg
+      - reel-que-es-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
-      ¿Por qué las fatbikes llevan ruedas tan gordas? Te lo explicamos en 4 diapositivas 👉
+      ¿Por qué las fatbikes llevan ruedas de 4 pulgadas? Te lo explicamos en 15 segundos 👇
 
       Una bicicleta con neumáticos de 4 pulgadas o más: más estabilidad, más agarre y más comodidad, en asfalto, tierra, grava o arena.
 
@@ -156,7 +151,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-10-23 19:00"
+    fecha: "2026-10-19 19:00"
     archivos:
       - reel-bateria-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
@@ -171,7 +166,7 @@ publicaciones:
       #urbanfatbikes #bicicletaelectrica #fatbike #bateria #mantenimiento
 
   - id: reel-carga
-    fecha: "2026-10-26 19:00"
+    fecha: "2026-10-23 19:00"
     archivos:
       - reel-carga-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
@@ -186,16 +181,11 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #movilidadurbana #ahorro
 
   - id: mitos-fatbike
-    fecha: "2026-10-21 13:30"
+    fecha: "2026-10-16 19:00"
     archivos:
-      - tarjeta-mitos-1.jpg
-      - tarjeta-mitos-2.jpg
-      - tarjeta-mitos-3.jpg
-      - tarjeta-mitos-4.jpg
-      - tarjeta-mitos-5.jpg
-      - tarjeta-mitos-6.jpg
+      - reel-mitos-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
-      ¿Necesitas carné para llevar una fatbike? Y otros 3 mitos que casi todo el mundo se cree 👉
+      ¿Necesitas carné para llevar una fatbike? Y otros 3 mitos que casi todo el mundo se cree 👇
 
       1. Todas son ilegales → Falso, si cumplen la norma EN 15194.
       2. Necesitas carné y seguro → Falso, si es una bicicleta eléctrica que cumple la norma.
@@ -207,7 +197,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #EN15194
 
   - id: reel-padres
-    fecha: "2026-10-30 19:00"
+    fecha: "2026-10-28 19:00"
     archivos:
       - reel-padres-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |

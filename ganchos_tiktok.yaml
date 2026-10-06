@@ -55,3 +55,27 @@ ganchos:
         recorte: [120, 150, 1900, 1900]
       - foto: v8-estudio.webp
         recorte: [1000, 560, 1760, 1000]
+  mitos:
+    duracion: 3
+    texto: ¿Necesitas *carné* para una fatbike?
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+      - foto: v8-estudio.webp
+        recorte: [1050, 950, 1850, 1750]
+  incluye:
+    duracion: 3
+    texto: "*3 regalos* con cada fatbike"
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [600, 250, 1100, 620]
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+  que-es:
+    duracion: 3
+    texto: ¿Por qué ruedas *tan gordas?*
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [1050, 950, 1850, 1750]
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]

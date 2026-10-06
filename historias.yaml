@@ -72,13 +72,13 @@ historias:
       subtitulo: Aunque no siempre sea obligatorio, es tu mejor protección.
       tamano: 120
 
-  - id: aviso-patinete
+  - id: aviso-bateria
     fecha: "2026-10-18 12:30"
     diapositiva:
       tipo: portada
       antetitulo: Mañana, nuevo reel
-      titulo: ¿Fatbike o *patinete*?
-      subtitulo: Mañana a las 19:00 te lo contamos.
+      titulo: Tu batería puede durar *años*
+      subtitulo: Mañana a las 19:00 te contamos cómo.
       tamano: 120
 
   - id: dato-48v

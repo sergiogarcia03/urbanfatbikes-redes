@@ -55,8 +55,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - Instagram: `publicar.py` cada hora (workflow «Publicar en redes»). Calendario en `calendario.yaml`,
   tarjetas y reels en `tarjetas.yaml` (`tarjetas.py`, `reels.py` con voz editada y música propia),
   historias en `historias.yaml` (+ «nuevo post» automática 1 h después).
-- Horarios (hora de España): 3 publicaciones/semana (lun/mié/vie, ≥2 reels). Reels 19:00, fotos y
-  carruseles 13:30. Historias extra: mar y jue 21:00, sáb y dom 12:30.
+- Horarios (hora de España): 3 publicaciones/semana (lun/mié/vie). **Mientras haya pocos seguidores (<~500), en el
+  feed solo reels** (lo único que llega a quien no nos sigue), todos a las 19:00; los carruseles se convierten en
+  reels (`reel: sí` + música en `tarjetas.yaml`). Fotos y carruseles, 13:30. Historias extra: mar y jue 21:00, sáb y dom 12:30.
 - Token de Instagram: se renueva solo cada lunes (`renovar_token.py`, secret `GH_PAT`).
 - TikTok (`tiktok.py`): los reels llegan como **borrador** a la bandeja de TikTok y GitHub abre un aviso
   (issue) con el texto. App de TikTok en **sandbox**, enviada a revisión el 30/09/2026; cuando la

@@ -77,6 +77,8 @@ tarjetas:
         imagen: v8-estudio.webp
 
   - nombre: incluye
+    reel: sí
+    musica: urban-2.m4a
     diapositivas:
       - tipo: dato
         antetitulo: Qué incluye tu V8
@@ -174,6 +176,8 @@ tarjetas:
         dice: ¿Tú cuál prefieres? Cuéntanoslo en comentarios.
 
   - nombre: que-es
+    reel: sí
+    musica: urban-1.m4a
     diapositivas:
       - tipo: portada
         antetitulo: Fatbikes
@@ -263,6 +267,8 @@ tarjetas:
         texto: Según tu tarifa de luz. Guarda este vídeo.
         dice: Así que cargala cuesta 9 céntimos según tu tarifa. Y guarda este vídeo y compártelo con tus amigos.
   - nombre: mitos
+    reel: sí
+    musica: inspira-2.m4a
     diapositivas:
       - tipo: portada
         antetitulo: Mitos
@@ -281,7 +287,7 @@ tarjetas:
         tamano: 110
       - tipo: portada
         antetitulo: Mito 3
-        titulo: Con *acelerador*, la velocidad da igual
+        titulo: Con *acelerador,* la velocidad da igual
         subtitulo: Falso. Si el motor empuja sin pedalear por encima de 6 km/h, pasa a ser un vehículo de motor (L1e).
         tamano: 110
       - tipo: portada
