@@ -65,11 +65,11 @@ publicaciones:
 
   - id: presentamos-v8
     fecha: "2026-10-09 13:30"
+    borrador: sí  # esperando fotos de una V8 sin daños (la del accidente tiene la rueda girada)
     archivos:
-      - v8-trasera.jpg
-      - v8-lado-ficha.jpg
+      - v8-real-1.jpg
     texto: |
-      Te presentamos la urbanfatbikes V8. Fotos reales, sin estudio 📸 Desliza para verla de lado.
+      Te presentamos la urbanfatbikes V8. Fotos reales, sin estudio 📸
 
       Una fatbike eléctrica de estética clásica y ruedas de 4 pulgadas, pensada para la ciudad y para salir de ella.
 
