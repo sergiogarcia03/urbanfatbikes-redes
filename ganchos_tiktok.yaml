@@ -1,6 +1,6 @@
 # Ganchos para las versiones de TikTok de los reels (gancho_tiktok.py).
 #
-# Los 3 primeros segundos de cada reel se cambian por fotos reales de la bici
+# Los 3 primeros segundos de cada reel (en TikTok y en Instagram) se cambian por fotos reales de la bici
 # con una frase grande; luego sigue el reel normal con su voz y su música.
 #   texto:    la frase gancho (las palabras entre *asteriscos* salen en turquesa)
 #   planos:   2 fotos de contenido/ (recorte opcional: izquierda, arriba, derecha, abajo)
@@ -11,16 +11,18 @@ ganchos:
     duracion: 3
     texto: ¿Tu fatbike es *legal…* o *trucada?*
     planos:
-      - foto: v8-real-1.jpg
-      - foto: v8-real-1.jpg
-        recorte: [600, 400, 1080, 760]
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+      - foto: v8-estudio.webp
+        recorte: [180, 980, 940, 1800]
   carga:
     duracion: 3
     texto: ¿Cuánto cuesta *cargarla?*
     planos:
-      - foto: v8-real-1.jpg
-      - foto: v8-real-1.jpg
-        recorte: [560, 20, 1000, 350]
+      - foto: v8-estudio.webp
+        recorte: [500, 150, 1150, 560]
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
   ficha:
     duracion: 3
     texto: Esta fatbike en *4 cifras*

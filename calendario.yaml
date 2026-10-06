@@ -51,7 +51,7 @@ publicaciones:
   - id: reel-legal
     fecha: "2026-10-07 19:00"
     archivos:
-      - reel-legal.mp4
+      - reel-legal-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
       ¿Tu fatbike es legal? Estas 3 cifras lo deciden 👇
 
@@ -114,7 +114,7 @@ publicaciones:
   - id: reel-ficha-v8
     fecha: "2026-10-16 19:00"
     archivos:
-      - reel-ficha.mp4
+      - reel-ficha-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
       La V8 en 4 cifras ⚡
 
@@ -127,7 +127,7 @@ publicaciones:
   - id: reel-patinete
     fecha: "2026-10-19 19:00"
     archivos:
-      - reel-patinete.mp4
+      - reel-patinete-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
       ¿Fatbike o patinete eléctrico? 🤔 Te lo resumimos en 30 segundos.
 
@@ -156,7 +156,7 @@ publicaciones:
   - id: reel-bateria
     fecha: "2026-10-23 19:00"
     archivos:
-      - reel-bateria.mp4
+      - reel-bateria-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
       3 consejos para que la batería de tu bici eléctrica dure años 🔋
 
@@ -171,7 +171,7 @@ publicaciones:
   - id: reel-carga
     fecha: "2026-10-26 19:00"
     archivos:
-      - reel-carga.mp4
+      - reel-carga-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
       ¿Cuánto cuesta cargar una fatbike eléctrica? 🔌
 
@@ -207,7 +207,7 @@ publicaciones:
   - id: reel-padres
     fecha: "2026-10-30 19:00"
     archivos:
-      - reel-padres.mp4
+      - reel-padres-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
     texto: |
       ¿Vas a regalarle una fatbike eléctrica a tu hijo? Revisa esto antes 👇
 

@@ -60,7 +60,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   aprueben: cambiar `TIKTOK_CLIENT_KEY`/`SECRET` por las de producción y volver a conectar
   (workflow «Conectar TikTok»: enlace de autorización con la clave → código de la web → modo conectar).
   TikTok puede tardar horas en pasar un borrador a la bandeja. TikTok pide **muy visual y gancho fuerte**:
-  cada reel lleva versión `-tiktok` con 3 s de fotos reales + frase gancho (`gancho_tiktok.py`, `ganchos_tiktok.yaml`).
+  cada reel lleva versión `-tiktok` con 3 s de fotos de la bici + frase gancho (`gancho_tiktok.py`, `ganchos_tiktok.yaml`);
+  **Instagram usa también esa versión** (en `calendario.yaml` van los `reel-*-tiktok.mp4`).
 - Web (GitHub Pages desde `docs/`): https://sergiogarcia03.github.io/urbanfatbikes-redes/ con privacidad,
   aviso legal y la página de vuelta de TikTok. Contacto: info.urbanfatbikes@gmail.com.
 - Agenda de contactos (privada, en Claude): https://claude.ai/artifact/3e9TFCyMgwTbwW9Eeho5Y9 — su código
