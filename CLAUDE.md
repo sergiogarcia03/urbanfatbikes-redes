@@ -27,6 +27,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - **Todo con gancho**: la portada o los 3 primeros segundos dan un motivo para parar
   (pregunta, dato sorprendente, error común). Nada de frases obvias o de relleno: **nunca
   «así es de lado», «así es una…», «aquí tienes…»**. Si un texto suena flojo, se reescribe.
+- **Textos de los posts**: la primera línea (lo que se ve antes del «…más», ~125 caracteres) lleva un dato
+  concreto (cifra o nombre); **una sola petición** por post: en reels «Mándaselo a quien…» (los envíos dan
+  alcance), en carruseles «Guárdalo», o una pregunta para comentar. Nunca dos a la vez.
 - Revisar antes de programar: ganchos, faltas, datos contrastados y que la foto esté perfecta.
   **Nada con la bici dañada** (la del accidente) ni retoques que haya que esconder con IA.
 - Material del proveedor (fotos/vídeo): **Sergio autorizó usarlo (06/10/2026)**, siempre sin el logo
