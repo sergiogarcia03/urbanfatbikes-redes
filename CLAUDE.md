@@ -21,6 +21,17 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   ganchos en los 3 primeros segundos, reels para descubrir y carruseles para guardar. Sin repetir la
   misma foto en muchas publicaciones.
 
+## Cómo trabajamos: como una agencia de redes
+- Sergio pidió que Claude actúe **como una empresa que gestiona sus redes de arriba abajo**:
+  plan y horario fijos, lo mejor posible en cada pieza, y **sentido común**.
+- **Todo con gancho**: la portada o los 3 primeros segundos dan un motivo para parar
+  (pregunta, dato sorprendente, error común). Nada de frases obvias o de relleno: **nunca
+  «así es de lado», «así es una…», «aquí tienes…»**. Si un texto suena flojo, se reescribe.
+- Revisar antes de programar: ganchos, faltas, datos contrastados y que la foto esté perfecta.
+  **Nada con la bici dañada** (la del accidente) ni retoques que haya que esconder con IA.
+- Material del proveedor (fotos/vídeo ZEROGO) solo con su permiso por escrito.
+- Ante una duda de verdad (algo que afecte a la marca, dinero o terceros), preguntar a Sergio: no pasa nada.
+
 ## Normas de la marca (siempre)
 - Tono profesional y de confianza, **solo en español**.
 - **Nada de imágenes ni voces realistas hechas con IA** (no quiere la etiqueta de IA).
