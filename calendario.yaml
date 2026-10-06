@@ -64,12 +64,11 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT
 
   - id: presentamos-v8
-    fecha: "2026-10-28 13:30"
-    borrador: sí  # esperando fotos de una V8 sin daños (la del accidente tiene la rueda girada)
+    fecha: "2026-10-09 13:30"
     archivos:
-      - v8-real-1.jpg
+      - tarjeta-v8-1.jpg
     texto: |
-      Te presentamos la urbanfatbikes V8. Fotos reales, sin estudio 📸
+      Ruedas de 4 pulgadas, 250 W y ensayada según la norma europea EN 15194. Te presentamos la urbanfatbikes V8 👇
 
       Una fatbike eléctrica de estética clásica y ruedas de 4 pulgadas, pensada para la ciudad y para salir de ella.
 
@@ -84,14 +83,13 @@ publicaciones:
 
   - id: detalles-v8
     fecha: "2026-10-12 19:00"
-    borrador: sí  # vídeo del proveedor: solo con su permiso por escrito
     archivos:
       - v8-detalles.mp4
     portada: v8-detalles-portada.jpg  # imagen para su historia "nuevo reel"
     texto: |
-      Los detalles de la urbanfatbikes V8 👀
+      Lo que no esperas de una fatbike 👀
 
-      Pantalla con velocidad y nivel de batería, llave NFC, mando con alarma, cesta delantera y faro delantero.
+      Faro LED, pantalla con velocidad y nivel de batería, mandos en el manillar y doble suspensión. Y además: llave NFC, alarma y cesta delantera.
 
       ¿Cuál es tu favorito? Te leemos en comentarios.
 
@@ -114,7 +112,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike
 
   - id: reel-ficha-v8
-    fecha: "2026-10-12 19:00"
+    fecha: "2026-10-16 19:00"
     archivos:
       - reel-ficha.mp4
     texto: |
@@ -127,7 +125,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fichatecnica #bicicletaelectrica #ebike
 
   - id: reel-patinete
-    fecha: "2026-10-16 19:00"
+    fecha: "2026-10-19 19:00"
     archivos:
       - reel-patinete.mp4
     texto: |
@@ -140,7 +138,7 @@ publicaciones:
       #urbanfatbikes #fatbike #patineteelectrico #movilidadurbana #bicicletaelectrica
 
   - id: que-es-fatbike
-    fecha: "2026-10-21 13:30"
+    fecha: "2026-10-28 13:30"
     archivos:
       - tarjeta-que-es-1.jpg
       - tarjeta-que-es-2.jpg
@@ -156,7 +154,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-10-19 19:00"
+    fecha: "2026-10-23 19:00"
     archivos:
       - reel-bateria.mp4
     texto: |
@@ -171,7 +169,7 @@ publicaciones:
       #urbanfatbikes #bicicletaelectrica #fatbike #bateria #mantenimiento
 
   - id: reel-carga
-    fecha: "2026-10-23 19:00"
+    fecha: "2026-10-26 19:00"
     archivos:
       - reel-carga.mp4
     texto: |
@@ -186,7 +184,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #movilidadurbana #ahorro
 
   - id: mitos-fatbike
-    fecha: "2026-10-09 13:30"
+    fecha: "2026-10-21 13:30"
     archivos:
       - tarjeta-mitos-1.jpg
       - tarjeta-mitos-2.jpg
@@ -207,7 +205,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #EN15194
 
   - id: reel-padres
-    fecha: "2026-10-26 19:00"
+    fecha: "2026-10-30 19:00"
     archivos:
       - reel-padres.mp4
     texto: |

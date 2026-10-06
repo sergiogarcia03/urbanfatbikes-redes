@@ -29,6 +29,7 @@ HUELLAS = CONTENIDO / "ganchos_tiktok.json"
 ANCHO, ALTO, FPS = 1080, 1920, 30
 MARGEN = 80
 Y_TEXTO = 330  # por debajo de la barra de arriba de TikTok
+FONDO_RECORTADA = (34, 44, 50)
 
 
 def suave(t):
@@ -44,12 +45,19 @@ def cubrir(imagen, ancho, alto):
 
 
 def cargar_plano(plano):
-    foto = Image.open(CONTENIDO / plano["foto"]).convert("RGB")
+    foto = Image.open(CONTENIDO / plano["foto"]).convert("RGBA")
+    recortada = foto.getchannel("A").getextrema()[0] < 255  # foto de producto sin fondo
+    base = Image.new("RGBA", foto.size, FONDO_RECORTADA + (255,))
+    base.alpha_composite(foto)
+    foto = base.convert("RGB")
     if plano.get("recorte"):
         foto = foto.crop(tuple(plano["recorte"]))
     foto = foto.resize((ANCHO, round(ANCHO * foto.height / foto.width)), Image.LANCZOS)
-    if foto.height > 860:  # foto vertical: que quepa entre el texto y la marca
-        foto = foto.resize((round(foto.width * 860 / foto.height), 860), Image.LANCZOS)
+    tope = 1000 if recortada else 860  # que quepa entre el texto y la marca
+    if foto.height > tope:
+        foto = foto.resize((round(foto.width * tope / foto.height), tope), Image.LANCZOS)
+    if recortada:
+        return foto, Image.new("RGB", (ANCHO, ALTO), FONDO_RECORTADA)
     fondo = cubrir(foto, ANCHO, ALTO).filter(ImageFilter.GaussianBlur(40))
     fondo = ImageEnhance.Brightness(fondo).enhance(0.45)
     return foto, fondo
@@ -96,7 +104,8 @@ def fotogramas(gancho, planos):
         lienzo.paste(grande, ((ANCHO - w) // 2, y))
         texto_gancho(lienzo, gancho["texto"], min(1.0, n / 9))
         d = ImageDraw.Draw(lienzo)
-        d.text((ANCHO / 2, ALTO - 250), "urbanfatbikes", font=marca, fill=(255, 255, 255, 200), anchor="mm")
+        if y + h < ALTO - 290:
+            d.text((ANCHO / 2, ALTO - 250), "urbanfatbikes", font=marca, fill=(255, 255, 255, 200), anchor="mm")
         yield lienzo.convert("RGB")
 
 

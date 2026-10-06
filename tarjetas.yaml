@@ -180,10 +180,11 @@ tarjetas:
         titulo: ¿Por qué ruedas *tan gordas?*
         subtitulo: Lo que tienes que saber antes de subirte a una.
         tamano: 130
-      - tipo: dato
-        numero: 4"
-        unidad: o más de ancho de rueda
-        texto: Lo que la define son unos neumáticos mucho más anchos que los de una bici normal.
+      - tipo: portada
+        antetitulo: urbanfatbikes V8
+        titulo: Ruedas de *4 pulgadas*
+        subtitulo: "Lo que define a una fatbike: neumáticos mucho más anchos que los de una bici normal."
+        imagen: v8-estudio.webp
       - tipo: lista
         titulo: Por qué *engancha*
         puntos:
