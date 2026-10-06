@@ -99,6 +99,11 @@ def main():
     proceso.stdin.close()
     if proceso.wait() != 0:
         sys.exit("❌ ffmpeg falló")
+    # portada del reel en el perfil (faro encendido con el gancho)
+    portada = RAIZ / "contenido" / "portadas" / f"{DESTINO.stem}.jpg"
+    portada.parent.mkdir(exist_ok=True)
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", "0.3", "-i", str(DESTINO), "-frames:v", "1",
+                    "-q:v", "2", str(portada)], check=True)
     print(f"✅ {DESTINO.name} ({total:.1f} s)")
 
 

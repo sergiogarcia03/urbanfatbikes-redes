@@ -59,8 +59,10 @@ class Instagram:
             params["caption"] = texto
         return self._llamar("POST", f"{self.user_id}/media", **params)["id"]
 
-    def contenedor_video(self, url, texto=None, en_carrusel=False):
+    def contenedor_video(self, url, texto=None, en_carrusel=False, portada=None):
         params = {"video_url": url}
+        if portada and not en_carrusel:
+            params["cover_url"] = portada  # portada del reel en la cuadrícula del perfil
         if en_carrusel:
             params["media_type"] = "VIDEO"
             params["is_carousel_item"] = "true"
