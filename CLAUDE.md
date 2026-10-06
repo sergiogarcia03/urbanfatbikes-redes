@@ -29,7 +29,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   «así es de lado», «así es una…», «aquí tienes…»**. Si un texto suena flojo, se reescribe.
 - Revisar antes de programar: ganchos, faltas, datos contrastados y que la foto esté perfecta.
   **Nada con la bici dañada** (la del accidente) ni retoques que haya que esconder con IA.
-- Material del proveedor (fotos/vídeo ZEROGO) solo con su permiso por escrito.
+- Material del proveedor (fotos/vídeo): **Sergio autorizó usarlo (06/10/2026)**, siempre sin el logo
+  «ZEROGO» ni rótulos en inglés (`v8-estudio.webp` ya limpia; vídeo montado con `herramientas/detalles_v8.py`).
 - Ante una duda de verdad (algo que afecte a la marca, dinero o terceros), preguntar a Sergio: no pasa nada.
 
 ## Normas de la marca (siempre)

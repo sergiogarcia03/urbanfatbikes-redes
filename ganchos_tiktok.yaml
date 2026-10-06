@@ -6,7 +6,6 @@
 #   planos:   2 fotos de contenido/ (recorte opcional: izquierda, arriba, derecha, abajo)
 # Variar las fotos y los recortes: que dos vídeos seguidos no empiecen igual.
 
-# Pendiente: ficha, patinete, bateria y padres, con fotos de una V8 sin daños.
 ganchos:
   legal:
     duracion: 3
@@ -22,3 +21,35 @@ ganchos:
       - foto: v8-real-1.jpg
       - foto: v8-real-1.jpg
         recorte: [560, 20, 1000, 350]
+  ficha:
+    duracion: 3
+    texto: Esta fatbike en *4 cifras*
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+      - foto: v8-estudio.webp
+        recorte: [430, 420, 900, 860]
+  patinete:
+    duracion: 3
+    texto: "*¿Fatbike* o *patinete?*"
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [180, 980, 940, 1800]
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+  bateria:
+    duracion: 3
+    texto: Haz esto y tu batería *durará años*
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [820, 720, 1300, 1300]
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+  padres:
+    duracion: 3
+    texto: "*Padres:* ojo antes de regalar una fatbike"
+    planos:
+      - foto: v8-estudio.webp
+        recorte: [120, 150, 1900, 1900]
+      - foto: v8-estudio.webp
+        recorte: [1000, 560, 1760, 1000]
