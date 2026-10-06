@@ -140,6 +140,15 @@ def url_publica(archivo):
     return f"{base}/{quote(ruta_adaptada(archivo).relative_to(RAIZ).as_posix())}"
 
 
+def portada_reel(archivo):
+    """URL de contenido/portadas/<vídeo>.jpg si existe: la portada del reel en el perfil."""
+    portada = RAIZ / "contenido" / "portadas" / f"{Path(archivo).stem}.jpg"
+    if archivo.startswith("http") or not portada.exists():
+        return None
+    base = os.environ["MEDIA_BASE_URL"].rstrip("/")
+    return f"{base}/contenido/portadas/{quote(portada.name)}"
+
+
 def es_video(archivo):
     return Path(archivo).suffix.lower() in EXT_VIDEO
 
@@ -156,7 +165,11 @@ def publicar_en_instagram(ig, publicacion):
     if len(archivos) == 1:
         archivo = archivos[0]
         if es_video(archivo):
-            contenedor = ig.contenedor_video(url_publica(archivo), texto)
+            try:
+                contenedor = ig.contenedor_video(url_publica(archivo), texto, portada=portada_reel(archivo))
+            except InstagramError as error:  # si la portada da problemas, el reel sale igual sin ella
+                print(f"⚠️  portada no aceptada ({error}); se publica sin portada")
+                contenedor = ig.contenedor_video(url_publica(archivo), texto)
         else:
             contenedor = ig.contenedor_imagen(url_publica(archivo), texto)
     else:

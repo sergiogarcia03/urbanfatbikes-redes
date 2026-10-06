@@ -26,6 +26,7 @@ RAIZ = Path(__file__).parent
 CONTENIDO = RAIZ / "contenido"
 DEFINICIONES = RAIZ / "ganchos_tiktok.yaml"
 HUELLAS = CONTENIDO / "ganchos_tiktok.json"
+PORTADAS = CONTENIDO / "portadas"
 ANCHO, ALTO, FPS = 1080, 1920, 30
 MARGEN = 80
 Y_TEXTO = 330  # por debajo de la barra de arriba de TikTok
@@ -129,7 +130,10 @@ def generar(nombre, gancho):
              "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
              "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", str(destino)]
     proceso = subprocess.Popen(orden, stdin=subprocess.PIPE)
-    for imagen in fotogramas(gancho, planos):
+    PORTADAS.mkdir(exist_ok=True)
+    for n, imagen in enumerate(fotogramas(gancho, planos)):
+        if n == 20:  # portada del reel en el perfil: gancho ya entero sobre la primera foto
+            imagen.save(PORTADAS / f"{destino.stem}.jpg", quality=90)
         proceso.stdin.write(imagen.tobytes())
     proceso.stdin.close()
     if proceso.wait() != 0:
