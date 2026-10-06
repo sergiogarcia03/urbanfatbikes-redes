@@ -176,15 +176,10 @@ tarjetas:
   - nombre: que-es
     diapositivas:
       - tipo: portada
-        antetitulo: Para empezar
-        titulo: ¿Qué es una *fatbike?*
-        subtitulo: Desliza y te lo enseñamos.
+        antetitulo: Fatbikes
+        titulo: ¿Por qué ruedas *tan gordas?*
+        subtitulo: Lo que tienes que saber antes de subirte a una.
         tamano: 130
-      - tipo: portada
-        antetitulo: Así es una
-        titulo: "*Fatbike*"
-        subtitulo: Como esta, la urbanfatbikes V8.
-        imagen: v8-estudio.webp
       - tipo: dato
         numero: 4"
         unidad: o más de ancho de rueda
@@ -270,8 +265,8 @@ tarjetas:
     diapositivas:
       - tipo: portada
         antetitulo: Mitos
-        titulo: 4 mitos sobre las *fatbikes*
-        subtitulo: Desliza y descubre la verdad.
+        titulo: ¿Necesitas *carné* para una fatbike?
+        subtitulo: Y otros 3 mitos que casi todo el mundo se cree.
         tamano: 120
       - tipo: portada
         antetitulo: Mito 1
@@ -285,7 +280,7 @@ tarjetas:
         tamano: 110
       - tipo: portada
         antetitulo: Mito 3
-        titulo: Con *acelerador* es igual
+        titulo: Con *acelerador*, la velocidad da igual
         subtitulo: Falso. Si el motor empuja sin pedalear por encima de 6 km/h, pasa a ser un vehículo de motor (L1e).
         tamano: 110
       - tipo: portada

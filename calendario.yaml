@@ -84,6 +84,7 @@ publicaciones:
 
   - id: detalles-v8
     fecha: "2026-10-12 19:00"
+    borrador: sí  # vídeo del proveedor: solo con su permiso por escrito
     archivos:
       - v8-detalles.mp4
     portada: v8-detalles-portada.jpg  # imagen para su historia "nuevo reel"
@@ -113,7 +114,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike
 
   - id: reel-ficha-v8
-    fecha: "2026-10-16 19:00"
+    fecha: "2026-10-12 19:00"
     archivos:
       - reel-ficha.mp4
     texto: |
@@ -126,7 +127,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fichatecnica #bicicletaelectrica #ebike
 
   - id: reel-patinete
-    fecha: "2026-10-19 19:00"
+    fecha: "2026-10-16 19:00"
     archivos:
       - reel-patinete.mp4
     texto: |
@@ -145,9 +146,8 @@ publicaciones:
       - tarjeta-que-es-2.jpg
       - tarjeta-que-es-3.jpg
       - tarjeta-que-es-4.jpg
-      - tarjeta-que-es-5.jpg
     texto: |
-      ¿Qué es una fatbike? Desliza 👉
+      ¿Por qué las fatbikes llevan ruedas tan gordas? Te lo explicamos en 4 diapositivas 👉
 
       Una bicicleta con neumáticos de 4 pulgadas o más: más estabilidad, más agarre y más comodidad, en asfalto, tierra, grava o arena.
 
@@ -156,7 +156,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-10-23 19:00"
+    fecha: "2026-10-19 19:00"
     archivos:
       - reel-bateria.mp4
     texto: |
@@ -171,7 +171,7 @@ publicaciones:
       #urbanfatbikes #bicicletaelectrica #fatbike #bateria #mantenimiento
 
   - id: reel-carga
-    fecha: "2026-10-26 19:00"
+    fecha: "2026-10-23 19:00"
     archivos:
       - reel-carga.mp4
     texto: |
@@ -195,11 +195,11 @@ publicaciones:
       - tarjeta-mitos-5.jpg
       - tarjeta-mitos-6.jpg
     texto: |
-      4 mitos sobre las fatbikes eléctricas. Desliza 👉
+      ¿Necesitas carné para llevar una fatbike? Y otros 3 mitos que casi todo el mundo se cree 👉
 
       1. Todas son ilegales → Falso, si cumplen la norma EN 15194.
       2. Necesitas carné y seguro → Falso, si es una bicicleta eléctrica que cumple la norma.
-      3. Con acelerador es igual → Falso, por encima de 6 km/h sin pedalear pasa a ser un vehículo de motor (L1e).
+      3. Con acelerador, la velocidad da igual → Falso, por encima de 6 km/h sin pedalear pasa a ser un vehículo de motor (L1e).
       4. El casco nunca es obligatorio → Falso, para menores de 16 años y en vías interurbanas.
 
       ¿Conocías los 4? Te leemos en comentarios.
@@ -207,7 +207,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #EN15194
 
   - id: reel-padres
-    fecha: "2026-10-30 19:00"
+    fecha: "2026-10-26 19:00"
     archivos:
       - reel-padres.mp4
     texto: |
