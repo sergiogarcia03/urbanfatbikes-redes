@@ -80,6 +80,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   «Modelo de negocio fatbikes España».
 
 ## Pendiente
+- Web corta **urbanfatbikes.github.io**: organización `urbanfatbikes` y repositorio `urbanfatbikes.github.io` ya creados
+  (vacío). Falta que Sergio conecte GitHub con Claude desde la cuenta de Claude (es de su padre) para poder subir
+  la copia de `docs/` (sin los archivos de TikTok). La web actual se queda donde está por la app de TikTok.
 - Respuesta de TikTok a la revisión de la app.
 - 11/01/2027: preguntas a proveedores (importador UE, precios por cantidad, recambios, sin marca Ouxi).
 - Con unos 100 seguidores: pedir el permiso de estadísticas de Instagram para ajustar horarios.
