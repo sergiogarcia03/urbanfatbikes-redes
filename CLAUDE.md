@@ -65,7 +65,11 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   TikTok puede tardar horas en pasar un borrador a la bandeja. TikTok pide **muy visual y gancho fuerte**:
   cada reel lleva versión `-tiktok` con 3 s de fotos de la bici + frase gancho (`gancho_tiktok.py`, `ganchos_tiktok.yaml`);
   **Instagram usa también esa versión** (en `calendario.yaml` van los `reel-*-tiktok.mp4`).
-- Web (GitHub Pages desde `docs/`): https://sergiogarcia03.github.io/urbanfatbikes-redes/ con privacidad,
+- **Web de la marca (la del perfil de Instagram): https://urbanfatbikes.github.io** (organización `urbanfatbikes`,
+  repositorio `urbanfatbikes.github.io`). Copia plana de `docs/` (sin carpeta `recursos/`) que **Sergio sube a mano**
+  porque Claude aún no tiene permiso en esa organización (falta conectar GitHub desde la cuenta de Claude, que es de
+  su padre). Si cambia `docs/`, mandarle los archivos para subirlos.
+- Web técnica (GitHub Pages desde `docs/`, la usa la app de TikTok): https://sergiogarcia03.github.io/urbanfatbikes-redes/ con privacidad,
   aviso legal y la página de vuelta de TikTok. Contacto: info.urbanfatbikes@gmail.com.
 - Agenda de contactos (privada, en Claude): https://claude.ai/artifact/3e9TFCyMgwTbwW9Eeho5Y9 — su código
   está en `herramientas/contactos.html`; los datos viven en su base de datos, no en el repositorio.
@@ -80,9 +84,6 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   «Modelo de negocio fatbikes España».
 
 ## Pendiente
-- Web corta **urbanfatbikes.github.io**: organización `urbanfatbikes` y repositorio `urbanfatbikes.github.io` ya creados
-  (vacío). Falta que Sergio conecte GitHub con Claude desde la cuenta de Claude (es de su padre) para poder subir
-  la copia de `docs/` (sin los archivos de TikTok). La web actual se queda donde está por la app de TikTok.
 - Respuesta de TikTok a la revisión de la app.
 - 11/01/2027: preguntas a proveedores (importador UE, precios por cantidad, recambios, sin marca Ouxi).
 - Con unos 100 seguidores: pedir el permiso de estadísticas de Instagram para ajustar horarios.
