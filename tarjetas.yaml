@@ -338,3 +338,85 @@ tarjetas:
         titulo: Compártelo con quien lo *necesite*
         texto: Síguenos para elegir bien.
         dice: Comparte este vídeo con quien lo necesite.
+
+  # --- Semana del 2 al 8 de noviembre de 2026 ---
+  - nombre: valencia
+    reel: sí
+    musica: urban-2.m4a
+    diapositivas:
+      - tipo: portada
+        antetitulo: València
+        titulo: ¿Por dónde puedes ir en *fatbike?*
+        subtitulo: Lo que dice la Ordenanza de Movilidad de València.
+        tamano: 120
+      - tipo: lista
+        titulo: Por la acera, *no*
+        puntos:
+          - Las bicis no pueden circular por las aceras
+          - Tampoco las eléctricas de 250 W
+        nota: Una bici con pedaleo asistido (250 W, 25 km/h) sigue las normas de la bicicleta.
+      - tipo: dato
+        antetitulo: Carril bici en la calzada
+        numero: 20
+        unidad: km/h como máximo
+        texto: Es la velocidad máxima en los carriles bici que van por la calzada.
+      - tipo: dato
+        antetitulo: Carril bici sobre la acera
+        numero: 15
+        unidad: km/h como máximo
+        texto: Si el carril bici va por encima de la acera, más despacio.
+      - tipo: cierre
+        titulo: Mándaselo a quien vaya en bici por *València*
+        texto: Síguenos para más normas antes de elegir tu fatbike.
+
+  - nombre: holanda
+    reel: sí
+    musica: inspira-1.m4a
+    diapositivas:
+      - tipo: portada
+        antetitulo: Desde Holanda
+        titulo: 115 € de multa por ir en *fatbike*
+        subtitulo: Ya pasa en el centro de Enschede.
+        tamano: 120
+      - tipo: dato
+        antetitulo: Lo que prohíben
+        numero: 7
+        unidad: cm de rueda
+        texto: Bicis con motor eléctrico y ruedas de más de 7 cm, en el centro y en horario de tiendas.
+      - tipo: lista
+        titulo: ¿Y en *España?*
+        puntos:
+          - Si es legal (250 W, 25 km/h), es una bicicleta
+          - Si está trucada, es un vehículo de motor (L1e)
+          - Antes de comprar, pide el informe EN 15194
+      - tipo: cierre
+        titulo: ¿Crees que llegará a *España?*
+        texto: Te leemos en comentarios.
+
+  - nombre: trucada
+    reel: sí
+    musica: urban-1.m4a
+    diapositivas:
+      - tipo: portada
+        antetitulo: Antes de comprar
+        titulo: 3 señales de una fatbike *trucada*
+        subtitulo: Si tiene alguna, legalmente no es una bicicleta.
+        tamano: 120
+      - tipo: lista
+        antetitulo: Señal 1
+        titulo: El motor ayuda *más allá* de 25 km/h
+        puntos:
+          - En una bici legal, a 25 km/h el motor se para
+      - tipo: lista
+        antetitulo: Señal 2
+        titulo: El acelerador pasa de *6 km/h*
+        puntos:
+          - Sin pedalear, solo puede ayudar hasta 6 km/h, para arrancar
+      - tipo: lista
+        antetitulo: Señal 3
+        titulo: Más de *250 W* de potencia
+        puntos:
+          - 500 W, 750 W o 1.000 W ya no es una bicicleta
+      - tipo: cierre
+        titulo: Mándaselo a quien vaya a *comprarse una*
+        texto: Si tiene alguna señal, es un vehículo de motor (L1e).
