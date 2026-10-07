@@ -75,6 +75,10 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - Agenda de contactos (privada, en Claude): https://claude.ai/artifact/3e9TFCyMgwTbwW9Eeho5Y9 — su código
   está en `herramientas/contactos.html`; los datos viven en su base de datos, no en el repositorio.
 
+- Skills de Instagram (`/ig-reel`, `/ig-caption`, `/ig-plan`, `/ig-profile`, `/ig-viral`…, 13 en total) en
+  `.claude/skills/ig-*`: copia de github.com/Jakeschincariol/instagram-agent-skill (MIT, revisada: no se conecta a
+  nada ni pide contraseñas), adaptada al español; leen `.claude/instagram/voice.md`. Solo ayudan a escribir:
+  publicar sigue siendo cosa de `publicar.py`. Si chocan con estas normas, mandan estas normas.
 - Consejo de ideas de negocio: `/roast <idea>` ejecuta en orden los subagentes de `.claude/agents/`
   (creyente → esceptico → inversionista → juez); el juez guarda el veredicto en `veredictos.md` (público).
 
