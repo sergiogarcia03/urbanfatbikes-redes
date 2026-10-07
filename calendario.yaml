@@ -51,7 +51,7 @@ publicaciones:
   - id: reel-legal
     fecha: "2026-10-07 19:00"
     archivos:
-      - reel-legal-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - reel-legal-tiktok.mp4  # ya publicado el 07/10 (la versión rápida es rapido-legal.mp4)
     texto: |
       ¿Tu fatbike es legal? Estas 3 cifras lo deciden 👇
 
@@ -87,7 +87,7 @@ publicaciones:
   - id: detalles-v8
     fecha: "2026-10-09 19:00"
     archivos:
-      - v8-detalles.mp4
+      - rapido-detalles.mp4  # reel rápido (reels_rapidos.py)
     portada: v8-detalles-portada.jpg  # imagen para su historia "nuevo reel"
     texto: |
       Faro LED, llave NFC y alarma: te presentamos la urbanfatbikes V8 👀
@@ -101,7 +101,7 @@ publicaciones:
   - id: que-incluye-v8
     fecha: "2026-10-21 19:00"
     archivos:
-      - reel-incluye-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-incluye.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       Candado, bomba de aire y kit de herramientas: 3 regalos con cada urbanfatbikes V8 🎁
 
@@ -114,7 +114,7 @@ publicaciones:
   - id: reel-ficha-v8
     fecha: "2026-10-12 19:00"
     archivos:
-      - reel-ficha-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-ficha.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       250 W, hasta 55 km y ruedas de 4 pulgadas: la V8 en 4 cifras ⚡
 
@@ -127,7 +127,7 @@ publicaciones:
   - id: reel-patinete
     fecha: "2026-10-14 19:00"
     archivos:
-      - reel-patinete-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-patinete.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       ¿Fatbike o patinete eléctrico? 🤔 Te lo resumimos en 30 segundos.
 
@@ -140,7 +140,7 @@ publicaciones:
   - id: que-es-fatbike
     fecha: "2026-10-26 19:00"
     archivos:
-      - reel-que-es-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-que-es.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       ¿Por qué las fatbikes llevan ruedas de 4 pulgadas? Te lo explicamos en 15 segundos 👇
 
@@ -153,7 +153,7 @@ publicaciones:
   - id: reel-bateria
     fecha: "2026-10-19 19:00"
     archivos:
-      - reel-bateria-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-bateria.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       3 consejos para que la batería de tu bici eléctrica dure años 🔋
 
@@ -168,7 +168,7 @@ publicaciones:
   - id: reel-carga
     fecha: "2026-10-23 19:00"
     archivos:
-      - reel-carga-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-carga.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       Cargar una fatbike cuesta unos céntimos. Hacemos la cuenta 🔌
 
@@ -183,7 +183,7 @@ publicaciones:
   - id: mitos-fatbike
     fecha: "2026-10-16 19:00"
     archivos:
-      - reel-mitos-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-mitos.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       ¿Necesitas carné para llevar una fatbike? Y otros 3 mitos que casi todo el mundo se cree 👇
 
@@ -199,7 +199,7 @@ publicaciones:
   - id: reel-padres
     fecha: "2026-10-28 19:00"
     archivos:
-      - reel-padres-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-padres.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       ¿Vas a regalarle una fatbike eléctrica a tu hijo? Revisa esto antes 👇
 
@@ -217,7 +217,7 @@ publicaciones:
   - id: reel-valencia
     fecha: "2026-11-02 19:00"
     archivos:
-      - reel-valencia-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-valencia.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       En València, ni por la acera ni a más de 20 km/h: lo que dice la Ordenanza de Movilidad para tu fatbike 🚲
 
@@ -229,7 +229,7 @@ publicaciones:
   - id: reel-holanda
     fecha: "2026-11-04 19:00"
     archivos:
-      - reel-holanda-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-holanda.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       115 € de multa por ir en fatbike por el centro: ya pasa en Enschede (Holanda) 🇳🇱
 
@@ -241,7 +241,7 @@ publicaciones:
   - id: reel-trucada
     fecha: "2026-11-06 19:00"
     archivos:
-      - reel-trucada-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+      - rapido-trucada.mp4  # reel rápido (reels_rapidos.py)
     texto: |
       Más de 25 km/h, acelerador sin límite o más de 250 W: 3 señales de una fatbike trucada ⚠️
 
