@@ -228,6 +228,9 @@ def lista(lienzo, datos):
     d = ImageDraw.Draw(lienzo)
     ancho = ANCHO - 2 * MARGEN
     y = MARGEN + 60
+    if datos.get("antetitulo"):
+        d.text((MARGEN, y), datos["antetitulo"].upper(), font=fuente("Bold", 34), fill=TURQUESA)
+        y += 70
     y = escribir(d, MARGEN, y, datos["titulo"], fuente("Black", datos.get("tamano", 88)), BLANCO, ancho, 1.05)
     d.rectangle((MARGEN, y + 25, MARGEN + 140, y + 35), fill=TURQUESA)
     y += 100

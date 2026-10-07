@@ -34,7 +34,7 @@ concurrency: publicar
 
 jobs:
   publicar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # fijo: ubuntu-latest pasa a Ubuntu 26 el 19/10/2026
     steps:
       - uses: actions/checkout@v5
 

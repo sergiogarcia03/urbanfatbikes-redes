@@ -212,3 +212,41 @@ publicaciones:
       Compártelo con quien lo necesite.
 
       #urbanfatbikes #fatbike #bicicletaelectrica #seguridadvial #padres
+
+  # --- Semana del 2 al 8 de noviembre de 2026 ---
+  - id: reel-valencia
+    fecha: "2026-11-02 19:00"
+    archivos:
+      - reel-valencia-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+    texto: |
+      En València, ni por la acera ni a más de 20 km/h: lo que dice la Ordenanza de Movilidad para tu fatbike 🚲
+
+      Una bici eléctrica legal (250 W, asistencia hasta 25 km/h) sigue las mismas normas que una bicicleta: nada de aceras, carril bici a 20 km/h como máximo si va por la calzada y a 15 km/h si va sobre la acera.
+
+      Mándaselo a quien vaya en bici por València.
+
+      #urbanfatbikes #valencia #fatbike #bicicletaelectrica #carrilbici
+  - id: reel-holanda
+    fecha: "2026-11-04 19:00"
+    archivos:
+      - reel-holanda-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+    texto: |
+      115 € de multa por ir en fatbike por el centro: ya pasa en Enschede (Holanda) 🇳🇱
+
+      Allí prohíben en el centro, en horario de tiendas, las bicis con motor eléctrico y ruedas de más de 7 cm. En España, una fatbike legal (250 W, 25 km/h, norma EN 15194) es una bicicleta; una trucada es un vehículo de motor (L1e).
+
+      ¿Crees que llegará a España? Te leemos en comentarios.
+
+      #urbanfatbikes #fatbike #holanda #bicicletaelectrica #movilidadurbana
+  - id: reel-trucada
+    fecha: "2026-11-06 19:00"
+    archivos:
+      - reel-trucada-tiktok.mp4  # con el gancho de fotos (gancho_tiktok.py)
+    texto: |
+      Más de 25 km/h, acelerador sin límite o más de 250 W: 3 señales de una fatbike trucada ⚠️
+
+      Si tiene alguna, legalmente no es una bicicleta: es un vehículo de motor (L1e) y necesita homologación, matrícula, seguro y permiso. Antes de comprar, pide el informe de ensayo según la norma EN 15194.
+
+      Mándaselo a quien vaya a comprarse una.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT
