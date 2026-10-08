@@ -141,6 +141,10 @@ def fondo_foto(spec, t, dur):
         alto = int(img.height * ancho / img.width)
         p = img.resize((ancho, alto), Image.LANCZOS)
         y = int(ALTO * spec.get("y", 0.62) - alto / 2)
+        if spec.get("suelo"):  # sombra bajo las ruedas para que no parezca flotando
+            sombra = Image.new("RGBA", (ANCHO, ALTO), (0, 0, 0, 0))
+            ImageDraw.Draw(sombra).ellipse((ANCHO / 2 - ancho * 0.55, y + alto - 40, ANCHO / 2 + ancho * 0.55, y + alto + 30), fill=(0, 0, 0, 170))
+            lienzo.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(22)))
         lienzo.alpha_composite(p, ((ANCHO - ancho) // 2, y))
         return lienzo
     base = cubrir(img.convert("RGB"), int(ANCHO * zoom), int(ALTO * zoom))
