@@ -482,7 +482,7 @@ reels:
     texto_y: 720
     tiempos: 4
     golpes:
-      - fondo: {foto: terceros/ek30.png, tam: 0.64, y: 0.655, marco: si}
+      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si}
         texto: "EverCross EK30: lo que dice *su ficha*"
         y: 440
       - fondo: {icono: velocimetro, valor: 25}
@@ -498,7 +498,7 @@ reels:
       - fondo: {icono: ruedas}
         texto: Ruedas de 20 x *4 pulgadas*
         y: 650
-      - fondo: {foto: terceros/ek30.png, tam: 0.64, y: 0.655, marco: si, zoom: out}
+      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si, zoom: out}
         texto: Sobre el papel, cifras de *bicicleta legal*
         y: 440
       - fondo: {color: rojo}
