@@ -288,7 +288,7 @@ reels:
         texto: Llave *NFC* y alarma
         tiempos: 3
       - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
-        texto: Localizador para encontrarla desde *cualquier móvil*
+        texto: Localizador para encontrarlo desde *tu móvil*
         tiempos: 4
       - fondo: {video: suspension}
         texto: "*Mándaselo* a quien busca una"
