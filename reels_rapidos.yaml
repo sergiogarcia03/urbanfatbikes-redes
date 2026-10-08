@@ -178,16 +178,34 @@ reels:
     golpes:
       - fondo: {escena: bici, desde: 1.0}
         texto: "*¿Fatbike* o *patinete?*"
+        tiempos: 3
       - fondo: {icono: ruedas}
-        texto: Rueda de *4 pulgadas*
+        texto: Ruedas de *4 pulgadas*
+        tiempos: 2.5
+      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
+        texto: Más *estable* en baches y adoquines
+        tiempos: 2.5
       - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
         texto: Vas *sentado*
         pegatina: si
+        tiempos: 2.5
       - fondo: {video: suspension}
-        texto: Absorbe los *baches*
+        texto: "Doble suspensión: *absorbe* los golpes"
+        tiempos: 2.5
+      - fondo: {icono: bateria}
+        texto: Suele llegar *más lejos*
+        tiempos: 2.5
+      - fondo: {video: frontal}
+        texto: Y cesta delantera para *la compra*
+        tiempos: 2.5
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: Si cumple la norma, es una *bicicleta*
+        pegatina: si
+        tiempos: 3
       - fondo: {color: turquesa}
         texto: ¿Tú cuál *prefieres?*
         avatar: {pose: duda, cara: sonrie, lado: derecha}
+        tiempos: 4
 
   pov-1000w:
     musica: urban-2
@@ -403,14 +421,22 @@ reels:
     golpes:
       - fondo: {escena: holanda, desde: 1.0}
         texto: En Holanda ya multan por ir en *fatbike*
+        tiempos: 3
       - fondo: {icono: multa, valor: "115 €", color: rojo}
         texto: "*115 €* en Enschede"
+        tiempos: 3
       - fondo: {icono: ruedas}
-        texto: Ruedas de más de *7 cm,* fuera del centro
+        texto: Ruedas de más de *7 cm* y motor
+        tiempos: 3
+      - fondo: {escena: bici, desde: 1.5}
+        texto: Fuera del centro en *horario de tiendas*
+        tiempos: 3
       - fondo: {escena: mapa, desde: 2.0}
         texto: ¿Llegará a *España?*
+        tiempos: 3
       - fondo: {escena: comparar, desde: 1.5}
-        texto: Aquí, si es legal, es una *bici*
+        texto: Aquí, si es legal, es una *bici.* ¿Tú qué opinas?
+        tiempos: 4
 
   diferencias:
     musica: urban-2
