@@ -107,6 +107,34 @@ def fondo_foto(spec, t, dur):
     recortada = img.getchannel("A").getextrema()[0] < 255
     lienzo = degradado(*ESTILOS["neon"]["fondos"]["oscuro"])
     zoom = 1.0 + 0.10 * (t / max(dur, 0.01)) if spec.get("zoom", "in") == "in" else 1.10 - 0.10 * (t / max(dur, 0.01))
+    if recortada and spec.get("marco"):
+        # foto de catálogo: la bici en su ficha blanca, con sombra en el suelo (no parece pegada)
+        ancho = int(ANCHO * spec.get("tam", 0.85))
+        bici = img.resize((ancho - 80, int(img.height * (ancho - 80) / img.width)), Image.LANCZOS)
+        caja = bici.getchannel("A").getbbox()
+        bici = bici.crop(caja)
+        alto = bici.height + 160
+        ficha = Image.new("RGBA", (ancho, alto), (0, 0, 0, 0))
+        fondo = Image.new("RGBA", (ancho, alto))
+        df = ImageDraw.Draw(fondo)
+        for yy in range(alto):  # blanco arriba, gris muy suave abajo, como un estudio
+            v = int(255 - 22 * yy / alto)
+            df.line((0, yy, ancho, yy), fill=(v, v, v + 2, 255))
+        suelo = Image.new("RGBA", (ancho, alto), (0, 0, 0, 0))
+        ImageDraw.Draw(suelo).ellipse((ancho * 0.12, alto - 115, ancho * 0.88, alto - 65), fill=(0, 0, 0, 110))
+        fondo.alpha_composite(suelo.filter(ImageFilter.GaussianBlur(18)))
+        fondo.alpha_composite(bici, ((ancho - bici.width) // 2, alto - 90 - bici.height))
+        mascara = Image.new("L", (ancho, alto), 0)
+        ImageDraw.Draw(mascara).rounded_rectangle((0, 0, ancho - 1, alto - 1), radius=36, fill=255)
+        ficha.paste(fondo, (0, 0), mascara)
+        f = zoom
+        ficha = ficha.resize((int(ancho * f), int(alto * f)), Image.LANCZOS)
+        x, y = (ANCHO - ficha.width) // 2, int(ALTO * spec.get("y", 0.62) - ficha.height / 2)
+        sombra = Image.new("RGBA", (ANCHO, ALTO), (0, 0, 0, 0))
+        ImageDraw.Draw(sombra).rounded_rectangle((x + 10, y + 24, x + ficha.width + 10, y + ficha.height + 24), radius=40, fill=(0, 0, 0, 150))
+        lienzo.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(26)))
+        lienzo.alpha_composite(ficha, (x, y))
+        return lienzo
     if recortada:
         # producto sin fondo: grande y centrado en la mitad de abajo
         ancho = int(ANCHO * spec.get("tam", 1.05) * zoom)

@@ -482,10 +482,9 @@ reels:
     texto_y: 720
     tiempos: 4
     golpes:
-      - fondo: {foto: terceros/ek30.png, tam: 0.8, y: 0.66}
+      - fondo: {foto: terceros/ek30.png, tam: 0.64, y: 0.655, marco: si}
         texto: "EverCross EK30: lo que dice *su ficha*"
-        y: 520
-        credito: "Imagen: EverCross"
+        y: 440
       - fondo: {icono: velocimetro, valor: 25}
         texto: Motor de *250 W*
         y: 650
@@ -499,9 +498,8 @@ reels:
       - fondo: {icono: ruedas}
         texto: Ruedas de 20 x *4 pulgadas*
         y: 650
-      - fondo: {foto: terceros/ek30.png, tam: 0.8, y: 0.66, zoom: out}
+      - fondo: {foto: terceros/ek30.png, tam: 0.64, y: 0.655, marco: si, zoom: out}
         texto: Sobre el papel, cifras de *bicicleta legal*
-        y: 520
-        credito: "Imagen: EverCross"
+        y: 440
       - fondo: {color: rojo}
         texto: Antes de comprar, pide el informe *EN 15194*
