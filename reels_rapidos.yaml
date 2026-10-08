@@ -1,7 +1,10 @@
 # Reels rápidos (reels_rapidos.py): un golpe nuevo cada 2 tiempos de la música.
 #
 # Cada golpe:
+#   estilo:   neon|aviso|claro|caja (del reel o de un golpe): que no todos tengan la misma base
 #   fondo:    {foto: archivo, recorte: [x1, y1, x2, y2], zoom: in|out}
+#             {escena: sofa|aeropuerto|holanda|comparar|bici|mapa|final, desde: s}  (dibujos de «Mi historia»)
+#             {icono: velocimetro|multa|auriculares|movil|cerveza|luces|matricula|bateria|enchufe|cebra|ruedas|silla, valor: ...}
 #             {video: faro|frontal|manillar|pantalla|suspension}   (tomas del proveedor sin rótulos)
 #             {color: oscuro|turquesa|rojo}
 #   texto:    frase corta (las palabras entre *asteriscos* en turquesa); entra palabra a palabra
@@ -9,554 +12,433 @@
 #   pegatina: si | no   (✅ / ❌)
 #   avatar:   {pose: pie|senala|brazos|duda|niega, cara: normal|sorpresa|sonrie|serio, lado: derecha|izquierda}
 #   tiempos:  cuántos tiempos dura (2 por defecto)
-# Reglas: 8-12 s, gancho en el primer golpe, nunca dos golpes iguales seguidos, cerrar con una sola petición.
+# Reglas: 5-6 s (5 golpes), sin más de un fondo liso por reel, gancho en el primer golpe, nunca dos golpes iguales seguidos, cerrar con una sola petición.
 
 reels:
   legal:
     musica: urban-1
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: ¿Tu fatbike es *legal…*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {video: faro}
-        texto: …o *trucada?*
-      - fondo: {color: turquesa}
-        numero: 250 W
-        texto: de potencia, *como máximo*
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        numero: "25"
-        texto: km/h y el motor *se para*
-      - fondo: {video: manillar}
-        numero: "6"
-        texto: km/h *sin pedalear*
-      - fondo: {color: rojo}
-        texto: ¿Supera *alguna?*
-        avatar: {pose: niega, cara: serio, lado: izquierda}
-      - fondo: {color: rojo}
-        texto: Es un *vehículo de motor*
-        pegatina: "no"
-      - fondo: {video: suspension}
-        texto: Matrícula, seguro y *carné*
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
-        texto: Pide el informe *EN 15194*
-        pegatina: si
-      - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien vaya a comprarse una"
-        avatar: {pose: brazos, cara: sonrie, lado: derecha}
+    - fondo:
+        foto: v8-estudio.webp
+        recorte:
+        - 120
+        - 150
+        - 1900
+        - 1900
+      texto: ¿Tu fatbike es *legal…*
+      avatar:
+        pose: duda
+        cara: sorpresa
+        lado: derecha
+    - fondo:
+        video: faro
+      texto: …o *trucada?*
+    - fondo:
+        color: turquesa
+      numero: 250 W
+      texto: de potencia, *como máximo*
+    - fondo:
+        foto: v8-estudio.webp
+        recorte:
+        - 180
+        - 980
+        - 940
+        - 1800
+      numero: '25'
+      texto: km/h y el motor *se para*
+    - fondo:
+        video: manillar
+      numero: '6'
+      texto: km/h *sin pedalear*
+    - fondo:
+        color: rojo
+      texto: ¿Supera *alguna?*
+      avatar:
+        pose: niega
+        cara: serio
+        lado: izquierda
+    - fondo:
+        color: rojo
+      texto: Es un *vehículo de motor*
+      pegatina: 'no'
+    - fondo:
+        video: suspension
+      texto: Matrícula, seguro y *carné*
+    - fondo:
+        foto: v8-estudio.webp
+        recorte:
+        - 120
+        - 150
+        - 1900
+        - 1900
+        zoom: out
+      texto: Pide el informe *EN 15194*
+      pegatina: si
+    - fondo:
+        color: turquesa
+      texto: '*Mándaselo* a quien vaya a comprarse una'
+      avatar:
+        pose: brazos
+        cara: sonrie
+        lado: derecha
+  ek30:
+    musica: urban-2
+    golpes:
+    - fondo:
+        color: oscuro
+      texto: ¿La EverCross EK30 es *legal?*
+      avatar:
+        pose: duda
+        cara: sorpresa
+        lado: derecha
+    - fondo:
+        color: turquesa
+      texto: Miramos su *ficha*
+      avatar:
+        pose: senala
+        cara: normal
+        lado: izquierda
+    - fondo:
+        color: oscuro
+      numero: 250 W
+      texto: de motor
+      pegatina: si
+    - fondo:
+        color: turquesa
+      numero: '25'
+      texto: km/h de velocidad máxima
+      pegatina: si
+    - fondo:
+        color: rojo
+      texto: Ruedas de 20 x *4 pulgadas*
+    - fondo:
+        color: oscuro
+      texto: Sobre el papel, cifras de *bicicleta*
+      avatar:
+        pose: brazos
+        cara: sonrie
+        lado: derecha
+    - fondo:
+        color: rojo
+      texto: Pero pide siempre el informe *EN 15194*
+    - fondo:
+        color: turquesa
+      texto: ¿Cuál quieres que *miremos ahora?*
 
   detalles:
     musica: inspira-1
+    estilo: neon
     golpes:
       - fondo: {video: faro}
-        texto: Lo que *no esperas…*
-      - fondo: {video: frontal}
-        texto: …en una *fatbike*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+        texto: Faro *LED,* llave NFC y alarma
       - fondo: {video: pantalla}
-        texto: Pantalla con *velocidad* y batería
+        texto: Pantalla con *velocidad*
       - fondo: {video: manillar}
         texto: Mandos en el *manillar*
-      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
-        texto: Llave *NFC* y *alarma*
-        pegatina: si
       - fondo: {video: suspension}
         texto: Doble *suspensión*
-      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
-        numero: 48 V
-        texto: de *batería*
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
-        texto: La urbanfatbikes *V8*
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
-      - fondo: {color: turquesa}
         texto: ¿Cuál es tu *favorito?*
+        avatar: {pose: senala, cara: sonrie, lado: izquierda}
 
   ficha:
     musica: urban-2
+    estilo: caja
     golpes:
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
         texto: Esta fatbike en *4 cifras*
         avatar: {pose: senala, cara: sonrie, lado: derecha}
-      - fondo: {color: turquesa}
-        numero: 250 W
-        texto: de *motor*
-      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
-        numero: 50-55
-        texto: km de autonomía *según fabricante*
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: "*250 W* y hasta 25 km/h"
+      - fondo: {icono: bateria}
+        texto: 50-55 km *según fabricante*
       - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        numero: 4"
-        texto: de *rueda*
+        texto: Ruedas de *4 pulgadas*
       - fondo: {video: suspension}
-        numero: "2"
-        texto: "*suspensiones*"
-      - fondo: {video: faro}
-        texto: Y faro *LED*
-      - fondo: {color: oscuro}
-        texto: Ensayada por *TÜV Rheinland*
-        pegatina: si
-        avatar: {pose: brazos, cara: sonrie, lado: izquierda}
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
-        texto: según la norma *EN 15194*
-      - fondo: {color: turquesa}
-        texto: "*Guárdalo* para tenerlo a mano"
+        texto: Doble suspensión. *Guárdalo*
+
+  norma-25:
+    musica: inspira-1
+    estilo: aviso
+    golpes:
+      - fondo: {icono: velocimetro, valor: 32}
+        texto: ¿Tu fatbike pasa de *25 km/h?*
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: Entonces no es una *bici*
+      - fondo: {icono: matricula}
+        texto: Es un *vehículo de motor*
+      - fondo: {icono: multa, valor: SEGURO, color: rojo}
+        texto: Matrícula, seguro y *permiso AM*
+      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
+        texto: "*Mándaselo* a quien la tenga trucada"
 
   patinete:
     musica: urban-1
+    estilo: claro
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+      - fondo: {escena: bici, desde: 1.0}
         texto: "*¿Fatbike* o *patinete?*"
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        numero: 4"
-        texto: "de rueda: *más agarre*"
-      - fondo: {color: oscuro}
-        texto: Ruedas pequeñas en los *baches*
-        pegatina: "no"
+      - fondo: {icono: ruedas}
+        texto: Rueda de *4 pulgadas*
       - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
         texto: Vas *sentado*
         pegatina: si
       - fondo: {video: suspension}
-        texto: Y la rueda ancha *absorbe* los baches
-      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
-        texto: Suele llegar *más lejos* con una carga
+        texto: Absorbe los *baches*
       - fondo: {color: turquesa}
-        texto: Si cumple la norma, es una *bicicleta*
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
-      - fondo: {color: oscuro}
         texto: ¿Tú cuál *prefieres?*
-
-  mitos:
-    musica: inspira-2
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: ¿Necesitas *carné* para una fatbike?
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: rojo}
-        texto: "Mito: todas son *ilegales*"
-        pegatina: "no"
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        texto: Con la norma *EN 15194* es una bici
-        pegatina: si
-      - fondo: {color: rojo}
-        texto: "Mito: necesitas *carné* y seguro"
-        pegatina: "no"
-      - fondo: {video: frontal}
-        texto: Si cumple la norma, *no*
-      - fondo: {color: rojo}
-        texto: "Mito: el *acelerador* da igual"
-        pegatina: "no"
-      - fondo: {video: manillar}
-        numero: "6"
-        texto: km/h sin pedalear, *como máximo*
-      - fondo: {color: rojo}
-        texto: "Mito: el casco *nunca* es obligatorio"
-        pegatina: "no"
-      - fondo: {color: oscuro}
-        texto: Menores de 16 y vías *interurbanas*
-        avatar: {pose: senala, cara: serio, lado: izquierda}
-      - fondo: {color: turquesa}
-        texto: ¿Conocías *los 4?*
-
-  bateria:
-    musica: tranquila-1
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
-        texto: Haz esto y tu batería *durará años*
-        avatar: {pose: senala, cara: sonrie, lado: derecha}
-      - fondo: {color: turquesa}
-        numero: "1"
-        texto: Siempre el *cargador original*
-      - fondo: {color: oscuro}
-        numero: "2"
-        texto: Ni sol *ni frío*
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: Cárgala a *temperatura ambiente*
-      - fondo: {color: turquesa}
-        numero: "3"
-        texto: Si no la usas en semanas…
-      - fondo: {video: pantalla}
-        texto: …guárdala a *media carga*
-        avatar: {pose: brazos, cara: sonrie, lado: izquierda}
-      - fondo: {color: oscuro}
-        texto: "*Mándaselo* a quien tenga una bici eléctrica"
-
-  incluye:
-    musica: urban-2
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        numero: "3"
-        texto: regalos con *cada fatbike*
-        avatar: {pose: brazos, cara: sorpresa, lado: derecha}
-      - fondo: {color: turquesa}
-        texto: "*Candado*"
-        pegatina: si
-      - fondo: {color: oscuro}
-        texto: Bomba de *aire*
-        pegatina: si
-      - fondo: {color: turquesa}
-        texto: Kit de *herramientas*
-        pegatina: si
-      - fondo: {video: manillar}
-        texto: "Y de serie: llave *NFC* y alarma"
-      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
-        texto: Localizador compatible con *iPhone*
-      - fondo: {video: suspension}
-        texto: Frenos *hidráulicos* y doble suspensión
-      - fondo: {color: oscuro}
-        texto: "*Mándaselo* a quien esté pensando en comprarse una"
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
-
-  carga:
-    musica: inspira-2
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
-        texto: ¿Cuánto cuesta *cargarla?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: turquesa}
-        numero: "0,75"
-        texto: kWh por *carga*
-      - fondo: {video: pantalla}
-        texto: Batería de *48 V* y 15,6 Ah
-      - fondo: {color: oscuro}
-        numero: 50-55
-        texto: km por carga, *según fabricante*
-      - fondo: {color: rojo}
-        texto: Sin *gasolina*
-        pegatina: si
-      - fondo: {color: rojo}
-        texto: Sin seguro *obligatorio* ni carné
-        pegatina: si
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
-        texto: Unos *céntimos* por carga
-        avatar: {pose: brazos, cara: sonrie, lado: izquierda}
-      - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien todavía va en coche a todo"
-
-  que-es:
-    musica: urban-1
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [1050, 950, 1850, 1750]}
-        texto: ¿Por qué ruedas *tan gordas?*
-        avatar: {pose: duda, cara: sorpresa, lado: izquierda}
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        numero: 4"
-        texto: de ancho, *o más*
-      - fondo: {color: turquesa}
-        texto: Más *estabilidad*
-        pegatina: si
-      - fondo: {video: suspension}
-        texto: Más *comodidad* en baches
-      - fondo: {color: oscuro}
-        texto: Asfalto, tierra, grava o *arena*
-        pegatina: si
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
-        texto: Por eso *engancha*
-        avatar: {pose: brazos, cara: sonrie, lado: derecha}
-      - fondo: {color: turquesa}
-        texto: ¿Te subirías a *una?*
-
-  padres:
-    musica: tranquila-1
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
-        texto: "*Padres:* ojo antes de regalar una fatbike"
-        avatar: {pose: senala, cara: serio, lado: derecha}
-      - fondo: {color: turquesa}
-        numero: "1"
-        texto: Pide el informe *EN 15194*
-      - fondo: {color: oscuro}
-        texto: Sin él, no sabes si es una *bicicleta*
-      - fondo: {video: manillar}
-        numero: "2"
-        texto: Acelerador hasta *6 km/h,* no más
-      - fondo: {color: rojo}
-        numero: "3"
-        texto: Ojo con los *modos desbloqueados*
-        pegatina: "no"
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: Y casco, obligatorio para *menores de 16*
-        avatar: {pose: brazos, cara: sonrie, lado: izquierda}
-      - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien lo necesite"
-
-  valencia:
-    musica: urban-2
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: ¿Fatbike por la acera en *València?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: rojo}
-        texto: Por la acera, *no*
-        pegatina: "no"
-      - fondo: {video: frontal}
-        texto: Las eléctricas de 250 W, *tampoco*
-      - fondo: {color: turquesa}
-        numero: "20"
-        texto: km/h en el carril bici *de la calzada*
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        numero: "15"
-        texto: km/h si va *sobre la acera*
-      - fondo: {color: oscuro}
-        texto: Lo dice la Ordenanza de Movilidad de *València*
-        avatar: {pose: senala, cara: serio, lado: izquierda}
-      - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien vaya en bici por València"
-
-  holanda:
-    musica: inspira-1
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: En Holanda ya multan por ir en *fatbike*
-        avatar: {pose: niega, cara: sorpresa, lado: derecha}
-      - fondo: {color: rojo}
-        numero: 115 €
-        texto: de multa en *Enschede*
-      - fondo: {foto: v8-estudio.webp, recorte: [1050, 950, 1850, 1750]}
-        numero: 7 cm
-        texto: "de rueda y motor: *fuera del centro*"
-      - fondo: {color: oscuro}
-        texto: En horario de *tiendas*
-      - fondo: {video: frontal}
-        texto: ¿Y en *España?*
-        avatar: {pose: duda, cara: normal, lado: izquierda}
-      - fondo: {color: turquesa}
-        texto: Si es legal, es una *bicicleta*
-        pegatina: si
-      - fondo: {color: rojo}
-        texto: Si está trucada, *vehículo de motor*
-        pegatina: "no"
-      - fondo: {color: oscuro}
-        texto: ¿Crees que llegará a *España?*
-
-  trucada:
-    musica: urban-1
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        numero: "3"
-        texto: señales de una fatbike *trucada*
-        avatar: {pose: niega, cara: serio, lado: derecha}
-      - fondo: {color: rojo}
-        numero: "1"
-        texto: El motor ayuda *más allá de 25 km/h*
-      - fondo: {video: pantalla}
-        texto: En una legal, a 25 km/h *se para*
-        pegatina: si
-      - fondo: {color: rojo}
-        numero: "2"
-        texto: El acelerador pasa de *6 km/h*
-      - fondo: {video: manillar}
-        texto: Sin pedalear, solo *para arrancar*
-      - fondo: {color: rojo}
-        numero: "3"
-        texto: Más de *250 W*
-      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
-        texto: 500, 750 o 1.000 W *no es una bici*
-        pegatina: "no"
-      - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien vaya a comprarse una"
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
-
-  # Respuesta en vídeo a un comentario de TikTok (08/10/2026): datos de la ficha pública de la tienda
-  ek30:
-    musica: urban-2
-    golpes:
-      - fondo: {color: oscuro}
-        texto: ¿La EverCross EK30 es *legal?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: turquesa}
-        texto: Miramos su *ficha*
-        avatar: {pose: senala, cara: normal, lado: izquierda}
-      - fondo: {color: oscuro}
-        numero: 250 W
-        texto: de motor
-        pegatina: si
-      - fondo: {color: turquesa}
-        numero: "25"
-        texto: km/h de velocidad máxima
-        pegatina: si
-      - fondo: {color: rojo}
-        texto: Ruedas de 20 x *4 pulgadas*
-      - fondo: {color: oscuro}
-        texto: Sobre el papel, cifras de *bicicleta*
-        avatar: {pose: brazos, cara: sonrie, lado: derecha}
-      - fondo: {color: rojo}
-        texto: Pero pide siempre el informe *EN 15194*
-      - fondo: {color: turquesa}
-        texto: ¿Cuál quieres que *miremos ahora?*
-
-  # --- Serie «Normas en 10 segundos» (martes y jueves, pensada para TikTok) ---
-  norma-25:
-    musica: inspira-1
-    golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
-        texto: ¿Tu fatbike pasa de *25 km/h?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: turquesa}
-        numero: "25"
-        texto: km/h y el motor *se para*
-        pegatina: si
-      - fondo: {color: rojo}
-        texto: Si sigue empujando…
-      - fondo: {color: rojo}
-        texto: …es un *vehículo de motor*
-        pegatina: "no"
-      - fondo: {video: pantalla}
-        texto: Matrícula, seguro y *permiso AM*
-      - fondo: {color: oscuro}
-        texto: "*Mándaselo* a quien la tenga trucada"
-        avatar: {pose: senala, cara: serio, lado: izquierda}
+        avatar: {pose: duda, cara: sonrie, lado: derecha}
 
   pov-1000w:
     musica: urban-2
+    estilo: neon
     golpes:
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
         texto: "POV: te compras una fatbike de *1.000 W*"
         avatar: {pose: brazos, cara: sonrie, lado: derecha}
-      - fondo: {color: rojo}
-        texto: Legalmente, *no es una bici*
-        pegatina: "no"
-      - fondo: {color: oscuro}
+      - fondo: {icono: matricula}
         texto: Necesita *matrícula*
-        avatar: {pose: niega, cara: sorpresa, lado: izquierda}
-      - fondo: {color: rojo}
+      - fondo: {icono: multa, valor: SEGURO, color: rojo}
         texto: Seguro *obligatorio*
-      - fondo: {color: oscuro}
-        texto: Y *permiso AM*
+      - fondo: {escena: comparar, desde: 2.5}
+        texto: Y legalmente *no es una bici*
       - fondo: {color: turquesa}
-        numero: 250 W
-        texto: y te ahorras *todo eso*
-        pegatina: si
-      - fondo: {color: oscuro}
         texto: ¿Te *compensa?*
+        avatar: {pose: niega, cara: sorpresa, lado: izquierda}
+
+  mitos:
+    musica: inspira-2
+    estilo: caja
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: ¿Necesitas *carné* para una fatbike?
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: Si cumple la norma, *no*
+        pegatina: si
+      - fondo: {icono: velocimetro, valor: 6}
+        texto: Acelerador hasta *6 km/h*
+      - fondo: {icono: silla}
+        texto: Casco obligatorio para *menores de 16*
+      - fondo: {video: frontal}
+        texto: ¿Conocías *estos mitos?*
+
+  bateria:
+    musica: tranquila-1
+    estilo: claro
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [820, 720, 1300, 1300]}
+        texto: Haz esto y tu batería *durará años*
+      - fondo: {icono: enchufe}
+        texto: Siempre el *cargador original*
+      - fondo: {icono: luces}
+        texto: Ni sol ni *frío*
+      - fondo: {icono: bateria, valor: media}
+        texto: Sin usarla, a *media carga*
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien tenga una bici eléctrica"
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
 
   auriculares:
     musica: inspira-1
+    estilo: aviso
     golpes:
-      - fondo: {video: manillar}
+      - fondo: {icono: auriculares}
         texto: ¿Auriculares en la *fatbike?*
-        avatar: {pose: duda, cara: normal, lado: derecha}
-      - fondo: {color: rojo}
-        texto: "*Prohibido*"
-        pegatina: "no"
-      - fondo: {color: oscuro}
-        numero: 200 €
-        texto: de *multa*
-      - fondo: {color: rojo}
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: "*200 €* de multa"
+      - fondo: {escena: bici, desde: 2.0}
         texto: Aunque no esté *sonando nada*
-      - fondo: {video: pantalla}
+      - fondo: {icono: movil}
         texto: Y el *móvil,* igual
-      - fondo: {color: oscuro}
-        numero: 200 €
-        texto: también
-        avatar: {pose: niega, cara: serio, lado: izquierda}
-      - fondo: {color: turquesa}
+      - fondo: {video: manillar}
         texto: "*Mándaselo* a quien va con cascos"
+
+  incluye:
+    musica: urban-2
+    estilo: neon
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: "*3 regalos* con cada fatbike"
+        avatar: {pose: brazos, cara: sorpresa, lado: derecha}
+      - fondo: {color: turquesa}
+        texto: Candado, bomba y *herramientas*
+        pegatina: si
+      - fondo: {video: manillar}
+        texto: Llave *NFC* y alarma
+      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
+        texto: Localizador para *iPhone*
+      - fondo: {video: suspension}
+        texto: "*Mándaselo* a quien busca una"
 
   nino:
     musica: urban-1
+    estilo: claro
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
-        texto: ¿Puedes llevar a tu hijo en la *fatbike?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {icono: silla}
+        texto: ¿Tu hijo en la *fatbike?*
       - fondo: {color: turquesa}
-        texto: Sí, *pero…*
-      - fondo: {color: oscuro}
         numero: "7"
         texto: años *como máximo*
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: En un asiento *homologado*
+      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
+        texto: En asiento *homologado*
         pegatina: si
-      - fondo: {color: turquesa}
-        texto: Y tú, *mayor de edad*
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
-      - fondo: {color: rojo}
-        numero: 100 €
-        texto: si no lo haces así
-        pegatina: "no"
-      - fondo: {color: oscuro}
-        texto: "*Mándaselo* a quien lleva a sus hijos en bici"
+      - fondo: {icono: multa, valor: "100 €", color: rojo}
+        texto: Si no, *100 €*
+      - fondo: {escena: final, desde: 1.0}
+        texto: "*Mándaselo* a quien lleva a sus hijos"
+
+  carga:
+    musica: inspira-2
+    estilo: caja
+    golpes:
+      - fondo: {icono: enchufe}
+        texto: ¿Cuánto cuesta *cargarla?*
+      - fondo: {icono: bateria}
+        texto: "*0,75 kWh* por carga"
+      - fondo: {video: pantalla}
+        texto: 50-55 km *según fabricante*
+      - fondo: {escena: bici, desde: 1.5}
+        texto: Sin *gasolina* ni carné
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
+        texto: Unos *céntimos.* Mándaselo
+        avatar: {pose: brazos, cara: sonrie, lado: derecha}
+
+  que-es:
+    musica: urban-1
+    estilo: neon
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [1050, 950, 1850, 1750]}
+        texto: ¿Por qué ruedas *tan gordas?*
+      - fondo: {icono: ruedas}
+        texto: "*4 pulgadas* o más"
+      - fondo: {escena: holanda, desde: 1.0}
+        texto: Más *estabilidad*
+      - fondo: {video: suspension}
+        texto: Más *comodidad*
+      - fondo: {escena: bici, desde: 2.5}
+        texto: ¿Te subirías a *una?*
 
   alcohol:
     musica: inspira-2
+    estilo: aviso
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+      - fondo: {icono: cerveza}
         texto: ¿Una cerveza y a la *fatbike?*
-        avatar: {pose: brazos, cara: sonrie, lado: derecha}
-      - fondo: {color: rojo}
+      - fondo: {escena: bici, desde: 1.0}
         texto: La misma tasa que *en coche*
       - fondo: {color: oscuro}
         numero: "0,25"
         texto: mg/l en aire *espirado*
-      - fondo: {color: rojo}
-        numero: 500 €
-        texto: de multa, *hasta 1.000 €*
-        pegatina: "no"
-      - fondo: {video: frontal}
-        texto: Y si te lo piden, *tienes que soplar*
-        avatar: {pose: niega, cara: serio, lado: izquierda}
-      - fondo: {color: turquesa}
+      - fondo: {icono: multa, valor: "1.000 €", color: rojo}
+        texto: De *500 a 1.000 €*
+      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
         texto: "*Mándaselo* a quien diga que en bici no pasa nada"
+
+  padres:
+    musica: tranquila-1
+    estilo: claro
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
+        texto: "*Padres:* ojo antes de regalar una fatbike"
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: Pide el informe *EN 15194*
+      - fondo: {icono: velocimetro, valor: 6}
+        texto: Acelerador hasta *6 km/h*
+      - fondo: {icono: multa, valor: "+25", color: rojo}
+        texto: Ojo con los *modos desbloqueados*
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien lo necesite"
+        avatar: {pose: senala, cara: serio, lado: derecha}
 
   luces:
     musica: urban-2
+    estilo: neon
     golpes:
       - fondo: {video: faro}
         texto: ¿Fatbike de noche *sin luces?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: oscuro}
-        texto: Delante, luz *blanca*
-        pegatina: si
-      - fondo: {color: rojo}
-        texto: Detrás, luz *roja*
-        pegatina: si
-      - fondo: {color: oscuro}
-        numero: 200 €
-        texto: si vas *sin luces*
+      - fondo: {icono: luces}
+        texto: Blanca *delante,* roja detrás
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: Sin luces, *200 €*
+      - fondo: {escena: holanda, desde: 2.0}
+        texto: En interurbanas, *prenda reflectante*
+      - fondo: {foto: v8-estudio.webp, recorte: [430, 420, 900, 860]}
+        texto: "*Mándaselo* a quien vuelve tarde"
+
+  valencia:
+    musica: urban-2
+    estilo: caja
+    golpes:
+      - fondo: {escena: sofa, desde: 1.0}
+        texto: ¿Fatbike por la acera en *València?*
+      - fondo: {icono: cebra}
+        texto: Por la acera, *no*
         pegatina: "no"
-      - fondo: {video: frontal}
-        texto: Y en vías interurbanas, *prenda reflectante*
-        avatar: {pose: senala, cara: normal, lado: izquierda}
-      - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien vuelve tarde en bici"
+      - fondo: {icono: velocimetro, valor: 20}
+        texto: "Carril bici en la calzada: *20 km/h*"
+      - fondo: {icono: velocimetro, valor: 15, color: turquesa}
+        texto: "Sobre la acera: *15 km/h*"
+      - fondo: {escena: bici, desde: 1.0}
+        texto: "*Mándaselo* a quien va en bici por València"
 
   paso-cebra:
     musica: inspira-2
+    estilo: aviso
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
+      - fondo: {icono: cebra}
         texto: ¿Cruzas el paso de cebra *montado?*
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {color: rojo}
-        numero: 200 €
-        texto: de *multa*
-        pegatina: "no"
-      - fondo: {color: oscuro}
-        texto: El paso de cebra es para *peatones*
-      - fondo: {color: turquesa}
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: "*200 €* de multa"
+      - fondo: {escena: final, desde: 1.0}
         texto: "*Bájate* y cruza andando"
-        pegatina: si
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
-      - fondo: {video: frontal}
+      - fondo: {escena: holanda, desde: 1.5}
         texto: O busca un *paso ciclista*
-      - fondo: {color: oscuro}
+      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
         texto: "*Mándaselo* a quien siempre cruza montado"
+
+  holanda:
+    musica: inspira-1
+    estilo: neon
+    golpes:
+      - fondo: {escena: holanda, desde: 1.0}
+        texto: En Holanda ya multan por ir en *fatbike*
+      - fondo: {icono: multa, valor: "115 €", color: rojo}
+        texto: "*115 €* en Enschede"
+      - fondo: {icono: ruedas}
+        texto: Ruedas de más de *7 cm,* fuera del centro
+      - fondo: {escena: mapa, desde: 2.0}
+        texto: ¿Llegará a *España?*
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: Aquí, si es legal, es una *bici*
 
   diferencias:
     musica: urban-2
+    estilo: claro
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: "Fatbike vs bici normal: *3 diferencias*"
-        avatar: {pose: senala, cara: sonrie, lado: derecha}
+      - fondo: {icono: ruedas}
+        texto: Fatbike vs bici normal en *4 segundos*
       - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        numero: "1"
-        texto: Ruedas de *4 pulgadas* o más
-      - fondo: {color: turquesa}
-        numero: "2"
-        texto: Más agarre en *arena y grava*
+        texto: Más *agarre*
       - fondo: {video: suspension}
-        numero: "3"
-        texto: Más *cómoda* en baches
-      - fondo: {color: oscuro}
-        texto: Y con 250 W, sigue siendo *una bici*
-        pegatina: si
+        texto: Más *cómoda*
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Y con 250 W, sigue siendo *bici*
       - fondo: {color: turquesa}
         texto: ¿Cuál *elegirías?*
-        avatar: {pose: brazos, cara: sonrie, lado: izquierda}
+        avatar: {pose: duda, cara: sonrie, lado: derecha}
+
+  trucada:
+    musica: urban-1
+    estilo: aviso
+    golpes:
+      - fondo: {escena: comparar, desde: 2.5}
+        texto: 3 señales de una fatbike *trucada*
+      - fondo: {icono: velocimetro, valor: 35}
+        texto: Pasa de *25 km/h*
+      - fondo: {video: manillar}
+        texto: Acelerador de más de *6 km/h*
+      - fondo: {icono: multa, valor: "+250 W", color: rojo}
+        texto: Más de *250 W*
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: "*Mándaselo* a quien vaya a comprarse una"
