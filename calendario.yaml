@@ -250,3 +250,101 @@ publicaciones:
       Mándaselo a quien vaya a comprarse una.
 
       #urbanfatbikes #fatbike #bicicletaelectrica #normativa #DGT
+
+  # --- Serie «Normas en 10 segundos»: martes y jueves (prioridad TikTok) ---
+  - id: reel-norma-25
+    fecha: "2026-10-13 19:00"
+    archivos:
+      - rapido-norma-25.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿Tu fatbike pasa de 25 km/h? Entonces no es una bicicleta ⚠️
+
+      A 25 km/h el motor de una bici eléctrica legal tiene que dejar de ayudar. Si sigue empujando, es un vehículo de motor (L1e): matrícula, seguro y permiso AM.
+
+      Mándaselo a quien la tenga trucada.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
+  - id: reel-pov-1000w
+    fecha: "2026-10-15 19:00"
+    archivos:
+      - rapido-pov-1000w.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      POV: te compras una fatbike de 1.000 W 😬
+
+      Con más de 250 W, legalmente ya no es una bicicleta: necesita matrícula, seguro obligatorio y permiso AM. Con 250 W y la norma EN 15194, te ahorras todo eso.
+
+      ¿Te compensa? Te leemos en comentarios.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #pov
+  - id: reel-auriculares
+    fecha: "2026-10-20 19:00"
+    archivos:
+      - rapido-auriculares.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Auriculares en la fatbike: 200 € de multa 🎧
+
+      Ir en bici con auriculares conectados a un reproductor está prohibido, aunque no esté sonando nada. Y usar el móvil mientras circulas, también: 200 €.
+
+      Mándaselo a quien va siempre con cascos.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
+  - id: reel-nino
+    fecha: "2026-10-22 19:00"
+    archivos:
+      - rapido-nino.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿Puedes llevar a tu hijo en la fatbike? Sí, hasta los 7 años 👶
+
+      En un asiento adicional homologado y siempre que tú seas mayor de edad. Si no, la multa es de 100 €.
+
+      Mándaselo a quien lleva a sus hijos en bici.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #padres
+  - id: reel-alcohol
+    fecha: "2026-10-27 19:00"
+    archivos:
+      - rapido-alcohol.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      0,25 mg/l: en fatbike, la misma tasa de alcohol que en coche 🍺
+
+      Para los ciclistas el límite es el mismo que para el resto de conductores (0,5 g/l en sangre o 0,25 mg/l en aire espirado). La multa va de 500 a 1.000 €, y si un agente te lo pide, tienes que soplar.
+
+      Mándaselo a quien diga que en bici no pasa nada.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
+  - id: reel-luces
+    fecha: "2026-10-29 19:00"
+    archivos:
+      - rapido-luces.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Fatbike de noche sin luces: 200 € de multa 🔦
+
+      Luz blanca delante y roja detrás. Y en vías interurbanas, de noche, prenda reflectante. Con el cambio de hora, más importante que nunca.
+
+      Mándaselo a quien vuelve tarde en bici.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #seguridadvial
+  - id: reel-paso-cebra
+    fecha: "2026-11-03 19:00"
+    archivos:
+      - rapido-paso-cebra.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Cruzar el paso de cebra montado en la bici: 200 € 🚸
+
+      El paso de cebra es para peatones: bájate y cruza andando, o busca un paso para bicis.
+
+      Mándaselo a quien siempre cruza montado.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
+  - id: reel-diferencias
+    fecha: "2026-11-05 19:00"
+    archivos:
+      - rapido-diferencias.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Ruedas de 4 pulgadas: 3 diferencias entre una fatbike y una bici normal 🚲
+
+      Más agarre en arena y grava, más comodidad en baches y adoquines. Y si tiene 250 W y cumple la norma EN 15194, sigue siendo una bicicleta.
+
+      ¿Cuál elegirías? Te leemos en comentarios.
+
+      #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #ebike
