@@ -71,10 +71,12 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   cada reel lleva versión `-tiktok` con 3 s de fotos de la bici + frase gancho (`gancho_tiktok.py`, `ganchos_tiktok.yaml`);
   **Instagram usa también esa versión** (en `calendario.yaml` van los `reel-*-tiktok.mp4`).
 - **Formato de los reels (desde el 07/10/2026): «reels rápidos»** (`reels_rapidos.py` + `reels_rapidos.yaml`):
-  8-12 s, un golpe nuevo cada 2 tiempos de la música con zoom, destello y «whoosh», texto que entra palabra a
-  palabra, cifras gigantes, ✅/❌, tomas del vídeo del proveedor sin rótulos, la foto de estudio y el avatar de Sergio
-  (dibujado, no realista) reaccionando. Sergio pidió **nada de «presentación»**: nunca dos golpes iguales seguidos,
-  gancho en el primer golpe y una sola petición al final. Los reels de tarjetas (`reels.py`) quedan solo para los
+  **5-7 s (5 golpes)**, un golpe nuevo cada 2 tiempos de la música con zoom, destello y «whoosh», texto que entra palabra
+  a palabra, cifras gigantes, ✅/❌. **Muchas imágenes y variadas**: tomas del vídeo del proveedor sin rótulos, foto de
+  estudio, escenas dibujadas de «Mi historia» (Holanda, Sergio en fatbike, legal vs trucada, mapa…), iconos animados
+  (velocímetro, multa, matrícula, auriculares, cerveza, batería…) y el avatar de Sergio (dibujado, no realista).
+  **4 estilos** (neon, aviso, claro, caja) que se alternan para que no todos tengan la misma base. Sergio pidió
+  **nada de «presentación»**: como mucho un fondo liso por reel, gancho en el primer golpe y una sola petición al final. Los reels de tarjetas (`reels.py`) quedan solo para los
   que lleven su voz.
 - **Web de la marca (la del perfil de Instagram): https://urbanfatbikes.github.io** (organización `urbanfatbikes`,
   repositorio `urbanfatbikes.github.io`). Copia plana de `docs/` (sin carpeta `recursos/`) que **Sergio sube a mano**
