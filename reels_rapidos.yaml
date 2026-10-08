@@ -473,3 +473,32 @@ reels:
         texto: Más de *250 W*
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
         texto: "*Mándaselo* a quien vaya a comprarse una"
+
+  # Segunda respuesta a Xionsan (09/10/2026): en las respuestas, TikTok tapa arriba (pegatina del comentario)
+  # y abajo (comentarios): texto en el centro, sin avatar abajo y más despacio.
+  ek30-v2:
+    musica: urban-2
+    estilo: caja
+    texto_y: 720
+    tiempos: 4
+    golpes:
+      - fondo: {color: oscuro}
+        texto: "EverCross EK30: lo que dice *su ficha*"
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: Motor de *250 W*
+        y: 650
+      - fondo: {color: turquesa}
+        numero: "25"
+        texto: km/h de velocidad *máxima*
+        y: 600
+      - fondo: {icono: bateria}
+        texto: Batería de *48 V* y 15,6 Ah
+        y: 650
+      - fondo: {icono: ruedas}
+        texto: Ruedas de 20 x *4 pulgadas*
+        y: 650
+      - fondo: {color: oscuro}
+        texto: Sobre el papel, cifras de *bicicleta legal*
+        pegatina: si
+      - fondo: {color: rojo}
+        texto: Antes de comprar, pide el informe *EN 15194*

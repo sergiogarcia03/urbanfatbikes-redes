@@ -495,7 +495,7 @@ def fotograma(reel, i, t, dur):
     lienzo.alpha_composite(velo)
     if g.get("avatar"):
         poner_avatar(lienzo, g["avatar"], t)
-    y = g.get("y", 330)
+    y = g.get("y", reel.get("texto_y", 330))
     if g.get("numero"):
         numero_grande(lienzo, str(g["numero"]), t, y, 330 if len(str(g["numero"])) <= 3 else 240, estilo)
         y += 420
@@ -517,9 +517,9 @@ def fotograma(reel, i, t, dur):
 
 def duraciones_de(reel):
     pulso = 60 / TEMPO[reel["musica"]]
-    tiempos = [g.get("tiempos", 2) for g in reel["golpes"]]
+    tiempos = [g.get("tiempos", reel.get("tiempos", 2)) for g in reel["golpes"]]
     if "tiempos" not in reel["golpes"][-1]:
-        tiempos[-1] = 3  # el cierre se queda un poco más para que dé tiempo a leer la petición
+        tiempos[-1] += 1  # el cierre se queda un poco más para que dé tiempo a leer la petición
     return [n * pulso for n in tiempos]
 
 

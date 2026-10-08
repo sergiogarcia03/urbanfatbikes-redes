@@ -57,7 +57,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   historias en `historias.yaml` (+ «nuevo post» automática 1 h después).
 - **TikTok es la prioridad (08/10/2026)**: 5 reels por semana, de lunes a viernes a las 19:00 (mar y jue: serie
   «Normas en 10 segundos»). Responder comentarios con vídeo («Responder con vídeo») cuando pregunten por una bici:
-  datos solo de la ficha pública de la tienda, sin criticar marcas ni usar sus fotos. Avisos al móvil: los issues de
+  datos solo de la ficha pública de la tienda, sin criticar marcas ni usar sus fotos. En las respuestas TikTok tapa arriba (pegatina
+  del comentario) y abajo (comentarios): `texto_y: 720`, `tiempos: 4` (≈2 s por golpe), sin avatar abajo (ver `ek30-v2`). Avisos al móvil: los issues de
   «📲 TikTok: publica…» se asignan a @sergiogarcia03 (app de GitHub); comentarios, con las notificaciones de TikTok e IG.
 - Horarios (hora de España): 3 publicaciones/semana (lun/mié/vie). **Mientras haya pocos seguidores (<~500), en el
   feed solo reels** (lo único que llega a quien no nos sigue), todos a las 19:00; los carruseles se convierten en
