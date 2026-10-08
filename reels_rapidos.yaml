@@ -498,8 +498,24 @@ reels:
       - fondo: {icono: ruedas}
         texto: Ruedas de 20 x *4 pulgadas*
         y: 650
-      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si, zoom: out}
-        texto: Sobre el papel, cifras de *bicicleta legal*
-        y: 440
       - fondo: {color: rojo}
-        texto: Antes de comprar, pide el informe *EN 15194*
+        texto: "Ojo: en otra tienda aparece con *500 W*"
+        y: 600
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {icono: matricula}
+        texto: Más de 250 W ya es *ciclomotor*
+        y: 650
+      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si, zoom: out}
+        texto: "Mira la placa del cuadro: *250 W y 25 km/h*"
+        y: 440
+      - fondo: {icono: velocimetro, valor: 6}
+        texto: Sin pedalear, el acelerador hasta *6 km/h*
+        y: 650
+      - fondo: {color: turquesa}
+        texto: Pide la declaración CE y el informe *EN 15194*
+        y: 600
+        avatar: {pose: senala, cara: sonrie, lado: izquierda}
+      - fondo: {color: oscuro}
+        texto: Si cumple todo, es una *bici legal*
+        y: 600
+        pegatina: si
