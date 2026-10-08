@@ -354,3 +354,31 @@ reels:
       - fondo: {color: turquesa}
         texto: "*Mándaselo* a quien vaya a comprarse una"
         avatar: {pose: senala, cara: sonrie, lado: izquierda}
+
+  # Respuesta en vídeo a un comentario de TikTok (08/10/2026): datos de la ficha pública de la tienda
+  ek30:
+    musica: urban-2
+    golpes:
+      - fondo: {color: oscuro}
+        texto: ¿La EverCross EK30 es *legal?*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {color: turquesa}
+        texto: Miramos su *ficha*
+        avatar: {pose: senala, cara: normal, lado: izquierda}
+      - fondo: {color: oscuro}
+        numero: 250 W
+        texto: de motor
+        pegatina: si
+      - fondo: {color: turquesa}
+        numero: "25"
+        texto: km/h de velocidad máxima
+        pegatina: si
+      - fondo: {color: rojo}
+        texto: Ruedas de 20 x *4 pulgadas*
+      - fondo: {color: oscuro}
+        texto: Sobre el papel, cifras de *bicicleta*
+        avatar: {pose: brazos, cara: sonrie, lado: derecha}
+      - fondo: {color: rojo}
+        texto: Pero pide siempre el informe *EN 15194*
+      - fondo: {color: turquesa}
+        texto: ¿Cuál quieres que *miremos ahora?*
