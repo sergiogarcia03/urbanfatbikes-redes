@@ -214,12 +214,14 @@ def avisar(publicacion, nombre_video):
         "2. Pega este texto:\n\n"
         f"```\n{texto}\n```\n\n"
         "3. Activa **Contenido comercial → Tu marca** (es obligatorio al hablar de tu marca).\n"
-        "4. Publica y cierra este aviso.\n"
+        "4. Publica y cierra este aviso.\n\n"
+        "@sergiogarcia03 ⏰ publícalo entre las 19:00 y las 22:00 (hora de España).\n"
     )
     try:
         requests.post(f"https://api.github.com/repos/{repo}/issues", timeout=30,
                       headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
-                      json={"title": f"TikTok: publica «{publicacion['id']}»", "body": cuerpo})
+                      json={"title": f"📲 TikTok: publica «{publicacion['id']}»", "body": cuerpo,
+                            "assignees": ["sergiogarcia03"]})  # asignado: le llega aviso al móvil (app de GitHub)
     except requests.RequestException:
         print("⚠️  No se pudo abrir el aviso en GitHub (el borrador sí está en TikTok).")
 

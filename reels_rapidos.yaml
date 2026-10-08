@@ -382,3 +382,181 @@ reels:
         texto: Pero pide siempre el informe *EN 15194*
       - fondo: {color: turquesa}
         texto: ¿Cuál quieres que *miremos ahora?*
+
+  # --- Serie «Normas en 10 segundos» (martes y jueves, pensada para TikTok) ---
+  norma-25:
+    musica: inspira-1
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
+        texto: ¿Tu fatbike pasa de *25 km/h?*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {color: turquesa}
+        numero: "25"
+        texto: km/h y el motor *se para*
+        pegatina: si
+      - fondo: {color: rojo}
+        texto: Si sigue empujando…
+      - fondo: {color: rojo}
+        texto: …es un *vehículo de motor*
+        pegatina: "no"
+      - fondo: {video: pantalla}
+        texto: Matrícula, seguro y *permiso AM*
+      - fondo: {color: oscuro}
+        texto: "*Mándaselo* a quien la tenga trucada"
+        avatar: {pose: senala, cara: serio, lado: izquierda}
+
+  pov-1000w:
+    musica: urban-2
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: "POV: te compras una fatbike de *1.000 W*"
+        avatar: {pose: brazos, cara: sonrie, lado: derecha}
+      - fondo: {color: rojo}
+        texto: Legalmente, *no es una bici*
+        pegatina: "no"
+      - fondo: {color: oscuro}
+        texto: Necesita *matrícula*
+        avatar: {pose: niega, cara: sorpresa, lado: izquierda}
+      - fondo: {color: rojo}
+        texto: Seguro *obligatorio*
+      - fondo: {color: oscuro}
+        texto: Y *permiso AM*
+      - fondo: {color: turquesa}
+        numero: 250 W
+        texto: y te ahorras *todo eso*
+        pegatina: si
+      - fondo: {color: oscuro}
+        texto: ¿Te *compensa?*
+
+  auriculares:
+    musica: inspira-1
+    golpes:
+      - fondo: {video: manillar}
+        texto: ¿Auriculares en la *fatbike?*
+        avatar: {pose: duda, cara: normal, lado: derecha}
+      - fondo: {color: rojo}
+        texto: "*Prohibido*"
+        pegatina: "no"
+      - fondo: {color: oscuro}
+        numero: 200 €
+        texto: de *multa*
+      - fondo: {color: rojo}
+        texto: Aunque no esté *sonando nada*
+      - fondo: {video: pantalla}
+        texto: Y el *móvil,* igual
+      - fondo: {color: oscuro}
+        numero: 200 €
+        texto: también
+        avatar: {pose: niega, cara: serio, lado: izquierda}
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien va con cascos"
+
+  nino:
+    musica: urban-1
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
+        texto: ¿Puedes llevar a tu hijo en la *fatbike?*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {color: turquesa}
+        texto: Sí, *pero…*
+      - fondo: {color: oscuro}
+        numero: "7"
+        texto: años *como máximo*
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: En un asiento *homologado*
+        pegatina: si
+      - fondo: {color: turquesa}
+        texto: Y tú, *mayor de edad*
+        avatar: {pose: senala, cara: sonrie, lado: izquierda}
+      - fondo: {color: rojo}
+        numero: 100 €
+        texto: si no lo haces así
+        pegatina: "no"
+      - fondo: {color: oscuro}
+        texto: "*Mándaselo* a quien lleva a sus hijos en bici"
+
+  alcohol:
+    musica: inspira-2
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: ¿Una cerveza y a la *fatbike?*
+        avatar: {pose: brazos, cara: sonrie, lado: derecha}
+      - fondo: {color: rojo}
+        texto: La misma tasa que *en coche*
+      - fondo: {color: oscuro}
+        numero: "0,25"
+        texto: mg/l en aire *espirado*
+      - fondo: {color: rojo}
+        numero: 500 €
+        texto: de multa, *hasta 1.000 €*
+        pegatina: "no"
+      - fondo: {video: frontal}
+        texto: Y si te lo piden, *tienes que soplar*
+        avatar: {pose: niega, cara: serio, lado: izquierda}
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien diga que en bici no pasa nada"
+
+  luces:
+    musica: urban-2
+    golpes:
+      - fondo: {video: faro}
+        texto: ¿Fatbike de noche *sin luces?*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {color: oscuro}
+        texto: Delante, luz *blanca*
+        pegatina: si
+      - fondo: {color: rojo}
+        texto: Detrás, luz *roja*
+        pegatina: si
+      - fondo: {color: oscuro}
+        numero: 200 €
+        texto: si vas *sin luces*
+        pegatina: "no"
+      - fondo: {video: frontal}
+        texto: Y en vías interurbanas, *prenda reflectante*
+        avatar: {pose: senala, cara: normal, lado: izquierda}
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien vuelve tarde en bici"
+
+  paso-cebra:
+    musica: inspira-2
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
+        texto: ¿Cruzas el paso de cebra *montado?*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {color: rojo}
+        numero: 200 €
+        texto: de *multa*
+        pegatina: "no"
+      - fondo: {color: oscuro}
+        texto: El paso de cebra es para *peatones*
+      - fondo: {color: turquesa}
+        texto: "*Bájate* y cruza andando"
+        pegatina: si
+        avatar: {pose: senala, cara: sonrie, lado: izquierda}
+      - fondo: {video: frontal}
+        texto: O busca un *paso ciclista*
+      - fondo: {color: oscuro}
+        texto: "*Mándaselo* a quien siempre cruza montado"
+
+  diferencias:
+    musica: urban-2
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: "Fatbike vs bici normal: *3 diferencias*"
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
+        numero: "1"
+        texto: Ruedas de *4 pulgadas* o más
+      - fondo: {color: turquesa}
+        numero: "2"
+        texto: Más agarre en *arena y grava*
+      - fondo: {video: suspension}
+        numero: "3"
+        texto: Más *cómoda* en baches
+      - fondo: {color: oscuro}
+        texto: Y con 250 W, sigue siendo *una bici*
+        pegatina: si
+      - fondo: {color: turquesa}
+        texto: ¿Cuál *elegirías?*
+        avatar: {pose: brazos, cara: sonrie, lado: izquierda}
