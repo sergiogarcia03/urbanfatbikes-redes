@@ -493,6 +493,12 @@ def fotograma(reel, i, t, dur):
     for y in range(900):
         dv.line((0, y, ANCHO, y), fill=color_velo[:3] + (int(color_velo[3] * (1 - y / 900)),))
     lienzo.alpha_composite(velo)
+    if g.get("credito"):  # fuente de una imagen que no es nuestra
+        d = ImageDraw.Draw(lienzo)
+        letra = fuente("SemiBold", 34)
+        ancho = letra.getlength(g["credito"])
+        d.rounded_rectangle((50, 1640, 90 + ancho, 1700), radius=14, fill=(0, 0, 0, 150))
+        d.text((70, 1648), g["credito"], font=letra, fill=(255, 255, 255, 230))
     if g.get("avatar"):
         poner_avatar(lienzo, g["avatar"], t)
     y = g.get("y", reel.get("texto_y", 330))
