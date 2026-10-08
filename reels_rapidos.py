@@ -228,7 +228,12 @@ def fondo_escena(spec, t, dur):
     cara = m["caras"][min(int(te * FPS), len(m["caras"]) - 1)]
     svg = ('<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">'
            + P.defs() + C.defs_extra() + H.defs_escenas() + H.FUNCIONES[nombre](min(te, largo), largo, cara) + '</svg>')
-    return Image.open(BytesIO(m["cairosvg"].svg2png(bytestring=svg.encode()))).convert("RGBA")
+    img = Image.open(BytesIO(m["cairosvg"].svg2png(bytestring=svg.encode()))).convert("RGBA")
+    if nombre == "comparar":  # bajar el dibujo para que el texto de arriba no lo pise
+        lienzo = Image.new("RGBA", img.size, img.getpixel((5, 5)))
+        lienzo.alpha_composite(img, (0, 300))
+        img = lienzo
+    return img
 
 
 def svg_icono(nombre, t, valor):
@@ -467,6 +472,8 @@ def fotograma(reel, i, t, dur):
     g = reel["golpes"][i]
     estilo = g.get("estilo", reel.get("estilo", "neon"))
     fondo = g.get("fondo", {"color": "oscuro"})
+    if estilo == "claro" and ("foto" in fondo or "video" in fondo or fondo.get("escena") in ("comparar", "mapa", "final")):
+        estilo = "neon"  # sobre fotos y vídeos oscuros, letra blanca con borde: se lee mejor
     if "foto" in fondo:
         lienzo = fondo_foto(fondo, t, dur)
     elif "video" in fondo:
