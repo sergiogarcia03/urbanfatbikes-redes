@@ -229,9 +229,11 @@ def fondo_escena(spec, t, dur):
     svg = ('<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">'
            + P.defs() + C.defs_extra() + H.defs_escenas() + H.FUNCIONES[nombre](min(te, largo), largo, cara) + '</svg>')
     img = Image.open(BytesIO(m["cairosvg"].svg2png(bytestring=svg.encode()))).convert("RGBA")
-    if nombre == "comparar":  # bajar el dibujo para que el texto de arriba no lo pise
-        lienzo = Image.new("RGBA", img.size, img.getpixel((5, 5)))
-        lienzo.alpha_composite(img, (0, 300))
+    if nombre == "comparar":  # más pequeño y abajo: el texto no lo pisa y se ve entero
+        esc = 0.8
+        peque = img.resize((int(img.width * esc), int(img.height * esc)), Image.LANCZOS)
+        lienzo = img.filter(ImageFilter.GaussianBlur(30))  # el mismo dibujo desenfocado de fondo, sin marco
+        lienzo.alpha_composite(peque, ((img.width - peque.width) // 2, img.height - peque.height - 40))
         img = lienzo
     return img
 

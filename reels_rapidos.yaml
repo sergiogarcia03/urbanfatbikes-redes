@@ -279,25 +279,30 @@ reels:
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
         texto: "*3 regalos* con cada fatbike"
         avatar: {pose: brazos, cara: sorpresa, lado: derecha}
+        tiempos: 3
       - fondo: {color: turquesa}
-        texto: Candado, bomba y *herramientas*
+        texto: Candado, bomba de aire y *herramientas*
         pegatina: si
+        tiempos: 4
       - fondo: {video: manillar}
         texto: Llave *NFC* y alarma
+        tiempos: 3
       - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
-        texto: Localizador para *iPhone*
+        texto: Localizador para encontrarla desde *cualquier móvil*
+        tiempos: 4
       - fondo: {video: suspension}
         texto: "*Mándaselo* a quien busca una"
+        tiempos: 4
 
   nino:
     musica: urban-1
     estilo: claro
     golpes:
       - fondo: {icono: silla}
-        texto: ¿Tu hijo en la *fatbike?*
+        texto: ¿Tu hijo de paquete en la *fatbike?*
       - fondo: {color: turquesa}
         numero: "7"
-        texto: años *como máximo*
+        texto: años, *como mucho*
       - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
         texto: En asiento *homologado*
         pegatina: si
