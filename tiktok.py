@@ -27,7 +27,7 @@ import secrets
 import subprocess
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlencode
 
@@ -226,6 +226,52 @@ def avisar(publicacion, nombre_video):
         print("⚠️  No se pudo abrir el aviso en GitHub (el borrador sí está en TikTok).")
 
 
+def historias_pendientes(ahora, publicados, manual=False):
+    """Historias de historias.yaml que tocan ya y aún no se han avisado para TikTok.
+
+    La API de TikTok no deja subir historias: se avisa a Sergio con la imagen para
+    que la suba él. Las de «nuevo post» no se mandan (en TikTok no hacen falta).
+    """
+    lista = []
+    for h in cargar_calendario():
+        if h.get("tipo") != "historia" or not h["id"].startswith("historia-") or h.get("borrador"):
+            continue
+        if "tiktok" in publicados.get(h["id"], {}) or not (RAIZ / "contenido" / archivos_de(h)[0]).exists():
+            continue
+        try:
+            cuando = fecha_de(h)
+        except (KeyError, ValueError):
+            continue
+        if cuando <= ahora and (ahora - cuando <= timedelta(hours=3) or manual):  # una historia vieja ya no sirve
+            lista.append(h)
+    return lista
+
+
+def avisar_historia(historia):
+    """Abre un aviso en GitHub con la imagen de la historia para subirla a TikTok."""
+    repo, token = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_TOKEN")
+    if not repo or not token:
+        return False
+    imagen = f"https://raw.githubusercontent.com/{repo}/main/contenido/{archivos_de(historia)[0]}"
+    cuerpo = (
+        f"![historia]({imagen})\n\n"
+        f"1. Abre [la imagen]({imagen}), mantén el dedo encima y pulsa **Descargar imagen**.\n"
+        "2. En TikTok pulsa **+** → abajo elige **Historia** → **Subir** → elige la imagen.\n"
+        "3. Si quieres, añade una canción suave desde **Sonidos** (sin que tape el texto).\n"
+        "4. Pulsa **Tu historia** y cierra este aviso.\n\n"
+        "@sergiogarcia03 ⏰ súbela ahora o antes de 2 horas (hora de España). Dura 24 h.\n"
+    )
+    try:
+        r = requests.post(f"https://api.github.com/repos/{repo}/issues", timeout=30,
+                          headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
+                          json={"title": f"📲 TikTok: sube la historia «{historia['id'][9:]}»", "body": cuerpo,
+                                "assignees": ["sergiogarcia03"]})
+        return r.ok
+    except requests.RequestException:
+        print("⚠️  No se pudo abrir el aviso de la historia en GitHub.")
+        return False
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--modo", choices=["enlace", "conectar", "comprobar", "probar", "estado", "simular", "subir"], default="simular")
@@ -278,15 +324,24 @@ def main():
             continue
         pendientes.append(publicacion)
 
+    historias = historias_pendientes(ahora, publicados, args.manual)
     if args.modo == "simular":
+        for historia in historias:
+            print(f"👀 {historia['id']}: se avisaría para subirla como historia de TikTok")
         for publicacion in pendientes:
             print(f"👀 {publicacion['id']}: se subiría a TikTok ({video_para_tiktok(publicacion).name})")
         if not pendientes:
             print("Nada que subir a TikTok ahora.")
         return
 
-    if args.modo == "subir" and not pendientes:
-        return
+    if args.modo == "subir":
+        for historia in historias:
+            if avisar_historia(historia):
+                publicados.setdefault(historia["id"], {})["tiktok"] = {"aviso": ahora.isoformat(timespec="minutes")}
+                guardar_publicados(publicados)
+                print(f"📲 {historia['id']}: aviso para subirla como historia de TikTok")
+        if not pendientes:
+            return
     if not os.environ.get(SECRETO_PERMISO):
         if args.modo == "subir":
             print("ℹ️  TikTok todavía no está conectado; no se sube nada.")

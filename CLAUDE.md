@@ -60,6 +60,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   datos solo de la ficha pública de la tienda, sin criticar marcas ni usar sus fotos. En las respuestas TikTok tapa arriba (pegatina
   del comentario) y abajo (comentarios): `texto_y: 720`, `tiempos: 4` (≈2 s por golpe), sin avatar abajo (ver `ek30-v2`). Avisos al móvil: los issues de
   «📲 TikTok: publica…» se asignan a @sergiogarcia03 (app de GitHub); comentarios, con las notificaciones de TikTok e IG.
+  **Historias de TikTok**: las de `historias.yaml` (no las de «nuevo post») abren a su hora un aviso «📲 TikTok: sube la
+  historia…» con la imagen, porque la API de TikTok no permite subir historias; Sergio la sube a mano.
 - Horarios (hora de España): 3 publicaciones/semana (lun/mié/vie). **Mientras haya pocos seguidores (<~500), en el
   feed solo reels** (lo único que llega a quien no nos sigue), todos a las 19:00; los carruseles se convierten en
   reels (`reel: sí` + música en `tarjetas.yaml`). Fotos y carruseles, 13:30. Historias extra: mar y jue 21:00, sáb y dom 12:30.
