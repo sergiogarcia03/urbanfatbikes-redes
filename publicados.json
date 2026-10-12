@@ -74,5 +74,16 @@
     "tiktok": {
       "aviso": "2026-10-11T12:48+02:00"
     }
+  },
+  "reel-ficha-v8": {
+    "instagram": {
+      "id": "18095926373557035",
+      "fecha": "2026-10-12T19:21+02:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7695832897047087126",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-10-12T19:22+02:00"
+    }
   }
 }
