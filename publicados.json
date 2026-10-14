@@ -117,5 +117,16 @@
     "tiktok": {
       "aviso": "2026-10-13T21:03+02:00"
     }
+  },
+  "reel-patinete": {
+    "instagram": {
+      "id": "18135819616631838",
+      "fecha": "2026-10-14T19:07+02:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7696571375985149974",
+      "estado": "PROCESSING_UPLOAD",
+      "fecha": "2026-10-14T19:08+02:00"
+    }
   }
 }
