@@ -99,7 +99,7 @@ publicaciones:
       #urbanfatbikes #fatbike #ebike #bicicletaelectrica
 
   - id: que-incluye-v8
-    fecha: "2026-10-21 18:40"
+    fecha: "2026-11-18 18:40"
     archivos:
       - rapido-incluye.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -439,3 +439,16 @@ publicaciones:
       Mándaselo a quien la quiera trucar.
 
       #urbanfatbikes #fatbike #trucada #multa #bicicletaelectrica
+
+  - id: reel-nuevo-espana
+    fecha: "2026-10-21 18:40"
+    archivos:
+      - rapido-nuevo-espana.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Nueva en España: la fatbike eléctrica que ves por todas partes en Holanda, en versión legal 🇪🇸
+
+      Soy Sergio, vivo en Holanda y traigo a España la urbanfatbikes V8: 250 W, asistencia hasta 25 km/h y ensayada según la norma europea EN 15194.
+
+      Síguenos para verla llegar.
+
+      #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #holanda

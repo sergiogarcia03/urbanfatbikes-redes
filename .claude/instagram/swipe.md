@@ -23,3 +23,7 @@ En cuanto haya estadísticas propias (permiso de Instagram o TikTok), se sustitu
 Fuentes de las noticias: https://nltimes.nl/2024/07/03/half-fatbikes-checked-amsterdam-tuned ·
 https://dutchnews.nl/2024/07/more-than-half-of-fatbikes-in-amsterdam-souped-up-police-find ·
 https://www.ilgiornale.it/news/cronaca-locale/sfreccia-sulla-pista-ciclabile-bici-truccata-multa-record-2501618.html
+
+## Gancho «nuevo en España» (14/10/2026)
+En piezas de la V8: «Nueva en España», «Esto arrasa en Holanda y llega a España», pegatina `nuevo: si`.
+Sin decir «la primera» ni «la única» (no está contrastado).
