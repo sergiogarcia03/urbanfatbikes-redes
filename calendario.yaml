@@ -151,7 +151,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-10-19 18:40"
+    fecha: "2026-11-16 18:40"
     archivos:
       - rapido-bateria.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -185,17 +185,15 @@ publicaciones:
     archivos:
       - rapido-mitos.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      ¿Necesitas carné para llevar una fatbike? Y otros 3 mitos que casi todo el mundo se cree 👇
+      ¿Necesitas carné para llevar una fatbike? Y otros 2 mitos que casi todo el mundo se cree 👇
 
-      1. Todas son ilegales → Falso, si cumplen la norma EN 15194.
-      2. Necesitas carné y seguro → Falso, si es una bicicleta eléctrica que cumple la norma.
-      3. Con acelerador, la velocidad da igual → Falso, por encima de 6 km/h sin pedalear pasa a ser un vehículo de motor (L1e).
-      4. El casco nunca es obligatorio → Falso, para menores de 16 años y en vías interurbanas.
+      1. Necesitas carné → Mentira, si cumple la norma EN 15194.
+      2. Todas son ilegales → Mentira: con 250 W y 25 km/h es una bicicleta.
+      3. Con acelerador, la velocidad da igual → Mentira: por encima de 6 km/h sin pedalear es un vehículo de motor (L1e).
 
-      ¿Conocías los 4? Te leemos en comentarios.
+      ¿Cuál te creías? Dínoslo en comentarios.
 
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #EN15194
-
   - id: reel-padres
     fecha: "2026-10-28 18:40"
     archivos:
@@ -269,15 +267,15 @@ publicaciones:
     archivos:
       - rapido-pov-1000w.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      POV: te compras una fatbike de 1.000 W 😬
+      Solo 1 de estas 3 fatbikes es legal en España: 45 km/h, 25 km/h o acelerador hasta 30 km/h 👀
 
-      Con más de 250 W, legalmente ya no es una bicicleta: necesita matrícula, seguro obligatorio y permiso AM. Con 250 W y la norma EN 15194, te ahorras todo eso.
+      Una bicicleta eléctrica deja de ayudar a los 25 km/h, tiene 250 W y su acelerador no pasa de 6 km/h sin pedalear. Si no, legalmente es un vehículo de motor (L1e): matrícula, seguro y carné.
 
-      ¿Te compensa? Te leemos en comentarios.
+      ¿Cuántas acertaste? Dínoslo en comentarios.
 
-      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #pov
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #EN15194
   - id: reel-auriculares
-    fecha: "2026-10-20 18:40"
+    fecha: "2026-11-17 18:40"
     archivos:
       - rapido-auriculares.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -414,3 +412,30 @@ publicaciones:
       Mándaselo a quien sale llueva o no.
 
       #urbanfatbikes #fatbike #lluvia #bicicletaelectrica #consejos
+
+  # --- Formato noticia (sustituyen a batería y auriculares, que pasan al 16 y 17 de noviembre) ---
+  - id: reel-amsterdam
+    fecha: "2026-10-19 18:40"
+    archivos:
+      - rapido-amsterdam.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      117 de 215 fatbikes revisadas por la policía de Ámsterdam estaban trucadas 😳
+
+      Las probaron en un banco de rodillos: la mayoría tenía el acelerador manipulado. 290 € de multa y 20 bicis requisadas (NL Times y DutchNews, julio de 2024). En España, una fatbike trucada es un vehículo de motor (L1e): matrícula, seguro y carné.
+
+      Mándaselo a quien quiera trucar la suya.
+
+      #urbanfatbikes #fatbike #holanda #trucada #bicicletaelectrica
+
+  - id: reel-italia
+    fecha: "2026-10-20 18:40"
+    archivos:
+      - rapido-italia.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      6.000 € de multa por una bici eléctrica trucada en el carril bici de Forte dei Marmi (Italia) 💸
+
+      La policía se fijó en la velocidad y vio que estaba modificada (Il Giornale). Allí, como aquí, el límite es 250 W y 25 km/h. En España, una trucada es un vehículo de motor (L1e).
+
+      Mándaselo a quien la quiera trucar.
+
+      #urbanfatbikes #fatbike #trucada #multa #bicicletaelectrica
