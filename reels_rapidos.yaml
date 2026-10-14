@@ -519,3 +519,92 @@ reels:
         texto: Si cumple todo, es una *bici legal*
         y: 600
         pegatina: si
+
+  # --- Semana del 9 al 13 de noviembre de 2026 ---
+  pegatina:
+    musica: inspira-1
+    estilo: claro
+    golpes:
+      - fondo: {foto: v8-estudio.webp}
+        texto: ¿Se te ha despegado la *pegatina* de tu fatbike?
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {color: oscuro}
+        texto: Pide a la tienda la *declaración CE*
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+      - fondo: {color: turquesa}
+        texto: Y el informe *EN 15194* en PDF
+        pegatina: si
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Guarda la *factura* y el manual
+      - fondo: {video: pantalla}
+        texto: "*Mándaselo* a quien tenga fatbike"
+
+  seguro:
+    musica: urban-2
+    estilo: aviso
+    golpes:
+      - fondo: {escena: sofa, desde: 1.0}
+        texto: ¿Tu bici eléctrica necesita *seguro* en 2026?
+      - fondo: {foto: v8-estudio.webp}
+        texto: "Con 250 W y 25 km/h: *no*"
+        pegatina: si
+      - fondo: {color: rojo}
+        texto: "Patinete eléctrico: *sí,* desde enero de 2026"
+      - fondo: {icono: matricula}
+        texto: "Trucada: seguro, matrícula y *carné*"
+        pegatina: "no"
+      - fondo: {video: suspension}
+        texto: "*Mándaselo* a quien tenga patinete o fatbike"
+
+  carril-valencia:
+    musica: inspira-2
+    estilo: neon
+    golpes:
+      - fondo: {video: manillar}
+        texto: ¿Cuántos km de carril bici tiene *València?*
+      - fondo: {color: turquesa}
+        numero: "164"
+        texto: km de *carril bici*
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Al trabajo *sin atascos* ni buscar aparcamiento
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: El motor te ayuda hasta *25 km/h*
+      - fondo: {video: frontal}
+        texto: "*Mándaselo* a quien vive en València"
+
+  casco:
+    musica: urban-1
+    estilo: caja
+    golpes:
+      - fondo: {escena: bici, desde: 0.5}
+        texto: ¿Casco obligatorio en *bici eléctrica?*
+      - fondo: {color: turquesa}
+        numero: "16"
+        texto: Menores de 16 años, *siempre*
+        pegatina: si
+      - fondo: {video: manillar}
+        texto: Fuera de la ciudad, *todos*
+      - fondo: {color: oscuro}
+        texto: En ciudad y con más de 16, *no es obligatorio*
+        avatar: {pose: senala, cara: normal, lado: derecha}
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: Sin casco cuando toca, *200 €*
+      - fondo: {video: frontal}
+        texto: "*Mándaselo* a quien nunca se lo pone"
+
+  lluvia:
+    musica: tranquila-1
+    estilo: claro
+    golpes:
+      - fondo: {video: faro}
+        texto: ¿Sales en fatbike *con lluvia?*
+      - fondo: {icono: luces}
+        texto: Luces *encendidas,* también de día
+      - fondo: {icono: velocimetro, valor: 15}
+        texto: Frena *antes:* en mojado cuesta más parar
+      - fondo: {icono: enchufe}
+        texto: Nunca la cargues *mojada*
+      - fondo: {video: suspension}
+        texto: Sécala con un trapo, *sin manguera*
+      - fondo: {video: frontal}
+        texto: "*Mándaselo* a quien sale llueva o no"
