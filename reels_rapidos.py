@@ -577,6 +577,25 @@ def marca(lienzo, texto, t):
     d.text((85, 238), texto, font=letra, fill=(255, 255, 255))
 
 
+def nuevo_espana(lienzo, t, x=ANCHO - 260, y=1180):
+    """Pegatina girada «NUEVO EN ESPAÑA» con la bandera, que entra con un salto."""
+    e = rebote((t - 0.2) / 0.35)
+    if e <= 0.02:
+        return
+    w, h = 440, 170
+    capa = Image.new("RGBA", (w + 20, h + 20), (0, 0, 0, 0))
+    d = ImageDraw.Draw(capa)
+    d.rounded_rectangle((10, 10, w + 10, h + 10), radius=30, fill=(255, 255, 255, 255), outline=(10, 14, 18, 255), width=6)
+    d.rectangle((34, 40, 104, 60), fill=(198, 11, 30))
+    d.rectangle((34, 60, 104, 100), fill=(255, 196, 0))
+    d.rectangle((34, 100, 104, 120), fill=(198, 11, 30))
+    d.text((124, 30), "NUEVO EN", font=fuente("Black", 50), fill=(198, 11, 30))
+    d.text((124, 90), "ESPAÑA", font=fuente("Black", 62), fill=(10, 14, 18))
+    capa = capa.resize((max(1, int(capa.width * e)), max(1, int(capa.height * e))), Image.LANCZOS)
+    capa = capa.rotate(8 + 2 * math.sin(t * 5), expand=True, resample=Image.BICUBIC)
+    lienzo.alpha_composite(capa, (int(x - capa.width / 2), int(y - capa.height / 2)))
+
+
 def progreso(lienzo, fraccion):
     d = ImageDraw.Draw(lienzo)
     d.rectangle((0, 196, ANCHO, 206), fill=(255, 255, 255, 60))
@@ -639,6 +658,8 @@ def fotograma(reel, i, t, dur):
         quiz(lienzo, g["quiz"], t, g["quiz"].get("y", 1250))
     if g.get("marca"):
         marca(lienzo, str(g["marca"]), t)
+    if g.get("nuevo"):
+        nuevo_espana(lienzo, t, *(g["nuevo"] if isinstance(g["nuevo"], list) else []))
     if g.get("pegatina"):
         pegatina(lienzo, g["pegatina"], t - 0.15, ANCHO // 2, y + 120)
     if reel.get("_avance") is not None:

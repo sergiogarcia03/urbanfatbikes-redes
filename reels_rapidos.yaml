@@ -684,3 +684,32 @@ reels:
       - fondo: {color: rojo}
         texto: "*Mándaselo* a quien la quiera trucar"
         tiempos: 4
+
+  # --- Gancho «nuevo en España» (lo pidió Sergio el 14/10/2026) ---
+  nuevo-espana:
+    musica: inspira-1
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {escena: holanda, desde: 1.0}
+        texto: Esto arrasa en Holanda y *llega a España*
+        tiempos: 4
+      - fondo: {escena: mapa}
+        texto: Vivo en Holanda y la traigo a *España*
+        tiempos: 4
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: urbanfatbikes V8, *nueva* en España
+        nuevo: si
+        tiempos: 4
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: "Legal: 250 W y *25 km/h*"
+        pegatina: si
+        tiempos: 3
+      - fondo: {video: faro}
+        texto: Ensayada según la norma *EN 15194*
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: Síguenos para verla *llegar*
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
+
