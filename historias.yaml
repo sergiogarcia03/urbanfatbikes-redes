@@ -192,3 +192,41 @@ historias:
       titulo: ¿Qué quieres que *expliquemos*?
       subtitulo: Escríbenos tu duda por mensaje y la respondemos en un reel.
       tamano: 100
+
+  # --- Semana del 9 al 15 de noviembre de 2026 ---
+  - id: dato-seguro
+    fecha: "2026-11-10 21:00"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato
+      numero: 250
+      unidad: W
+      texto: Con esta potencia y asistencia hasta 25 km/h, tu bici eléctrica no necesita seguro obligatorio.
+
+  - id: antes-de-comprar
+    fecha: "2026-11-12 21:00"
+    diapositiva:
+      tipo: lista
+      titulo: Antes de comprar, *pide*
+      puntos:
+        - Declaración CE
+        - Informe EN 15194
+        - Factura y manual
+
+  - id: turia
+    fecha: "2026-11-14 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Plan de sábado
+      titulo: Una vuelta por el *Jardín del Turia*
+      subtitulo: ¿Cuál es tu ruta favorita en bici por València? Cuéntanosla por mensaje.
+      tamano: 100
+
+  - id: que-quieres-ver-3
+    fecha: "2026-11-15 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Qué *norma* te gustaría que explicáramos?
+      subtitulo: Escríbenos por mensaje y la respondemos en un reel.
+      tamano: 100
