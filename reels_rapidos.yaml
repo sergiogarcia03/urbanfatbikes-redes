@@ -210,36 +210,60 @@ reels:
   pov-1000w:
     musica: urban-2
     estilo: neon
+    progreso: si
     golpes:
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: "POV: te compras una fatbike de *1.000 W*"
-        avatar: {pose: brazos, cara: sonrie, lado: derecha}
-      - fondo: {icono: matricula}
-        texto: Necesita *matrícula*
-      - fondo: {icono: multa, valor: SEGURO, color: rojo}
-        texto: Seguro *obligatorio*
-      - fondo: {escena: comparar, desde: 2.5}
-        texto: Y legalmente *no es una bici*
+        texto: Solo 1 de estas 3 fatbikes es *legal*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+        tiempos: 4
+      - fondo: {color: rojo}
+        marca: 1/3
+        texto: Te ayuda hasta *45 km/h*
+        quiz: {correcta: 1, cuenta: 2, explica: "Es un *ciclomotor*"}
+        tiempos: 8
+      - fondo: {foto: v8-estudio.webp, recorte: [430, 420, 900, 860]}
+        marca: 2/3
+        texto: 250 W y deja de ayudar a *25 km/h*
+        quiz: {correcta: 0, cuenta: 2, explica: "Con informe *EN 15194*"}
+        tiempos: 8
+      - fondo: {color: oscuro}
+        marca: 3/3
+        texto: Acelerador hasta *30 km/h* sin pedalear
+        quiz: {correcta: 1, cuenta: 2, explica: "Vehículo de motor *(L1e)*"}
+        tiempos: 8
       - fondo: {color: turquesa}
-        texto: ¿Te *compensa?*
-        avatar: {pose: niega, cara: sorpresa, lado: izquierda}
+        texto: ¿Cuántas *acertaste?* Dínoslo en comentarios
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 5
 
   mitos:
     musica: inspira-2
     estilo: caja
+    progreso: si
     golpes:
       - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: ¿Necesitas *carné* para una fatbike?
+        texto: 3 mitos de las fatbikes que *casi todos* se creen
         avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {escena: comparar, desde: 1.5}
-        texto: Si cumple la norma, *no*
-        pegatina: si
-      - fondo: {icono: velocimetro, valor: 6}
-        texto: Acelerador hasta *6 km/h*
-      - fondo: {icono: silla}
-        texto: Casco obligatorio para *menores de 16*
+        tiempos: 4
       - fondo: {video: frontal}
-        texto: ¿Conocías *estos mitos?*
+        marca: 1/3
+        texto: Necesitas *carné* para llevarla
+        quiz: {opciones: [VERDAD, MENTIRA], correcta: 1, cuenta: 2, explica: "Si cumple la norma, *no*"}
+        tiempos: 7
+      - fondo: {video: faro}
+        marca: 2/3
+        texto: Todas las fatbikes son *ilegales*
+        quiz: {opciones: [VERDAD, MENTIRA], correcta: 1, cuenta: 2, explica: "250 W y 25 km/h: *es una bici*"}
+        tiempos: 7
+      - fondo: {video: pantalla}
+        marca: 3/3
+        texto: Con acelerador, la velocidad *da igual*
+        quiz: {opciones: [VERDAD, MENTIRA], correcta: 1, cuenta: 2, explica: "Más de 6 km/h sin pedalear: *L1e*"}
+        tiempos: 7
+      - fondo: {color: turquesa}
+        texto: ¿Cuál *te creías?* Dínoslo en comentarios
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 5
 
   bateria:
     musica: tranquila-1
@@ -608,3 +632,55 @@ reels:
         texto: Sécala con un trapo, *sin manguera*
       - fondo: {video: frontal}
         texto: "*Mándaselo* a quien sale llueva o no"
+
+  # --- Formato noticia (14/10/2026): titular real con su medio ---
+  amsterdam:
+    musica: urban-1
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {noticia: {medio: NL Times, fecha: julio 2024, titular: "Más de la mitad de las fatbikes revisadas en Ámsterdam, trucadas"}}
+        texto: 117 de 215 fatbikes, *trucadas*
+        tiempos: 5
+      - fondo: {escena: holanda, desde: 1.0}
+        texto: La policía las prueba en un *banco de rodillos*
+        tiempos: 3
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: La mayoría, trucando *el acelerador*
+        tiempos: 3
+      - fondo: {color: rojo}
+        numero: "290 €"
+        texto: de multa y 20 bicis *requisadas*
+        tiempos: 3
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: En España, una trucada es un *vehículo de motor*
+        tiempos: 3
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien quiera trucar la suya"
+        tiempos: 4
+
+  italia:
+    musica: urban-2
+    estilo: aviso
+    progreso: si
+    golpes:
+      - fondo: {noticia: {medio: Il Giornale · Italia, titular: "Va por el carril bici con una bici trucada: multa récord (traducido)"}}
+        texto: "*6.000 €* de multa por su fatbike"
+        tiempos: 5
+      - fondo: {icono: velocimetro, valor: 45}
+        texto: Iba por el carril bici *demasiado rápido*
+        tiempos: 3
+      - fondo: {escena: comparar, desde: 2.5}
+        texto: La policía vio que estaba *modificada*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: "En Italia, como en España: *250 W y 25 km/h*"
+        pegatina: si
+        tiempos: 3
+      - fondo: {icono: matricula}
+        texto: Aquí, una trucada es *vehículo de motor (L1e)*
+        pegatina: "no"
+        tiempos: 3
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien la quiera trucar"
+        tiempos: 4

@@ -226,6 +226,40 @@ def fondo_liso(estilo, color, t):
     return lienzo
 
 
+def fondo_noticia(spec, t, dur, estilo="neon"):
+    """Recorte de periódico con el titular real y su medio (formato «noticia» de TikTok)."""
+    lienzo = fondo_liso(estilo, spec.get("color", "oscuro"), t)
+    n = spec["noticia"]
+    ancho, x0 = 900, 90
+    titular = fuente("Black", 64)
+    lineas = partir(n["titular"], titular, ancho - 100)
+    alto = 230 + len(lineas) * 78
+    papel = Image.new("RGBA", (ancho, alto), (250, 248, 242, 255))
+    d = ImageDraw.Draw(papel)
+    d.rectangle((0, 0, ancho, 96), fill=(20, 20, 20))
+    d.text((50, 22), n["medio"].upper(), font=fuente("Black", 46), fill=(255, 255, 255))
+    if n.get("fecha"):
+        d.text((ancho - 50, 34), n["fecha"], font=fuente("SemiBold", 32), fill=(200, 200, 200), anchor="ra")
+    y = 130
+    for linea in lineas:
+        d.text((50, y), " ".join(p for p, _ in linea), font=titular, fill=(20, 20, 20))
+        y += 78
+    d.line((50, y + 30, ancho - 50, y + 30), fill=(200, 196, 186), width=4)
+    d.line((50, y + 56, ancho - 250, y + 56), fill=(210, 206, 196), width=4)
+    # entra girada y se endereza
+    ang = -6 + 4 * suave(t / 0.5)
+    escala = 0.9 + 0.1 * suave(t / 0.4) + 0.02 * t / max(dur, 0.1)
+    papel = papel.resize((int(ancho * escala), int(alto * escala)), Image.LANCZOS).rotate(ang, expand=True, resample=Image.BICUBIC)
+    sombra = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
+    y0 = int(spec.get("y", 0.62) * ALTO - papel.height / 2)
+    xx = (ANCHO - papel.width) // 2
+    sombra.alpha_composite(Image.new("RGBA", papel.size, (0, 0, 0, 140)), (xx + 16, y0 + 24))
+    sombra.putalpha(sombra.getchannel("A").point(lambda a: a) )
+    lienzo.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(20)))
+    lienzo.alpha_composite(papel, (xx, y0))
+    return lienzo
+
+
 def fondo_color(spec, t, dur, estilo="neon"):
     return fondo_liso(estilo, spec.get("color", "oscuro"), t)
 
@@ -491,6 +525,64 @@ def pegatina(lienzo, tipo, t, x, y, r=95):
     lienzo.alpha_composite(capa)
 
 
+def quiz(lienzo, spec, t, y):
+    """¿LEGAL o ILEGAL?: dos botones, cuenta atrás y respuesta (hace que se vuelva a ver y se comente)."""
+    opciones, buena = spec.get("opciones", ["LEGAL", "ILEGAL"]), spec["correcta"]
+    espera = spec.get("cuenta", 1.6)
+    revelado = t >= espera
+    panel = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
+    ImageDraw.Draw(panel).rounded_rectangle((40, y - 230, ANCHO - 40, y + 290), radius=48, fill=(10, 14, 18, 215))
+    lienzo.alpha_composite(panel.filter(ImageFilter.GaussianBlur(3)))
+    for k, texto in enumerate(opciones):
+        cx = ANCHO / 2 + (k * 2 - 1) * 245
+        entra = rebote((t - 0.1 * k) / 0.3)
+        if entra <= 0.02:
+            continue
+        acierto = k == buena
+        if revelado:
+            e = rebote((t - espera) / 0.3)
+            color = VERDE if acierto else (90, 90, 90)
+            escala = entra * (1 + 0.15 * e if acierto else 1 - 0.12 * e)
+        else:
+            color = (255, 255, 255)
+            escala = entra * (1 + 0.03 * math.sin(t * 12 + k * 3))
+        w, h = 430 * escala, 150 * escala
+        capa = Image.new("RGBA", (int(w) + 20, int(h) + 20), (0, 0, 0, 0))
+        dc = ImageDraw.Draw(capa)
+        dc.rounded_rectangle((10, 10, w + 10, h + 10), radius=int(40 * escala), fill=color + (255,),
+                             outline=(10, 14, 18, 255), width=6)
+        lt = fuente("Black", max(10, int(78 * escala)))
+        dc.text(((w + 20) / 2, (h + 20) / 2), texto, font=lt, anchor="mm",
+                fill=(10, 14, 18) if color == (255, 255, 255) else (255, 255, 255))
+        lienzo.alpha_composite(capa, (int(cx - capa.width / 2), int(y - capa.height / 2)))
+    d = ImageDraw.Draw(lienzo)
+    if not revelado:  # barra que se vacía: «piénsalo»
+        resto = 1 - t / espera
+        d.rounded_rectangle((190, y + 130, 190 + 700 * resto, y + 156), radius=13, fill=AMARILLO)
+        d.text((ANCHO / 2, y + 220), f"{math.ceil(espera - t)}", font=fuente("Black", 90), fill=(255, 255, 255),
+               anchor="mm", stroke_width=8, stroke_fill=(0, 0, 0))
+    else:
+        pegatina(lienzo, "si" if opciones[buena].upper() in ("LEGAL", "SÍ", "SI", "VERDAD") else "no",
+                 t - espera - 0.1, ANCHO // 2 + (buena * 2 - 1) * 245, int(y - 140), r=70)
+        if spec.get("explica"):
+            texto_cinetico(lienzo, spec["explica"], t - espera - 0.2, y + 140, 72)
+
+
+def marca(lienzo, texto, t):
+    """Contador arriba a la izquierda (1/3, 2/3…): da motivo para quedarse hasta el final."""
+    letra = fuente("Black", 56)
+    w = letra.getlength(texto)
+    d = ImageDraw.Draw(lienzo)
+    d.rounded_rectangle((60, 230, 110 + w, 310), radius=24, fill=ROJO + (255,))
+    d.text((85, 238), texto, font=letra, fill=(255, 255, 255))
+
+
+def progreso(lienzo, fraccion):
+    d = ImageDraw.Draw(lienzo)
+    d.rectangle((0, 196, ANCHO, 206), fill=(255, 255, 255, 60))
+    d.rectangle((0, 196, int(ANCHO * fraccion), 206), fill=AMARILLO + (255,))
+
+
 # --- Montaje --------------------------------------------------------------------
 
 
@@ -516,6 +608,8 @@ def fotograma(reel, i, t, dur):
         lienzo = fondo_escena(fondo, t, dur)
     elif "icono" in fondo:
         lienzo = fondo_icono(fondo, t, dur, estilo)
+    elif "noticia" in fondo:
+        lienzo = fondo_noticia(fondo, t, dur, estilo)
     else:
         lienzo = fondo_color(fondo, t, dur, estilo)
     # velo arriba para que el texto se lea siempre
@@ -538,11 +632,19 @@ def fotograma(reel, i, t, dur):
         numero_grande(lienzo, str(g["numero"]), t, y, 330 if len(str(g["numero"])) <= 3 else 240, estilo)
         y += 420
     if g.get("texto"):
-        y = texto_cinetico(lienzo, g["texto"], t, y, g.get("tam", 112), estilo=estilo)
+        # el gancho ya está entero en el primer fotograma (TikTok decide en el primer segundo)
+        tt = t + 1.5 if (i == 0 and reel.get("gancho_fijo", True)) else t
+        y = texto_cinetico(lienzo, g["texto"], tt, y, g.get("tam", 112), estilo=estilo)
+    if g.get("quiz"):
+        quiz(lienzo, g["quiz"], t, g["quiz"].get("y", 1250))
+    if g.get("marca"):
+        marca(lienzo, str(g["marca"]), t)
     if g.get("pegatina"):
         pegatina(lienzo, g["pegatina"], t - 0.15, ANCHO // 2, y + 120)
-    # golpe de cámara al cortar: zoom que se recoge y un destello corto
-    golpe = 1.0 + 0.08 * (1 - suave(t / 0.22))
+    if reel.get("_avance") is not None:
+        progreso(lienzo, reel["_avance"])
+    # golpe de cámara al cortar: zoom que se recoge y un destello corto (el primero no: ya empieza quieto)
+    golpe = 1.0 + 0.08 * (1 - suave(t / 0.22)) if i > 0 else 1.0
     img = lienzo.convert("RGB")
     if golpe > 1.001:
         w, h = int(ANCHO * golpe), int(ALTO * golpe)
@@ -610,6 +712,8 @@ def generar(nombre, reel):
     for k in range(int(total * FPS)):
         t = k / FPS
         i, tl = golpe_en(reel["golpes"], duraciones, t)
+        if reel.get("progreso"):
+            reel["_avance"] = t / total
         img = fotograma(reel, i, tl, duraciones[i])
         if k == int(min(0.75, duraciones[0] - 0.05) * FPS):
             img.save(PORTADAS / f"{destino.stem}.jpg", quality=90)
@@ -633,6 +737,7 @@ def hoja(nombre, reel):
 
 
 def huella(reel):
+    reel = {k: v for k, v in reel.items() if not k.startswith("_")}
     h = hashlib.sha256(json.dumps(reel, sort_keys=True, ensure_ascii=False).encode())
     h.update(Path(__file__).read_bytes())
     return h.hexdigest()

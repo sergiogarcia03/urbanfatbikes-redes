@@ -73,6 +73,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   TikTok puede tardar horas en pasar un borrador a la bandeja. TikTok pide **muy visual y gancho fuerte**:
   cada reel lleva versión `-tiktok` con 3 s de fotos de la bici + frase gancho (`gancho_tiktok.py`, `ganchos_tiktok.yaml`);
   **Instagram usa también esa versión** (en `calendario.yaml` van los `reel-*-tiktok.mp4`).
+- **Desde el 14/10/2026 los reels van «más trabajados»** (lo pidió Sergio para más visitas e interacción): quiz
+  «¿legal o ilegal?» con cuenta atrás, noticias reales con su medio, contador 1/3 y barra de progreso, gancho entero en el
+  primer fotograma, 10-20 s. Ver `.claude/instagram/swipe.md`. Nunca la V8 de fondo en un caso ilegal o trucado.
 - **Formato de los reels (desde el 07/10/2026): «reels rápidos»** (`reels_rapidos.py` + `reels_rapidos.yaml`):
   **5-7 s (5 golpes)**, un golpe nuevo cada 2 tiempos de la música con zoom, destello y «whoosh», texto que entra palabra
   a palabra, cifras gigantes, ✅/❌. **Muchas imágenes y variadas**: tomas del vídeo del proveedor sin rótulos, foto de
