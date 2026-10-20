@@ -713,3 +713,34 @@ reels:
         avatar: {pose: senala, cara: sonrie, lado: derecha}
         tiempos: 4
 
+
+  # --- Idea de un comentario de TikTok (fotopdf, 20/10/2026) ---
+  ajuste-pantalla:
+    musica: urban-1
+    estilo: aviso
+    progreso: si
+    golpes:
+      - fondo: {color: rojo}
+        texto: Tu fatbike puede ser *ilegal* sin que la toques
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+        tiempos: 4
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: Muchas pantallas esconden un ajuste de *velocidad*
+        tiempos: 4
+      - fondo: {icono: velocimetro, valor: 45}
+        texto: Si se cambia y pasa de *25 km/h*
+        tiempos: 3
+      - fondo: {escena: comparar, desde: 2.5}
+        texto: Legalmente ya *no es una bici*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: Si te la vendieron así, ¿te pueden *multar?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "Cuenta cómo va *en la calle*"}
+        tiempos: 8
+      - fondo: {color: turquesa}
+        texto: Pídela *limitada de fábrica* y con informe EN 15194
+        pegatina: si
+        tiempos: 4
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien tenga fatbike"
+        tiempos: 4

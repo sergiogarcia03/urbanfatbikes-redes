@@ -287,7 +287,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
   - id: reel-nino
-    fecha: "2026-10-22 18:40"
+    fecha: "2026-11-19 18:40"
     archivos:
       - rapido-nino.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -452,3 +452,16 @@ publicaciones:
       Síguenos para verla llegar.
 
       #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #holanda
+
+  - id: reel-ajuste-pantalla
+    fecha: "2026-10-22 18:40"
+    archivos:
+      - rapido-ajuste-pantalla.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Tu fatbike puede ser ilegal sin que la hayas tocado: muchas pantallas tienen un ajuste de velocidad máxima ⚠️
+
+      Si ese ajuste deja que te ayude por encima de 25 km/h, legalmente ya no es una bicicleta, sino un vehículo de motor (L1e), aunque la tienda te la vendiera así. Antes de comprar, pídela limitada de fábrica y con el informe de ensayo según la norma EN 15194.
+
+      Mándaselo a quien tenga fatbike.
+
+      #urbanfatbikes #fatbike #trucada #DGT #bicicletaelectrica
