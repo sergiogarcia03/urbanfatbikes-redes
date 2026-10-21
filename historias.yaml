@@ -189,7 +189,7 @@ historias:
     diapositiva:
       tipo: portada
       antetitulo: Te preguntamos
-      titulo: ¿Qué quieres que *expliquemos*?
+      titulo: ¿Qué quieres que *expliquemos?*
       subtitulo: Escríbenos tu duda por mensaje y la respondemos en un reel.
       tamano: 100
 
@@ -229,4 +229,79 @@ historias:
       antetitulo: Te preguntamos
       titulo: ¿Qué *norma* te gustaría que explicáramos?
       subtitulo: Escríbenos por mensaje y la respondemos en un reel.
+      tamano: 100
+
+  # --- Semana del 16 al 22 de noviembre de 2026 ---
+  - id: holanda-ebikes
+    fecha: "2026-11-17 21:00"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato de Holanda
+      numero: 56
+      unidad: "%"
+      texto: de las bicis nuevas vendidas allí en 2023 fueron eléctricas (RAI y BOVAG).
+
+  - id: aviso-quiz-v8
+    fecha: "2026-11-19 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Mañana, nuevo reel
+      titulo: ¿Cuál puedes llevar *sin carné?*
+      subtitulo: Un quiz de 2 fatbikes. Mañana por la tarde.
+      tamano: 100
+
+  - id: ruta-valencia
+    fecha: "2026-11-21 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Por qué barrio de *València* irías en fatbike?
+      subtitulo: Cuéntanoslo por mensaje.
+      tamano: 100
+
+  - id: dato-1-5
+    fecha: "2026-11-22 12:30"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato
+      numero: "1,5"
+      unidad: metros
+      texto: Es lo mínimo que debe dejarte un coche al adelantarte en carretera.
+
+  # --- Semana del 23 al 29 de noviembre de 2026 ---
+  - id: black-friday-lista
+    fecha: "2026-11-24 21:00"
+    diapositiva:
+      tipo: lista
+      titulo: Black Friday, *revisa*
+      puntos:
+        - 250 W, no más
+        - Ayuda hasta 25 km/h
+        - Informe EN 15194
+
+  - id: aviso-holanda-bicis
+    fecha: "2026-11-26 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Mañana, nuevo reel
+      titulo: El país con *más bicis* que personas
+      subtitulo: Mañana por la tarde. No te lo pierdas.
+      tamano: 100
+
+  - id: turia-tramo
+    fecha: "2026-11-28 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Plan de sábado
+      titulo: Una vuelta por el *Turia*
+      subtitulo: ¿Desde qué puente empiezas tú? Cuéntanoslo por mensaje.
+      tamano: 100
+
+  - id: que-quieres-ver-4
+    fecha: "2026-11-29 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Qué quieres ver de la *V8?*
+      subtitulo: Escríbenos por mensaje y lo grabamos.
       tamano: 100

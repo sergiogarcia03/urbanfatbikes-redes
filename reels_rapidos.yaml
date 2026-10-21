@@ -338,80 +338,134 @@ reels:
   carga:
     musica: inspira-2
     estilo: caja
+    progreso: si
     golpes:
       - fondo: {icono: enchufe}
-        texto: ¿Cuánto cuesta *cargarla?*
+        texto: ¿Cuánto cuesta *cargar* una fatbike?
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: Una carga completa cuesta…
+        quiz: {opciones: ["5 €", "CÉNTIMOS"], correcta: 1, cuenta: 2, explica: "Son unos *0,75 kWh*"}
+        tiempos: 7
       - fondo: {icono: bateria}
-        texto: "*0,75 kWh* por carga"
+        texto: Batería de *48 V* y 15,6 Ah
+        tiempos: 3
       - fondo: {video: pantalla}
         texto: 50-55 km *según fabricante*
+        tiempos: 3
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: urbanfatbikes V8, *nueva* en España
+        nuevo: si
+        tiempos: 3
       - fondo: {escena: bici, desde: 1.5}
-        texto: Sin *gasolina* ni carné
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
-        texto: Unos *céntimos.* Mándaselo
-        avatar: {pose: brazos, cara: sonrie, lado: derecha}
+        texto: "*Mándaselo* a quien va en coche a todas partes"
+        tiempos: 4
 
   que-es:
-    musica: urban-1
+    musica: urban-2
     estilo: neon
+    progreso: si
     golpes:
       - fondo: {foto: v8-estudio.webp, recorte: [1050, 950, 1850, 1750]}
-        texto: ¿Por qué ruedas *tan gordas?*
+        texto: ¿Por qué las fatbikes llevan ruedas *tan gordas?*
+        tiempos: 4
       - fondo: {icono: ruedas}
-        texto: "*4 pulgadas* o más"
+        marca: 1/3
+        texto: "*4 pulgadas:* más agarre en arena y grava"
+        tiempos: 3
       - fondo: {escena: holanda, desde: 1.0}
-        texto: Más *estabilidad*
+        marca: 2/3
+        texto: Más *estable* en adoquines y baches
+        tiempos: 3
       - fondo: {video: suspension}
-        texto: Más *comodidad*
-      - fondo: {escena: bici, desde: 2.5}
-        texto: ¿Te subirías a *una?*
+        marca: 3/3
+        texto: Y con suspensión, *más cómoda*
+        tiempos: 3
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
+        texto: Lo que arrasa en Holanda, *nuevo en España*
+        nuevo: si
+        tiempos: 4
+      - fondo: {color: turquesa}
+        texto: ¿Te subirías a una? *Dínoslo* en comentarios
+        avatar: {pose: duda, cara: sonrie, lado: derecha}
+        tiempos: 4
 
   alcohol:
-    musica: inspira-2
+    musica: inspira-1
     estilo: aviso
+    progreso: si
     golpes:
       - fondo: {icono: cerveza}
-        texto: ¿Una cerveza y a la *fatbike?*
-      - fondo: {escena: bici, desde: 1.0}
-        texto: La misma tasa que *en coche*
+        texto: Una cerveza y a la *fatbike…*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Te pueden *multar* en bici?
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "La misma tasa que *en coche*"}
+        tiempos: 7
       - fondo: {color: oscuro}
         numero: "0,25"
         texto: mg/l en aire *espirado*
+        tiempos: 3
       - fondo: {icono: multa, valor: "1.000 €", color: rojo}
         texto: De *500 a 1.000 €*
-      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
+        tiempos: 3
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Y si un agente te lo pide, *tienes que soplar*
+        tiempos: 3
+      - fondo: {color: rojo}
         texto: "*Mándaselo* a quien diga que en bici no pasa nada"
+        tiempos: 4
 
   padres:
     musica: tranquila-1
     estilo: claro
+    progreso: si
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
-        texto: "*Padres:* ojo antes de regalar una fatbike"
-      - fondo: {escena: comparar, desde: 1.5}
-        texto: Pide el informe *EN 15194*
+      - fondo: {noticia: {medio: DGT, fecha: 1 oct 2026, titular: "Patinetes eléctricos: edad mínima de 15 años y casco obligatorio"}}
+        texto: "*Padres:* desde octubre cambian las normas"
+        tiempos: 5
+      - fondo: {color: oscuro}
+        texto: ¿Y en una fatbike eléctrica *legal?*
+        quiz: {opciones: ["PATINETE", "BICI"], correcta: 1, cuenta: 2, explica: "Cuenta como *bicicleta*"}
+        tiempos: 7
+      - fondo: {icono: silla}
+        marca: 1/3
+        texto: Casco obligatorio para *menores de 16*
+        tiempos: 3
       - fondo: {icono: velocimetro, valor: 6}
-        texto: Acelerador hasta *6 km/h*
-      - fondo: {icono: multa, valor: "+25", color: rojo}
-        texto: Ojo con los *modos desbloqueados*
+        marca: 2/3
+        texto: Acelerador hasta *6 km/h,* no más
+        tiempos: 3
+      - fondo: {escena: comparar, desde: 1.5}
+        marca: 3/3
+        texto: Pide el informe *EN 15194*
+        tiempos: 3
       - fondo: {color: turquesa}
-        texto: "*Mándaselo* a quien lo necesite"
+        texto: "*Mándaselo* a quien tenga hijos adolescentes"
         avatar: {pose: senala, cara: serio, lado: derecha}
+        tiempos: 4
 
   luces:
-    musica: urban-2
+    musica: urban-1
     estilo: neon
+    progreso: si
     golpes:
       - fondo: {video: faro}
-        texto: ¿Fatbike de noche *sin luces?*
+        texto: "Cambio de hora: ahora *anochece antes*"
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Sin luces de noche te pueden *multar* en bici?
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "*200 €* de multa"}
+        tiempos: 7
       - fondo: {icono: luces}
         texto: Blanca *delante,* roja detrás
-      - fondo: {icono: multa, valor: "200 €", color: rojo}
-        texto: Sin luces, *200 €*
+        tiempos: 3
       - fondo: {escena: holanda, desde: 2.0}
-        texto: En interurbanas, *prenda reflectante*
-      - fondo: {foto: v8-estudio.webp, recorte: [430, 420, 900, 860]}
+        texto: Fuera de la ciudad, *prenda reflectante*
+        tiempos: 3
+      - fondo: {color: turquesa}
         texto: "*Mándaselo* a quien vuelve tarde"
+        tiempos: 4
 
   valencia:
     musica: urban-2
@@ -744,3 +798,186 @@ reels:
       - fondo: {color: rojo}
         texto: "*Mándaselo* a quien tenga fatbike"
         tiempos: 4
+
+  # --- Revisión del 21/10/2026 ---
+  carril-patraix:
+    musica: inspira-2
+    estilo: caja
+    progreso: si
+    golpes:
+      - fondo: {noticia: {medio: Ajuntament de València, fecha: 1 oct 2026, titular: "Aprobado el proyecto del carril bici de Campos Crespo, Pius XI y Conca"}}
+        texto: "*Nuevo carril bici* en València"
+        tiempos: 5
+      - fondo: {color: turquesa}
+        numero: "1.100 m"
+        texto: entre *Jesús y Patraix*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: De Tres Creus a *Beat Nicolau Factor*
+        tiempos: 3
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Y conecta con los carriles *de esas calles*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: "*Mándaselo* a quien vive en Jesús o Patraix"
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
+
+  quiz-v8:
+    musica: urban-2
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {color: oscuro}
+        texto: ¿Cuál de estas 2 fatbikes puedes llevar *sin carné?*
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+        tiempos: 4
+      - fondo: {color: rojo}
+        marca: A
+        texto: "*750 W* y hasta 45 km/h"
+        quiz: {correcta: 1, cuenta: 2, explica: "Vehículo de motor *(L1e)*"}
+        tiempos: 7
+      - fondo: {foto: v8-estudio.webp, recorte: [430, 420, 900, 860]}
+        marca: B
+        texto: "*250 W* y deja de ayudar a 25 km/h"
+        quiz: {correcta: 0, cuenta: 2, explica: "Es una *bicicleta*"}
+        tiempos: 7
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
+        texto: La B es la urbanfatbikes V8, *nueva en España*
+        nuevo: si
+        tiempos: 4
+      - fondo: {color: turquesa}
+        texto: ¿Acertaste? *Dínoslo* en comentarios
+        tiempos: 4
+
+  black-friday:
+    musica: urban-1
+    estilo: aviso
+    progreso: si
+    golpes:
+      - fondo: {color: rojo}
+        texto: Black Friday y fatbike barata… *ojo*
+        avatar: {pose: niega, cara: serio, lado: derecha}
+        tiempos: 4
+      - fondo: {icono: velocimetro, valor: 45}
+        marca: 1/3
+        texto: "«500 W» o «45 km/h»: ya *no es una bici*"
+        pegatina: "no"
+        tiempos: 3
+      - fondo: {color: oscuro}
+        marca: 2/3
+        texto: Sin informe *EN 15194,* no te fíes
+        tiempos: 3
+      - fondo: {icono: velocimetro, valor: 25}
+        marca: 3/3
+        texto: «Modo desbloqueable» = *ilegal* en la calle
+        pegatina: "no"
+        tiempos: 3
+      - fondo: {escena: comparar, desde: 1.5}
+        texto: Busca *250 W,* 25 km/h y acelerador hasta 6 km/h
+        tiempos: 3
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien esté mirando una"
+        tiempos: 4
+
+  vmp-bici:
+    musica: inspira-1
+    estilo: claro
+    progreso: si
+    golpes:
+      - fondo: {noticia: {medio: DGT, fecha: 1 oct 2026, titular: "Nuevas normas para patinetes: casco, chaleco de noche y 15 años"}}
+        texto: "Patinete o fatbike: *no son lo mismo*"
+        tiempos: 5
+      - fondo: {color: oscuro}
+        texto: ¿Seguro obligatorio para tu *bici eléctrica legal?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 1, cuenta: 2, explica: "El patinete *sí*"}
+        tiempos: 7
+      - fondo: {color: rojo}
+        marca: 1/3
+        numero: "15"
+        texto: años como mínimo para el *patinete*
+        tiempos: 3
+      - fondo: {icono: silla}
+        marca: 2/3
+        texto: "Patinete: *casco* siempre"
+        tiempos: 3
+      - fondo: {icono: luces}
+        marca: 3/3
+        texto: "Patinete: *chaleco* de noche"
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien tenga patinete"
+        tiempos: 4
+
+  turia:
+    musica: inspira-2
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {escena: bici, desde: 2.0}
+        texto: Más de *9 km* de parque en mitad de València
+        tiempos: 4
+      - fondo: {color: turquesa}
+        numero: "+9 km"
+        texto: de *Jardín del Turia*
+        tiempos: 3
+      - fondo: {video: frontal}
+        texto: Llano, entre árboles y *sin coches*
+        tiempos: 3
+      - fondo: {noticia: {medio: El Periòdic, titular: "València ampliará el Jardí del Túria con 2,5 km más de recorrido (traducido)"}}
+        texto: Y crecerá *2,5 km* más
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: ¿Cuál es tu tramo *favorito?* Dínoslo en comentarios
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
+
+  adelantar:
+    musica: urban-2
+    estilo: caja
+    progreso: si
+    golpes:
+      - fondo: {escena: bici, desde: 0.5}
+        texto: ¿Cuánto espacio debe dejarte un coche *al adelantarte?*
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: En carretera, como mínimo…
+        quiz: {opciones: ["1 M", "1,5 M"], correcta: 1, cuenta: 2, explica: "*1,5 metros*"}
+        tiempos: 7
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: Si no, *200 €* y 6 puntos
+        tiempos: 3
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: Y debe *reducir* la velocidad
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien conduce"
+        tiempos: 4
+
+  holanda-bicis:
+    musica: tranquila-1
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {escena: holanda, desde: 1.0}
+        texto: En Holanda hay *más bicis que personas*
+        tiempos: 4
+      - fondo: {color: turquesa}
+        numero: "24,1 M"
+        texto: de bicis para unos *18 millones* de personas
+        tiempos: 3
+      - fondo: {icono: bateria}
+        texto: Y más de la mitad de las nuevas son *eléctricas*
+        tiempos: 3
+      - fondo: {escena: mapa}
+        texto: Vivo allí y lo traigo a *España*
+        tiempos: 3
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: urbanfatbikes V8, *legal* y nueva en España
+        nuevo: si
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: Síguenos para verla *llegar*
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
+

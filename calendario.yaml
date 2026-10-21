@@ -142,11 +142,11 @@ publicaciones:
     archivos:
       - rapido-que-es.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      ¿Por qué las fatbikes llevan ruedas de 4 pulgadas? Te lo explicamos en 6 segundos 👇
+      ¿Por qué las fatbikes llevan ruedas de 4 pulgadas? 3 razones 👇
 
-      Una bicicleta con neumáticos de 4 pulgadas o más: más estabilidad, más agarre y más comodidad, en asfalto, tierra, grava o arena.
+      Más agarre en arena y grava, más estabilidad en adoquines y baches y, con suspensión, más comodidad. Lo que arrasa en Holanda, nuevo en España.
 
-      ¿Te subirías a una? Cuéntanoslo en comentarios.
+      ¿Te subirías a una? Dínoslo en comentarios.
 
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
@@ -199,19 +199,17 @@ publicaciones:
     archivos:
       - rapido-padres.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      ¿Vas a regalarle una fatbike eléctrica a tu hijo? Revisa esto antes 👇
+      Desde el 1 de octubre, los patinetes eléctricos piden 15 años como mínimo y casco: ¿y una fatbike? 👇
 
-      1. Pide el informe de ensayo según la norma europea EN 15194.
-      2. Que no tenga acelerador: si empuja sin pedalear por encima de 6 km/h, ya no es una bicicleta.
-      3. Nada de "modos desbloqueados" que pasen de 25 km/h.
+      Una fatbike eléctrica legal (250 W, 25 km/h, norma EN 15194) cuenta como bicicleta, no como patinete. Antes de regalarla:
+      1. Casco: obligatorio para menores de 16 años en cualquier vía.
+      2. Acelerador hasta 6 km/h sin pedalear, no más.
+      3. Pide el informe de ensayo según la norma EN 15194.
 
-      Y siempre casco: para menores de 16 años es obligatorio en cualquier vía.
-
-      Compártelo con quien lo necesite.
+      Mándaselo a quien tenga hijos adolescentes.
 
       #urbanfatbikes #fatbike #bicicletaelectrica #seguridadvial #padres
 
-  # --- Semana del 2 al 8 de noviembre de 2026 ---
   - id: reel-valencia
     fecha: "2026-11-02 18:40"
     archivos:
@@ -310,18 +308,20 @@ publicaciones:
       Mándaselo a quien diga que en bici no pasa nada.
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
+
   - id: reel-luces
     fecha: "2026-10-29 18:40"
     archivos:
       - rapido-luces.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      Fatbike de noche sin luces: 200 € de multa 🔦
+      Con el cambio de hora anochece antes: sin luces en bici, 200 € de multa 🔦
 
-      Luz blanca delante y roja detrás. Y en vías interurbanas, de noche, prenda reflectante. Con el cambio de hora, más importante que nunca.
+      Luz blanca delante y roja detrás. Y fuera de la ciudad, de noche, prenda reflectante.
 
       Mándaselo a quien vuelve tarde en bici.
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #seguridadvial
+
   - id: reel-paso-cebra
     fecha: "2026-11-03 18:40"
     archivos:
@@ -465,3 +465,99 @@ publicaciones:
       Mándaselo a quien tenga fatbike.
 
       #urbanfatbikes #fatbike #trucada #DGT #bicicletaelectrica
+
+  # --- Revisión del 21/10/2026 ---
+  - id: reel-carril-patraix
+    fecha: "2026-10-30 18:40"
+    archivos:
+      - rapido-carril-patraix.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      1.100 metros de carril bici nuevo en València: Campos Crespo, Pius XI y Conca 🚲
+
+      El Ayuntamiento aprobó el 1 de octubre el proyecto, entre los barrios de Jesús y Patraix, de Tres Creus a Beat Nicolau Factor, conectando con los carriles de esas dos calles. Salió de los presupuestos participativos.
+
+      Mándaselo a quien vive en Jesús o Patraix.
+
+      #urbanfatbikes #valencia #carrilbici #patraix #fatbike
+
+  - id: reel-quiz-v8
+    fecha: "2026-11-20 18:40"
+    archivos:
+      - rapido-quiz-v8.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      750 W y 45 km/h o 250 W y 25 km/h: ¿cuál de estas 2 fatbikes puedes llevar sin carné? 🤔
+
+      La de 750 W es un vehículo de motor (L1e): matrícula, seguro y carné. La de 250 W que deja de ayudar a 25 km/h es una bicicleta: la urbanfatbikes V8, nueva en España y ensayada según la norma EN 15194.
+
+      ¿Acertaste? Dínoslo en comentarios.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #nuevoenespaña #DGT
+
+  - id: reel-black-friday
+    fecha: "2026-11-23 18:40"
+    archivos:
+      - rapido-black-friday.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Black Friday: 3 trampas al comprar una fatbike barata ⚠️
+
+      1. «500 W» o «45 km/h»: ya no es una bicicleta, es un vehículo de motor (L1e).
+      2. Sin informe de ensayo según la norma EN 15194, no te fíes.
+      3. «Modo desbloqueable»: si pasa de 25 km/h, en la calle es ilegal.
+      Busca 250 W, asistencia hasta 25 km/h y acelerador hasta 6 km/h.
+
+      Mándaselo a quien esté mirando una.
+
+      #urbanfatbikes #fatbike #blackfriday #bicicletaelectrica #EN15194
+
+  - id: reel-vmp-bici
+    fecha: "2026-11-24 18:40"
+    archivos:
+      - rapido-vmp-bici.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Patinetes: desde el 1 de octubre, 15 años como mínimo, casco y chaleco de noche (DGT) 🛴
+
+      Una bici eléctrica legal (250 W, 25 km/h) no es un patinete: cuenta como bicicleta y no necesita seguro obligatorio. El patinete, sí.
+
+      Mándaselo a quien tenga patinete.
+
+      #urbanfatbikes #patineteelectrico #fatbike #DGT #normas
+
+  - id: reel-turia
+    fecha: "2026-11-25 18:40"
+    archivos:
+      - rapido-turia.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Más de 9 km de parque en mitad de València: el Jardín del Turia 🌳
+
+      Llano, entre árboles y sin coches, ideal para ir en bici. Y el Ayuntamiento planea ampliarlo con 2,5 km más de recorrido.
+
+      ¿Cuál es tu tramo favorito? Dínoslo en comentarios.
+
+      #urbanfatbikes #valencia #jardindelturia #fatbike #bicicletaelectrica
+
+  - id: reel-adelantar
+    fecha: "2026-11-26 18:40"
+    archivos:
+      - rapido-adelantar.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      1,5 metros: lo mínimo que debe dejarte un coche al adelantarte en carretera 🚲
+
+      Además, tiene que reducir la velocidad. Si no deja esa distancia, 200 € de multa y 6 puntos del carné.
+
+      Mándaselo a quien conduce.
+
+      #urbanfatbikes #ciclistas #DGT #seguridadvial #fatbike
+
+  - id: reel-holanda-bicis
+    fecha: "2026-11-27 18:40"
+    archivos:
+      - rapido-holanda-bicis.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      24,1 millones de bicis para unos 18 millones de personas: así es Holanda 🇳🇱
+
+      Y más de la mitad de las bicis nuevas que se venden allí son eléctricas (RAI y BOVAG). Soy Sergio, vivo allí y traigo a España la urbanfatbikes V8: 250 W, 25 km/h y ensayada según la norma EN 15194.
+
+      Síguenos para verla llegar.
+
+      #urbanfatbikes #holanda #fatbike #nuevoenespaña #bicicletaelectrica
+
