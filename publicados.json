@@ -238,5 +238,16 @@
     "tiktok": {
       "aviso": "2026-10-20T21:12+02:00"
     }
+  },
+  "reel-nuevo-espana": {
+    "instagram": {
+      "id": "17891834103457692",
+      "fecha": "2026-10-21T19:07+02:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7699169074114414614",
+      "estado": "PROCESSING_UPLOAD",
+      "fecha": "2026-10-21T19:08+02:00"
+    }
   }
 }
