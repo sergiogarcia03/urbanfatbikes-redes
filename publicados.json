@@ -281,5 +281,16 @@
     "tiktok": {
       "aviso": "2026-10-22T21:14+02:00"
     }
+  },
+  "reel-carga": {
+    "instagram": {
+      "id": "18127251640875207",
+      "fecha": "2026-10-23T19:09+02:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7699911857489905686",
+      "estado": "PROCESSING_UPLOAD",
+      "fecha": "2026-10-23T19:11+02:00"
+    }
   }
 }
