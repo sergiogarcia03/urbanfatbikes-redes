@@ -99,7 +99,7 @@ publicaciones:
       #urbanfatbikes #fatbike #ebike #bicicletaelectrica
 
   - id: que-incluye-v8
-    fecha: "2026-11-18 18:40"
+    fecha: "2026-11-18 19:00"
     archivos:
       - rapido-incluye.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -125,7 +125,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fichatecnica #bicicletaelectrica #ebike
 
   - id: reel-patinete
-    fecha: "2026-10-14 18:40"
+    fecha: "2026-10-14 19:00"
     archivos:
       - rapido-patinete.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -138,7 +138,7 @@ publicaciones:
       #urbanfatbikes #fatbike #patineteelectrico #movilidadurbana #bicicletaelectrica
 
   - id: que-es-fatbike
-    fecha: "2026-10-26 18:40"
+    fecha: "2026-10-26 19:00"
     archivos:
       - rapido-que-es.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -151,7 +151,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-11-16 18:40"
+    fecha: "2026-11-16 19:00"
     archivos:
       - rapido-bateria.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -166,7 +166,7 @@ publicaciones:
       #urbanfatbikes #bicicletaelectrica #fatbike #bateria #mantenimiento
 
   - id: reel-carga
-    fecha: "2026-10-23 18:40"
+    fecha: "2026-10-23 19:00"
     archivos:
       - rapido-carga.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -181,7 +181,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #movilidadurbana #ahorro
 
   - id: mitos-fatbike
-    fecha: "2026-10-16 18:40"
+    fecha: "2026-10-16 19:00"
     archivos:
       - rapido-mitos.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -195,7 +195,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #fatbikeelectrica #bicicletaelectrica #EN15194
   - id: reel-padres
-    fecha: "2026-10-28 18:40"
+    fecha: "2026-10-28 19:00"
     archivos:
       - rapido-padres.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -211,7 +211,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #seguridadvial #padres
 
   - id: reel-valencia
-    fecha: "2026-11-02 18:40"
+    fecha: "2026-11-02 19:00"
     archivos:
       - rapido-valencia.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -223,7 +223,7 @@ publicaciones:
 
       #urbanfatbikes #valencia #fatbike #bicicletaelectrica #carrilbici
   - id: reel-holanda
-    fecha: "2026-11-04 18:40"
+    fecha: "2026-11-04 19:00"
     archivos:
       - rapido-holanda.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -235,7 +235,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #holanda #bicicletaelectrica #movilidadurbana
   - id: reel-trucada
-    fecha: "2026-11-06 18:40"
+    fecha: "2026-11-06 19:00"
     archivos:
       - rapido-trucada.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -261,7 +261,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
   - id: reel-pov-1000w
-    fecha: "2026-10-15 18:40"
+    fecha: "2026-10-15 19:00"
     archivos:
       - rapido-pov-1000w.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -273,7 +273,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #EN15194
   - id: reel-auriculares
-    fecha: "2026-11-17 18:40"
+    fecha: "2026-11-17 19:00"
     archivos:
       - rapido-auriculares.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -285,7 +285,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
   - id: reel-nino
-    fecha: "2026-11-19 18:40"
+    fecha: "2026-11-19 19:00"
     archivos:
       - rapido-nino.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -297,7 +297,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #padres
   - id: reel-alcohol
-    fecha: "2026-10-27 18:40"
+    fecha: "2026-10-27 19:00"
     archivos:
       - rapido-alcohol.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -310,7 +310,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
 
   - id: reel-luces
-    fecha: "2026-10-29 18:40"
+    fecha: "2026-10-29 19:00"
     archivos:
       - rapido-luces.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -323,7 +323,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #seguridadvial
 
   - id: reel-paso-cebra
-    fecha: "2026-11-03 18:40"
+    fecha: "2026-11-03 19:00"
     archivos:
       - rapido-paso-cebra.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -335,7 +335,7 @@ publicaciones:
 
       #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
   - id: reel-diferencias
-    fecha: "2026-11-05 18:40"
+    fecha: "2026-11-05 19:00"
     archivos:
       - rapido-diferencias.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -349,7 +349,7 @@ publicaciones:
 
   # --- Semana del 9 al 13 de noviembre de 2026 ---
   - id: reel-pegatina
-    fecha: "2026-11-09 18:40"
+    fecha: "2026-11-09 19:00"
     archivos:
       - rapido-pegatina.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -362,7 +362,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #EN15194 #normas
 
   - id: reel-seguro
-    fecha: "2026-11-10 18:40"
+    fecha: "2026-11-10 19:00"
     archivos:
       - rapido-seguro.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -375,7 +375,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #seguro #DGT
 
   - id: reel-carril-valencia
-    fecha: "2026-11-11 18:40"
+    fecha: "2026-11-11 19:00"
     archivos:
       - rapido-carril-valencia.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -388,7 +388,7 @@ publicaciones:
       #urbanfatbikes #valencia #carrilbici #fatbike #bicicletaelectrica
 
   - id: reel-casco
-    fecha: "2026-11-12 18:40"
+    fecha: "2026-11-12 19:00"
     archivos:
       - rapido-casco.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -401,7 +401,7 @@ publicaciones:
       #urbanfatbikes #fatbike #casco #DGT #seguridadvial
 
   - id: reel-lluvia
-    fecha: "2026-11-13 18:40"
+    fecha: "2026-11-13 19:00"
     archivos:
       - rapido-lluvia.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -415,7 +415,7 @@ publicaciones:
 
   # --- Formato noticia (sustituyen a batería y auriculares, que pasan al 16 y 17 de noviembre) ---
   - id: reel-amsterdam
-    fecha: "2026-10-19 18:40"
+    fecha: "2026-10-19 19:00"
     archivos:
       - rapido-amsterdam.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -428,7 +428,7 @@ publicaciones:
       #urbanfatbikes #fatbike #holanda #trucada #bicicletaelectrica
 
   - id: reel-italia
-    fecha: "2026-10-20 18:40"
+    fecha: "2026-10-20 19:00"
     archivos:
       - rapido-italia.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -441,7 +441,7 @@ publicaciones:
       #urbanfatbikes #fatbike #trucada #multa #bicicletaelectrica
 
   - id: reel-nuevo-espana
-    fecha: "2026-10-21 18:40"
+    fecha: "2026-10-21 19:00"
     archivos:
       - rapido-nuevo-espana.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -454,7 +454,7 @@ publicaciones:
       #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #holanda
 
   - id: reel-ajuste-pantalla
-    fecha: "2026-10-22 18:40"
+    fecha: "2026-10-22 19:00"
     archivos:
       - rapido-ajuste-pantalla.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -468,7 +468,7 @@ publicaciones:
 
   # --- Revisión del 21/10/2026 ---
   - id: reel-carril-patraix
-    fecha: "2026-10-30 18:40"
+    fecha: "2026-10-30 19:00"
     archivos:
       - rapido-carril-patraix.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -481,7 +481,7 @@ publicaciones:
       #urbanfatbikes #valencia #carrilbici #patraix #fatbike
 
   - id: reel-quiz-v8
-    fecha: "2026-11-20 18:40"
+    fecha: "2026-11-20 19:00"
     archivos:
       - rapido-quiz-v8.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -494,7 +494,7 @@ publicaciones:
       #urbanfatbikes #fatbike #bicicletaelectrica #nuevoenespaña #DGT
 
   - id: reel-black-friday
-    fecha: "2026-11-23 18:40"
+    fecha: "2026-11-23 19:00"
     archivos:
       - rapido-black-friday.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -510,7 +510,7 @@ publicaciones:
       #urbanfatbikes #fatbike #blackfriday #bicicletaelectrica #EN15194
 
   - id: reel-vmp-bici
-    fecha: "2026-11-24 18:40"
+    fecha: "2026-11-24 19:00"
     archivos:
       - rapido-vmp-bici.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -523,7 +523,7 @@ publicaciones:
       #urbanfatbikes #patineteelectrico #fatbike #DGT #normas
 
   - id: reel-turia
-    fecha: "2026-11-25 18:40"
+    fecha: "2026-11-25 19:00"
     archivos:
       - rapido-turia.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -536,7 +536,7 @@ publicaciones:
       #urbanfatbikes #valencia #jardindelturia #fatbike #bicicletaelectrica
 
   - id: reel-adelantar
-    fecha: "2026-11-26 18:40"
+    fecha: "2026-11-26 19:00"
     archivos:
       - rapido-adelantar.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -549,7 +549,7 @@ publicaciones:
       #urbanfatbikes #ciclistas #DGT #seguridadvial #fatbike
 
   - id: reel-holanda-bicis
-    fecha: "2026-11-27 18:40"
+    fecha: "2026-11-27 19:00"
     archivos:
       - rapido-holanda-bicis.mp4  # reel rápido (reels_rapidos.py)
     texto: |
