@@ -14,6 +14,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
@@ -187,6 +188,33 @@ def publicar_en_instagram(ig, publicacion):
     return ig.publicar(contenedor)
 
 
+# GitHub se salta a menudo ejecuciones programadas (a veces pasan 2-5 horas sin
+# ninguna). Si lo próximo del calendario sale dentro de este margen, la ejecución
+# se queda esperando y lo publica a su hora exacta en vez de confiar en la siguiente.
+ESPERA_MAX = timedelta(hours=4, minutes=30)
+
+
+def esperar_a_la_proxima(publicados, ahora):
+    proximas, atrasadas = [], False
+    for p in cargar_calendario():
+        nombre = p.get("id")
+        if p.get("borrador") or "instagram" in publicados.get(nombre, {}) or problemas(p):
+            continue
+        try:
+            cuando = fecha_de(p)
+        except (KeyError, ValueError):
+            continue
+        if cuando <= ahora and ahora - cuando <= MAX_RETRASO:
+            atrasadas = True
+        elif timedelta(0) < cuando - ahora <= ESPERA_MAX:
+            proximas.append(cuando)
+    if atrasadas or not proximas:
+        return
+    cuando = min(proximas)
+    print(f"⏳ Lo próximo sale a las {cuando:%H:%M}: espero aquí para publicarlo a su hora", flush=True)
+    time.sleep((cuando - ahora).total_seconds() + 20)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--modo", choices=["comprobar", "simular", "publicar"], default="simular")
@@ -210,6 +238,9 @@ def main():
     ahora = datetime.now(ZONA)
     publicados = cargar_publicados()
     fallos = 0
+    if modo == "publicar" and not args.manual:
+        esperar_a_la_proxima(publicados, ahora)
+        ahora = datetime.now(ZONA)
 
     for publicacion in cargar_calendario():
         nombre = publicacion.get("id", "(sin id)")
