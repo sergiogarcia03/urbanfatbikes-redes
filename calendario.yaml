@@ -627,3 +627,17 @@ publicaciones:
 
       #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #EN15194
 
+  # --- Fotos reales de Sergio: presentación sorpresa (domingo, extra) ---
+  - id: reel-sorpresa-v8
+    fecha: "2026-11-01 19:00"
+    archivos:
+      - rapido-sorpresa-v8.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Nueva en España: la urbanfatbikes V8, la fatbike que ves por todas partes en Holanda, en versión legal 🇪🇸
+
+      Fotos reales de la nuestra: 250 W, asistencia hasta 25 km/h y ensayada según la norma europea EN 15194.
+
+      Síguenos para verla llegar.
+
+      #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #holanda
+

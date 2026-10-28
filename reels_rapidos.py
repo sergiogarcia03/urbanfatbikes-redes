@@ -147,9 +147,23 @@ def fondo_foto(spec, t, dur):
             lienzo.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(22)))
         lienzo.alpha_composite(p, ((ANCHO - ancho) // 2, y))
         return lienzo
-    base = cubrir(img.convert("RGB"), int(ANCHO * zoom), int(ALTO * zoom))
-    x, y = (base.width - ANCHO) // 2, (base.height - ALTO) // 2
-    return base.crop((x, y, x + ANCHO, y + ALTO)).convert("RGBA")
+    if spec.get("encajar"):
+        # foto horizontal real: entera en el centro, sobre ella misma desenfocada y oscurecida
+        fondo = cubrir(img.convert("RGB"), ANCHO, ALTO).filter(ImageFilter.GaussianBlur(40))
+        fondo = ImageEnhance.Brightness(fondo).enhance(0.45).convert("RGBA")
+        ancho = int(ANCHO * spec.get("tam", 1.0) * zoom)
+        p = img.convert("RGB").resize((ancho, int(img.height * ancho / img.width)), Image.LANCZOS)
+        fondo.paste(p, ((ANCHO - ancho) // 2, int(ALTO * spec.get("y", 0.6) - p.height / 2)))
+        lienzo = fondo
+    else:
+        base = cubrir(img.convert("RGB"), int(ANCHO * zoom), int(ALTO * zoom))
+        x, y = (base.width - ANCHO) // 2, (base.height - ALTO) // 2
+        lienzo = base.crop((x, y, x + ANCHO, y + ALTO)).convert("RGBA")
+    if spec.get("revelar"):
+        # empieza casi a oscuras y se va encendiendo: el «¿qué es esto?» antes de enseñarla
+        luz = 0.08 + 0.92 * suave(t / max(dur * 0.8, 0.1))
+        lienzo = ImageEnhance.Brightness(lienzo.convert("RGB")).enhance(luz).convert("RGBA")
+    return lienzo
 
 
 _fotogramas = {}

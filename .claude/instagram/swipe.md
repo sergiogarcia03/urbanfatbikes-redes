@@ -27,3 +27,16 @@ https://www.ilgiornale.it/news/cronaca-locale/sfreccia-sulla-pista-ciclabile-bic
 ## Gancho «nuevo en España» (14/10/2026)
 En piezas de la V8: «Nueva en España», «Esto arrasa en Holanda y llega a España», pegatina `nuevo: si`.
 Sin decir «la primera» ni «la única» (no está contrastado).
+
+## Cuentas grandes del nicho (búsqueda del 29/10/2026)
+Instagram y TikTok no se pueden abrir desde la sesión; esto sale de las páginas de etiquetas de TikTok que
+devuelve el buscador (cifras aproximadas y de fechas distintas).
+- Las cuentas grandes de fatbikes son holandesas: FastFatbike (~962K seguidores), Strijder (~1,5 M),
+  Herofatbikes (~46K, un vídeo con ~124K me gusta).
+- Lo que más gusta en esas cuentas:
+  1. **ASMR**: sonido real de la bici de cerca (encender, faro, pitido de la pantalla, ruedas en grava).
+  2. **Presentación o «nuevo modelo»**: la bici a oscuras que se va revelando, «llega…».
+  3. **POV montando por la calle.**
+  4. Velocidad y acrobacias. **Esto no lo hacemos** (choca con la marca legal).
+- Los formatos 1 y 3 necesitan vídeo real de Sergio: pedírselo con una lista de planos.
+  El 2 ya existe con sus fotos: `revelar: si` + `encajar: si` (reel `sorpresa-v8`).
