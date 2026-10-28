@@ -359,5 +359,16 @@
     "tiktok": {
       "aviso": "2026-10-27T22:28+01:00"
     }
+  },
+  "reel-padres": {
+    "instagram": {
+      "id": "18450252280133560",
+      "fecha": "2026-10-28T19:00+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7701780286862673942",
+      "estado": "PROCESSING_UPLOAD",
+      "fecha": "2026-10-28T19:01+01:00"
+    }
   }
 }
