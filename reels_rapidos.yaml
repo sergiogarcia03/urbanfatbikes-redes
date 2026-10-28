@@ -1146,3 +1146,27 @@ reels:
         avatar: {pose: senala, cara: sonrie, lado: derecha}
         tiempos: 4
 
+
+  # --- Formato «presentación sorpresa» con las fotos reales de Sergio (29/10/2026) ---
+  sorpresa-v8:
+    musica: inspira-2
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {foto: sergio/v8-lado-real.jpg, encajar: si, revelar: si, y: 0.62}
+        texto: Algo nuevo llega a *España…*
+        tiempos: 5
+      - fondo: {foto: sergio/v8-frente-real.jpg}
+        texto: En Holanda la ves *por todas partes*
+        tiempos: 3
+      - fondo: {foto: sergio/v8-pantalla-real.jpg, encajar: si, tam: 0.8, y: 0.62}
+        texto: "Legal: 250 W y *25 km/h*"
+        tiempos: 3
+      - fondo: {foto: sergio/v8-lado-real.jpg, encajar: si, y: 0.62, zoom: out}
+        texto: urbanfatbikes V8, *nueva en España*
+        nuevo: [800, 1500]
+        tiempos: 4
+      - fondo: {color: turquesa}
+        texto: Síguenos para verla *llegar*
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
