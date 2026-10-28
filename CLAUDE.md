@@ -31,7 +31,8 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   concreto (cifra o nombre); **una sola petición** por post: en reels «Mándaselo a quien…» (los envíos dan
   alcance), en carruseles «Guárdalo», o una pregunta para comentar. Nunca dos a la vez.
 - Revisar antes de programar: ganchos, faltas, datos contrastados y que la foto esté perfecta.
-  **Nada con la bici dañada** (la del accidente) ni retoques que haya que esconder con IA.
+  **Nada que enseñe daños** ni retoques que haya que esconder con IA. La bici del accidente ya está **arreglada** (29/10/2026):
+  sus fotos sirven si no se ve nada torcido (las de `contenido/sergio/` son de ella y están bien).
 - Material del proveedor (fotos/vídeo): **Sergio autorizó usarlo (06/10/2026)**, siempre sin el logo
   «ZEROGO» ni rótulos en inglés (`v8-estudio.webp` ya limpia; vídeo montado con `herramientas/detalles_v8.py`).
 - **Fotos reales de la V8 de Sergio (29/10/2026)** en `contenido/sergio/`: `v8-lado-real.jpg` (perfil completo, la mejor),
