@@ -231,7 +231,7 @@ publicaciones:
 
       Allí prohíben en el centro, en horario de tiendas, las bicis con motor eléctrico y ruedas de más de 7 cm. En España, una fatbike legal (250 W, 25 km/h, norma EN 15194) es una bicicleta; una trucada es un vehículo de motor (L1e).
 
-      ¿Crees que llegará a España? Te leemos en comentarios.
+      ¿Crees que llegará aquí? Dínoslo en comentarios.
 
       #urbanfatbikes #fatbike #holanda #bicicletaelectrica #movilidadurbana
   - id: reel-trucada
@@ -239,9 +239,9 @@ publicaciones:
     archivos:
       - rapido-trucada.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      Más de 25 km/h, acelerador sin límite o más de 250 W: 3 señales de una fatbike trucada ⚠️
+      A 50 km/h en bici por Granada: 500 € de multa por una bici trucada (Motorpasión). 3 señales de una fatbike trucada ⚠️
 
-      Si tiene alguna, legalmente no es una bicicleta: es un vehículo de motor (L1e) y necesita homologación, matrícula, seguro y permiso. Antes de comprar, pide el informe de ensayo según la norma EN 15194.
+      Más de 25 km/h con ayuda, acelerador que pasa de 6 km/h sin pedalear o más de 250 W. Si tiene alguna, legalmente no es una bicicleta: es un vehículo de motor (L1e) y necesita homologación, matrícula, seguro y permiso. Antes de comprar, pide el informe de ensayo según la norma EN 15194.
 
       Mándaselo a quien vaya a comprarse una.
 
@@ -560,4 +560,70 @@ publicaciones:
       Síguenos para verla llegar.
 
       #urbanfatbikes #holanda #fatbike #nuevoenespaña #bicicletaelectrica
+
+  # --- Revisión del 28/10/2026: semana del 30/11 al 4/12 ---
+  - id: reel-robos
+    fecha: "2026-11-30 19:00"
+    archivos:
+      - rapido-robos.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      3 trucos para que no te roben la fatbike: candado en U, sitio fijo y localizador 🔒
+
+      Ata el cuadro (no solo la rueda) a algo fijo y a la vista. Y mejor con alarma y localizador en el móvil: la urbanfatbikes V8, nueva en España, los trae de serie.
+
+      Mándaselo a quien aparca la bici en la calle.
+
+      #urbanfatbikes #fatbike #antirrobo #bicicletaelectrica #nuevoenespaña
+
+  - id: reel-tunel
+    fecha: "2026-12-01 19:00"
+    archivos:
+      - rapido-tunel.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      En un túnel, luces encendidas también de día: si no, 200 € de multa 🔦
+
+      Luz blanca delante y roja detrás, de noche y en túneles. Con el invierno, más importante que nunca.
+
+      Mándaselo a quien sale en bici a la carretera.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #seguridadvial
+
+  - id: reel-valencia-sol
+    fecha: "2026-12-02 19:00"
+    archivos:
+      - rapido-valencia-sol.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      300 días de sol al año (según Visit València) y más de 160 km de carril bici: València es para ir en bici también en invierno ☀️
+
+      Una ciudad llana, con inviernos suaves y carril bici en todos los barrios.
+
+      ¿Vas en bici en invierno? Dínoslo en comentarios.
+
+      #urbanfatbikes #valencia #carrilbici #fatbike #bicicletaelectrica
+
+  - id: reel-semaforo
+    fecha: "2026-12-03 19:00"
+    archivos:
+      - rapido-semaforo.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Saltarte un semáforo en rojo en bici: 200 € de multa, como en coche 🚦
+
+      Las normas de circulación son las mismas para todos. Y ojo con los peatones.
+
+      Mándaselo a quien se los salta.
+
+      #urbanfatbikes #fatbike #bicicletaelectrica #DGT #normas
+
+  - id: reel-acelerador-v8
+    fecha: "2026-12-04 19:00"
+    archivos:
+      - rapido-acelerador-v8.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿La urbanfatbikes V8 tiene acelerador? Sí, pero solo hasta 6 km/h sin pedalear 👇
+
+      Sirve para arrancar en un semáforo o una cuesta. Pedaleando, el motor de 250 W te ayuda hasta 25 km/h. Por eso, legalmente es una bicicleta: ensayada según la norma europea EN 15194 y nueva en España.
+
+      ¿Qué más quieres saber? Pregúntanos en comentarios.
+
+      #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #EN15194
 

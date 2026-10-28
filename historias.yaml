@@ -305,3 +305,40 @@ historias:
       titulo: ¿Qué quieres ver de la *V8?*
       subtitulo: Escríbenos por mensaje y lo grabamos.
       tamano: 100
+
+  # --- Semana del 30 de noviembre al 6 de diciembre de 2026 ---
+  - id: encuesta-candado
+    fecha: "2026-12-01 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Dónde aparcas tu *bici?*
+      subtitulo: ¿En casa, en el trabajo o en la calle? Cuéntanoslo por mensaje.
+      tamano: 100
+
+  - id: aviso-acelerador
+    fecha: "2026-12-03 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Mañana, nuevo reel
+      titulo: ¿La V8 tiene *acelerador?*
+      subtitulo: Mañana por la tarde te lo contamos.
+      tamano: 100
+
+  - id: puente-diciembre
+    fecha: "2026-12-05 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Plan de puente
+      titulo: Una ruta en *bici* este finde
+      subtitulo: ¿Por dónde vas tú? Cuéntanoslo por mensaje.
+      tamano: 100
+
+  - id: dato-300
+    fecha: "2026-12-06 12:30"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato de València
+      numero: 300
+      unidad: días de sol
+      texto: al año, según Visit València. Ideal para ir en bici también en invierno.
