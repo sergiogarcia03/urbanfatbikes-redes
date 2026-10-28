@@ -470,133 +470,129 @@ reels:
   valencia:
     musica: urban-2
     estilo: caja
+    progreso: si
     golpes:
       - fondo: {escena: sofa, desde: 1.0}
         texto: ¿Fatbike por la acera en *València?*
-      - fondo: {icono: cebra}
-        texto: Por la acera, *no*
-        pegatina: "no"
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: "¿Se puede?"
+        quiz: {opciones: ["SÍ", "NO"], correcta: 1, cuenta: 2, explica: "Por la acera, *no*"}
+        tiempos: 7
       - fondo: {icono: velocimetro, valor: 20}
+        marca: 1/2
         texto: "Carril bici en la calzada: *20 km/h*"
+        tiempos: 3
       - fondo: {icono: velocimetro, valor: 15, color: turquesa}
-        texto: "Sobre la acera: *15 km/h*"
+        marca: 2/2
+        texto: "Carril bici sobre la acera: *15 km/h*"
+        tiempos: 3
       - fondo: {escena: bici, desde: 1.0}
         texto: "*Mándaselo* a quien va en bici por València"
+        tiempos: 4
 
   paso-cebra:
     musica: inspira-2
     estilo: aviso
+    progreso: si
     golpes:
       - fondo: {icono: cebra}
         texto: ¿Cruzas el paso de cebra *montado?*
-      - fondo: {icono: multa, valor: "200 €", color: rojo}
-        texto: "*200 €* de multa"
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Te pueden *multar?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "*200 €* de multa"}
+        tiempos: 7
       - fondo: {escena: final, desde: 1.0}
         texto: "*Bájate* y cruza andando"
+        tiempos: 3
       - fondo: {escena: holanda, desde: 1.5}
         texto: O busca un *paso ciclista*
-      - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
+        tiempos: 3
+      - fondo: {color: rojo}
         texto: "*Mándaselo* a quien siempre cruza montado"
+        tiempos: 4
 
   holanda:
     musica: inspira-1
     estilo: neon
+    progreso: si
     golpes:
-      - fondo: {escena: holanda, desde: 1.0}
-        texto: En Holanda ya multan por ir en *fatbike*
-        tiempos: 3
       - fondo: {icono: multa, valor: "115 €", color: rojo}
-        texto: "*115 €* en Enschede"
+        texto: "*115 €* de multa por ir en fatbike al centro"
+        tiempos: 4
+      - fondo: {escena: holanda, desde: 1.0}
+        texto: Pasa en *Enschede* (Holanda)
         tiempos: 3
       - fondo: {icono: ruedas}
         texto: Ruedas de más de *7 cm* y motor
         tiempos: 3
       - fondo: {escena: bici, desde: 1.5}
-        texto: Fuera del centro en *horario de tiendas*
-        tiempos: 3
-      - fondo: {escena: mapa, desde: 2.0}
-        texto: ¿Llegará a *España?*
+        texto: Solo en el centro y en *horario de tiendas*
         tiempos: 3
       - fondo: {escena: comparar, desde: 1.5}
-        texto: Aquí, si es legal, es una *bici.* ¿Tú qué opinas?
+        texto: En España, si es legal, es una *bicicleta*
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: ¿Llegará aquí? *Dínoslo* en comentarios
+        avatar: {pose: duda, cara: sonrie, lado: derecha}
         tiempos: 4
 
   diferencias:
     musica: urban-2
     estilo: claro
+    progreso: si
     golpes:
       - fondo: {icono: ruedas}
-        texto: Fatbike vs bici normal en *4 segundos*
+        texto: "Fatbike o bici normal: *3 diferencias*"
+        tiempos: 3
       - fondo: {foto: v8-estudio.webp, recorte: [180, 980, 940, 1800]}
-        texto: Más *agarre*
+        marca: 1/3
+        texto: Más *agarre* en arena y grava
+        tiempos: 3
       - fondo: {video: suspension}
-        texto: Más *cómoda*
+        marca: 2/3
+        texto: Más *cómoda* en baches
+        tiempos: 3
       - fondo: {escena: bici, desde: 1.0}
+        marca: 3/3
         texto: Y con 250 W, sigue siendo *bici*
+        tiempos: 3
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900], zoom: out}
+        texto: urbanfatbikes V8, *nueva* en España
+        nuevo: si
+        tiempos: 3
       - fondo: {color: turquesa}
-        texto: ¿Cuál *elegirías?*
+        texto: ¿Cuál *elegirías?* Dínoslo en comentarios
         avatar: {pose: duda, cara: sonrie, lado: derecha}
+        tiempos: 4
 
   trucada:
     musica: urban-1
     estilo: aviso
+    progreso: si
     golpes:
+      - fondo: {noticia: {medio: Motorpasión, titular: "Multa de 500 euros para un ciclista que circulaba a 50 km/h por Granada en una bici trucada"}}
+        texto: "*50 km/h* en bici por Granada"
+        tiempos: 5
       - fondo: {escena: comparar, desde: 2.5}
         texto: 3 señales de una fatbike *trucada*
+        tiempos: 3
       - fondo: {icono: velocimetro, valor: 35}
-        texto: Pasa de *25 km/h*
-      - fondo: {video: manillar}
-        texto: Acelerador de más de *6 km/h*
-      - fondo: {icono: multa, valor: "+250 W", color: rojo}
-        texto: Más de *250 W*
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: "*Mándaselo* a quien vaya a comprarse una"
-
-  # Segunda respuesta a Xionsan (09/10/2026): en las respuestas, TikTok tapa arriba (pegatina del comentario)
-  # y abajo (comentarios): texto en el centro, sin avatar abajo y más despacio.
-  ek30-v2:
-    musica: urban-2
-    estilo: caja
-    texto_y: 720
-    tiempos: 4
-    golpes:
-      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si}
-        texto: "EverCross EK30: lo que dice *su ficha*"
-        y: 440
-      - fondo: {icono: velocimetro, valor: 25}
-        texto: Motor de *250 W*
-        y: 650
-      - fondo: {color: turquesa}
-        numero: "25"
-        texto: km/h de velocidad *máxima*
-        y: 600
-      - fondo: {icono: bateria}
-        texto: Batería de *48 V* y 15,6 Ah
-        y: 650
-      - fondo: {icono: ruedas}
-        texto: Ruedas de 20 x *4 pulgadas*
-        y: 650
+        marca: 1/3
+        texto: Te ayuda por encima de *25 km/h*
+        tiempos: 3
       - fondo: {color: rojo}
-        texto: "Ojo: en otra tienda aparece con *500 W*"
-        y: 600
-        avatar: {pose: duda, cara: sorpresa, lado: derecha}
-      - fondo: {icono: matricula}
-        texto: Más de 250 W ya es *ciclomotor*
-        y: 650
-      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si, zoom: out}
-        texto: "Mira la placa del cuadro: *250 W y 25 km/h*"
-        y: 440
-      - fondo: {icono: velocimetro, valor: 6}
-        texto: Sin pedalear, el acelerador hasta *6 km/h*
-        y: 650
-      - fondo: {color: turquesa}
-        texto: Pide la declaración CE y el informe *EN 15194*
-        y: 600
-        avatar: {pose: senala, cara: sonrie, lado: izquierda}
+        marca: 2/3
+        texto: El acelerador pasa de *6 km/h* sin pedalear
+        tiempos: 3
+      - fondo: {icono: multa, valor: "+250 W", color: rojo}
+        marca: 3/3
+        texto: Más de *250 W*
+        tiempos: 3
       - fondo: {color: oscuro}
-        texto: Si cumple todo, es una *bici legal*
-        y: 600
-        pegatina: si
+        texto: "*Mándaselo* a quien vaya a comprarse una"
+        tiempos: 4
 
   # --- Semana del 9 al 13 de noviembre de 2026 ---
   pegatina:
@@ -686,6 +682,50 @@ reels:
         texto: Sécala con un trapo, *sin manguera*
       - fondo: {video: frontal}
         texto: "*Mándaselo* a quien sale llueva o no"
+
+  ek30-v2:
+    musica: urban-2
+    estilo: caja
+    texto_y: 720
+    tiempos: 4
+    golpes:
+      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si}
+        texto: "EverCross EK30: lo que dice *su ficha*"
+        y: 440
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: Motor de *250 W*
+        y: 650
+      - fondo: {color: turquesa}
+        numero: "25"
+        texto: km/h de velocidad *máxima*
+        y: 600
+      - fondo: {icono: bateria}
+        texto: Batería de *48 V* y 15,6 Ah
+        y: 650
+      - fondo: {icono: ruedas}
+        texto: Ruedas de 20 x *4 pulgadas*
+        y: 650
+      - fondo: {color: rojo}
+        texto: "Ojo: en otra tienda aparece con *500 W*"
+        y: 600
+        avatar: {pose: duda, cara: sorpresa, lado: derecha}
+      - fondo: {icono: matricula}
+        texto: Más de 250 W ya es *ciclomotor*
+        y: 650
+      - fondo: {foto: terceros/ek30.png, tam: 0.6, y: 0.66, suelo: si, zoom: out}
+        texto: "Mira la placa del cuadro: *250 W y 25 km/h*"
+        y: 440
+      - fondo: {icono: velocimetro, valor: 6}
+        texto: Sin pedalear, el acelerador hasta *6 km/h*
+        y: 650
+      - fondo: {color: turquesa}
+        texto: Pide la declaración CE y el informe *EN 15194*
+        y: 600
+        avatar: {pose: senala, cara: sonrie, lado: izquierda}
+      - fondo: {color: oscuro}
+        texto: Si cumple todo, es una *bici legal*
+        y: 600
+        pegatina: si
 
   # --- Formato noticia (14/10/2026): titular real con su medio ---
   amsterdam:
@@ -978,6 +1018,131 @@ reels:
         tiempos: 4
       - fondo: {color: oscuro}
         texto: Síguenos para verla *llegar*
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
+
+  # --- Revisión del 28/10/2026 ---
+  robos:
+    musica: inspira-2
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {escena: bici, desde: 1.0}
+        texto: 3 trucos para que no te *roben la fatbike*
+        tiempos: 4
+      - fondo: {color: oscuro}
+        marca: 1/3
+        texto: Candado en U al *cuadro,* no solo a la rueda
+        tiempos: 3
+      - fondo: {escena: holanda, desde: 1.5}
+        marca: 2/3
+        texto: Átala a algo *fijo* y a la vista
+        tiempos: 3
+      - fondo: {video: manillar}
+        marca: 3/3
+        texto: Alarma y *localizador* en el móvil
+        tiempos: 3
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: La urbanfatbikes V8 los trae *de serie*
+        nuevo: si
+        tiempos: 4
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien aparca la bici en la calle"
+        tiempos: 4
+
+  tunel:
+    musica: urban-1
+    estilo: aviso
+    progreso: si
+    golpes:
+      - fondo: {video: faro}
+        texto: ¿Luces en bici *de día?*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: En un túnel, ¿son *obligatorias?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "Sí, *también de día*"}
+        tiempos: 7
+      - fondo: {icono: luces}
+        texto: Blanca *delante,* roja detrás
+        tiempos: 3
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: Sin luces cuando tocan, *200 €*
+        tiempos: 3
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien sale en bici a la carretera"
+        tiempos: 4
+
+  valencia-sol:
+    musica: inspira-1
+    estilo: claro
+    progreso: si
+    golpes:
+      - fondo: {escena: bici, desde: 2.0}
+        texto: Diciembre en València y *en bici*
+        tiempos: 3
+      - fondo: {color: turquesa}
+        numero: "300"
+        texto: días de sol al año, según *Visit València*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        numero: "+160 km"
+        texto: de *carril bici*
+        tiempos: 3
+      - fondo: {video: frontal}
+        texto: Y una ciudad *llana*
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: ¿Vas en bici en invierno? *Dínoslo* en comentarios
+        avatar: {pose: senala, cara: sonrie, lado: derecha}
+        tiempos: 4
+
+  semaforo:
+    musica: urban-2
+    estilo: caja
+    progreso: si
+    golpes:
+      - fondo: {escena: bici, desde: 0.5}
+        texto: Semáforo en rojo y vas *en bici…*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Te pueden *multar?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "*200 €,* como a un coche"}
+        tiempos: 7
+      - fondo: {icono: multa, valor: "200 €", color: rojo}
+        texto: Las normas son las mismas que *para todos*
+        tiempos: 3
+      - fondo: {icono: cebra}
+        texto: Y ojo con los *peatones*
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien se los salta"
+        tiempos: 4
+
+  acelerador-v8:
+    musica: tranquila-1
+    estilo: neon
+    progreso: si
+    golpes:
+      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
+        texto: ¿La urbanfatbikes V8 tiene *acelerador?*
+        nuevo: si
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: ¿Tú qué crees?
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "Sí, pero *limitado*"}
+        tiempos: 7
+      - fondo: {icono: velocimetro, valor: 6}
+        texto: Solo hasta *6 km/h* sin pedalear
+        tiempos: 3
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Para *arrancar* en un semáforo o una cuesta
+        tiempos: 3
+      - fondo: {icono: velocimetro, valor: 25}
+        texto: Pedaleando, te ayuda hasta *25 km/h*
+        pegatina: si
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: ¿Qué más quieres saber? *Pregúntanos* en comentarios
         avatar: {pose: senala, cara: sonrie, lado: derecha}
         tiempos: 4
 
