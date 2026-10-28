@@ -34,6 +34,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   **Nada con la bici dañada** (la del accidente) ni retoques que haya que esconder con IA.
 - Material del proveedor (fotos/vídeo): **Sergio autorizó usarlo (06/10/2026)**, siempre sin el logo
   «ZEROGO» ni rótulos en inglés (`v8-estudio.webp` ya limpia; vídeo montado con `herramientas/detalles_v8.py`).
+- **Fotos reales de la V8 de Sergio (29/10/2026)** en `contenido/sergio/`: `v8-lado-real.jpg` (perfil completo, la mejor),
+  `v8-frente-real.jpg`, `v8-pantalla-real.jpg` (con reflejo de un dedo: solo de fondo y poco tiempo) y `v8-arriba-real.jpg` (desordenada,
+  mejor no). Usarlas antes que `v8-estudio.webp`, sin repetir la misma en reels seguidos.
 - Ante una duda de verdad (algo que afecte a la marca, dinero o terceros), preguntar a Sergio: no pasa nada.
 
 ## Normas de la marca (siempre)
