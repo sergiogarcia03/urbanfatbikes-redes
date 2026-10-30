@@ -402,5 +402,16 @@
     "tiktok": {
       "aviso": "2026-10-29T21:00+01:00"
     }
+  },
+  "reel-carril-patraix": {
+    "instagram": {
+      "id": "18119147729089716",
+      "fecha": "2026-10-30T19:32+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7702530562842003478",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-10-30T19:33+01:00"
+    }
   }
 }
