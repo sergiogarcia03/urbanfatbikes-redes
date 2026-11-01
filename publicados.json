@@ -437,5 +437,16 @@
     "tiktok": {
       "aviso": "2026-11-01T14:10+01:00"
     }
+  },
+  "reel-sorpresa-v8": {
+    "instagram": {
+      "id": "17927081118431475",
+      "fecha": "2026-11-01T19:00+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7703264583112722454",
+      "estado": "PROCESSING_UPLOAD",
+      "fecha": "2026-11-01T19:00+01:00"
+    }
   }
 }
