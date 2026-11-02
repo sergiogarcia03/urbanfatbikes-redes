@@ -215,7 +215,7 @@ def avisar(publicacion, nombre_video):
         f"```\n{texto}\n```\n\n"
         "3. Activa **Contenido comercial → Tu marca** (es obligatorio al hablar de tu marca).\n"
         "4. Publica y cierra este aviso.\n\n"
-        "@sergiogarcia03 ⏰ publícalo entre las 19:00 y las 22:00 (hora de España).\n"
+        "@sergiogarcia03 ⏰ publícalo entre las 18:30 y las 22:00 (hora de España).\n"
     )
     try:
         requests.post(f"https://api.github.com/repos/{repo}/issues", timeout=30,

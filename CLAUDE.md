@@ -59,7 +59,7 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - Instagram: `publicar.py` cada hora (workflow «Publicar en redes»). Calendario en `calendario.yaml`,
   tarjetas y reels en `tarjetas.yaml` (`tarjetas.py`, `reels.py` con voz editada y música propia),
   historias en `historias.yaml` (+ «nuevo post» automática 1 h después).
-- **TikTok es la prioridad (08/10/2026)**: 5 reels por semana, de lunes a viernes a las 19:00 en punto (GitHub se salta ejecuciones programadas, a veces 7-8 horas: el workflow «Vigilar el calendario» (`vigilar.py`) siempre está esperando, lanza «Publicar en redes» en modo `automatico` a la hora exacta y se releva a sí mismo; además `publicar.py` espera hasta 4 h 30 min, ver `ESPERA_MAX`) (mar y jue: serie
+- **TikTok es la prioridad (08/10/2026)**: 5 reels por semana, de lunes a viernes a las 18:30 en punto (lo pidió Sergio el 02/11/2026) (GitHub se salta ejecuciones programadas, a veces 7-8 horas: el workflow «Vigilar el calendario» (`vigilar.py`) siempre está esperando, lanza «Publicar en redes» en modo `automatico` a la hora exacta y se releva a sí mismo; además `publicar.py` espera hasta 4 h 30 min, ver `ESPERA_MAX`) (mar y jue: serie
   «Normas en 10 segundos»). Responder comentarios con vídeo («Responder con vídeo») cuando pregunten por una bici:
   datos solo de la ficha pública de la tienda, sin criticar marcas ni usar sus fotos. En las respuestas TikTok tapa arriba (pegatina
   del comentario) y abajo (comentarios): `texto_y: 720`, `tiempos: 4` (≈2 s por golpe), sin avatar abajo (ver `ek30-v2`). Avisos al móvil: los issues de
@@ -67,7 +67,7 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   **Historias de TikTok**: las de `historias.yaml` (no las de «nuevo post») abren a su hora un aviso «📲 TikTok: sube la
   historia…» con la imagen, porque la API de TikTok no permite subir historias; Sergio la sube a mano.
 - Horarios (hora de España): 3 publicaciones/semana (lun/mié/vie). **Mientras haya pocos seguidores (<~500), en el
-  feed solo reels** (lo único que llega a quien no nos sigue), todos a las 19:00; los carruseles se convierten en
+  feed solo reels** (lo único que llega a quien no nos sigue), todos a las 18:30; los carruseles se convierten en
   reels (`reel: sí` + música en `tarjetas.yaml`). Fotos y carruseles, 13:30. Historias extra: mar y jue 21:00, sáb y dom 12:30.
 - Token de Instagram: se renueva solo cada lunes (`renovar_token.py`, secret `GH_PAT`).
 - TikTok (`tiktok.py`): los reels llegan como **borrador** a la bandeja de TikTok y GitHub abre un aviso
