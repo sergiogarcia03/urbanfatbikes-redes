@@ -80,6 +80,9 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
 - **Desde el 14/10/2026 los reels van «más trabajados»** (lo pidió Sergio para más visitas e interacción): quiz
   «¿legal o ilegal?» con cuenta atrás, noticias reales con su medio, contador 1/3 y barra de progreso, gancho entero en el
   primer fotograma, 10-20 s. Ver `.claude/instagram/swipe.md`. Nunca la V8 de fondo en un caso ilegal o trucado.
+  **Edición nueva (02/11/2026, Sergio pidió subir el nivel)**: `transicion: barrido` (whip pan con estela), `ficha:` (ficha técnica
+  animada, filas que entran una a una), cifras que cuentan hacia arriba en `numero`, quiz con `pegatina: ninguna` si la respuesta no es sí/no.
+  Usarlas en los reels nuevos (ver `eskute-v202`).
   **Gancho «nuevo en España»** (lo pidió Sergio): en las piezas de la V8, «nueva en España» / «lo que arrasa en Holanda
   llega a España» y la pegatina `nuevo: si` (NUEVO EN ESPAÑA con bandera). Nunca decir que es la primera ni la única.
 - **Formato de los reels (desde el 07/10/2026): «reels rápidos»** (`reels_rapidos.py` + `reels_rapidos.yaml`):
