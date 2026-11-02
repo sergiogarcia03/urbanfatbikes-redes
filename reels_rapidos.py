@@ -14,6 +14,7 @@ Uso:
 import hashlib
 import json
 import math
+import re
 import subprocess
 import sys
 from io import BytesIO
@@ -508,7 +509,22 @@ def texto_cinetico(lienzo, frase, t, y, tam=112, palabra_cada=0.07, estilo="neon
     return y + len(lineas) * alto_linea
 
 
+def contando(texto, t, dur=0.7):
+    """«80 km» → la cifra sube de 0 a 80 en dur segundos (respeta «1.000» y «20,8»)."""
+    m = re.match(r"^([+]?)(\d[\d.]*(?:,\d+)?)(.*)$", texto)
+    if not m or t >= dur:
+        return texto
+    signo, cifra, resto = m.groups()
+    decimales = len(cifra.split(",")[1]) if "," in cifra else 0
+    valor = float(cifra.replace(".", "").replace(",", ".")) * suave(t / dur)
+    hecho = f"{valor:,.{decimales}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    if "." not in cifra:
+        hecho = hecho.replace(".", "")
+    return signo + hecho + resto
+
+
 def numero_grande(lienzo, texto, t, y, tam=330, estilo="neon"):
+    texto = contando(texto, t)
     e = ESTILOS[estilo]
     letra = fuente("Black", tam)
     escala = 0.5 + 0.5 * rebote(t / 0.3)
@@ -576,10 +592,35 @@ def quiz(lienzo, spec, t, y):
         d.text((ANCHO / 2, y + 220), f"{math.ceil(espera - t)}", font=fuente("Black", 90), fill=(255, 255, 255),
                anchor="mm", stroke_width=8, stroke_fill=(0, 0, 0))
     else:
-        pegatina(lienzo, "si" if opciones[buena].upper() in ("LEGAL", "SÍ", "SI", "VERDAD") else "no",
-                 t - espera - 0.1, ANCHO // 2 + (buena * 2 - 1) * 245, int(y - 140), r=70)
+        tipo = spec.get("pegatina") or ("si" if opciones[buena].upper() in ("LEGAL", "SÍ", "SI", "VERDAD") else "no")
+        if tipo != "ninguna":
+            pegatina(lienzo, tipo, t - espera - 0.1, ANCHO // 2 + (buena * 2 - 1) * 245, int(y - 140), r=70)
         if spec.get("explica"):
             texto_cinetico(lienzo, spec["explica"], t - espera - 0.2, y + 140, 72)
+
+
+def ficha(lienzo, filas, t, y, estilo="neon"):
+    """Ficha técnica: filas «dato · valor» que entran de una en una desde la izquierda."""
+    e = ESTILOS[estilo]
+    color = e.get("caja_resalta", e["resalta"])
+    alto_fila, x0, ancho = 118, 70, ANCHO - 140
+    fondo = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
+    ImageDraw.Draw(fondo).rounded_rectangle((x0 - 20, y - 30, x0 + ancho + 20, y + alto_fila * len(filas) + 10),
+                                            radius=40, fill=(10, 14, 18, 215))
+    lienzo.alpha_composite(fondo)
+    clave_f, valor_f = fuente("SemiBold", 52), fuente("Black", 64)
+    for k, (clave, valor) in enumerate(filas):
+        entra = suave((t - 0.15 - 0.22 * k) / 0.3)
+        if entra <= 0:
+            continue
+        capa = Image.new("RGBA", (ancho, alto_fila), (0, 0, 0, 0))
+        d = ImageDraw.Draw(capa)
+        d.text((20, alto_fila / 2), str(clave), font=clave_f, fill=(200, 210, 215), anchor="lm")
+        d.text((ancho - 20, alto_fila / 2), contando(str(valor), t - 0.15 - 0.22 * k), font=valor_f, fill=color, anchor="rm")
+        if k < len(filas) - 1:
+            d.line((20, alto_fila - 2, ancho - 20, alto_fila - 2), fill=(255, 255, 255, 40), width=2)
+        capa.putalpha(capa.getchannel("A").point(lambda v: int(v * entra)))
+        lienzo.alpha_composite(capa, (int(x0 - 120 * (1 - entra)), int(y + k * alto_fila)))
 
 
 def marca(lienzo, texto, t):
@@ -668,6 +709,8 @@ def fotograma(reel, i, t, dur):
         # el gancho ya está entero en el primer fotograma (TikTok decide en el primer segundo)
         tt = t + 1.5 if (i == 0 and reel.get("gancho_fijo", True)) else t
         y = texto_cinetico(lienzo, g["texto"], tt, y, g.get("tam", 112), estilo=estilo)
+    if g.get("ficha"):
+        ficha(lienzo, g["ficha"], t, g.get("ficha_y", y + 40), estilo)
     if g.get("quiz"):
         quiz(lienzo, g["quiz"], t, g["quiz"].get("y", 1250))
     if g.get("marca"):
@@ -685,9 +728,24 @@ def fotograma(reel, i, t, dur):
         w, h = int(ANCHO * golpe), int(ALTO * golpe)
         img = img.resize((w, h), Image.BILINEAR)
         img = img.crop(((w - ANCHO) // 2, (h - ALTO) // 2, (w - ANCHO) // 2 + ANCHO, (h - ALTO) // 2 + ALTO))
-    if t < 0.07 and i > 0:
+    if t < 0.07 and i > 0 and reel.get("transicion") != "barrido":
         img = Image.blend(img, Image.new("RGB", img.size, (255, 255, 255)), 0.35 * (1 - t / 0.07))
     return img
+
+
+def barrido(anterior, nuevo, f):
+    """Transición «whip pan»: lo anterior sale hacia la izquierda y lo nuevo entra desde la derecha, con estela."""
+    f = suave(f)
+    dx = int(ANCHO * f)
+    lienzo = Image.new("RGB", (ANCHO, ALTO))
+    lienzo.paste(anterior, (-dx, 0))
+    lienzo.paste(nuevo, (ANCHO - dx, 0))
+    fuerza = 1 - abs(2 * f - 1)  # la estela es máxima a mitad del barrido
+    if fuerza > 0.05:
+        n = max(2, int(80 * fuerza))
+        estela = lienzo.resize((ANCHO // n, ALTO), Image.BILINEAR).resize((ANCHO, ALTO), Image.BILINEAR)
+        lienzo = Image.blend(lienzo, estela, 0.85 * fuerza)
+    return lienzo
 
 
 def duraciones_de(reel):
@@ -744,12 +802,20 @@ def generar(nombre, reel):
              "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", str(destino)]
     proceso = subprocess.Popen(orden, stdin=subprocess.PIPE)
     PORTADAS.mkdir(exist_ok=True)
+    ultimo = previo = None
+    golpe_actual = 0
     for k in range(int(total * FPS)):
         t = k / FPS
         i, tl = golpe_en(reel["golpes"], duraciones, t)
         if reel.get("progreso"):
             reel["_avance"] = t / total
         img = fotograma(reel, i, tl, duraciones[i])
+        if reel.get("transicion") == "barrido":
+            if i != golpe_actual:
+                ultimo, golpe_actual = previo, i
+            previo = img
+            if i > 0 and tl < 0.2 and ultimo is not None:
+                img = barrido(ultimo, img, tl / 0.2)
         if k == int(min(0.75, duraciones[0] - 0.05) * FPS):
             img.save(PORTADAS / f"{destino.stem}.jpg", quality=90)
         proceso.stdin.write(img.tobytes())
