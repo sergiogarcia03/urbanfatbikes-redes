@@ -1178,10 +1178,11 @@ reels:
     texto_y: 640
     transicion: barrido
     golpes:
-      - fondo: {color: oscuro}
+      - fondo: {foto: terceros/eskute-v202.png, tam: 0.56, y: 0.63, suelo: si}
         texto: "Eskute V202: *todo* lo que tienes que saber"
-        y: 720
-        tiempos: 4
+        tam: 92
+        y: 560
+        tiempos: 5
       - fondo: {color: turquesa}
         texto: Lo que dice *su ficha*
         ficha: [[Motor, "250 W"], [Par, "65 Nm"], [Batería, "48 V · 20,8 Ah"], [Autonomía, "hasta 80 km"], [Ruedas, "20 x 4 pulgadas"]]
@@ -1190,6 +1191,10 @@ reels:
         texto: Y además
         ficha: [[Cambio, "Shimano 7 vel."], [Frenos, "de disco"], [Desbloqueo, "NFC"], [Batería, "extraíble"]]
         tiempos: 7
+      - fondo: {foto: terceros/eskute-v202-colores.png, tam: 0.92, y: 0.6, suelo: si, zoom: out}
+        texto: En *negro* o en *verde*
+        y: 600
+        tiempos: 4
       - fondo: {icono: velocimetro, valor: 25}
         texto: Asistencia hasta *25 km/h*
         tiempos: 4
@@ -1209,7 +1214,7 @@ reels:
         numero: "+30 kg"
         texto: de peso, ojo si vives *sin ascensor*
         tiempos: 4
-      - fondo: {color: oscuro}
+      - fondo: {foto: terceros/eskute-v202.png, tam: 0.48, y: 0.69, suelo: si, zoom: out}
         texto: ¿Dónde *encontrarla?*
         ficha: [[Web oficial, "eu.eskute.com"], [También en, "Amazon.es"]]
         tiempos: 6
