@@ -93,6 +93,4 @@ jobs:
 
       - name: Guardar qué se ha publicado
         if: always() && github.event_name != 'push'
-        run: |
-          git add publicados.json
-          git diff --cached --quiet || (git commit -m "Registrar publicaciones" && git pull --rebase && git push)
+        run: python guardar_publicados.py
