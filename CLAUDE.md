@@ -116,9 +116,7 @@ Léelo al empezar cualquier sesión. Resume lo que Sergio y Claude han decidido.
   «Modelo de negocio fatbikes España».
 
 ## Pendiente
-- **Reel «¿Dónde guardar tu fatbike?»** (lo pidió Sergio el 03/11/2026, a raíz de Xionsan y giorgio en TikTok): bici box,
-  aparcabicis seguros y lockers (en València si hay datos oficiales), trastero o casa, batería extraíble, candado. Formato nuevo
-  (barrido, ficha, quiz). Cuando salga, avisar a Sergio para que mencione a @xionsan_3.
+- Reel «¿Dónde guardar tu fatbike?» programado el 16/11/2026 (`guardar`): ese día recordar a Sergio que mencione a @xionsan_3.
 - Respuesta de TikTok a la revisión de la app.
 - 11/01/2027: preguntas a proveedores (importador UE, precios por cantidad, recambios, sin marca Ouxi).
 - Con unos 100 seguidores: pedir el permiso de estadísticas de Instagram para ajustar horarios.

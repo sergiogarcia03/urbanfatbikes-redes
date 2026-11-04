@@ -342,3 +342,40 @@ historias:
       numero: 300
       unidad: días de sol
       texto: al año, según Visit València. Ideal para ir en bici también en invierno.
+
+  # --- Semana del 7 al 13 de diciembre de 2026 ---
+  - id: encuesta-regalo
+    fecha: "2026-12-08 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Pedirías una *fatbike* por Navidad?
+      subtitulo: Respóndenos por mensaje.
+      tamano: 100
+
+  - id: aviso-detalles-real
+    fecha: "2026-12-10 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Mañana, nuevo reel
+      titulo: La V8 *de verdad*
+      subtitulo: Con fotos reales. Mañana por la tarde.
+      tamano: 100
+
+  - id: dato-dos-en-dos
+    fecha: "2026-12-12 12:30"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato
+      numero: 2
+      unidad: en paralelo
+      texto: Es lo máximo que podéis ir en grupo por carretera. Con curvas o poca visibilidad, en fila.
+
+  - id: que-quieres-ver-5
+    fecha: "2026-12-13 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿De qué *bici* hablamos ahora?
+      subtitulo: Escríbenos el modelo y lo analizamos en un reel.
+      tamano: 100

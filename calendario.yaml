@@ -151,7 +151,7 @@ publicaciones:
       #urbanfatbikes #fatbike #fatbikeelectrica #ebike #bicicletaelectrica
 
   - id: reel-bateria
-    fecha: "2026-11-16 18:30"
+    fecha: "2026-12-07 18:30"
     archivos:
       - rapido-bateria.mp4  # reel rápido (reels_rapidos.py)
     texto: |
@@ -355,7 +355,7 @@ publicaciones:
     texto: |
       ¿Se te ha despegado la pegatina de 250 W de tu fatbike? Nos lo preguntó un seguidor de Barcelona 👇
 
-      La pegatina no es lo único que lo demuestra. Pide a la tienda o a la marca la declaración CE de conformidad y el informe de ensayo según la norma europea EN 15194, y guárdalos en el móvil junto con la factura y el manual.
+      Lo que de verdad lo demuestra: la declaración CE de conformidad y el informe de ensayo según la norma EN 15194. Pídelos a la tienda y guárdalos en el móvil, junto con la factura y el manual.
 
       Mándaselo a quien tenga fatbike.
 
@@ -392,9 +392,9 @@ publicaciones:
     archivos:
       - rapido-casco.mp4  # reel rápido (reels_rapidos.py)
     texto: |
-      Menores de 16 años: casco siempre, también en bici eléctrica ⛑️
+      Tienes 30 años y vas en bici por la ciudad: ¿es obligatorio el casco? ⛑️
 
-      Fuera de la ciudad es obligatorio para todos. En ciudad, con más de 16 años, la ley no lo exige (mira la ordenanza de tu ayuntamiento), pero es tu cabeza. Sin casco cuando toca, la multa es de 200 €.
+      En ciudad, con más de 16 años, no (mira la ordenanza de tu ayuntamiento). Menores de 16: siempre. Fuera de la ciudad: todos. Sin casco cuando toca, 200 € de multa.
 
       Mándaselo a quien nunca se lo pone.
 
@@ -640,4 +640,70 @@ publicaciones:
       Síguenos para verla llegar.
 
       #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #holanda
+
+  # --- Revisión del 4/11/2026 ---
+  - id: reel-guardar
+    fecha: "2026-11-16 18:30"
+    archivos:
+      - rapido-guardar.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      19.686 plazas de aparcabicis en València, según el Ayuntamiento… pero casi todas en la calle 🚲
+
+      Los aparcamientos cerrados para bicis aún están en pruebas. Si no tienes bici box: trastero o garaje, en casa si cabe, y en la calle siempre con candado en U. Y si la batería se saca, súbela aparte: la bici pesa menos.
+
+      ¿Dónde la guardas tú? Dínoslo en comentarios.
+
+      #urbanfatbikes #valencia #aparcabicis #fatbike #bicicletaelectrica
+
+  - id: reel-regalo
+    fecha: "2026-12-08 18:30"
+    archivos:
+      - rapido-regalo.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿Una fatbike para Navidad? 4 cosas que tienes que comprobar antes de regalarla 🎁
+
+      250 W, que deje de ayudar a 25 km/h, acelerador hasta 6 km/h sin pedalear e informe de ensayo según la norma EN 15194. Si es para un menor de 16, casco obligatorio en cualquier vía. Y ojo con los «modos desbloqueables»: en la calle son ilegales.
+
+      Mándaselo a quien esté pensando en regalar una.
+
+      #urbanfatbikes #fatbike #navidad #regalo #bicicletaelectrica
+
+  - id: reel-luces-navidad
+    fecha: "2026-12-09 18:30"
+    archivos:
+      - rapido-luces-navidad.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Luces de Navidad en València en bici: 3 normas para no llevarte una multa 🎄
+
+      Luz blanca delante y roja detrás, nada de ir por la acera (bájate y ve andando) y aparca en un aparcabicis, no en una farola.
+
+      Mándaselo a quien vaya a ver las luces.
+
+      #urbanfatbikes #valencia #navidad #fatbike #bicicletaelectrica
+
+  - id: reel-grupo
+    fecha: "2026-12-10 18:30"
+    archivos:
+      - rapido-grupo.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      En bici por carretera, en grupo: ¿podéis ir en paralelo? Sí, de dos en dos como máximo 🚴
+
+      Siempre lo más a la derecha posible, con casco, y en fila cuando haya curvas, poca visibilidad o mucho tráfico.
+
+      Mándaselo a tu grupo de bici.
+
+      #urbanfatbikes #ciclismo #DGT #normas #fatbike
+
+  - id: reel-detalles-real
+    fecha: "2026-12-11 18:30"
+    archivos:
+      - rapido-detalles-real.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      La urbanfatbikes V8 de verdad: llave NFC, alarma y localizador en el móvil, de serie 🔑
+
+      Nueva en España: doble suspensión, frenos de disco y pantalla con velocidad y batería. Fotos reales de la nuestra.
+
+      ¿Qué más quieres ver? Pregúntanos en comentarios.
+
+      #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #ebike
 
