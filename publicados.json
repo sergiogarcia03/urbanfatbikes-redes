@@ -520,5 +520,16 @@
       "id": "17979661236138346",
       "fecha": "2026-11-04T19:30+01:00"
     }
+  },
+  "reel-diferencias": {
+    "instagram": {
+      "id": "17908386279670166",
+      "fecha": "2026-11-05T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7704741348750166038",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-05T18:31+01:00"
+    }
   }
 }
