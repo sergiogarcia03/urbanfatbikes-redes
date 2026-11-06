@@ -632,7 +632,7 @@ reels:
     transicion: barrido
     golpes:
       - fondo: {escena: sofa, desde: 1.0}
-        texto: Seguro obligatorio desde 2026… ¿y tu *bici eléctrica?*
+        texto: Seguro obligatorio para patinetes… ¿y tu *bici eléctrica?*
         tiempos: 4
       - fondo: {color: oscuro}
         texto: Con 250 W y 25 km/h, ¿necesita *seguro?*
