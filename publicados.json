@@ -546,5 +546,16 @@
     "tiktok": {
       "aviso": "2026-11-05T21:00+01:00"
     }
+  },
+  "reel-trucada": {
+    "instagram": {
+      "id": "18650175256055399",
+      "fecha": "2026-11-06T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7705112262331172886",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-06T18:30+01:00"
+    }
   }
 }
