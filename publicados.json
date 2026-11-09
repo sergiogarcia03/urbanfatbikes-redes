@@ -581,5 +581,16 @@
     "tiktok": {
       "aviso": "2026-11-08T12:30+01:00"
     }
+  },
+  "reel-pegatina": {
+    "instagram": {
+      "id": "18002974548041426",
+      "fecha": "2026-11-09T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7706225544597538838",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-09T18:30+01:00"
+    }
   }
 }
