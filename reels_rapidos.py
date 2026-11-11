@@ -478,6 +478,8 @@ def texto_cinetico(lienzo, frase, t, y, tam=112, palabra_cada=0.07, estilo="neon
     """Palabras que entran una a una con un pequeño salto (como los subtítulos de TikTok)."""
     e = ESTILOS[estilo]
     letra = fuente("Black", tam)
+    # «*No*, pero…» → «*No,* pero…»: la puntuación pegada al resaltado va dentro, si no se ve el asterisco
+    frase = re.sub(r"\*([^*]+)\*([,.;:!?…]+)", r"*\1\2*", frase)
     lineas = partir(frase, letra, ANCHO - 140)
     alto_linea = round(tam * (1.3 if e.get("caja") else 1.12))
     n = 0
