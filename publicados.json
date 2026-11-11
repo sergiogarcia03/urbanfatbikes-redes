@@ -624,5 +624,16 @@
     "tiktok": {
       "aviso": "2026-11-10T21:00+01:00"
     }
+  },
+  "reel-carril-valencia": {
+    "instagram": {
+      "id": "17940154401126797",
+      "fecha": "2026-11-11T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7706967704326047766",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-11T18:30+01:00"
+    }
   }
 }
