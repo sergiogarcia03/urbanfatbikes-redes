@@ -379,3 +379,40 @@ historias:
       titulo: ¿De qué *bici* hablamos ahora?
       subtitulo: Escríbenos el modelo y lo analizamos en un reel.
       tamano: 100
+
+  # --- Semana del 14 al 20 de diciembre de 2026 ---
+  - id: encuesta-probado
+    fecha: "2026-12-15 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Has montado alguna vez en *fatbike?*
+      subtitulo: Cuéntanos qué te pareció por mensaje.
+      tamano: 100
+
+  - id: aviso-v8-de-cerca
+    fecha: "2026-12-17 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Mañana, nuevo reel
+      titulo: La V8 *de cerca*
+      subtitulo: Con fotos reales. Mañana por la tarde.
+      tamano: 100
+
+  - id: dato-menos-de-7
+    fecha: "2026-12-19 12:30"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato
+      numero: 7
+      unidad: años
+      texto: Solo los menores de 7 años pueden ir de paquete, en asiento homologado y con un conductor mayor de edad.
+
+  - id: feliz-navidad
+    fecha: "2026-12-20 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: urbanfatbikes
+      titulo: ¡Felices *fiestas!*
+      subtitulo: Gracias por estar aquí desde el principio. Lo mejor está por llegar.
+      tamano: 110

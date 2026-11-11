@@ -293,36 +293,42 @@ reels:
   auriculares:
     musica: inspira-1
     estilo: aviso
+    progreso: si
+    transicion: barrido
     golpes:
       - fondo: {icono: auriculares}
-        texto: ¿Auriculares en la *fatbike?*
-      - fondo: {icono: multa, valor: "200 €", color: rojo}
-        texto: "*200 €* de multa"
-      - fondo: {escena: bici, desde: 2.0}
-        texto: Aunque no esté *sonando nada*
-      - fondo: {icono: movil}
-        texto: Y el *móvil,* igual
-      - fondo: {video: manillar}
-        texto: "*Mándaselo* a quien va con cascos"
+        texto: ¿Auriculares puestos en la *fatbike?*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: Aunque no esté sonando nada, ¿te pueden *multar?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "*200 €* de multa"}
+        tiempos: 8
+      - fondo: {color: rojo}
+        numero: "200 €"
+        texto: también con el *móvil* en la mano
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: "*Mándaselo* a quien va siempre con cascos"
+        tiempos: 4
 
   incluye:
     musica: urban-2
     estilo: neon
+    progreso: si
+    transicion: barrido
     golpes:
-      - fondo: {foto: v8-estudio.webp, recorte: [120, 150, 1900, 1900]}
-        texto: "*3 regalos* con cada fatbike"
-        avatar: {pose: brazos, cara: sorpresa, lado: derecha}
-        tiempos: 3
+      - fondo: {foto: sergio/v8-frente-real.jpg}
+        texto: 3 cosas que vienen *en la caja* de la urbanfatbikes V8
+        nuevo: [800, 1450]
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: En la *caja*
+        ficha: [[Candado, "incluido"], [Bomba de aire, "incluida"], [Herramientas, "incluidas"]]
+        tiempos: 7
       - fondo: {color: turquesa}
-        texto: Candado, bomba de aire y *herramientas*
-        pegatina: si
-        tiempos: 4
-      - fondo: {video: manillar}
-        texto: Llave *NFC* y alarma
-        tiempos: 3
-      - fondo: {foto: v8-estudio.webp, recorte: [500, 150, 1150, 560]}
-        texto: Localizador para encontrarlo desde *tu móvil*
-        tiempos: 4
+        texto: Y *de serie*
+        ficha: [[Llave, "NFC"], [Alarma, "sí"], [Localizador, "en el móvil"]]
+        tiempos: 7
       - fondo: {video: suspension}
         texto: "*Mándaselo* a quien busca una"
         tiempos: 4
@@ -330,19 +336,27 @@ reels:
   nino:
     musica: urban-1
     estilo: claro
+    progreso: si
+    transicion: barrido
     golpes:
       - fondo: {icono: silla}
         texto: ¿Tu hijo de paquete en la *fatbike?*
-      - fondo: {color: turquesa}
-        numero: "7"
-        texto: años, *como mucho*
-      - fondo: {foto: v8-estudio.webp, recorte: [1000, 560, 1760, 1000]}
-        texto: En asiento *homologado*
-        pegatina: si
-      - fondo: {icono: multa, valor: "100 €", color: rojo}
-        texto: Si no, *100 €*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Hasta qué *edad?*
+        quiz: {opciones: ["7 AÑOS", "12 AÑOS"], correcta: 0, cuenta: 2, explica: "Menores de *7 años*", pegatina: ninguna}
+        tiempos: 7
+      - fondo: {color: oscuro}
+        texto: Las *condiciones*
+        ficha: [[Edad, "menos de 7"], [Asiento, "homologado"], [Quien conduce, "mayor de edad"]]
+        tiempos: 7
+      - fondo: {color: rojo}
+        numero: "100 €"
+        texto: de multa si *no se cumple*
+        tiempos: 3
       - fondo: {escena: final, desde: 1.0}
         texto: "*Mándaselo* a quien lleva a sus hijos"
+        tiempos: 4
 
   carga:
     musica: inspira-2
@@ -1388,5 +1402,130 @@ reels:
         tiempos: 3
       - fondo: {color: turquesa}
         texto: ¿Qué más quieres ver? *Pregúntanos*
+        tiempos: 4
+
+  # --- Revisión del 11/11/2026 ---
+  invierno:
+    musica: tranquila-1
+    estilo: neon
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {video: faro}
+        texto: "Invierno y fatbike: *3 cosas* que casi nadie hace"
+        tiempos: 4
+      - fondo: {icono: ruedas}
+        marca: 1/3
+        texto: Revisa la *presión:* con frío baja
+        tiempos: 3
+      - fondo: {icono: bateria}
+        marca: 2/3
+        texto: Carga la batería *dentro de casa*
+        tiempos: 3
+      - fondo: {icono: luces}
+        marca: 3/3
+        texto: Luces *siempre,* anochece antes
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien sigue en bici en invierno"
+        tiempos: 4
+
+  peaton:
+    musica: urban-2
+    estilo: caja
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {icono: cebra}
+        texto: Vas andando con la bici *por la acera…*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Eres *peatón?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "Sí, si vas *a pie*"}
+        tiempos: 7
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Montado, *no:* por la acera no se va en bici
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien no lo sabía"
+        tiempos: 4
+
+  rutas-valencia:
+    musica: inspira-2
+    estilo: neon
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {escena: bici, desde: 2.0}
+        texto: 3 rutas para estrenar la bici en *València*
+        tiempos: 4
+      - fondo: {escena: holanda, desde: 1.0}
+        marca: 1/3
+        texto: El *Jardín del Turia,* de punta a punta
+        tiempos: 3
+      - fondo: {color: turquesa}
+        marca: 2/3
+        texto: El *paseo marítimo* de la Malvarrosa
+        tiempos: 3
+      - fondo: {color: oscuro}
+        marca: 3/3
+        texto: La *Vía Xurra,* hacia el norte entre huertas
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: ¿Cuál es tu favorita? *Dínoslo* en comentarios
+        tiempos: 4
+
+  cena-empresa:
+    musica: urban-1
+    estilo: aviso
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {icono: cerveza}
+        texto: Cena de empresa y vuelves *en fatbike…*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Te pueden hacer *soplar?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 0, cuenta: 2, explica: "Sí, como *en coche*"}
+        tiempos: 7
+      - fondo: {color: oscuro}
+        numero: "0,25"
+        texto: mg/l, la *misma tasa* que en coche
+        tiempos: 3
+      - fondo: {icono: multa, valor: "1.000 €", color: rojo}
+        texto: Multa de *500 a 1.000 €*
+        tiempos: 3
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien va a la cena en bici"
+        tiempos: 4
+
+  v8-de-cerca:
+    musica: tranquila-1
+    estilo: neon
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {foto: sergio/v8-lado-real.jpg, encajar: si, y: 0.62}
+        texto: La urbanfatbikes V8 *de cerca*
+        nuevo: [800, 1450]
+        tiempos: 4
+      - fondo: {foto: sergio/v8-lado-real.jpg, recorte: [60, 330, 460, 720]}
+        marca: 1/4
+        texto: Ruedas de *20 x 4* pulgadas
+        tiempos: 3
+      - fondo: {video: suspension}
+        marca: 2/4
+        texto: "*Doble* suspensión"
+        tiempos: 3
+      - fondo: {video: faro}
+        marca: 3/4
+        texto: Faro *LED* delante
+        tiempos: 3
+      - fondo: {foto: sergio/v8-pantalla-real.jpg, encajar: si, tam: 0.8, y: 0.62}
+        marca: 4/4
+        texto: Pantalla con *velocidad* y batería
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: ¿Qué detalle quieres ver ahora? *Dínoslo*
         tiempos: 4
 
