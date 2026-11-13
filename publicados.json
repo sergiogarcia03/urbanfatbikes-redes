@@ -667,5 +667,16 @@
     "tiktok": {
       "aviso": "2026-11-12T21:00+01:00"
     }
+  },
+  "reel-lluvia": {
+    "instagram": {
+      "id": "18141454897628772",
+      "fecha": "2026-11-13T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7707709889295992854",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-13T18:30+01:00"
+    }
   }
 }
