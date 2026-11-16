@@ -702,5 +702,16 @@
     "tiktok": {
       "aviso": "2026-11-15T12:30+01:00"
     }
+  },
+  "reel-guardar": {
+    "instagram": {
+      "id": "18290965957292389",
+      "fecha": "2026-11-16T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7708823364017932310",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-16T18:31+01:00"
+    }
   }
 }
