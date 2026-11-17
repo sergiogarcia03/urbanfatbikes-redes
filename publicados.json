@@ -724,6 +724,11 @@
     "instagram": {
       "id": "18156496018529071",
       "fecha": "2026-11-17T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7709194676188039171",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-17T18:32+01:00"
     }
   }
 }
