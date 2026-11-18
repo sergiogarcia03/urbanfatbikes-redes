@@ -774,3 +774,69 @@ publicaciones:
 
       #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #ebike
 
+  # --- Revisión del 18/11/2026: semana del 21 al 25/12 ---
+  - id: reel-origen
+    fecha: "2026-12-21 18:30"
+    archivos:
+      - rapido-origen.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿Para qué se inventaron las ruedas gordas de las fatbikes? Para la nieve y la arena ❄️
+
+      Más superficie apoyada en el suelo, más agarre. Por eso hoy, en ciudad, dan tanta estabilidad en baches y adoquines.
+
+      Mándaselo a quien diga que son solo por estética.
+
+      #urbanfatbikes #fatbike #fatbikeelectrica #curiosidades #bicicletaelectrica
+
+  - id: reel-chaleco
+    fecha: "2026-12-22 18:30"
+    archivos:
+      - rapido-chaleco.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿Chaleco reflectante en bici? Obligatorio solo de noche o con poca visibilidad fuera de la ciudad 🦺
+
+      En ciudad no es obligatorio, pero en invierno es muy recomendable: anochece antes y te ven mucho mejor.
+
+      Mándaselo a quien sale en bici en invierno.
+
+      #urbanfatbikes #fatbike #DGT #seguridadvial #normas
+
+  - id: reel-escapadas-valencia
+    fecha: "2026-12-23 18:30"
+    archivos:
+      - rapido-escapadas-valencia.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Vacaciones en València: 3 escapadas en bici, del Turia al puerto, a El Saler y por la Vía Xurra 🚲
+
+      Para estrenar la bici estas fiestas sin coger el coche.
+
+      ¿Cuál harías tú? Dínoslo en comentarios.
+
+      #urbanfatbikes #valencia #albufera #fatbike #rutasenbici
+
+  - id: reel-papa-noel
+    fecha: "2026-12-24 18:30"
+    archivos:
+      - rapido-papa-noel.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Si Papá Noel cambiara el trineo por una fatbike… ¿sería legal? 🎅
+
+      Para ir legal en España: 250 W, ayuda hasta 25 km/h y luces. A toda velocidad sería un vehículo de motor, con trineo y todo.
+
+      ¡Felices fiestas! Mándaselo a quien le guste la Navidad.
+
+      #urbanfatbikes #fatbike #navidad #papanoel #bicicletaelectrica
+
+  - id: reel-preguntas
+    fecha: "2026-12-25 18:30"
+    archivos:
+      - rapido-preguntas.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      ¿Es legal? ¿Dónde la guardo? ¿Cuál me compro? Las 3 preguntas que más nos hacéis 🙌
+
+      Con 250 W y 25 km/h es una bicicleta; en casa, trastero o con candado en U; y antes de comprar, pide el informe EN 15194. Gracias por estar aquí estos meses.
+
+      ¿Qué pregunta te falta? Dínosla en comentarios.
+
+      #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #felicesfiestas
+

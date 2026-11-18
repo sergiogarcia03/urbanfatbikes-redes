@@ -1529,3 +1529,121 @@ reels:
         texto: ¿Qué detalle quieres ver ahora? *Dínoslo*
         tiempos: 4
 
+  # --- Revisión del 18/11/2026: semana del 21 al 25/12 ---
+  origen:
+    musica: inspira-2
+    estilo: neon
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {foto: sergio/v8-lado-real.jpg, recorte: [60, 330, 460, 720]}
+        texto: ¿Sabes para qué se inventaron las *ruedas gordas?*
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: ¿Para qué crees?
+        quiz: {opciones: ["NIEVE", "CIUDAD"], correcta: 0, cuenta: 2, explica: "Para la *nieve* y la arena", pegatina: ninguna}
+        tiempos: 7
+      - fondo: {icono: ruedas}
+        texto: Más superficie, *más agarre*
+        tiempos: 3
+      - fondo: {escena: bici, desde: 1.0}
+        texto: Hoy, en ciudad, *estabilidad* en baches y adoquines
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: "*Mándaselo* a quien diga que son solo por estética"
+        tiempos: 4
+
+  chaleco:
+    musica: urban-1
+    estilo: aviso
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {icono: luces}
+        texto: ¿Chaleco reflectante en *bici?*
+        tiempos: 3
+      - fondo: {color: oscuro}
+        texto: ¿Siempre *obligatorio?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 1, cuenta: 2, explica: "Solo de noche *fuera de la ciudad*", pegatina: ninguna}
+        tiempos: 8
+      - fondo: {color: oscuro}
+        texto: Cuándo *sí*
+        ficha: [[Fuera de la ciudad, "de noche"], [Poca visibilidad, "sí"], [En ciudad, "recomendable"]]
+        tiempos: 7
+      - fondo: {color: rojo}
+        texto: "*Mándaselo* a quien sale en bici en invierno"
+        tiempos: 4
+
+  escapadas-valencia:
+    musica: inspira-1
+    estilo: neon
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {escena: bici, desde: 2.0}
+        texto: Vacaciones en *València:* 3 escapadas en bici
+        tiempos: 4
+      - fondo: {escena: holanda, desde: 1.0}
+        marca: 1/3
+        texto: Del Turia hasta *el puerto*
+        tiempos: 3
+      - fondo: {color: turquesa}
+        marca: 2/3
+        texto: Hacia *El Saler* y la Albufera
+        tiempos: 3
+      - fondo: {color: oscuro}
+        marca: 3/3
+        texto: La *Vía Xurra,* entre huertas
+        tiempos: 3
+      - fondo: {color: turquesa}
+        texto: ¿Cuál harías tú? *Dínoslo* en comentarios
+        tiempos: 4
+
+  papa-noel:
+    musica: urban-2
+    estilo: claro
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {escena: sofa, desde: 1.0}
+        texto: Si Papá Noel cambiara el trineo por una *fatbike…*
+        tiempos: 4
+      - fondo: {color: oscuro}
+        texto: Con trineo a toda velocidad, ¿sería *legal?*
+        quiz: {opciones: ["SÍ", "NO"], correcta: 1, cuenta: 2, explica: "Más de 25 km/h: *vehículo de motor*"}
+        tiempos: 7
+      - fondo: {color: oscuro}
+        texto: Para ir *legal*
+        ficha: [[Motor, "250 W"], [Ayuda hasta, "25 km/h"], [Casco, "recomendable"], [Luces, "obligatorias"]]
+        tiempos: 7
+      - fondo: {color: turquesa}
+        texto: ¡Felices fiestas! *Mándaselo* a quien le guste la Navidad
+        tiempos: 4
+
+  preguntas:
+    musica: tranquila-1
+    estilo: neon
+    progreso: si
+    transicion: barrido
+    golpes:
+      - fondo: {foto: sergio/v8-frente-real.jpg}
+        texto: Las 3 preguntas que *más nos hacéis*
+        tiempos: 4
+      - fondo: {color: oscuro}
+        marca: 1/3
+        texto: "¿Es legal? Con 250 W y 25 km/h, *sí*"
+        pegatina: si
+        tiempos: 3
+      - fondo: {color: turquesa}
+        marca: 2/3
+        texto: "¿Dónde la guardo? Trastero, casa o *candado en U*"
+        tiempos: 3
+      - fondo: {color: oscuro}
+        marca: 3/3
+        texto: "¿Cuál me compro? Pide el informe *EN 15194*"
+        tiempos: 3
+      - fondo: {foto: sergio/v8-lado-real.jpg, encajar: si, y: 0.62}
+        texto: Gracias por estar aquí. *¡Felices fiestas!*
+        nuevo: [800, 1450]
+        tiempos: 4
+
