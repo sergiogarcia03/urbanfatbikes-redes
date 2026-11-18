@@ -416,3 +416,40 @@ historias:
       titulo: ¡Felices *fiestas!*
       subtitulo: Gracias por estar aquí desde el principio. Lo mejor está por llegar.
       tamano: 110
+
+  # --- Semana del 21 al 27 de diciembre de 2026 ---
+  - id: encuesta-vacaciones
+    fecha: "2026-12-22 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Vas a sacar la *bici* estas vacaciones?
+      subtitulo: Cuéntanos a dónde por mensaje.
+      tamano: 100
+
+  - id: feliz-nochebuena
+    fecha: "2026-12-24 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: urbanfatbikes
+      titulo: ¡Feliz *Nochebuena!*
+      subtitulo: Gracias por acompañarnos este año.
+      tamano: 110
+
+  - id: dato-nieve
+    fecha: "2026-12-26 12:30"
+    diapositiva:
+      tipo: dato
+      antetitulo: Curiosidad
+      numero: 4
+      unidad: pulgadas
+      texto: o más de ancho tienen las ruedas de una fatbike. Nacieron para rodar por nieve y arena.
+
+  - id: propositos
+    fecha: "2026-12-27 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Ir más en *bici* es tu propósito para 2027?
+      subtitulo: Respóndenos por mensaje.
+      tamano: 100
