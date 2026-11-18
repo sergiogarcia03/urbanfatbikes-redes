@@ -756,5 +756,11 @@
       "estado": "SEND_TO_USER_INBOX",
       "fecha": "2026-11-18T18:30+01:00"
     }
+  },
+  "que-incluye-v8-historia": {
+    "instagram": {
+      "id": "17967206514251536",
+      "fecha": "2026-11-18T19:30+01:00"
+    }
   }
 }
