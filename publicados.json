@@ -788,5 +788,16 @@
     "tiktok": {
       "aviso": "2026-11-19T21:00+01:00"
     }
+  },
+  "reel-quiz-v8": {
+    "instagram": {
+      "id": "17881452531632835",
+      "fecha": "2026-11-20T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7710307489585481750",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-20T18:31+01:00"
+    }
   }
 }
