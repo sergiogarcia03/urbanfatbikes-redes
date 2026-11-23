@@ -823,5 +823,16 @@
     "tiktok": {
       "aviso": "2026-11-22T12:30+01:00"
     }
+  },
+  "reel-black-friday": {
+    "instagram": {
+      "id": "18110861422973943",
+      "fecha": "2026-11-23T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7711420736040339478",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-23T18:31+01:00"
+    }
   }
 }
