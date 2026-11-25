@@ -866,5 +866,16 @@
     "tiktok": {
       "aviso": "2026-11-24T21:00+01:00"
     }
+  },
+  "reel-turia": {
+    "instagram": {
+      "id": "18096553871677940",
+      "fecha": "2026-11-25T18:30+01:00"
+    },
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7712162902065104918",
+      "estado": "SEND_TO_USER_INBOX",
+      "fecha": "2026-11-25T18:31+01:00"
+    }
   }
 }
