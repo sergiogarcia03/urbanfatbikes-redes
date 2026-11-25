@@ -840,3 +840,71 @@ publicaciones:
 
       #urbanfatbikes #fatbike #nuevoenespaña #bicicletaelectrica #felicesfiestas
 
+  # --- Revisión del 25/11/2026: semana del 28/12 al 1/1 ---
+  - id: reel-inocentes
+    fecha: "2026-12-28 18:30"
+    archivos:
+      - rapido-inocentes.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Parece una inocentada, pero es verdad: 3 frases sobre fatbikes, ¿cuáles son ciertas? 😜
+
+      1. Una fatbike legal no necesita carné ni seguro → verdad, con 250 W y 25 km/h.
+      2. Con el acelerador puedes ir a 25 km/h sin pedalear → inocentada: solo hasta 6 km/h.
+      3. En Holanda hay ciudades que multan por ir en fatbike → verdad: en Enschede, 115 €.
+
+      ¿Cuántas acertaste? Dínoslo en comentarios.
+
+      #urbanfatbikes #fatbike #inocentes #bicicletaelectrica #DGT
+
+  - id: reel-sillin-dos
+    fecha: "2026-12-29 18:30"
+    archivos:
+      - rapido-sillin-dos.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Sillín largo en tu fatbike: ¿puedes llevar a un amigo detrás? No 🚫
+
+      En bici solo puede ir de paquete un menor de 7 años, en un asiento adicional homologado y con un conductor mayor de edad. Nos lo preguntó un seguidor en TikTok.
+
+      Mándaselo a quien lleva a sus amigos de paquete.
+
+      #urbanfatbikes #fatbike #DGT #normas #bicicletaelectrica
+
+  - id: reel-valencia-2027
+    fecha: "2026-12-30 18:30"
+    archivos:
+      - rapido-valencia-2027.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      164 km de carril bici, 300 días de sol y todo llano: tu propósito para 2027 es ir en bici por València 🚲
+
+      Datos del Ayuntamiento de València y de Visit València. Y con ayuda eléctrica, llegas sin sudar.
+
+      ¿Te apuntas? Mándaselo a quien vive en València.
+
+      #urbanfatbikes #valencia #carrilbici #propositos2027 #fatbike
+
+  - id: reel-resumen-2026
+    fecha: "2026-12-31 18:30"
+    archivos:
+      - rapido-resumen-2026.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      Más de 60 reels desde octubre: así ha sido nuestro 2026 🎉
+
+      Lo que más nos habéis preguntado: si es legal (con 250 W y 25 km/h, sí), dónde guardarla y cuál comprar (con el informe EN 15194). Gracias por cada comentario.
+
+      En 2027, más. Síguenos para no perdértelo.
+
+      #urbanfatbikes #fatbike #nuevoenespaña #findeaño #bicicletaelectrica
+
+  - id: reel-propositos
+    fecha: "2027-01-01 18:30"
+    archivos:
+      - rapido-propositos.mp4  # reel rápido (reels_rapidos.py)
+    texto: |
+      3 propósitos sobre dos ruedas para 2027: bici legal, casco y luces 🎆
+
+      Comprueba que tu bici es legal (250 W y 25 km/h), ponte casco aunque no sea obligatorio y lleva luces siempre de noche. ¡Feliz año!
+
+      ¿Cuál es el tuyo? Dínoslo en comentarios.
+
+      #urbanfatbikes #fatbike #propositos2027 #bicicletaelectrica #seguridadvial
+

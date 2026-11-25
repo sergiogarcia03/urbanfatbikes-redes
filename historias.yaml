@@ -453,3 +453,40 @@ historias:
       titulo: ¿Ir más en *bici* es tu propósito para 2027?
       subtitulo: Respóndenos por mensaje.
       tamano: 100
+
+  # --- Semana del 28 de diciembre de 2026 al 3 de enero de 2027 ---
+  - id: encuesta-inocentada
+    fecha: "2026-12-29 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Cuál es la mayor *mentira* que has oído sobre las fatbikes?
+      subtitulo: Cuéntanosla por mensaje y la desmontamos.
+      tamano: 100
+
+  - id: feliz-2027
+    fecha: "2026-12-31 21:00"
+    diapositiva:
+      tipo: portada
+      antetitulo: urbanfatbikes
+      titulo: ¡Feliz *2027!*
+      subtitulo: Gracias por acompañarnos. Lo mejor está por llegar.
+      tamano: 110
+
+  - id: dato-164
+    fecha: "2027-01-02 12:30"
+    diapositiva:
+      tipo: dato
+      antetitulo: Dato de València
+      numero: 164
+      unidad: km
+      texto: de carril bici tiene València, según su Ayuntamiento.
+
+  - id: que-quieres-ver-2027
+    fecha: "2027-01-03 12:30"
+    diapositiva:
+      tipo: portada
+      antetitulo: Te preguntamos
+      titulo: ¿Qué quieres ver en *2027?*
+      subtitulo: Escríbenos por mensaje y lo preparamos.
+      tamano: 100

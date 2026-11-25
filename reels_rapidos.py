@@ -583,7 +583,10 @@ def quiz(lienzo, spec, t, y):
         dc = ImageDraw.Draw(capa)
         dc.rounded_rectangle((10, 10, w + 10, h + 10), radius=int(40 * escala), fill=color + (255,),
                              outline=(10, 14, 18, 255), width=6)
-        lt = fuente("Black", max(10, int(78 * escala)))
+        tam_letra = 78
+        while tam_letra > 40 and fuente("Black", tam_letra).getlength(texto) > 390:
+            tam_letra -= 4  # «INOCENTADA» y otras palabras largas caben en el botón
+        lt = fuente("Black", max(10, int(tam_letra * escala)))
         dc.text(((w + 20) / 2, (h + 20) / 2), texto, font=lt, anchor="mm",
                 fill=(10, 14, 18) if color == (255, 255, 255) else (255, 255, 255))
         lienzo.alpha_composite(capa, (int(cx - capa.width / 2), int(y - capa.height / 2)))
@@ -617,8 +620,13 @@ def ficha(lienzo, filas, t, y, estilo="neon"):
             continue
         capa = Image.new("RGBA", (ancho, alto_fila), (0, 0, 0, 0))
         d = ImageDraw.Draw(capa)
-        d.text((20, alto_fila / 2), str(clave), font=clave_f, fill=(200, 210, 215), anchor="lm")
-        d.text((ancho - 20, alto_fila / 2), contando(str(valor), t - 0.15 - 0.22 * k), font=valor_f, fill=color, anchor="rm")
+        cf, vf = clave_f, valor_f
+        tc, tv = 52, 64
+        while tc > 30 and cf.getlength(str(clave)) + vf.getlength(str(valor)) > ancho - 70:
+            tc, tv = tc - 3, tv - 3  # filas largas: letra más pequeña para que no se pisen
+            cf, vf = fuente("SemiBold", tc), fuente("Black", tv)
+        d.text((20, alto_fila / 2), str(clave), font=cf, fill=(200, 210, 215), anchor="lm")
+        d.text((ancho - 20, alto_fila / 2), contando(str(valor), t - 0.15 - 0.22 * k), font=vf, fill=color, anchor="rm")
         if k < len(filas) - 1:
             d.line((20, alto_fila - 2, ancho - 20, alto_fila - 2), fill=(255, 255, 255, 40), width=2)
         capa.putalpha(capa.getchannel("A").point(lambda v: int(v * entra)))
